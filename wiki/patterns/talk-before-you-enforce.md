@@ -4,7 +4,9 @@ number: 3
 threads: [design-patterns, institutions]
 larger_patterns: [two-keyholders]
 smaller_patterns: []
-releases: [001-a-shared-server]
+introduced_in: ""                     # planned: Release 002 (institutions) theory post
+applied_in:
+  - governance/who-holds-root.md
 status: draft
 ---
 
@@ -22,5 +24,8 @@ Technical enforcement still has a place. But it works better as the group's deci
 ## Therefore
 **Before building any enforcement tool, set up a place for the group to talk (a chat channel, a regular check-in) and use it.** When a problem comes up, raise it there first. If enforcement is needed, let the group choose it, and start with the smallest response that works.
 
-## Used in
-- [001 A Shared Server](../../releases/001-a-shared-server.md): [Setting up your first server](../../guides/first-server.md), [Who holds root?](../../governance/who-holds-root.md)
+## Connections
+- **Introduced in:** planned for the Release 002 (institutions) theory post. Previewed in [Who owns the machine?](../../theory/who-owns-the-machine.md)
+- **Applied in:** [Who holds root?](../../governance/who-holds-root.md)
+- **Larger patterns:** [Two Keyholders](two-keyholders.md)
+- **Smaller patterns:** none yet

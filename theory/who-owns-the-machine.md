@@ -9,6 +9,9 @@ sources:
   - illich-1973-tools-for-conviviality.md
   - franklin-1990-real-world-of-technology.md
   - doctorow-2023-internet-con.md
+patterns:
+  - wiki/patterns/small-enough-to-understand.md
+  - wiki/patterns/two-keyholders.md
 status: draft          # rough draft for the author to rewrite in their own voice
 ---
 
@@ -19,7 +22,9 @@ OUTLINE
 3. Free software won, and lost (Moglen)
 4. Holistic vs. prescriptive (Franklin), convivial tools (Illich)
 5. Why lock-in holds (Doctorow)
-6. Owning the machine is necessary but not enough → guide + governance
+6. Owning the machine is necessary but not enough
+7. Patterns: Small Enough to Understand → Two Keyholders
+8. From theory to practice → guide + governance
 -->
 
 ## The cloud is someone else's computer
@@ -54,14 +59,35 @@ If owning your own infrastructure is better, why doesn't everyone do it? Cory Do
 
 ## Owning the machine is necessary, but not enough
 
-Owning the machine is the first step. It means learning to set up a server you control. That's the [guide in this release](../guides/first-server.md).
+Owning the machine is the first step. But a server owned by one person who holds every password is not a commons. It's a small platform with a friendly owner. As soon as other people depend on it, the question changes from *who owns the machine* to *who decides how it's run*.
 
-But a server owned by one person who holds every password is not a commons. It's a small platform with a friendly owner. As soon as other people depend on it, the question changes from *who owns the machine* to *who decides how it's run*. That's the [governance piece in this release](../governance/who-holds-root.md), and the patterns below.
+Two patterns follow from this argument.
 
+## Patterns
+
+### [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md)
+Illich's convivial tools and Franklin's holistic technologies point the same way: people can only control what they can understand. A community server built from a stack only one expert can follow is prescriptive technology with a friendlier face. Members can't fix it, change it, or take part in decisions about it. The size of the system is a political choice, as Winner argued.
+
+> **Therefore:** keep the system small enough that a second member could learn to run it in a weekend. Prefer well-documented, widely used software. Add complexity only when a real need appears, and write down why.
+
+### [Two Keyholders](../wiki/patterns/two-keyholders.md)
+Owning the machine collectively means more than one person can actually run it. If one person holds all the access, the community depends on that person's time, health, and goodwill, and the "friendly owner" ends up deciding everything by default.
+
+> **Therefore:** every shared system has at least two people with full admin access, and both of them use it regularly. Write down where credentials and recovery information live, and make sure both keyholders can reach them without the other's help.
+
+### How the patterns fit together
+**Small Enough to Understand** is the larger pattern. A second keyholder is only realistic if the system is small enough for them to learn. **Two Keyholders** completes it by putting that understanding in more than one pair of hands.
+
+Both lead toward governance. [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md), from the `institutions` thread (Release 002), completes Two Keyholders. Once several people share power, they need a way to settle problems together.
+
+<!-- Author: the Moglen and Doctorow sections suggest a third pattern about federation and exit, e.g. "Federate, Don't Isolate" or "Exit Built In". -->
+
+## From theory to practice
+- The [guide](../guides/first-server.md) builds a small, understandable server: one machine, plain Debian, a few standard tools.
+- The [governance piece](../governance/who-holds-root.md) turns Two Keyholders and Talk Before You Enforce into rules and a charter a group can adopt.
 
 ## In this release
-- **Release:** [001 A Shared Server](../releases/001-a-shared-server.md)
-- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)
+- **Release:** [001 Liberatory Tech: A Shared Server](../releases/001-a-shared-server.md)
+- **Theory & patterns:** [Who owns the machine?](../theory/who-owns-the-machine.md): [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Two Keyholders](../wiki/patterns/two-keyholders.md)
 - **Guide:** [Setting up your first server](../guides/first-server.md)
 - **Governance:** [Who holds root?](../governance/who-holds-root.md)
-- **Patterns:** [Two Keyholders](../wiki/patterns/two-keyholders.md), [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md)

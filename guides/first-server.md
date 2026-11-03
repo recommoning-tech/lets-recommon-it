@@ -6,6 +6,9 @@ threads: [liberatory-tech]
 difficulty: beginner
 status: draft          # commands need a test run on a fresh install before publishing
 release: 001-a-shared-server
+patterns_applied:
+  - wiki/patterns/small-enough-to-understand.md
+  - wiki/patterns/two-keyholders.md
 ---
 
 ## What you'll build
@@ -164,6 +167,10 @@ Right now this is your server. Before others depend on it, decide:
 
 The governance piece, [Who holds root?](../governance/who-holds-root.md), works through these questions with Elinor Ostrom's institutional analysis.
 
+## Patterns applied
+- [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md): one machine, plain Debian, standard tools (`ufw`, `unattended-upgrades`) rather than a container platform or configuration management on day one.
+- [Two Keyholders](../wiki/patterns/two-keyholders.md): see Community considerations. Add a second admin before anyone else depends on the server.
+
 ## Further reading
 
 - [Debian Administrator's Handbook](https://debian-handbook.info/) (free)
@@ -171,8 +178,7 @@ The governance piece, [Who holds root?](../governance/who-holds-root.md), works 
 - `man sshd_config`, `man ufw`
 
 ## In this release
-- **Release:** [001 A Shared Server](../releases/001-a-shared-server.md)
-- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)
+- **Release:** [001 Liberatory Tech: A Shared Server](../releases/001-a-shared-server.md)
+- **Theory & patterns:** [Who owns the machine?](../theory/who-owns-the-machine.md): [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Two Keyholders](../wiki/patterns/two-keyholders.md)
 - **Guide:** [Setting up your first server](../guides/first-server.md)
 - **Governance:** [Who holds root?](../governance/who-holds-root.md)
-- **Patterns:** [Two Keyholders](../wiki/patterns/two-keyholders.md), [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md)
