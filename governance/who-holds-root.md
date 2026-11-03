@@ -1,14 +1,13 @@
 ---
 title: "Who holds root? An IAD analysis of a shared server"
 date:                  # YYYY-MM-DD, set at publish
-type: essay
 threads: [institutions, practice]
 sources:
   - ostrom-2005-understanding-institutional-diversity.md
   - crawford-ostrom-1995-grammar-of-institutions.md
   - ostrom-walker-gardner-1992-covenants-with-and-without-a-sword.md
   - ostrom-1990-governing-the-commons.md
-companion: guides/first-server.md
+release: 001-a-shared-server
 status: draft          # rough draft for the author to rewrite in their own voice
 ---
 
@@ -27,7 +26,7 @@ OUTLINE
 
 ## The server works. Now what?
 
-You followed the [first server guide](../../guides/first-server.md). You have a small Debian machine with SSH keys, a firewall, and automatic updates. Then a housemate wants a shared calendar on it. A friend asks about photo backup. A neighborhood group wants a chat server.
+You followed the [first server guide](../guides/first-server.md). You have a small Debian machine with SSH keys, a firewall, and automatic updates. Then a housemate wants a shared calendar on it. A friend asks about photo backup. A neighborhood group wants a chat server.
 
 The technical side of saying yes is easy. The hard part is that the server is no longer yours alone. Someone has to decide who gets an account, who can install software, who gets woken up when it breaks, and what happens if you move away.
 
@@ -58,7 +57,7 @@ Fill in this table for your own server. The gaps are your governance to-do list.
 Ostrom identified seven types of rules that shape any action situation. Each maps onto a real decision:
 
 - **Boundary rules:** who can join, and how? *(Invite only? Anyone in the building?)*
-- **Position rules:** what roles exist, and how many people hold each? *(At least two admins.)*
+- **Position rules:** what roles exist, and how many people hold each? *(At least two admins. See [Two Keyholders](../wiki/patterns/two-keyholders.md).)*
 - **Choice rules:** what each position may, must, or must not do. *(Admins must not read members' files without permission.)*
 - **Aggregation rules:** how decisions are made. *(Admins decide routine changes; any member can call a group decision on new services.)*
 - **Information rules:** what gets shared, and with whom. *(Planned downtime is announced in the group chat.)*
@@ -99,7 +98,7 @@ The first is a wish. The second can be followed, checked, and enforced. Not ever
 
 It's tempting to solve governance with tools: permissions, quotas, automated bans. Ostrom, James Walker, and Roy Gardner tested this in "Covenants With and Without a Sword." In their experiments, simply letting people talk to each other sharply increased cooperation, even with no enforcement at all. Sanctions worked best when the group chose them, combined with communication.
 
-For a shared server: set up a channel to talk (a group chat, a monthly check-in) **before** you set up enforcement tools.
+For a shared server: set up a channel to talk (a group chat, a monthly check-in) **before** you set up enforcement tools. See [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md).
 
 ## Quick health check
 
@@ -148,3 +147,10 @@ If the group ends, members get [N] weeks to export their data before the server 
 ```
 
 <!-- Author: add a real example from your own setup? Even a small one makes this concrete. -->
+
+## In this release
+- **Release:** [001 A Shared Server](../releases/001-a-shared-server.md)
+- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)
+- **Guide:** [Setting up your first server](../guides/first-server.md)
+- **Governance:** [Who holds root?](../governance/who-holds-root.md)
+- **Patterns:** [Two Keyholders](../wiki/patterns/two-keyholders.md), [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md)

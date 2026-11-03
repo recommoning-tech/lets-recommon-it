@@ -5,14 +5,14 @@ updated:
 threads: [practice]
 difficulty: beginner
 status: draft          # commands need a test run on a fresh install before publishing
-companion: posts/drafts/who-holds-root.md
+release: 001-a-shared-server
 ---
 
 ## What you'll build
 
 A small, secure Linux server running Debian 13 ("trixie"), reachable over SSH from your own computer. It will update itself, have a firewall, and accept only key-based logins. Later guides (Docker, Tailscale, self-hosted apps) build on this one.
 
-This guide is for one or two admins. The companion post, [Who holds root?](../posts/drafts/who-holds-root.md), covers what changes when a group shares the server.
+This guide is part of [Release 001: A Shared Server](../releases/001-a-shared-server.md). The theory post, [Who owns the machine?](../theory/who-owns-the-machine.md), explains why running your own server matters. This guide is for one or two admins. The governance piece, [Who holds root?](../governance/who-holds-root.md), covers what changes when a group shares the server.
 
 ## Prerequisites
 
@@ -157,15 +157,22 @@ Backups come in a later guide. Until then, don't put anything on this server you
 
 Right now this is your server. Before others depend on it, decide:
 
-- **Who else gets admin (sudo) access?** At least two people should, so the server survives one person being unavailable.
+- **Who else gets admin (sudo) access?** At least two people should, so the server survives one person being unavailable. See [Two Keyholders](../wiki/patterns/two-keyholders.md).
 - **Where are the keys and recovery details written down**, and who can read them?
 - **Who does the weekly checks** in the maintenance table?
 - **What happens if you move away or step back?**
 
-The companion post, [Who holds root?](../posts/drafts/who-holds-root.md), works through these questions with Elinor Ostrom's institutional analysis.
+The governance piece, [Who holds root?](../governance/who-holds-root.md), works through these questions with Elinor Ostrom's institutional analysis.
 
 ## Further reading
 
 - [Debian Administrator's Handbook](https://debian-handbook.info/) (free)
 - [Debian Wiki: UnattendedUpgrades](https://wiki.debian.org/UnattendedUpgrades)
 - `man sshd_config`, `man ufw`
+
+## In this release
+- **Release:** [001 A Shared Server](../releases/001-a-shared-server.md)
+- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)
+- **Guide:** [Setting up your first server](../guides/first-server.md)
+- **Governance:** [Who holds root?](../governance/who-holds-root.md)
+- **Patterns:** [Two Keyholders](../wiki/patterns/two-keyholders.md), [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md)
