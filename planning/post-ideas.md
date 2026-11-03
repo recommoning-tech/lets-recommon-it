@@ -23,6 +23,12 @@ Each technical guide has a companion post on how to run that piece as a communit
 
 | Running a local LLM on a community server (Ollama / llama.cpp) | Situated AI: small models, small datasets, community control | Griziotti |
 
+| Threat modeling for a household or group (after EFF's SSD) | Whose threat model? Deciding privacy rules together | EFF; Nissenbaum |
+| End-to-end encryption on your server (Matrix, Vaultwarden, encrypted backups) | Admins who *can't* read your data | Moglen; Rogaway |
+| Network-wide ad and tracker blocking (Pi-hole / AdGuard Home) | Filtering for a group: who decides what gets blocked? | Brunton & Nissenbaum |
+| Logging only what you need | Data minimization as an institutional rule | Schneier; Nissenbaum |
+| Local-only home automation (Home Assistant) | The smart home without the landlord or the cloud | Sadowski |
+
 ## Service deep dives
 - Nextcloud: files, calendars, contacts for a group
 - Matrix / Element: federated chat
@@ -56,6 +62,13 @@ AI series:
 - Everything is a hallucination: using probabilistic tools for the right jobs
 - Who owns the GPUs? AI and the return of the mainframe
 - Data cooperatives and data sovereignty: who governs a community's data?
+
+Privacy series:
+- Contextual integrity for sysadmins: privacy as appropriate flow
+- When the police ask: legal requests and community servers
+- Surveillance didn't start with the internet: reading Browne
+- Surveillance capitalism or just capitalism? Zuboff vs. Griziotti
+- Freedom in the Cloud, 15 years on: what happened to FreedomBox?
 
 ## Reviews
 One book per review; each feeds a bibliography entry.
