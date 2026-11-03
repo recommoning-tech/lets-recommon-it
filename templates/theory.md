@@ -2,12 +2,17 @@
 title: ""
 date:                  # YYYY-MM-DD, set at publish
 release: ""            # NNN-slug, matching releases/NNN-slug.md
-threads: []
+threads: []            # the release's thread first
 sources: []            # bibliography file names this post cites
+patterns: []           # wiki/patterns/slug.md introduced here
 status: draft          # draft | published
 ---
 
-<!-- Theory post: presents an idea or topic, citing other work. Sets up the guide and governance piece. -->
+<!--
+Theory & patterns: why this thread matters for community-scale IT commons.
+The essay derives the patterns. The full pattern text lives on each wiki page; here, give each pattern
+a short paragraph, its "Therefore" line, and a link. Don't duplicate the full pattern.
+-->
 
 ## The problem or question
 
@@ -16,13 +21,23 @@ status: draft          # draft | published
 
 ## The argument
 
-## What this means in practice
-<!-- Bridge to the guide (the skill) and the governance piece (running it together). -->
+## Patterns
+<!-- One subsection per pattern introduced here. -->
+
+### [Pattern Name](../wiki/patterns/slug.md)
+<!-- One paragraph: how the argument above leads to this pattern. -->
+
+> **Therefore:** <!-- copy the pattern's Therefore line -->
+
+### How the patterns fit together
+<!-- Which pattern is larger, which completes which, and links to related patterns from other releases. -->
+
+## From theory to practice
+<!-- Bridge to the guide (concrete example) and governance piece (processes). -->
 
 ## In this release
-<!-- Link the other elements of the release. Keep in sync with releases/<release>.md. -->
+<!-- Keep in sync with releases/<release>.md. -->
 - **Release:** [NNN Title](../releases/NNN-slug.md)
-- **Theory:** [Title](../theory/slug.md)
+- **Theory & patterns:** [Title](../theory/slug.md): [Pattern](../wiki/patterns/slug.md), [Pattern](../wiki/patterns/slug.md)
 - **Guide:** [Title](../guides/slug.md)
 - **Governance:** [Title](../governance/slug.md)
-- **Patterns:** [Pattern](../wiki/patterns/slug.md), [Pattern](../wiki/patterns/slug.md)
