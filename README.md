@@ -24,7 +24,7 @@ There is no website yet. This repo holds the source material.
 
 Every piece of content is tagged with one or more threads, defined in [`planning/concept-map.md`](planning/concept-map.md):
 
-`institutions` · `commons` · `liberatory-tech` · `design-patterns` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `practice`
+`institutions` · `commons` · `liberatory-tech` · `design-patterns` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy` · `practice`
 
 ## Contributing
 
