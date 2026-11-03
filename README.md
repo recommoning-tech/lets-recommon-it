@@ -1,6 +1,6 @@
 # Let's Recommon IT
 
-A blog, guide collection, and wiki about building **community-scale information and communication technology**.
+A blog, guide collection, and wiki about building community-scale information and communication technology.
 
 The project has two parts:
 
@@ -26,7 +26,7 @@ There is no website yet. This repo holds the source material.
 
 ## Releases
 
-Content is published in **releases**. Each thread has one foundational release with three parts:
+Content is published in releases. Each thread has one foundational release with three parts:
 
 1. **Theory & patterns:** why the thread matters for community-scale IT commons. The essay derives a set of patterns and shows how they relate to each other.
 2. **Guide:** implements a concrete example, applying the patterns.

@@ -13,7 +13,7 @@ Argues that AI is not neutral. Its methods of statistical optimization, classifi
 
 ## Why it's useful here
 - Makes the same argument as Griziotti's "technofascism" in a book-length, English-language form.
-- **Proposes governance forms.** People's and workers' councils are institutions that IAD can analyze and that a community could actually set up to decide whether and how to adopt AI.
+- **Proposes governance forms.** People's and workers' councils are institutions that IAD can analyze and that a community could set up to decide whether and how to adopt AI.
 - Links AI critique to care and mutual aid, connecting the `ai` and `labor-care` threads.
 
 ## Key ideas

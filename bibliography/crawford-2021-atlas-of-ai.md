@@ -14,7 +14,7 @@ Maps AI as an extractive industry. It traces the earth (lithium and rare-earth m
 ## Why it's useful here
 - Supplies the material evidence behind Griziotti's sections on hardware and ecological devastation.
 - A strong argument for small, local models: every layer of the atlas is a centralized dependency.
-- A useful structure for posts that ask "what is this tool actually made of?"
+- A useful structure for posts that ask "what is this tool made of?"
 
 ## Key ideas
 - AI as extractive infrastructure: earth, labor, data, classification, affect, state, power

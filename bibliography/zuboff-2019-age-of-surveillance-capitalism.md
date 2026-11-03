@@ -13,7 +13,7 @@ Argues that Google, then Facebook and others, invented a new economic logic: cla
 
 ## Why it's useful here
 - **The standard reference** and the source of terms the public already knows.
-- A useful contrast with Griziotti and McQuillan. Zuboff treats surveillance capitalism as a rogue mutation of an otherwise acceptable capitalism. The blog's other sources see it as capitalism continuing as usual. Worth being explicit about that disagreement.
+- A useful contrast with Griziotti and McQuillan. Zuboff treats surveillance capitalism as a rogue mutation of an otherwise acceptable capitalism. The blog's other sources see it as capitalism continuing as usual. Posts that cite both should name that disagreement.
 - Detailed history of how ad-tech business models were built.
 
 ## Key ideas

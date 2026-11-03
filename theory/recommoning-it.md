@@ -39,21 +39,21 @@ OUTLINE
 
 Most of us run our lives through systems we don't own and can't change. Our photos, messages, calendars, and documents sit on servers owned by a handful of companies. The rules are written in terms of service we never negotiated. When a company changes those rules, raises prices, or shuts a service down, we adapt or leave. Leaving usually means losing our data and our connections.
 
-This is not an accident or a temporary phase. It is how the business works.
+This is how the business works.
 
 <!-- Author: personal example here? A service you lost, or a moment you realized how dependent you were. -->
 
 ## This has happened before
 
-The word *enclosure* comes from English history. Over several centuries, land that villagers had used in common, for grazing, firewood, and food, was fenced off and turned into private property. Commoners lost not only resources but a way of life and a say in how it was run. [Silvia Federici](../bibliography/federici-2004-caliban-and-the-witch.md) and [Peter Linebaugh](../bibliography/linebaugh-2008-magna-carta-manifesto.md) both show that enclosure was not a single event. It is a process that repeats whenever something shared becomes valuable enough to take.
+The word *enclosure* comes from English history. Over several centuries, land that villagers had used in common, for grazing, firewood, and food, was fenced off and turned into private property. Commoners lost the resources, their way of life, and their say in how it was run. [Silvia Federici](../bibliography/federici-2004-caliban-and-the-witch.md) and [Peter Linebaugh](../bibliography/linebaugh-2008-magna-carta-manifesto.md) both show that enclosure recurs whenever something shared becomes valuable enough to take.
 
 The early internet and free software were built in a commons spirit. Protocols were open, code was shared, and anyone could run a server. [Giorgio Griziotti](../bibliography/griziotti-2018-neurocapitalism.md) describes how that collective intelligence was gradually captured by platforms that turned our attention, relationships, and knowledge into raw material. [Generative AI continues the pattern](../bibliography/griziotti-2026-how-to-survive-artificial-intelligence.md). It is trained on the shared record of human writing and art, then sold back to us through a few companies that control the hardware.
 
 ## Commoning is a verb
 
-Linebaugh puts it simply: there is no commons without commoning. A commons is not just a resource. It is a group of people who share something and the practices they use to look after it together.
+Linebaugh: there is no commons without commoning. A commons is a group of people who share something, plus the practices they use to look after it.
 
-That is what *recommon* means here: building the practices, skills, and institutions that let communities hold their information technology in common again. It is not just "use open source" or "self-host your apps." Those can help, but on their own they can remain individual projects. One person's homelab doesn't recommon anything.
+That is what *recommon* means here: building the practices, skills, and institutions that let communities hold their information technology in common again. Open source and self-hosting help, but on their own they stay individual projects. One person's homelab doesn't recommon anything.
 
 ## The right scale
 
@@ -71,13 +71,13 @@ Each step up adds people, and with people come questions about who decides.
 
 A community server can be run as badly as any platform. If one person holds every password, makes every decision, and does all the work, it's a small fiefdom with a friendly ruler. When that person burns out or moves away, the whole thing collapses.
 
-Elinor Ostrom spent her career studying how communities govern shared resources. She showed that people can and do manage commons well, but only with the right institutions: rules about who belongs, who can do what, how decisions are made, and how disputes are settled. Her [Institutional Analysis and Development framework](../bibliography/ostrom-2005-understanding-institutional-diversity.md) gives us a way to look at any shared system and ask: who participates, what positions exist, and what rules apply at each level?
+Elinor Ostrom showed that communities manage shared resources well when they have the right institutions: rules about who belongs, who can do what, how decisions are made, and how disputes are settled. Her [Institutional Analysis and Development framework](../bibliography/ostrom-2005-understanding-institutional-diversity.md) asks of any shared system: who participates, what positions exist, and what rules apply at each level?
 
 So every technical question on this site comes with a governance question.
 
 ## A pattern language for community tech
 
-Christopher Alexander's [*A Pattern Language*](../bibliography/alexander-1977-pattern-language.md) collected 253 patterns for building towns and houses. Each named a recurring problem and a solution, and each linked to larger patterns it helped complete and smaller ones that completed it. He wrote it so that the people who would live in a place could design it themselves, without depending on experts. The idea later shaped software design and the first wiki.
+Christopher Alexander's [*A Pattern Language*](../bibliography/alexander-1977-pattern-language.md) collected 253 patterns for building towns and houses. Each named a recurring problem and a solution, and each linked to larger patterns it helped complete and smaller ones that completed it. He wrote it so the people who would live in a place could design it themselves. The idea later shaped software design and the first wiki.
 
 His earlier [*Notes on the Synthesis of Form*](../bibliography/alexander-1964-notes-on-the-synthesis-of-form.md) explains where patterns come from. Good design is about *fit* between a form and its context, and you find fit by paying attention to what goes wrong in real use. [*The Timeless Way of Building*](../bibliography/alexander-1979-timeless-way-of-building.md) adds that good places grow piecemeal, one repair at a time, not from a master plan.
 
@@ -101,11 +101,11 @@ Patterns that come only from reading and argument drift toward abstraction. Alex
 > **Therefore:** every pattern is introduced in a theory essay and applied by name in at least one guide or governance piece. When a pattern doesn't fit what happens in practice, revise the pattern and note why.
 
 ### How the patterns fit together
-**Theory, Practice, Governance** is the larger pattern: it sets the shape of each release. **Every Page Links Out** holds the three parts together. **Patterns Are Tested in Practice** keeps the pattern language honest by tying each pattern to real use. Below these, each thread's release introduces its own patterns. Release 001, for example, introduces [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md) and [Two Keyholders](../wiki/patterns/two-keyholders.md).
+Theory, Practice, Governance is the larger pattern: it sets the shape of each release. Every Page Links Out holds the three parts together. Patterns Are Tested in Practice keeps the pattern language honest by tying each pattern to real use. Below these, each thread's release introduces its own patterns. Release 001, for example, introduces [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md) and [Two Keyholders](../wiki/patterns/two-keyholders.md).
 
 ## How this site works
 
-The site is organized as **releases**, one for each of its main threads: liberatory technology, institutions, privacy, AI, commons and enclosure, Big Tech, open source, and labor and care. Each release has:
+The site is organized as releases, one for each of its main threads: liberatory technology, institutions, privacy, AI, commons and enclosure, Big Tech, open source, and labor and care. Each release has:
 
 1. **Theory & patterns:** why the thread matters for community-scale IT, and the patterns that follow
 2. **Guide:** step-by-step instructions for a concrete example: servers, Docker stacks, private networks, self-hosted services

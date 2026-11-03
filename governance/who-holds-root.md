@@ -33,11 +33,11 @@ You followed the [first server guide](../guides/first-server.md). You have a sma
 
 The technical side of saying yes is easy. The hard part is that the server is no longer yours alone. Someone has to decide who gets an account, who can install software, who gets woken up when it breaks, and what happens if you move away.
 
-Most self-hosting guides skip this. Most community servers fail because of it.
+Most self-hosting guides skip this part, and it's where shared servers usually fail.
 
 ## A tool for thinking about rules
 
-Elinor Ostrom spent decades studying how groups govern shared resources: fisheries, irrigation systems, forests. To compare very different cases, she and her colleagues built the **Institutional Analysis and Development (IAD) framework**. Its central idea is the **action situation**: any setting where people with different roles interact under rules and produce outcomes.
+Elinor Ostrom spent decades studying how groups govern shared resources: fisheries, irrigation systems, forests. To compare very different cases, she and her colleagues built the Institutional Analysis and Development (IAD) framework. Its central idea is the *action situation*: any setting where people with different roles interact under rules and produce outcomes.
 
 A shared server is an action situation. Breaking it into parts shows what you need to decide.
 
@@ -79,7 +79,7 @@ IAD separates rules by level:
 
 The common failure is having only operational rules, and having them live in one person's head. When the group disagrees, there's no agreed way to decide, so the admin decides. The admin becomes the ruler, whether they wanted that or not.
 
-## Writing rules that actually work
+## Writing rules that work
 
 Sue Crawford and Elinor Ostrom proposed a "grammar of institutions" for writing rules clearly. A complete rule has five parts, **ADICO**:
 
@@ -93,15 +93,15 @@ Compare:
 
 > ~~"Admins should try to give notice before downtime."~~
 
-> **Admins** (A) **must** (D) **announce planned downtime in the group chat** (I) **at least 48 hours in advance** (C), **or else the downtime is postponed** (O).
+> Admins (A) must (D) announce planned downtime in the group chat (I) at least 48 hours in advance (C), or else the downtime is postponed (O).
 
-The first is a wish. The second can be followed, checked, and enforced. Not every rule needs a sanction. Statements without an "or else" are *norms*, and many good community norms work fine that way. But you should know which is which.
+The first is a wish; the second can be checked and enforced. Not every rule needs a sanction. Statements without an "or else" are *norms*, and many community norms work fine that way. Just know which is which.
 
 ## Talk before you enforce
 
-It's tempting to solve governance with tools: permissions, quotas, automated bans. Ostrom, James Walker, and Roy Gardner tested this in "Covenants With and Without a Sword." In their experiments, simply letting people talk to each other sharply increased cooperation, even with no enforcement at all. Sanctions worked best when the group chose them, combined with communication.
+It's tempting to solve governance with tools: permissions, quotas, automated bans. Ostrom, James Walker, and Roy Gardner tested this in "Covenants With and Without a Sword." In their experiments, letting people talk to each other sharply increased cooperation, even with no enforcement at all. Sanctions worked best when the group chose them, combined with communication.
 
-For a shared server: set up a channel to talk (a group chat, a monthly check-in) **before** you set up enforcement tools. See [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md).
+For a shared server: set up a channel to talk (a group chat, a monthly check-in) before you set up enforcement tools. See [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md).
 
 ## Quick health check
 

@@ -59,7 +59,7 @@ Key bridges:
 - **Nissenbaum → institutions:** contextual integrity's norms about information flows are IAD information rules, and can be written as ADICO statements.
 - **Winner → everything technical:** architecture choices are governance choices.
 
-## Tensions worth writing about
+## Tensions to write about
 - **Open source ≠ commons.** Many FOSS projects have one maintainer or a corporate owner (Eghbal). A license is not governance.
 - **Self-hosting can be individualist.** A homelab for one person doesn't recommon anything. The blog's line is personal → household → community.
 - **Convenience vs. conviviality.** Tailscale is easy but relies on a company's coordination server. Is Headscale worth the complexity?
