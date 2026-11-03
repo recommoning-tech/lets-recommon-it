@@ -11,9 +11,10 @@
 
 ## Phase 2: Content foundation
 - [ ] Review and rewrite seed bibliography annotations in your own voice (`status: draft` → `final`)
-- [ ] Choose licenses (content: CC BY-SA 4.0? code: MIT or AGPL-3.0?)
-- [ ] Draft launch essay: "What does it mean to recommon IT?"
-- [ ] Draft first guide + companion pair (server setup + "Who holds root?")
+- [x] Choose licenses: CC BY-SA 4.0 (content), MIT (code)
+- [x] Draft launch essay: "What does it mean to recommon IT?" (rough draft; needs rewrite in author's voice)
+- [x] Draft first guide + companion pair (server setup + "Who holds root?") (rough drafts)
+- [ ] Test-run the server guide on a fresh Debian 13 install
 - [ ] Write first 3 wiki patterns
 - [ ] Add 5 entries from `reading-list.md`
 

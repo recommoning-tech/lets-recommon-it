@@ -6,7 +6,7 @@ Status: `idea` → `outlined` → `drafting` → `published`
 
 | Title (working) | Type | Threads | Status |
 |---|---|---|---|
-| What does it mean to *recommon* IT? | essay | commons, liberatory-tech | idea |
+| What does it mean to *recommon* IT? | essay | commons, liberatory-tech | drafting |
 | Personal → household → community: the scale this blog is about | essay | liberatory-tech, practice | idea |
 
 ## Paired series: guide + governance companion
