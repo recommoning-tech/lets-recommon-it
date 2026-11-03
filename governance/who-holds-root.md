@@ -14,34 +14,13 @@ patterns_applied:
 status: draft          # rough draft for the author to rewrite in their own voice
 ---
 
-<!--
-OUTLINE
-1. Problem: the server works, and now other people want to use it
-2. IAD in one paragraph: the action situation
-3. Walk through the parts for a shared server
-4. Rule types: what has to be decided
-5. Three levels of rules: operational, collective-choice, constitutional
-6. Writing rules that work: ADICO
-7. Talk before you enforce (Covenants)
-8. Quick health check: Ostrom's design principles
-9. Template: a one-page server charter
--->
-
 ## The server works. Now what?
 
-You followed the [first server guide](../guides/first-server.md). You have a small Debian machine with SSH keys, a firewall, and automatic updates. Then a housemate wants a shared calendar on it. A friend asks about photo backup. A neighborhood group wants a chat server.
+You followed the [first server guide](../guides/first-server.md). Then a housemate wants a shared calendar on it, a friend asks about photo backup, and a neighborhood group wants a chat server. Saying yes is technically easy. The hard part is that someone now has to decide who gets an account, who can install software, who gets woken up when it breaks, and what happens if you move away. Most self-hosting guides skip this part, and it's where shared servers usually fail.
 
-The technical side of saying yes is easy. The hard part is that the server is no longer yours alone. Someone has to decide who gets an account, who can install software, who gets woken up when it breaks, and what happens if you move away.
+## The server as an action situation
 
-Most self-hosting guides skip this part, and it's where shared servers usually fail.
-
-## A tool for thinking about rules
-
-Elinor Ostrom spent decades studying how groups govern shared resources: fisheries, irrigation systems, forests. To compare very different cases, she and her colleagues built the Institutional Analysis and Development (IAD) framework. Its central idea is the *action situation*: any setting where people with different roles interact under rules and produce outcomes.
-
-A shared server is an action situation. Breaking it into parts shows what you need to decide.
-
-## The parts of a shared server
+Elinor Ostrom's Institutional Analysis and Development (IAD) framework, built to compare fisheries, irrigation systems, and forests, centers on the *action situation*: a setting where people in different roles interact under rules and produce outcomes. A shared server is one. Fill in this table for yours; the gaps are your governance to-do list.
 
 | IAD part | Question | Example for a household or small group |
 |---|---|---|
@@ -53,11 +32,9 @@ A shared server is an action situation. Breaking it into parts shows what you ne
 | **Outcomes** | What results? | Uptime, data safety, privacy, who does the work |
 | **Costs & benefits** | Who pays, who gains? | Who buys the hardware and pays for electricity; who spends Saturday fixing it |
 
-Fill in this table for your own server. The gaps are your governance to-do list.
-
 ## Seven kinds of rules
 
-Ostrom identified seven types of rules that shape any action situation. Each maps onto a real decision:
+Ostrom's seven rule types each map onto a real decision. Anything you don't decide gets decided by default, usually by whoever holds root.
 
 - **Boundary rules:** who can join, and how? *(Invite only? Anyone in the building?)*
 - **Position rules:** what roles exist, and how many people hold each? *(At least two admins. See [Two Keyholders](../wiki/patterns/two-keyholders.md).)*
@@ -67,45 +44,27 @@ Ostrom identified seven types of rules that shape any action situation. Each map
 - **Payoff rules:** who pays and who benefits. *(Members chip in for the hard drive.)*
 - **Scope rules:** what the server is for. *(Household services only; no public websites.)*
 
-You don't need all of these written down on day one. Know that each one exists, because if you don't decide it, someone will decide it by default, usually whoever holds root.
-
 ## Three levels of rules
 
-IAD separates rules by level:
+1. **Operational:** day-to-day use. How to request an account, when updates happen, how much storage each person gets.
+2. **Collective-choice:** how operational rules are made and changed. Who can propose a new service, how the group decides.
+3. **Constitutional:** who takes part in collective choice, and how the arrangement can change or end. Who counts as a member, what happens to the data if the group dissolves.
 
-1. **Operational rules** govern day-to-day use: how to request an account, when updates happen, how much storage each person gets.
-2. **Collective-choice rules** govern how operational rules are made and changed: who can propose a new service, how the group decides.
-3. **Constitutional rules** govern who takes part in collective choice and how the whole arrangement can be changed or ended: who counts as a member, what happens to the data if the group dissolves.
-
-The common failure is having only operational rules, and having them live in one person's head. When the group disagrees, there's no agreed way to decide, so the admin decides. The admin becomes the ruler, whether they wanted that or not.
+The common failure is having only operational rules, kept in one person's head. When the group disagrees there's no agreed way to decide, so the admin decides, and becomes the ruler whether they wanted to or not.
 
 ## Writing rules that work
 
-Sue Crawford and Elinor Ostrom proposed a "grammar of institutions" for writing rules clearly. A complete rule has five parts, **ADICO**:
-
-- **A**ttributes: who it applies to
-- **D**eontic: must, may, or must not
-- a**I**m: the action
-- **C**onditions: when or where
-- **O**r else: the consequence
-
-Compare:
+Sue Crawford and Elinor Ostrom's "grammar of institutions" gives a complete rule five parts, ADICO: **A**ttributes (who), **D**eontic (must, may, must not), a**I**m (the action), **C**onditions (when or where), and **O**r else (the consequence). Compare:
 
 > ~~"Admins should try to give notice before downtime."~~
 
 > Admins (A) must (D) announce planned downtime in the group chat (I) at least 48 hours in advance (C), or else the downtime is postponed (O).
 
-The first is a wish; the second can be checked and enforced. Not every rule needs a sanction. Statements without an "or else" are *norms*, and many community norms work fine that way. Just know which is which.
-
-## Talk before you enforce
-
-It's tempting to solve governance with tools: permissions, quotas, automated bans. Ostrom, James Walker, and Roy Gardner tested this in "Covenants With and Without a Sword." In their experiments, letting people talk to each other sharply increased cooperation, even with no enforcement at all. Sanctions worked best when the group chose them, combined with communication.
-
-For a shared server: set up a channel to talk (a group chat, a monthly check-in) before you set up enforcement tools. See [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md).
+The first is a wish; the second can be checked and enforced. Statements without an "or else" are *norms*, and many community norms work fine that way. Just know which is which.
 
 ## Quick health check
 
-Ostrom's design principles from *Governing the Commons* make a good five-minute check. Can you answer yes?
+Ostrom's design principles from *Governing the Commons*, as a five-minute check:
 
 - [ ] It's clear who is a member.
 - [ ] The rules fit this group, not copied from a corporation.
@@ -117,7 +76,7 @@ Ostrom's design principles from *Governing the Commons* make a good five-minute 
 
 ## Patterns applied
 - [Two Keyholders](../wiki/patterns/two-keyholders.md): a position rule. The charter below requires at least two admins.
-- [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md): an aggregation and information rule. Set up the group channel first, and let the group choose any sanctions.
+- [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md): an aggregation and information rule. In Ostrom, Walker, and Gardner's "Covenants With and Without a Sword" experiments, letting people talk sharply increased cooperation even without enforcement, and sanctions worked best when the group chose them. Set up a group channel or regular check-in before any enforcement tools.
 
 ## A one-page server charter
 
