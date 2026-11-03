@@ -18,7 +18,7 @@ A group sharing a system has started to have problems: someone uses too much sto
 The admin's instinct is to reach for technical enforcement: quotas, permissions, bans. These are quick, but they put the admin in charge of discipline and skip the group's own judgment. Members experience the rules as imposed from above.
 
 ## Discussion
-Ostrom, Walker, and Gardner showed in experiments that simply letting people talk to each other sharply increases cooperation, even with no enforcement at all. Sanctions worked best when combined with communication and chosen by the group itself ([*Covenants With and Without a Sword*](../../bibliography/ostrom-walker-gardner-1992-covenants-with-and-without-a-sword.md)). *Governing the Commons* lists graduated sanctions and low-cost conflict resolution among the design principles of lasting institutions ([*Governing the Commons*](../../bibliography/ostrom-1990-governing-the-commons.md)).
+Ostrom, Walker, and Gardner showed in experiments that letting people talk to each other sharply increases cooperation, even with no enforcement at all. Sanctions worked best when combined with communication and chosen by the group itself ([*Covenants With and Without a Sword*](../../bibliography/ostrom-walker-gardner-1992-covenants-with-and-without-a-sword.md)). *Governing the Commons* lists graduated sanctions and low-cost conflict resolution among the design principles of lasting institutions ([*Governing the Commons*](../../bibliography/ostrom-1990-governing-the-commons.md)).
 
 Technical enforcement still has a place. But it works better as the group's decision, carried out by an admin, than as the admin's decision imposed on the group.
 

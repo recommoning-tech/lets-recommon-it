@@ -21,7 +21,7 @@ When one person holds all the admin access, the system depends on that person. I
 ## Discussion
 Most community tech starts with one enthusiastic person who sets it up. That's fine at the start, but it creates a bus factor of one. Ostrom's work on long-lasting commons shows that rules about positions (who holds which role, and how many people hold it) are part of what makes an institution survive ([*Understanding Institutional Diversity*](../../bibliography/ostrom-2005-understanding-institutional-diversity.md)). Nadia Eghbal's study of open source maintainers ([*Working in Public*](../../bibliography/eghbal-2020-working-in-public.md)) shows the cost of the single-maintainer model. Federici's point about invisible care work ([*Re-enchanting the World*](../../bibliography/federici-2019-re-enchanting-the-world.md)) applies too: the lone admin's work is rarely seen until it stops.
 
-Two keyholders is the minimum, not the ideal. The second keyholder needs to actually use their access now and then, or they won't be able to step in when needed.
+Two keyholders is the minimum, not the ideal. The second keyholder needs to use their access now and then, or they won't be able to step in when needed.
 
 ## Therefore
 **Every shared system has at least two people with full admin access, and both of them use it regularly.** Write down where credentials and recovery information live, and make sure both keyholders can reach them without the other's help.

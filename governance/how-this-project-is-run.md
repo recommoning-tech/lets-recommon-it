@@ -22,9 +22,9 @@ status: draft          # proposal; members adopt the charter below at the first 
 
 ## The situation
 
-Let's Recommon IT is meant to be run collectively from the start. It is a commons of writing, patterns, and code, and it should be governed the way this site says commons should be governed. If the project can't follow its own advice, readers have no reason to.
+Let's Recommon IT is meant to be run collectively from the start. It is a commons of writing, patterns, and code, so it should follow its own advice on governing commons. If it can't, readers have no reason to.
 
-Right now one founding member wrote most of the content and holds every account. That's normal for a new project, and it's exactly the situation [Two Keyholders](../wiki/patterns/two-keyholders.md) warns about. This document sets up shared decision-making now, while the group is small and changes are cheap.
+Right now one founding member wrote most of the content and holds every account. That's normal for a new project, and it's the situation [Two Keyholders](../wiki/patterns/two-keyholders.md) warns about. This document sets up shared decision-making now, while the group is small and changes are cheap.
 
 ## Analysis
 
@@ -49,7 +49,7 @@ Using Ostrom's IAD framework ([*Understanding Institutional Diversity*](../bibli
 - **Drafts:** anything with `status: draft` may be merged to `main`. Changing it to `published` requires review by a member other than the author.
 
 ### Collective-choice rules: changing how the work is done
-- **Lazy consensus.** Changes to templates, threads, the release plan, or this document's operational rules are proposed in [issues / discussions]. A proposal passes if no member objects within [7] days.
+- **Lazy consensus:** changes to templates, threads, the release plan, or this document's operational rules are proposed in [issues / discussions]. A proposal passes if no member objects within [7] days.
 - **Objections** go to the next members' meeting, where the group looks for a version everyone can accept. If that fails, [two-thirds] of members decide.
 - **Meetings:** members meet [monthly] by [video / in person]. Notes go in the decision log.
 
@@ -60,7 +60,7 @@ Using Ostrom's IAD framework ([*Understanding Institutional Diversity*](../bibli
 - **Dissolution:** if the project ends, the repository is archived publicly, or handed to another commons-oriented group that agrees to keep the licenses. Domains and accounts are transferred or closed by the keyholders.
 
 ### Keyholders
-Every account the project depends on has at least two keyholders, who both actually use their access:
+Every account the project depends on has at least two keyholders, who both use their access:
 
 | Account | Keyholders | Status |
 |---|---|---|
@@ -78,14 +78,14 @@ This project uses AI tools in drafting, and its own sources are critical of AI (
 
 ## Risks and trade-offs
 
-- **Founder dominance.** "Collective from the start" can be collective in name only if one person wrote everything and holds every account. Counter it with real keyholders, real review, and the first meeting's review of founder-merged PRs.
-- **Consensus paralysis.** Lazy consensus with a deadline, and a fallback vote, keep decisions moving.
-- **Volunteer burnout.** Writing is visible; maintenance (fixing links, reviewing, renewing the domain) usually isn't ([Eghbal](../bibliography/eghbal-2020-working-in-public.md); [Federici](../bibliography/federici-2019-re-enchanting-the-world.md)). Name the maintenance tasks and rotate them.
-- **Forks.** CC BY-SA and MIT mean anyone can copy the project and go their own way. That's a feature: exit is always possible, which keeps the group honest.
-- **Too much process for a small group.** Start with the operational rules and the keyholders table. Add the rest as the group grows.
+- **Founder dominance:** "collective from the start" is collective in name only if one person wrote everything and holds every account. Counter it with a second keyholder who is a different person, review by other members, and the first meeting's review of founder-merged PRs.
+- **Consensus paralysis:** lazy consensus with a deadline, and a fallback vote, keep decisions moving.
+- **Volunteer burnout:** writing is visible; maintenance (fixing links, reviewing, renewing the domain) usually isn't ([Eghbal](../bibliography/eghbal-2020-working-in-public.md); [Federici](../bibliography/federici-2019-re-enchanting-the-world.md)). Name the maintenance tasks and rotate them.
+- **Forks:** CC BY-SA and MIT mean anyone can copy the project and go their own way. That's a feature: exit is always possible, which keeps the group honest.
+- **Too much process for a small group:** start with the operational rules and the keyholders table. Add the rest as the group grows.
 
 ## Patterns applied
-- [Two Keyholders](../wiki/patterns/two-keyholders.md): the keyholders table, plus the action to move GitHub to an organization.
+- [Two Keyholders](../wiki/patterns/two-keyholders.md): the keyholders table, and the open action to add a second person as a GitHub owner.
 - [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md): objections go to a meeting before any vote; the only automatic consequence is reverting an unreviewed merge.
 - [Theory, Practice, Governance](../wiki/patterns/theory-practice-governance.md): the review rules cover all three parts of a release equally.
 - [Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md): this project is the first test of its own patterns. Problems found here should change the patterns.
