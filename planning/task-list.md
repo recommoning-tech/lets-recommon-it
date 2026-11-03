@@ -11,7 +11,7 @@
 
 ## Phase 2: Content foundation
 - [ ] Review and rewrite seed bibliography annotations in your own voice (`status: draft` → `final`)
-- [ ] Choose licenses (content: CC BY-SA 4.0? code: MIT or AGPL-3.0?)
+- [x] Choose licenses: CC BY-SA 4.0 (content), MIT (code)
 - [ ] Draft launch essay: "What does it mean to recommon IT?"
 - [ ] Draft first guide + companion pair (server setup + "Who holds root?")
 - [ ] Write first 3 wiki patterns

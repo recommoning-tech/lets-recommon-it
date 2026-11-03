@@ -32,5 +32,5 @@ Start from the matching file in `templates/`. File names use lowercase kebab-cas
 
 ## License
 
-- Written content: see [`LICENSE-CONTENT`](LICENSE-CONTENT) (placeholder)
-- Code and config: see [`LICENSE-CODE`](LICENSE-CODE) (placeholder)
+- **Written content** (posts, guides, wiki, bibliography annotations): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). See [`LICENSE-CONTENT`](LICENSE-CONTENT).
+- **Code and config** (scripts, config files, Docker Compose examples, code snippets in guides, site source): [MIT](https://opensource.org/license/mit). See [`LICENSE-CODE`](LICENSE-CODE).
