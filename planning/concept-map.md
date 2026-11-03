@@ -16,6 +16,7 @@ How do we build and run information technology at **community scale**, so it is 
 | `big-tech-critique` | Big Tech critique | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
 | `labor-care` | Labor, care & bureaucracy | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |
 | `open-source` | Free & open source | Licenses and development models make shared code possible but not sufficient | Stallman; Raymond; Eghbal; Benkler |
+| `ai` | Artificial intelligence | AI is a relational, hardware-centered megamachine of extraction and control; alternatives are small, local, federated, and situated | Griziotti; (to add: Pasquinelli; Bender et al.) |
 | `practice` | Practice | Technical how-to: servers, containers, networks, services | Guides; real projects (NYC Mesh, Guifi.net, etc.) |
 
 ## Connections between threads
@@ -38,6 +39,9 @@ How do we build and run information technology at **community scale**, so it is 
                 │                    │               │  (Winner)
                 └──────── big-tech-critique ─────────┘
                            (Doctorow, Marx)
+                                 │
+                                 ai
+                            (Griziotti)
 ```
 
 Key bridges:
@@ -49,10 +53,14 @@ Key bridges:
 - **Federici → maintenance:** who does the upkeep? Every guide has a "Maintenance" and "Community considerations" section.
 - **Doctorow → open-source/practice:** interoperability and open protocols are what make leaving platforms possible.
 - **Bookchin/Illich → architecture:** choose tools small and legible enough for members to understand and control.
+- **Griziotti → practice:** the alternatives he names (federated platforms, data co-ops, mesh networks, small local models) are things this blog's guides can build.
+- **Griziotti → institutions:** his open question, "how can these practices scale without reproducing centralization?", is what polycentric governance (Ostrom) addresses.
 - **Winner → everything technical:** architecture choices are governance choices.
 
 ## Tensions worth writing about
 - **Open source ≠ commons.** Many FOSS projects have one maintainer or a corporate owner (Eghbal). A license is not governance.
 - **Self-hosting can be individualist.** A homelab for one person doesn't recommon anything. The blog's line is personal → household → community.
 - **Convenience vs. conviviality.** Tailscale is easy but relies on a company's coordination server. Is Headscale worth the complexity?
+- **Using AI to critique AI.** This project, like Griziotti's essay, is written with AI help. Where is the line between help and interference, and how do we keep critical direction?
+- **Local models vs. scale.** Small community models avoid data-center extraction but are weaker. When is "good enough" good enough?
 - **Volunteer burnout.** Commons need maintainers. How do you avoid recreating unpaid care work?

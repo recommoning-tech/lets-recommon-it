@@ -21,6 +21,8 @@ Each technical guide has a companion post on how to run that piece as a communit
 | Single sign-on for a community (Authentik / Keycloak) | Membership and boundaries: who gets an account, and who decides? | Ostrom (boundary & position rules) |
 | Monitoring and uptime | Graduated responses: what to do when things (or people) break | Ostrom, Walker & Gardner; *Governing the Commons* (principles 4–6) |
 
+| Running a local LLM on a community server (Ollama / llama.cpp) | Situated AI: small models, small datasets, community control | Griziotti |
+
 ## Service deep dives
 - Nextcloud: files, calendars, contacts for a group
 - Matrix / Element: federated chat
@@ -47,6 +49,13 @@ Other:
 - Convivial tools vs. one-click platforms (Illich, Franklin)
 - Enclosure, then and now: from the Charter of the Forest to the cloud (Linebaugh, Federici)
 - Solutionism at the city scale (Paris Marx)
+
+AI series:
+- How to survive AI at community scale: a reading of Griziotti
+- Comfort is the opposite of democracy: chatbots as infrastructure of the intimate
+- Everything is a hallucination: using probabilistic tools for the right jobs
+- Who owns the GPUs? AI and the return of the mainframe
+- Data cooperatives and data sovereignty: who governs a community's data?
 
 ## Reviews
 One book per review; each feeds a bibliography entry.
