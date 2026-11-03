@@ -24,7 +24,6 @@ Sources to add to `bibliography/`. Move items out of this list when an entry is 
 - Graeber, David. 2011. *Debt: The First 5,000 Years*. Melville House.
 
 ## AI
-- Pasquinelli, Matteo. 2023. *The Eye of the Master: A Social History of Artificial Intelligence*. Verso.
 - Bender, Emily M., Timnit Gebru, et al. 2021. "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?" FAccT '21.
 - Barad, Karen. 2007. *Meeting the Universe Halfway*. Duke University Press.
 - Local, in `~/data-commons/reference/`: Asma Mhalla interview (EN/FR); Caronia, "Tecnologie: dalla protesi al mondo" (+ EN summary); Griziotti, "Neurocapitalismo: il dio arcaico ed il leviatano tecnologico" (+ EN)

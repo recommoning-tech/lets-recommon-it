@@ -16,7 +16,7 @@ How do we build and run information technology at **community scale**, so it is 
 | `big-tech-critique` | Big Tech critique | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
 | `labor-care` | Labor, care & bureaucracy | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |
 | `open-source` | Free & open source | Licenses and development models make shared code possible but not sufficient | Stallman; Raymond; Eghbal; Benkler |
-| `ai` | Artificial intelligence | AI is a relational, hardware-centered megamachine of extraction and control; alternatives are small, local, federated, and situated | Griziotti; (to add: Pasquinelli; Bender et al.) |
+| `ai` | Artificial intelligence | AI is a relational, hardware-centered megamachine of extraction and control; alternatives are small, local, federated, and situated | Griziotti; Pasquinelli; McQuillan; Crawford; Bender & Hanna; Eubanks; Viljoen; Frischmann, Madison & Strandburg |
 | `practice` | Practice | Technical how-to: servers, containers, networks, services | Guides; real projects (NYC Mesh, Guifi.net, etc.) |
 
 ## Connections between threads
