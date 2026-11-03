@@ -2,7 +2,7 @@
 title: "Setting up your first server"
 date:                  # YYYY-MM-DD, set at publish
 updated:
-threads: [practice]
+threads: [liberatory-tech]
 difficulty: beginner
 status: draft          # commands need a test run on a fresh install before publishing
 release: 001-a-shared-server

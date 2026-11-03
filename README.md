@@ -39,7 +39,7 @@ Every element links to the others. The manifest in `releases/NNN-slug.md` lists 
 
 Every piece of content is tagged with one or more threads, defined in [`planning/concept-map.md`](planning/concept-map.md):
 
-`institutions` · `commons` · `liberatory-tech` · `design-patterns` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy` · `practice`
+`institutions` · `commons` · `liberatory-tech` · `design-patterns` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy`
 
 ## Contributing
 

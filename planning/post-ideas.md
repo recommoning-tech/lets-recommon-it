@@ -20,7 +20,7 @@ The paired guide/governance tables below are candidates for future releases.
 | Title (working) | Type | Threads | Status |
 |---|---|---|---|
 | What does it mean to *recommon* IT? | essay | commons, liberatory-tech | drafting |
-| Personal → household → community: the scale this blog is about | essay | liberatory-tech, practice | idea |
+| Personal → household → community: the scale this blog is about | essay | liberatory-tech | idea |
 
 ## Paired series: guide + governance companion
 Each technical guide has a companion post on how to run that piece as a community.

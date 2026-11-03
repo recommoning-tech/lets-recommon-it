@@ -2,7 +2,7 @@
 title: ""
 date:                  # YYYY-MM-DD
 updated:
-threads: [practice]
+threads: []            # the release's thread
 difficulty: beginner   # beginner | intermediate | advanced
 status: draft          # draft | published
 release: ""            # NNN-slug, matching releases/NNN-slug.md

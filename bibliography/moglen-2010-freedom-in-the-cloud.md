@@ -5,7 +5,7 @@ year: 2010
 publisher: "Talk at the Internet Society New York chapter (ISOC-NY), February 2010. Transcript: Software Freedom Law Center."
 type: talk
 url: "https://freedomboxfoundation.org/appearances/"
-threads: [privacy, open-source, practice]
+threads: [privacy, open-source, liberatory-tech]
 status: draft          # verify date: sources give Feb 2 or Feb 5, 2010
 ---
 

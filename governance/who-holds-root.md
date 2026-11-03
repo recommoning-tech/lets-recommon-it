@@ -1,7 +1,7 @@
 ---
 title: "Who holds root? An IAD analysis of a shared server"
 date:                  # YYYY-MM-DD, set at publish
-threads: [institutions, practice]
+threads: [institutions]
 sources:
   - ostrom-2005-understanding-institutional-diversity.md
   - crawford-ostrom-1995-grammar-of-institutions.md
