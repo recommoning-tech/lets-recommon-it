@@ -19,7 +19,8 @@
 - [x] Draft Release 001: A Shared Server (theory, guide, governance, 3 patterns)
 - [x] Write first 3 wiki patterns
 - [x] Release 000 (design-patterns, meta): revise launch essay as theory & patterns; contributing guide; project governance (drafts)
-- [ ] Convert `recommon-it` GitHub user account to an organization with 2+ owners
+- [x] Create GitHub organization `recommoning-tech` and transfer the repo
+- [ ] Add a second *person* as an owner of `recommoning-tech` (currently `recommon-it` + `jordaninskeep`, both the founding member)
 - [ ] First members' meeting: adopt charter, fill governance placeholders
 - [ ] Add 5 entries from `reading-list.md`
 
