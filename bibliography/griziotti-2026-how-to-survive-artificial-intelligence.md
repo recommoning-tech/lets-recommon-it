@@ -32,6 +32,7 @@ Rejects the three dominant AI narratives (doom, salvation, transhumanist enhance
 - **Molecular strategy:** accumulate partial victories and points of friction rather than storming a "Winter Palace"
 
 ## Related
+- griziotti-2018-neurocapitalism.md
 - doctorow-2025-enshittification.md
 - ostrom-2010-beyond-markets-and-states.md (polycentricity as an answer to "scale without centralization")
 - bookchin-1971-post-scarcity-anarchism.md
