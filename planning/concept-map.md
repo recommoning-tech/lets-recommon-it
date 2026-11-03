@@ -1,0 +1,52 @@
+# Concept Map
+
+How the blog's main ideas connect. Each thread below is a tag used in front matter across the repo.
+
+## The central question
+How do we build and run information technology at **community scale**, so it is owned, understood, and governed by the people who use it?
+
+## Threads
+
+| Tag | Thread | Core claim | Key sources |
+|---|---|---|---|
+| `commons` | Commons governance | Communities can govern shared resources well with rules they make themselves | Ostrom; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
+| `liberatory-tech` | Liberatory / convivial technology | Technology liberates only when its scale and control are local and democratic | Bookchin; Illich; Franklin; Winner |
+| `design-patterns` | Design & patterns | Good systems grow piecemeal from shared patterns that users can apply themselves | Alexander; Bollier & Helfrich |
+| `big-tech-critique` | Big Tech critique | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
+| `labor-care` | Labor, care & bureaucracy | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |
+| `open-source` | Free & open source | Licenses and development models make shared code possible but not sufficient | Stallman; Raymond; Eghbal; Benkler |
+| `practice` | Practice | Technical how-to: servers, containers, networks, services | Guides; real projects (NYC Mesh, Guifi.net, etc.) |
+
+## Connections between threads
+
+```
+                 commons  ───────────────  design-patterns
+                (Ostrom)   Bollier &        (Alexander)
+                   │       Helfrich             │
+     Federici,     │                            │  piecemeal growth,
+     Linebaugh     │                            │  user-led design
+                   │                            │
+              labor-care ─────── practice ──── liberatory-tech
+             (Federici,         (guides)       (Bookchin, Illich,
+              Graeber)             │             Franklin)
+                   │               │                │
+     maintenance   │         open-source            │  architecture
+     burden        │     (Stallman, Raymond)        │  = politics
+                   │               │                │  (Winner)
+                   └──── big-tech-critique ─────────┘
+                        (Doctorow, Marx)
+```
+
+Key bridges:
+- **Ostrom → practice:** the eight design principles become a governance checklist for a shared server.
+- **Alexander → wiki:** the "Pattern Language for Community Tech" uses his format. (His work also influenced software design patterns and the first wiki.)
+- **Federici → maintenance:** who does the upkeep? Every guide has a "Maintenance" and "Community considerations" section.
+- **Doctorow → open-source/practice:** interoperability and open protocols are what make leaving platforms possible.
+- **Bookchin/Illich → architecture:** choose tools small and legible enough for members to understand and control.
+- **Winner → everything technical:** architecture choices are governance choices.
+
+## Tensions worth writing about
+- **Open source ≠ commons.** Many FOSS projects have one maintainer or a corporate owner (Eghbal). A license is not governance.
+- **Self-hosting can be individualist.** A homelab for one person doesn't recommon anything. The blog's line is personal → household → community.
+- **Convenience vs. conviviality.** Tailscale is easy but relies on a company's coordination server. Is Headscale worth the complexity?
+- **Volunteer burnout.** Commons need maintainers. How do you avoid recreating unpaid care work?

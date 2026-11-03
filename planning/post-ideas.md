@@ -1,0 +1,53 @@
+# Post Ideas
+
+Status: `idea` → `outlined` → `drafting` → `published`
+
+## Launch posts
+
+| Title (working) | Type | Threads | Status |
+|---|---|---|---|
+| What does it mean to *recommon* IT? | essay | commons, liberatory-tech | idea |
+| Personal → household → community: the scale this blog is about | essay | liberatory-tech, practice | idea |
+
+## Paired series: guide + governance companion
+Each technical guide has a companion post on how to run that piece as a community.
+
+| Technical guide | Governance companion | Sources |
+|---|---|---|
+| Setting up your first server (hardware, OS, SSH, updates) | Who holds root? Ostrom's design principles for a shared server | Ostrom |
+| A Docker Compose stack for self-hosted apps (reverse proxy, TLS, volumes) | Choosing software a community can maintain after you leave | Eghbal, Illich |
+| Private networks with Tailscale / WireGuard / Headscale | From personal VPN to neighborhood network | Bookchin, Doctorow |
+| Backups that actually work (3-2-1, restore testing) | Maintenance is care work | Federici, Franklin |
+| Single sign-on for a community (Authentik / Keycloak) | Membership and boundaries: who gets an account, and who decides? | Ostrom (principle 1) |
+| Monitoring and uptime | Graduated responses: what to do when things (or people) break | Ostrom (principles 4–6) |
+
+## Service deep dives
+- Nextcloud: files, calendars, contacts for a group
+- Matrix / Element: federated chat
+- Mastodon / GoToSocial: a community Fediverse instance
+- Jellyfin: shared media library
+- Vaultwarden: shared password management
+- A wiki for a community (Wiki.js, BookStack, or MediaWiki)
+
+## Commentary & essays
+- Open source is not a commons (yet): Ostrom meets Eghbal
+- Terms of service as bureaucracy (Graeber)
+- Enshittification and the exit door: why interoperability matters (Doctorow)
+- Do servers have politics? (Winner)
+- Convivial tools vs. one-click platforms (Illich, Franklin)
+- Enclosure, then and now: from the Charter of the Forest to the cloud (Linebaugh, Federici)
+- Solutionism at the city scale (Paris Marx)
+
+## Reviews
+One book per review; each feeds a bibliography entry.
+- Start with: *Governing the Commons*, *Tools for Conviviality*, *The Internet Con*
+
+## Wiki: A Pattern Language for Community Tech
+Candidate patterns (Alexander format, see `templates/wiki-pattern.md`):
+- Two Keyholders (no single admin)
+- Restore Before You Trust (tested backups)
+- Small Enough to Understand
+- Open Door, Clear Boundary (membership)
+- Maintenance Rota
+- Federate Before You Centralize
+- Exit Built In (data export, open formats)
