@@ -13,8 +13,8 @@ There is no website yet. This repo holds the source material.
 
 | Folder | Contents |
 |---|---|
-| `releases/` | One manifest per release, listing its four elements |
-| `theory/` | Theory posts: an idea or topic, citing other work |
+| `releases/` | One manifest per release, listing its parts |
+| `theory/` | Theory posts: why a thread matters, deriving its patterns |
 | `guides/` | Step-by-step technical guides |
 | `governance/` | How to run it as a commons; risks and trade-offs |
 | `wiki/patterns/` | The "Pattern Language for Community Tech" |
@@ -26,20 +26,23 @@ There is no website yet. This repo holds the source material.
 
 ## Releases
 
-Content is published in **releases**. Each release can contain up to four elements built around one idea:
+Content is published in **releases**. Each thread has one foundational release with three parts:
 
-1. **Theory:** presents the idea, citing other work
-2. **Guide:** teaches a skill or sets up the relevant software or hardware
-3. **Governance:** how to use it in a commons setting, with risks and trade-offs
-4. **Patterns:** a set of patterns for the problems involved
+1. **Theory & patterns:** why the thread matters for community-scale IT commons. The essay derives a set of patterns and shows how they relate to each other.
+2. **Guide:** implements a concrete example, applying the patterns.
+3. **Governance:** the considerations and processes for running it as a commons, with risks and trade-offs.
 
-Every element links to the others. The manifest in `releases/NNN-slug.md` lists them; each element has `release:` in its front matter and an "In this release" footer. Patterns can belong to several releases.
+Patterns live on their own wiki pages (`wiki/patterns/`) and form one network across all threads. Each pattern records the theory post that introduced it (`introduced_in`) and the guides and governance pieces that apply it (`applied_in`).
+
+Every element links to the others. The manifest in `releases/NNN-slug.md` lists them; each element has `release:` in its front matter and an "In this release" footer.
+
+Release 000 applies this structure to the project itself (the `design-patterns` thread).
 
 ## Threads
 
 Every piece of content is tagged with one or more threads, defined in [`planning/concept-map.md`](planning/concept-map.md):
 
-`institutions` · `commons` · `liberatory-tech` · `design-patterns` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy` · `practice`
+`institutions` · `commons` · `liberatory-tech` · `design-patterns` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy`
 
 ## Contributing
 

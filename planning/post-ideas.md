@@ -4,14 +4,19 @@ Status: `idea` → `outlined` → `drafting` → `published`
 
 ## Releases
 
-Each release: theory + guide + governance + patterns. See `releases/` for manifests.
+One foundational release per thread: theory & patterns, guide, governance. See `releases/` for manifests.
 
-| # | Release | Theory | Guide | Governance | Patterns | Status |
-|---|---|---|---|---|---|---|
-| 001 | A Shared Server | Who owns the machine? | Setting up your first server | Who holds root? | Two Keyholders; Small Enough to Understand; Talk Before You Enforce | drafting |
-| 002 | Containers and Services (idea) | — | Docker Compose stack | Choosing software a community can maintain | — | idea |
-| 003 | Private Networks (idea) | — | Tailscale / WireGuard / Headscale | From personal VPN to neighborhood network | — | idea |
-| 004 | Backups (idea) | Maintenance is care work | Backups that actually work | — | Restore Before You Trust | idea |
+| # | Thread | Theory & patterns | Guide | Governance | Status |
+|---|---|---|---|---|---|
+| 000 | design-patterns (meta) | Recommoning IT (revised launch essay); structural patterns, e.g. Theory, Practice, Governance; Every Page Links Out; Patterns Are Tested in Practice | How to contribute | How this project is run | planned |
+| 001 | liberatory-tech | Who owns the machine?: Small Enough to Understand; Two Keyholders | Setting up your first server | Who holds root? | drafting |
+| 002 | institutions | IAD for community tech: Talk Before You Enforce; ... | Writing a server charter | Changing the rules | idea |
+| 003 | privacy | Contextual integrity | E2EE services / threat modeling | The admin can read your mail | idea |
+| 004 | ai | Situated AI (Griziotti) | Running a local LLM | Who governs the model and the data? | idea |
+| 005 | commons | Enclosure and recommoning | Self-hosted shared files | Membership and exit | idea |
+| 006 | big-tech-critique | Enshittification and exit | Migrating off a platform | Exit rights | idea |
+| 007 | open-source | Open source is not a commons | Choosing maintainable software | Contributing upstream | idea |
+| 008 | labor-care | Maintenance is care work: Restore Before You Trust; Maintenance Rota | Backups and monitoring | Maintenance rotas | idea |
 
 The paired guide/governance tables below are candidates for future releases.
 
@@ -20,7 +25,7 @@ The paired guide/governance tables below are candidates for future releases.
 | Title (working) | Type | Threads | Status |
 |---|---|---|---|
 | What does it mean to *recommon* IT? | essay | commons, liberatory-tech | drafting |
-| Personal → household → community: the scale this blog is about | essay | liberatory-tech, practice | idea |
+| Personal → household → community: the scale this blog is about | essay | liberatory-tech | idea |
 
 ## Paired series: guide + governance companion
 Each technical guide has a companion post on how to run that piece as a community.

@@ -1,13 +1,16 @@
 ---
 title: "Who holds root? An IAD analysis of a shared server"
 date:                  # YYYY-MM-DD, set at publish
-threads: [institutions, practice]
+threads: [institutions]
 sources:
   - ostrom-2005-understanding-institutional-diversity.md
   - crawford-ostrom-1995-grammar-of-institutions.md
   - ostrom-walker-gardner-1992-covenants-with-and-without-a-sword.md
   - ostrom-1990-governing-the-commons.md
 release: 001-a-shared-server
+patterns_applied:
+  - wiki/patterns/two-keyholders.md
+  - wiki/patterns/talk-before-you-enforce.md
 status: draft          # rough draft for the author to rewrite in their own voice
 ---
 
@@ -112,6 +115,10 @@ Ostrom's design principles from *Governing the Commons* make a good five-minute 
 - [ ] There's a quick, low-cost way to resolve disputes.
 - [ ] No outside party (landlord, ISP, platform) can override the group's rules without notice.
 
+## Patterns applied
+- [Two Keyholders](../wiki/patterns/two-keyholders.md): a position rule. The charter below requires at least two admins.
+- [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md): an aggregation and information rule. Set up the group channel first, and let the group choose any sanctions.
+
 ## A one-page server charter
 
 Start here. Fill it in together, not alone.
@@ -149,8 +156,7 @@ If the group ends, members get [N] weeks to export their data before the server 
 <!-- Author: add a real example from your own setup? Even a small one makes this concrete. -->
 
 ## In this release
-- **Release:** [001 A Shared Server](../releases/001-a-shared-server.md)
-- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)
+- **Release:** [001 Liberatory Tech: A Shared Server](../releases/001-a-shared-server.md)
+- **Theory & patterns:** [Who owns the machine?](../theory/who-owns-the-machine.md): [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Two Keyholders](../wiki/patterns/two-keyholders.md)
 - **Guide:** [Setting up your first server](../guides/first-server.md)
 - **Governance:** [Who holds root?](../governance/who-holds-root.md)
-- **Patterns:** [Two Keyholders](../wiki/patterns/two-keyholders.md), [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md)

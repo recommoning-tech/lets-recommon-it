@@ -5,7 +5,7 @@ year: 2014              # relaunched 2014; continuously updated
 publisher: "Electronic Frontier Foundation"
 type: website
 url: "https://ssd.eff.org/"
-threads: [privacy, practice]
+threads: [privacy]
 status: draft
 ---
 

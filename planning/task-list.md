@@ -15,9 +15,10 @@
 - [x] Draft launch essay: "What does it mean to recommon IT?" (rough draft; needs rewrite in author's voice)
 - [x] Draft first guide + companion pair (server setup + "Who holds root?") (rough drafts)
 - [ ] Test-run the server guide on a fresh Debian 13 install
-- [x] Define release structure (theory + guide + governance + patterns)
+- [x] Define release structure: one release per thread (theory & patterns, guide, governance)
 - [x] Draft Release 001: A Shared Server (theory, guide, governance, 3 patterns)
 - [x] Write first 3 wiki patterns
+- [ ] Release 000 (design-patterns, meta): revise launch essay as theory & patterns; contributing guide; project governance
 - [ ] Add 5 entries from `reading-list.md`
 
 ## Phase 3: Website (later)
