@@ -1,0 +1,72 @@
+# Post Ideas
+
+Status: `idea` → `outlined` → `drafting` → `published`
+
+## Launch posts
+
+| Title (working) | Type | Threads | Status |
+|---|---|---|---|
+| What does it mean to *recommon* IT? | essay | commons, liberatory-tech | idea |
+| Personal → household → community: the scale this blog is about | essay | liberatory-tech, practice | idea |
+
+## Paired series: guide + governance companion
+Each technical guide has a companion post on how to run that piece as a community.
+
+| Technical guide | Governance companion | Sources |
+|---|---|---|
+| Setting up your first server (hardware, OS, SSH, updates) | Who holds root? An IAD analysis of a shared server | Ostrom, *Understanding Institutional Diversity* |
+| A Docker Compose stack for self-hosted apps (reverse proxy, TLS, volumes) | Choosing software a community can maintain after you leave | Eghbal, Illich |
+| Private networks with Tailscale / WireGuard / Headscale | From personal VPN to neighborhood network | Bookchin, Doctorow |
+| Backups that actually work (3-2-1, restore testing) | Maintenance is care work | Federici, Franklin |
+| Single sign-on for a community (Authentik / Keycloak) | Membership and boundaries: who gets an account, and who decides? | Ostrom (boundary & position rules) |
+| Monitoring and uptime | Graduated responses: what to do when things (or people) break | Ostrom, Walker & Gardner; *Governing the Commons* (principles 4–6) |
+
+| Running a local LLM on a community server (Ollama / llama.cpp) | Situated AI: small models, small datasets, community control | Griziotti |
+
+## Service deep dives
+- Nextcloud: files, calendars, contacts for a group
+- Matrix / Element: federated chat
+- Mastodon / GoToSocial: a community Fediverse instance
+- Jellyfin: shared media library
+- Vaultwarden: shared password management
+- A wiki for a community (Wiki.js, BookStack, or MediaWiki)
+
+## Commentary & essays
+
+Institutional analysis (IAD) series:
+- IAD for sysadmins: a field guide to the action situation
+- Writing your server's rules with ADICO
+- Three levels of rules for a community instance: operational, collective-choice, constitutional
+- Polycentric by design: the Fediverse as an Ostrom system
+- Covenants without a sword: why talking beats enforcement tooling
+- Parsing a terms of service with the grammar of institutions
+
+Other:
+- Open source is not a commons (yet): Ostrom meets Eghbal
+- Terms of service as bureaucracy (Graeber)
+- Enshittification and the exit door: why interoperability matters (Doctorow)
+- Do servers have politics? (Winner)
+- Convivial tools vs. one-click platforms (Illich, Franklin)
+- Enclosure, then and now: from the Charter of the Forest to the cloud (Linebaugh, Federici)
+- Solutionism at the city scale (Paris Marx)
+
+AI series:
+- How to survive AI at community scale: a reading of Griziotti
+- Comfort is the opposite of democracy: chatbots as infrastructure of the intimate
+- Everything is a hallucination: using probabilistic tools for the right jobs
+- Who owns the GPUs? AI and the return of the mainframe
+- Data cooperatives and data sovereignty: who governs a community's data?
+
+## Reviews
+One book per review; each feeds a bibliography entry.
+- Start with: *Governing the Commons*, *Tools for Conviviality*, *The Internet Con*
+
+## Wiki: A Pattern Language for Community Tech
+Candidate patterns (Alexander format, see `templates/wiki-pattern.md`):
+- Two Keyholders (no single admin)
+- Restore Before You Trust (tested backups)
+- Small Enough to Understand
+- Open Door, Clear Boundary (membership)
+- Maintenance Rota
+- Federate Before You Centralize
+- Exit Built In (data export, open formats)
