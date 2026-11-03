@@ -22,13 +22,11 @@ status: draft          # proposal; members adopt the charter below at the first 
 
 ## The situation
 
-Let's Recommon IT is meant to be run collectively from the start. It is a commons of writing, patterns, and code, so it should follow its own advice on governing commons. If it can't, readers have no reason to.
-
-Right now one founding member wrote most of the content and holds every account. That's normal for a new project, and it's the situation [Two Keyholders](../wiki/patterns/two-keyholders.md) warns about. This document sets up shared decision-making now, while the group is small and changes are cheap.
+Let's Recommon IT is a commons of writing, patterns, and code, run collectively from the start. If it can't follow its own advice on governing commons, readers have no reason to. Right now one founding member wrote most of the content and holds every account, which is the situation [Two Keyholders](../wiki/patterns/two-keyholders.md) warns about. This document sets up shared decision-making while the group is small and changes are cheap.
 
 ## Analysis
 
-Using Ostrom's IAD framework ([*Understanding Institutional Diversity*](../bibliography/ostrom-2005-understanding-institutional-diversity.md)):
+The project as an IAD action situation ([*Understanding Institutional Diversity*](../bibliography/ostrom-2005-understanding-institutional-diversity.md)):
 
 | IAD part | For this project |
 |---|---|
@@ -90,44 +88,9 @@ This project uses AI tools in drafting, and its own sources are critical of AI (
 - [Theory, Practice, Governance](../wiki/patterns/theory-practice-governance.md): the review rules cover all three parts of a release equally.
 - [Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md): this project is the first test of its own patterns. Problems found here should change the patterns.
 
-## Template: project charter
+## Adopting the charter
 
-Adopt at the first members' meeting.
-
-```markdown
-# Let's Recommon IT: Charter
-
-Adopted: [date]. Members present: [names].
-
-## Purpose (scope)
-Let's Recommon IT develops and shares knowledge for community-scale information and
-communication technology: theory and patterns, guides, and governance.
-
-## Members (boundary)
-Current members: [names]. New members join by [rule].
-
-## Roles (position)
-- Members review and decide.
-- Keyholders: at least two per account (see keyholders table).
-- Contributors submit work through pull requests.
-
-## Work (choice + information)
-- Every merge to main needs approval from one member other than the author.
-- Decisions are recorded in [location].
-- AI-assisted drafts are disclosed in the pull request.
-
-## Decisions (aggregation)
-- Routine: lazy consensus, [7] days.
-- Objections: discussed at the next meeting; fallback [two-thirds] vote.
-
-## Costs (payoff)
-[Who pays for domain/hosting; how costs are shared.]
-
-## Changing this charter (constitutional)
-By [consensus] of members at a meeting.
-Licenses stay CC BY-SA 4.0 (content) and MIT (code).
-If the project ends, the repository is archived publicly or handed to a commons-oriented group that keeps the licenses.
-```
+The rules above are the charter. At the first members' meeting, fill in the bracketed placeholders, record the date and the members present, and adopt it. From then on it changes only under the constitutional rules.
 
 ## In this release
 - **Release:** [000 Design Patterns: Recommoning IT](../releases/000-design-patterns.md)
