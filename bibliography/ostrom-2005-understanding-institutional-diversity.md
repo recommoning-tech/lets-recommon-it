@@ -4,7 +4,7 @@ authors: ["Ostrom, Elinor"]
 year: 2005
 publisher: "Princeton University Press"
 type: book
-threads: [commons]
+threads: [institutions]
 status: draft
 ---
 

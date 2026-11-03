@@ -4,7 +4,7 @@ authors: ["Ostrom, Elinor", "Walker, James", "Gardner, Roy"]
 year: 1992
 publisher: "American Political Science Review 86(2): 404–417"
 type: article
-threads: [commons]
+threads: [institutions]
 status: draft
 ---
 

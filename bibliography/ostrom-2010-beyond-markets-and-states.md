@@ -4,7 +4,7 @@ authors: ["Ostrom, Elinor"]
 year: 2010
 publisher: "American Economic Review 100(3): 641–672"
 type: article
-threads: [commons]
+threads: [institutions]
 status: draft
 ---
 

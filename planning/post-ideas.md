@@ -14,12 +14,12 @@ Each technical guide has a companion post on how to run that piece as a communit
 
 | Technical guide | Governance companion | Sources |
 |---|---|---|
-| Setting up your first server (hardware, OS, SSH, updates) | Who holds root? Ostrom's design principles for a shared server | Ostrom |
+| Setting up your first server (hardware, OS, SSH, updates) | Who holds root? An IAD analysis of a shared server | Ostrom, *Understanding Institutional Diversity* |
 | A Docker Compose stack for self-hosted apps (reverse proxy, TLS, volumes) | Choosing software a community can maintain after you leave | Eghbal, Illich |
 | Private networks with Tailscale / WireGuard / Headscale | From personal VPN to neighborhood network | Bookchin, Doctorow |
 | Backups that actually work (3-2-1, restore testing) | Maintenance is care work | Federici, Franklin |
-| Single sign-on for a community (Authentik / Keycloak) | Membership and boundaries: who gets an account, and who decides? | Ostrom (principle 1) |
-| Monitoring and uptime | Graduated responses: what to do when things (or people) break | Ostrom (principles 4–6) |
+| Single sign-on for a community (Authentik / Keycloak) | Membership and boundaries: who gets an account, and who decides? | Ostrom (boundary & position rules) |
+| Monitoring and uptime | Graduated responses: what to do when things (or people) break | Ostrom, Walker & Gardner; *Governing the Commons* (principles 4–6) |
 
 ## Service deep dives
 - Nextcloud: files, calendars, contacts for a group
@@ -30,6 +30,16 @@ Each technical guide has a companion post on how to run that piece as a communit
 - A wiki for a community (Wiki.js, BookStack, or MediaWiki)
 
 ## Commentary & essays
+
+Institutional analysis (IAD) series:
+- IAD for sysadmins: a field guide to the action situation
+- Writing your server's rules with ADICO
+- Three levels of rules for a community instance: operational, collective-choice, constitutional
+- Polycentric by design: the Fediverse as an Ostrom system
+- Covenants without a sword: why talking beats enforcement tooling
+- Parsing a terms of service with the grammar of institutions
+
+Other:
 - Open source is not a commons (yet): Ostrom meets Eghbal
 - Terms of service as bureaucracy (Graeber)
 - Enshittification and the exit door: why interoperability matters (Doctorow)

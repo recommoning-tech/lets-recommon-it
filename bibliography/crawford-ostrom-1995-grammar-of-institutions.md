@@ -4,7 +4,7 @@ authors: ["Crawford, Sue E. S.", "Ostrom, Elinor"]
 year: 1995
 publisher: "American Political Science Review 89(3): 582–600"
 type: article
-threads: [commons, design-patterns]
+threads: [institutions, design-patterns]
 status: draft
 ---
 

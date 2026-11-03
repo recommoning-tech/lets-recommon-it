@@ -9,7 +9,8 @@ How do we build and run information technology at **community scale**, so it is 
 
 | Tag | Thread | Core claim | Key sources |
 |---|---|---|---|
-| `commons` | Commons governance | Communities can govern shared resources well with rules they make themselves | Ostrom; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
+| `institutions` | Institutional analysis (primary framework) | Rules can be analyzed and designed. IAD breaks any governed situation into participants, positions, rules, and levels of choice | Ostrom, *Understanding Institutional Diversity*; Crawford & Ostrom; Ostrom (Nobel lecture); Ostrom, Walker & Gardner; Ostrom, *Governing the Commons* |
+| `commons` | Commons & enclosure | Communities can hold resources in common; enclosure is the recurring threat | Ostrom, *Governing the Commons*; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
 | `liberatory-tech` | Liberatory / convivial technology | Technology liberates only when its scale and control are local and democratic | Bookchin; Illich; Franklin; Winner |
 | `design-patterns` | Design & patterns | Good systems grow piecemeal from shared patterns that users can apply themselves | Alexander; Bollier & Helfrich |
 | `big-tech-critique` | Big Tech critique | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
@@ -20,25 +21,30 @@ How do we build and run information technology at **community scale**, so it is 
 ## Connections between threads
 
 ```
-                 commons  ───────────────  design-patterns
-                (Ostrom)   Bollier &        (Alexander)
-                   │       Helfrich             │
-     Federici,     │                            │  piecemeal growth,
-     Linebaugh     │                            │  user-led design
-                   │                            │
-              labor-care ─────── practice ──── liberatory-tech
-             (Federici,         (guides)       (Bookchin, Illich,
-              Graeber)             │             Franklin)
-                   │               │                │
-     maintenance   │         open-source            │  architecture
-     burden        │     (Stallman, Raymond)        │  = politics
-                   │               │                │  (Winner)
-                   └──── big-tech-critique ─────────┘
-                        (Doctorow, Marx)
+        institutions (IAD) ─────── ADICO ────── design-patterns
+             (Ostrom)                            (Alexander)
+                │                                    │
+             commons ─── Bollier & Helfrich ─────────┤
+      (Governing the Commons)                        │
+                │                                    │  piecemeal growth,
+    Federici,   │                                    │  user-led design
+    Linebaugh   │                                    │
+            labor-care ────────── practice ──── liberatory-tech
+           (Federici,             (guides)      (Bookchin, Illich,
+            Graeber)                 │            Franklin)
+                │                    │               │
+    maintenance │               open-source          │  architecture
+    burden      │           (Stallman, Raymond)      │  = politics
+                │                    │               │  (Winner)
+                └──────── big-tech-critique ─────────┘
+                           (Doctorow, Marx)
 ```
 
 Key bridges:
-- **Ostrom → practice:** the eight design principles become a governance checklist for a shared server.
+- **IAD → practice:** analyze a shared server as an action situation: who participates, what positions exist (admin, member, guest), which rules apply at each level (operational, collective-choice, constitutional).
+- **ADICO → governance docs:** write codes of conduct and admin policies as statements with who, must/may/must not, what, when, and the consequence.
+- **Polycentricity → federation:** the Fediverse, Matrix, and mesh networks are polycentric systems: many independently governed nodes under shared protocols.
+- **Design principles → health check:** *Governing the Commons*' eight principles remain a quick test of whether an institution is likely to last.
 - **Alexander → wiki:** the "Pattern Language for Community Tech" uses his format. (His work also influenced software design patterns and the first wiki.)
 - **Federici → maintenance:** who does the upkeep? Every guide has a "Maintenance" and "Community considerations" section.
 - **Doctorow → open-source/practice:** interoperability and open protocols are what make leaving platforms possible.
