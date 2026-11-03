@@ -7,6 +7,7 @@ smaller_patterns: []
 introduced_in: ""                     # planned: Release 002 (institutions) theory post
 applied_in:
   - governance/who-holds-root.md
+  - governance/how-this-project-is-run.md
 status: draft
 ---
 
@@ -26,6 +27,6 @@ Technical enforcement still has a place. But it works better as the group's deci
 
 ## Connections
 - **Introduced in:** planned for the Release 002 (institutions) theory post. Previewed in [Who owns the machine?](../../theory/who-owns-the-machine.md)
-- **Applied in:** [Who holds root?](../../governance/who-holds-root.md)
+- **Applied in:** [Who holds root?](../../governance/who-holds-root.md), [How this project is run](../../governance/how-this-project-is-run.md)
 - **Larger patterns:** [Two Keyholders](two-keyholders.md)
 - **Smaller patterns:** none yet

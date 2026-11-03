@@ -8,6 +8,7 @@ introduced_in: theory/who-owns-the-machine.md
 applied_in:
   - guides/first-server.md
   - governance/who-holds-root.md
+  - governance/how-this-project-is-run.md
 status: draft
 ---
 
@@ -27,6 +28,6 @@ Two keyholders is the minimum, not the ideal. The second keyholder needs to actu
 
 ## Connections
 - **Introduced in:** [Who owns the machine?](../../theory/who-owns-the-machine.md) (Release 001, liberatory-tech)
-- **Applied in:** [Setting up your first server](../../guides/first-server.md), [Who holds root?](../../governance/who-holds-root.md)
+- **Applied in:** [Setting up your first server](../../guides/first-server.md), [Who holds root?](../../governance/who-holds-root.md), [How this project is run](../../governance/how-this-project-is-run.md)
 - **Larger patterns:** [Small Enough to Understand](small-enough-to-understand.md)
 - **Smaller patterns:** [Talk Before You Enforce](talk-before-you-enforce.md)

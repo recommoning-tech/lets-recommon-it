@@ -8,7 +8,7 @@ One foundational release per thread: theory & patterns, guide, governance. See `
 
 | # | Thread | Theory & patterns | Guide | Governance | Status |
 |---|---|---|---|---|---|
-| 000 | design-patterns (meta) | Recommoning IT (revised launch essay); structural patterns, e.g. Theory, Practice, Governance; Every Page Links Out; Patterns Are Tested in Practice | How to contribute | How this project is run | planned |
+| 000 | design-patterns (meta) | Recommoning IT (revised launch essay); structural patterns, e.g. Theory, Practice, Governance; Every Page Links Out; Patterns Are Tested in Practice | Writing for Let's Recommon IT | How this project is run | drafting |
 | 001 | liberatory-tech | Who owns the machine?: Small Enough to Understand; Two Keyholders | Setting up your first server | Who holds root? | drafting |
 | 002 | institutions | IAD for community tech: Talk Before You Enforce; ... | Writing a server charter | Changing the rules | idea |
 | 003 | privacy | Contextual integrity | E2EE services / threat modeling | The admin can read your mail | idea |
@@ -24,7 +24,6 @@ The paired guide/governance tables below are candidates for future releases.
 
 | Title (working) | Type | Threads | Status |
 |---|---|---|---|
-| What does it mean to *recommon* IT? | essay | commons, liberatory-tech | drafting |
 | Personal → household → community: the scale this blog is about | essay | liberatory-tech | idea |
 
 ## Paired series: guide + governance companion
