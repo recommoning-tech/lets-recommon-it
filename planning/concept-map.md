@@ -17,6 +17,7 @@ How do we build and run information technology at **community scale**, so it is 
 | `labor-care` | Labor, care & bureaucracy | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |
 | `open-source` | Free & open source | Licenses and development models make shared code possible but not sufficient | Stallman; Raymond; Eghbal; Benkler |
 | `ai` | Artificial intelligence | AI is a relational, hardware-centered megamachine of extraction and control; alternatives are small, local, federated, and situated | Griziotti; Pasquinelli; McQuillan; Crawford; Bender & Hanna; Eubanks; Viljoen; Frischmann, Madison & Strandburg |
+| `privacy` | Privacy & anti-surveillance | Privacy means information flowing appropriately for its context. Self-hosting moves the surveillance risk from corporations to the admins, so governance and encryption both matter | Nissenbaum; Brunton & Nissenbaum; Moglen; Rogaway; Browne; Zuboff; Schneier; Sadowski; EFF |
 | `practice` | Practice | Technical how-to: servers, containers, networks, services | Guides; real projects (NYC Mesh, Guifi.net, etc.) |
 
 ## Connections between threads
@@ -40,8 +41,8 @@ How do we build and run information technology at **community scale**, so it is 
                 └──────── big-tech-critique ─────────┘
                            (Doctorow, Marx)
                                  │
-                                 ai
-                            (Griziotti)
+                                 ai ──────────── privacy
+                            (Griziotti)   (Nissenbaum, Moglen)
 ```
 
 Key bridges:
@@ -55,6 +56,8 @@ Key bridges:
 - **Bookchin/Illich → architecture:** choose tools small and legible enough for members to understand and control.
 - **Griziotti → practice:** the alternatives he names (federated platforms, data co-ops, mesh networks, small local models) are things this blog's guides can build.
 - **Griziotti → institutions:** his open question, "how can these practices scale without reproducing centralization?", is what polycentric governance (Ostrom) addresses.
+- **Moglen → practice:** small home servers federating with each other are the origin of self-hosting as a privacy strategy, and the reason the guides exist.
+- **Nissenbaum → institutions:** contextual integrity's norms about information flows are IAD information rules, and can be written as ADICO statements.
 - **Winner → everything technical:** architecture choices are governance choices.
 
 ## Tensions worth writing about
@@ -63,4 +66,6 @@ Key bridges:
 - **Convenience vs. conviviality.** Tailscale is easy but relies on a company's coordination server. Is Headscale worth the complexity?
 - **Using AI to critique AI.** This project, like Griziotti's essay, is written with AI help. Where is the line between help and interference, and how do we keep critical direction?
 - **Local models vs. scale.** Small community models avoid data-center extraction but are weaker. When is "good enough" good enough?
+- **The admin can read your mail.** Self-hosting moves surveillance power from a corporation to a neighbor. Answers include end-to-end encryption (admins *can't* read) and information rules (admins *won't*). Which do you rely on?
+- **Privacy vs. accountability.** Logs help debug problems and resolve disputes, but they are also surveillance. How much should a community server record?
 - **Volunteer burnout.** Commons need maintainers. How do you avoid recreating unpaid care work?

@@ -11,7 +11,6 @@ Sources to add to `bibliography/`. Move items out of this list when an entry is 
 ## Tech critique
 - Tarnoff, Ben. 2022. *Internet for the People: The Fight for Our Digital Future*. Verso.
 - Giblin, Rebecca & Doctorow, Cory. 2022. *Chokepoint Capitalism*. Beacon Press.
-- Zuboff, Shoshana. 2019. *The Age of Surveillance Capitalism*. PublicAffairs.
 - Marx, Paris. *Tech Won't Save Us* (podcast).
 
 ## Design
