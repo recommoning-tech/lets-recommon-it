@@ -46,6 +46,8 @@ Every piece of content is tagged with one or more threads, defined in [`planning
 
 ## Contributing
 
+See [Writing for Let's Recommon IT](guides/contributing.md) for the full workflow, and [How this project is run](governance/how-this-project-is-run.md) for review and decision rules.
+
 Start from the matching file in `templates/` (`release.md`, `theory.md`, `guide.md`, `governance.md`, `wiki-pattern.md`, `post.md`, `bibliography-entry.md`). Keep the "In this release" footer in every element in sync with the release manifest. File names use lowercase kebab-case, and bibliography entries are named `author-year-short-title.md`.
 
 ## License
