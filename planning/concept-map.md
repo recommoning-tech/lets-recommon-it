@@ -42,7 +42,7 @@ How do we build and run information technology at **community scale**, so it is 
                            (Doctorow, Marx)
                                  │
                                  ai ──────────── privacy
-                            (Griziotti)   (Nissenbaum, Moglen)
+                            (Griziotti)     (Nissenbaum, Moglen)
 ```
 
 Key bridges:
