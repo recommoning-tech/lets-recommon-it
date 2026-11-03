@@ -64,7 +64,7 @@ Every account the project depends on has at least two keyholders, who both actua
 
 | Account | Keyholders | Status |
 |---|---|---|
-| GitHub organization `recommoning-tech` | `recommon-it` (owner), `jordaninskeep` (owner, invite pending) | Org created; repo transferred. Both owner accounts belong to the founding member, which guards against losing one account but not against losing the person. **Action needed:** a second member as owner. |
+| GitHub organization `recommoning-tech` | `recommon-it` (owner), `jordaninskeep` (owner) | Org created; repo transferred. Both owner accounts belong to the founding member, which guards against losing one account but not against losing the person. **Action needed:** a second member as owner. |
 | Domain registrar | [member], [member] | Not yet registered |
 | Hosting | [member], [member] | Not yet chosen |
 | Shared password vault | [member], [member] | Not yet set up |
