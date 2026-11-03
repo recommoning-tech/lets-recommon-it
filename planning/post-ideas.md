@@ -2,6 +2,19 @@
 
 Status: `idea` → `outlined` → `drafting` → `published`
 
+## Releases
+
+Each release: theory + guide + governance + patterns. See `releases/` for manifests.
+
+| # | Release | Theory | Guide | Governance | Patterns | Status |
+|---|---|---|---|---|---|---|
+| 001 | A Shared Server | Who owns the machine? | Setting up your first server | Who holds root? | Two Keyholders; Small Enough to Understand; Talk Before You Enforce | drafting |
+| 002 | Containers and Services (idea) | — | Docker Compose stack | Choosing software a community can maintain | — | idea |
+| 003 | Private Networks (idea) | — | Tailscale / WireGuard / Headscale | From personal VPN to neighborhood network | — | idea |
+| 004 | Backups (idea) | Maintenance is care work | Backups that actually work | — | Restore Before You Trust | idea |
+
+The paired guide/governance tables below are candidates for future releases.
+
 ## Launch posts
 
 | Title (working) | Type | Threads | Status |

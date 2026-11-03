@@ -5,6 +5,7 @@ number:                # pattern number, for cross-reference
 threads: [design-patterns]
 larger_patterns: []    # patterns this one helps complete
 smaller_patterns: []   # patterns that complete this one
+releases: []           # NNN-slug of each release that uses this pattern
 status: draft
 ---
 
@@ -19,3 +20,7 @@ status: draft
 
 ## Therefore
 <!-- The solution, stated as an instruction. -->
+
+## Used in
+<!-- Releases and other pages that use this pattern. -->
+- [NNN Title](../../releases/NNN-slug.md)
