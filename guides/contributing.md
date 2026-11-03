@@ -28,7 +28,7 @@ A complete, linked contribution to the site. This might be a whole release (theo
 ### 1. Get the repository and make a branch
 
 ```bash
-git clone https://github.com/recommon-it/lets-recommon-it.git
+git clone https://github.com/recommoning-tech/lets-recommon-it.git
 cd lets-recommon-it
 git switch -c release/002-institutions   # never work directly on main
 ```
