@@ -50,9 +50,3 @@ Small Enough to Understand is the larger pattern: a second keyholder is only rea
 ## From theory to practice
 - The [guide](../guides/first-server.md) builds a small, understandable server: one machine, plain Debian, a few standard tools.
 - The [governance piece](../governance/who-holds-root.md) introduces Two Keyholders and applies Talk Before You Enforce, turning both into rules and a charter a group can adopt.
-
-## In this thread
-- **Thread:** liberatory-tech · [the table](../index.md)
-- **Guides:** [Setting up your first server](../guides/first-server.md)
-- **Governance:** [Who holds root?](../governance/who-holds-root.md)
-- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)

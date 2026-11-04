@@ -2,7 +2,7 @@
 title: ""
 date:                  # YYYY-MM-DD
 updated:
-threads: []            # first thread is the row in the table (index.md)
+threads: []            # first thread is the row in the table
 difficulty: beginner   # beginner | intermediate | advanced
 status: draft          # draft | published
 patterns: []           # wiki/patterns/slug.md introduced here (level: operational)
@@ -39,10 +39,3 @@ patterns_applied: []   # wiki/patterns/slug.md from other pieces
 - [Pattern](../wiki/patterns/slug.md):
 
 ## Further reading
-
-## In this thread
-<!-- Every piece in this row of index.md. Keep identical across the row. -->
-- **Thread:** thread-name · [the table](../index.md)
-- **Guides:** [Title](../guides/slug.md)
-- **Governance:** [Title](../governance/slug.md)
-- **Theory:** [Title](../theory/slug.md)

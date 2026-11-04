@@ -37,10 +37,3 @@ If the unit of contribution is large, such as a full set of theory, guide, and g
 ## Consequences
 - **Positive:** more people can contribute, and work is published sooner.
 - **Negative:** rows fill unevenly, with three guides and no governance. The table makes that visible.
-
-## Connections
-- **Thread and level:** institutions, collective-choice
-- **Introduced in:** [How this project is run](../../governance/how-this-project-is-run.md)
-- **Applied in:** [Writing for Let's Recommon IT](../../guides/contributing.md)
-- **Larger patterns:** [Every Thread at Every Level](every-thread-at-every-level.md)
-- **Smaller patterns:** none yet

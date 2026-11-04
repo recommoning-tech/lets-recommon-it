@@ -100,9 +100,3 @@ If the unit of contribution is a full set of theory, guide, and governance, only
 ## Adopting the charter
 
 The rules above are the charter. At the first members' meeting, fill in the bracketed placeholders, record the date and the members present, and adopt it along with the [operational rules](../guides/contributing.md#operational-rules). From then on it changes only under the constitutional rules.
-
-## In this thread
-- **Thread:** institutions · [the table](../index.md)
-- **Guides:** [Writing for Let's Recommon IT](../guides/contributing.md)
-- **Governance:** [How this project is run](../governance/how-this-project-is-run.md)
-- **Theory:** [This repository is a commons](../theory/this-repository-is-a-commons.md)

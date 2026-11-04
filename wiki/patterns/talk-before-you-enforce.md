@@ -39,10 +39,3 @@ The admin's instinct is to reach for technical enforcement: quotas, permissions,
 ## Consequences
 - **Positive:** rules feel like the group's own, and many problems are settled without sanctions.
 - **Negative:** responses are slower, and someone has to host the conversation. Urgent problems such as a security incident may need an admin to act first and explain afterwards.
-
-## Connections
-- **Thread and level:** institutions, collective-choice
-- **Introduced in:** planned for an institutions governance piece. Previewed in [Who owns the machine?](../../theory/who-owns-the-machine.md)
-- **Applied in:** [Who holds root?](../../governance/who-holds-root.md), [How this project is run](../../governance/how-this-project-is-run.md), [Who decides what becomes a pattern?](../../governance/who-decides-what-becomes-a-pattern.md)
-- **Larger patterns:** [Two Keyholders](two-keyholders.md)
-- **Smaller patterns:** [Workshop the Pattern](workshop-the-pattern.md)

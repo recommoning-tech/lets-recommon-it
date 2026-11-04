@@ -119,9 +119,3 @@ If the group ends, members get [N] weeks to export their data before the server 
 ```
 
 <!-- Author: add a real example from your own setup? Even a small one makes this concrete. -->
-
-## In this thread
-- **Thread:** liberatory-tech · [the table](../index.md)
-- **Guides:** [Setting up your first server](../guides/first-server.md)
-- **Governance:** [Who holds root?](../governance/who-holds-root.md)
-- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)

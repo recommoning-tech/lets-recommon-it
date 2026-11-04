@@ -27,7 +27,7 @@ It doesn't take a specialist. In Iba's workshops, businesspeople and students wr
 
 - Something you know works, from running a server, a group, or a project
 - The pattern template: `templates/wiki-pattern.md`
-- A look at the pattern table in [`index.md`](../index.md), so you don't rewrite a pattern that exists
+- A look at the [pattern table](https://recommoning-tech.github.io/lets-recommon-it/patterns/), so you don't rewrite a pattern that exists
 - For submitting it: [Writing for Let's Recommon IT](contributing.md)
 
 ## Steps
@@ -135,9 +135,3 @@ The steps above run backwards from how a pattern is read. Alexander found patter
 ## Further reading
 - [Iba, "A Practical Guide on Pattern Writing"](../bibliography/iba-2021-practical-guide-pattern-writing.md): sentence forms and checkpoints for every element
 - [Alexander, *The Timeless Way of Building*](../bibliography/alexander-1979-timeless-way-of-building.md), chapter 14, "Patterns Which Can Be Shared"
-
-## In this thread
-- **Thread:** design-patterns · [the table](../index.md)
-- **Guides:** [Writing a pattern](../guides/writing-a-pattern.md)
-- **Governance:** [Who decides what becomes a pattern?](../governance/who-decides-what-becomes-a-pattern.md)
-- **Theory:** [A pattern language for community tech](../theory/a-pattern-language-for-community-tech.md)

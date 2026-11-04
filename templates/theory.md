@@ -1,7 +1,7 @@
 ---
 title: ""
 date:                  # YYYY-MM-DD, set at publish
-threads: []            # first thread is the row in the table (index.md)
+threads: []            # first thread is the row in the table
 sources: []            # bibliography file names this post cites
 patterns: []           # wiki/patterns/slug.md introduced here (level: metaconstitutional)
 patterns_applied: []   # wiki/patterns/slug.md from other pieces
@@ -34,10 +34,3 @@ a short paragraph, its Solution, and a link. Don't duplicate the full pattern.
 
 ## From theory to practice
 <!-- Bridge to guides and governance pieces in the same thread. -->
-
-## In this thread
-<!-- Every piece in this row of index.md. Keep identical across the row. -->
-- **Thread:** thread-name · [the table](../index.md)
-- **Guides:** [Title](../guides/slug.md)
-- **Governance:** [Title](../governance/slug.md)
-- **Theory:** [Title](../theory/slug.md)

@@ -40,10 +40,3 @@ Patterns that come only from argument drift toward abstraction. They sound right
 ## Consequences
 - **Positive:** the language fills with solutions that have met real servers and real groups, and failures improve the patterns.
 - **Negative:** a new pattern waits for a second piece before it counts as tested, and a pattern applied only by its own author is still lightly tested.
-
-## Connections
-- **Thread and level:** design-patterns, metaconstitutional
-- **Introduced in:** [A pattern language for community tech](../../theory/a-pattern-language-for-community-tech.md)
-- **Applied in:** [Writing for Let's Recommon IT](../../guides/contributing.md), [How this project is run](../../governance/how-this-project-is-run.md), [Writing a pattern](../../guides/writing-a-pattern.md), [Who decides what becomes a pattern?](../../governance/who-decides-what-becomes-a-pattern.md)
-- **Larger patterns:** [Every Thread at Every Level](every-thread-at-every-level.md)
-- **Smaller patterns:** [Workshop the Pattern](workshop-the-pattern.md)

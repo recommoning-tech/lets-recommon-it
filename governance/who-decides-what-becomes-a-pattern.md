@@ -99,9 +99,3 @@ Date: [date]   Author: [name]   Readers: [names, at least two]
 6. Author asks questions to clarify. No defending. (5 min)
 7. Record agreed changes in the pull request. If the readers agree, a member sets status: workshopped.
 ```
-
-## In this thread
-- **Thread:** design-patterns · [the table](../index.md)
-- **Guides:** [Writing a pattern](../guides/writing-a-pattern.md)
-- **Governance:** [Who decides what becomes a pattern?](../governance/who-decides-what-becomes-a-pattern.md)
-- **Theory:** [A pattern language for community tech](../theory/a-pattern-language-for-community-tech.md)

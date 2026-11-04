@@ -39,10 +39,3 @@ When one person holds all the admin access, the system depends on that person. I
 ## Consequences
 - **Positive:** the system survives one person leaving or burning out, and decisions stop defaulting to one admin.
 - **Negative:** more people with full access means more trust is needed and more ways for credentials to leak. Keyholders have to coordinate so they don't undo each other's work.
-
-## Connections
-- **Thread and level:** liberatory-tech, collective-choice
-- **Introduced in:** [Who holds root?](../../governance/who-holds-root.md)
-- **Applied in:** [Setting up your first server](../../guides/first-server.md), [How this project is run](../../governance/how-this-project-is-run.md)
-- **Larger patterns:** [Small Enough to Understand](small-enough-to-understand.md)
-- **Smaller patterns:** [Talk Before You Enforce](talk-before-you-enforce.md)

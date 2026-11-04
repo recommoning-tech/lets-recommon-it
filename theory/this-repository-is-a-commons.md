@@ -86,9 +86,3 @@ Every Thread at Every Level is the largest pattern on the site: it sets the shap
 - The [governance piece](../governance/how-this-project-is-run.md) analyzes the project as an action situation and sets its collective-choice and constitutional rules.
 
 <!-- Author: rewrite in your own voice. A concrete moment from setting up this repo (e.g. realizing one person held every account) would ground the commons section. -->
-
-## In this thread
-- **Thread:** institutions · [the table](../index.md)
-- **Guides:** [Writing for Let's Recommon IT](../guides/contributing.md)
-- **Governance:** [How this project is run](../governance/how-this-project-is-run.md)
-- **Theory:** [This repository is a commons](../theory/this-repository-is-a-commons.md)

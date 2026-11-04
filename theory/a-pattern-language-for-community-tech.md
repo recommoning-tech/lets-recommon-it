@@ -83,9 +83,3 @@ A Language Users Can Speak is the larger pattern: it says who the language is fo
 - The [governance piece](../governance/who-decides-what-becomes-a-pattern.md) sets out how a pattern moves from draft to published, and who decides.
 
 <!-- Author: rewrite in your own voice. Where did you first meet patterns, and what made you want to use them for this site? -->
-
-## In this thread
-- **Thread:** design-patterns · [the table](../index.md)
-- **Guides:** [Writing a pattern](../guides/writing-a-pattern.md)
-- **Governance:** [Who decides what becomes a pattern?](../governance/who-decides-what-becomes-a-pattern.md)
-- **Theory:** [A pattern language for community tech](../theory/a-pattern-language-for-community-tech.md)

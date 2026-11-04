@@ -47,11 +47,11 @@ Branch names start with what you're contributing: `pattern/`, `guide/`, `governa
 
 ### 2. Find your cell
 
-Open [the table](../index.md). Pick a thread (row) and a column. A cell can hold more than one piece, so a filled cell is still open. To add a new thread, open an issue proposing it; threads are added under the project's [collective-choice rules](../governance/how-this-project-is-run.md).
+Open [the table](../index.md) on the website. Pick a thread (row) and a column. A cell can hold more than one piece, so a filled cell is still open. To add a new thread, open an issue proposing it; threads are added under the project's [collective-choice rules](../governance/how-this-project-is-run.md).
 
 ### 3. Check the existing patterns
 
-The pattern table in [`index.md`](../index.md) lists every pattern with its thread and level. Apply existing patterns by name before inventing new ones.
+The [pattern table](https://recommoning-tech.github.io/lets-recommon-it/patterns/) lists every pattern with its thread and level. Apply existing patterns by name before inventing new ones.
 
 ## Contribute a pattern
 
@@ -61,10 +61,9 @@ A pattern can be contributed on its own, before any piece explains it. [Writing 
 2. Set `number` to the highest existing number + 1.
 3. Set `thread` (one) and `level`: `operational`, `collective-choice`, `constitutional`, or `metaconstitutional`. The level decides which column introduces it.
 4. Write the elements solution first and name last ([Solution First](../wiki/patterns/solution-first.md)): Solution, Actions, Problem, Context, Forces, Consequences, then the name and a one-sentence introduction. The page shows them in reading order.
-5. Set `introduced_in` to the piece that explains it. If there isn't one yet, leave it empty and write "planned for a [thread] [column] piece" under Connections.
-6. Fill in `larger_patterns` and `smaller_patterns`, and update the *other* pattern's page so the link goes both ways.
-7. Add the pattern to the pattern table in `index.md`.
-8. Before it leaves `draft`, ask for a pattern workshop ([Workshop the Pattern](../wiki/patterns/workshop-the-pattern.md); proposed in [Who decides what becomes a pattern?](../governance/who-decides-what-becomes-a-pattern.md)).
+5. Set `introduced_in` to the piece that explains it. If there isn't one yet, leave it empty; the website shows the cell as open.
+6. Fill in `larger_patterns` and `smaller_patterns`, and update the *other* pattern's front matter so the link goes both ways.
+7. Before it leaves `draft`, ask for a pattern workshop ([Workshop the Pattern](../wiki/patterns/workshop-the-pattern.md); proposed in [Who decides what becomes a pattern?](../governance/who-decides-what-becomes-a-pattern.md)).
 
 ## Contribute a guide (operational)
 
@@ -88,7 +87,7 @@ A theory essay argues what the thread is about: what is being shared, who it's f
 
 ### Patterns
 - **Introduced here:** list them in `patterns:`, set each pattern page's `introduced_in` to this piece, and give each one a subsection under **Patterns introduced**: a paragraph on how the piece leads to it, its Solution (the **Therefore** sentence), and a link. Don't copy the whole pattern; the wiki page is the single source.
-- **Applied here:** list them in `patterns_applied:`, say how under **Patterns applied**, and add this piece to the pattern page's `applied_in` and Connections.
+- **Applied here:** list them in `patterns_applied:`, say how under **Patterns applied**, and add this piece to the pattern page's `applied_in`.
 
 If a pattern doesn't fit what you found, say so and propose a change to it ([Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md)).
 
@@ -97,13 +96,18 @@ If a pattern doesn't fit what you found, say so and propose a change to it ([Pat
 - For a new source, copy `templates/bibliography-entry.md` to `bibliography/author-year-short-title.md`, check the citation against a publisher or library record, and set `status: draft` until the annotation is reviewed.
 
 ### Links
-Apply [Every Page Links Out](../wiki/patterns/every-page-links-out.md):
-1. End the piece with an **In this thread** footer listing every piece in its row.
-2. Add the piece to its cell in `index.md`.
-3. Add it to the footer of the other pieces in the same row. To find them:
+Apply [Every Page Links Out](../wiki/patterns/every-page-links-out.md). The website builds the table, each piece's "In this thread" footer, and each pattern's connections from front matter, so links between pieces come from getting the front matter right:
+
+- `threads`: the first entry is the piece's row.
+- `patterns` and `patterns_applied` on pieces, and `introduced_in`, `applied_in`, `larger_patterns`, and `smaller_patterns` on patterns, must agree with each other.
+- `sources` lists the bibliography files the piece cites.
+
+Link to other files in the body with relative paths (`../wiki/patterns/two-keyholders.md`); the website turns them into site links.
+
+To check your work, build the site. It stops with a list of any front matter that doesn't match:
 
 ```bash
-grep -rln "Thread:\*\* institutions" --include=*.md .
+cd site && npm ci && npm run build
 ```
 
 ## Operational rules
@@ -130,8 +134,8 @@ Open a pull request into `main`. Say which cell it fills, what changed and why, 
 
 Before asking for review:
 
-- [ ] The piece is in its cell in `index.md`, and every piece in its row has the same **In this thread** footer
-- [ ] Every pattern has one `thread` and one `level`, and is in the pattern table
+- [ ] `cd site && npm run build` finishes without front matter errors
+- [ ] Every pattern has one `thread` and one `level`
 - [ ] Every pattern introduced here has `introduced_in` set to this piece
 - [ ] Every pattern applied here lists this piece in `applied_in`
 - [ ] Larger/smaller pattern links go both ways
@@ -140,7 +144,7 @@ Before asking for review:
 
 ## Maintenance
 
-- **Renaming or moving a file:** search for its old name with `grep` and update every reference, including front matter and `index.md`.
+- **Renaming or moving a file:** search for its old name with `grep` and update every reference, including front matter.
 - **Revising a pattern:** update the Solution on the pattern page *and* in the piece that introduces it. Note the reason in the commit message.
 - **Status:** move `status: draft` to `published` only after review.
 
@@ -169,9 +173,3 @@ Pieces contributed one cell at a time tend to become islands. A guide cut off fr
 - [`templates/`](../templates/) for all templates
 - [Writing a pattern](writing-a-pattern.md) and [Iba, "A Practical Guide on Pattern Writing"](../bibliography/iba-2021-practical-guide-pattern-writing.md) for the pattern format
 - [Crawford & Ostrom, "A Grammar of Institutions"](../bibliography/crawford-ostrom-1995-grammar-of-institutions.md) for ADICO
-
-## In this thread
-- **Thread:** institutions · [the table](../index.md)
-- **Guides:** [Writing for Let's Recommon IT](../guides/contributing.md)
-- **Governance:** [How this project is run](../governance/how-this-project-is-run.md)
-- **Theory:** [This repository is a commons](../theory/this-repository-is-a-commons.md)
