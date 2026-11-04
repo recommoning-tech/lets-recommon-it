@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.5",
+    "@fontsource/architects-daughter": "^5.3.0",
+    "@fontsource/courier-prime": "^5.3.0",
     "astro": "^7.4.5"
   }
 }

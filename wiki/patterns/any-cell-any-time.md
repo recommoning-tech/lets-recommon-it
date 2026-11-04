@@ -2,7 +2,7 @@
 title: "Any Cell, Any Time"
 number: 7
 introduction: "Small contributions are welcome contributions."
-image: ""
+image: images/any-cell-any-time.svg
 thread: institutions
 level: collective-choice
 introduced_in: governance/how-this-project-is-run.md

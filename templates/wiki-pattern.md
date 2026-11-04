@@ -4,7 +4,7 @@
 title: ""
 number:                # pattern number, for cross-reference
 introduction: ""       # one sentence under the name that makes the reader want to read on
-image: ""              # optional: path to an illustration of the pattern at work
+image: ""              # optional: images/<slug>.svg; see wiki/patterns/images/README.md
 thread: ""             # one thread: the row in the table
 level: ""              # operational | collective-choice | constitutional | metaconstitutional
 introduced_in: ""      # the piece at this level that explains it: guides/ (operational), governance/ (collective-choice, constitutional), theory/ (metaconstitutional)

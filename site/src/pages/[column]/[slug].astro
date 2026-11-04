@@ -1,9 +1,10 @@
 ---
-// Guides, governance pieces, and theory essays share one layout.
+// Guides, governance pieces, and theory essays share one layout, set as a typed memo.
 import Base from '../../layouts/Base.astro';
+import Mark from '../../components/Mark.astro';
 import { render } from 'astro:content';
-import { site, url, editUrl, threadOf, type Piece, type ColumnId } from '../../lib/content';
-import { COLUMNS, BASE } from '../../lib/site.mjs';
+import { site, url, threadOf, editUrl, repoPath, type Piece, type ColumnId } from '../../lib/content';
+import { COLUMNS } from '../../lib/site.mjs';
 
 export async function getStaticPaths() {
   const { pieces } = await site();
@@ -22,17 +23,28 @@ const introduced = pats(d.patterns);
 const applied = pats(d.patterns_applied);
 ---
 <Base title={d.title} edit={editUrl(piece)}>
-  <p class="crumbs"><a href={BASE}>The table</a> › <a href={url.thread(thread.id)}>{thread.name}</a> › {column.name} <span class="level">({column.levelLabel})</span></p>
-  <article class="piece">
-    <header>
-      <h1>{d.title}</h1>
-      {d.status === 'draft' && <p><span class="badge">Draft</span></p>}
-      {(introduced.length > 0 || applied.length > 0) && (
-        <p class="piece-patterns">
-          {introduced.length > 0 && <>Introduces {introduced.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>)}. </>}
-          {applied.length > 0 && <>Applies {applied.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>)}.</>}
-        </p>
-      )}
+  <article class="piece" style={`--thread:${thread.ink}`}>
+    <header class="memo">
+      <dl class="memo-fields">
+        <dt>Re:</dt>
+        <dd><h1>{d.title}</h1></dd>
+        <dt>Thread:</dt>
+        <dd><span class="tag"><Mark shape="circle" color={thread.ink} /><a href={url.thread(thread.id)}>{thread.name}</a></span></dd>
+        <dt>Column:</dt>
+        <dd><span class="tag"><Mark shape={column.mark as any} />{column.name}</span>, {column.levelLabel.toLowerCase()} level</dd>
+        <dt>File:</dt>
+        <dd><code>{repoPath(piece)}</code></dd>
+      </dl>
+      <div class="margin-notes">
+        {d.status === 'draft' && <p class="note note--draft">draft</p>}
+        {(introduced.length > 0 || applied.length > 0) && (
+          <p class="note">
+            {introduced.length > 0 && <>introduces {introduced.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>)}</>}
+            {introduced.length > 0 && applied.length > 0 && <br />}
+            {applied.length > 0 && <>applies {applied.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>)}</>}
+          </p>
+        )}
+      </div>
     </header>
     <div class="prose"><Content /></div>
   </article>
@@ -42,15 +54,15 @@ const applied = pats(d.patterns_applied);
       <ul>{sources.map((s) => <li><a href={url.source(s)}>{s.data.title}</a>{s.data.authors.length > 0 && <>, {s.data.authors.join('; ')}</>}{s.data.year && <> ({s.data.year})</>}</li>)}</ul>
     </section>
   )}
-  <nav class="in-thread" aria-label="In this thread">
-    <h2>In this thread: <a href={url.thread(thread.id)}>{thread.name}</a></h2>
+  <nav class="in-thread" aria-label="Everything in this thread">
+    <h2 class="with-mark"><Mark shape="circle" color={thread.ink} />Also in <a href={url.thread(thread.id)}>{thread.name}</a></h2>
     <div class="in-thread-cols">
       {COLUMNS.map((c) => (
         <div>
-          <h3>{c.name}</h3>
+          <h3 class="with-mark"><Mark shape={c.mark as any} />{c.name}</h3>
           {row[c.id as ColumnId].length ? (
-            <ul>{row[c.id as ColumnId].map((p) => <li>{p.id === piece.id && p.collection === piece.collection ? <strong aria-current="page">{p.data.title}</strong> : <a href={url.piece(p)}>{p.data.title}</a>}</li>)}</ul>
-          ) : <p class="open">Open</p>}
+            <ul>{row[c.id as ColumnId].map((p) => <li>{p.id === piece.id && p.collection === piece.collection ? <span aria-current="page">{p.data.title} (this memo)</span> : <a href={url.piece(p)}>{p.data.title}</a>}</li>)}</ul>
+          ) : <p class="empty">open</p>}
         </div>
       ))}
     </div>

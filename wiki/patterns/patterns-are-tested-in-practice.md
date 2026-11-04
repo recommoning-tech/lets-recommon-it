@@ -2,7 +2,7 @@
 title: "Patterns Are Tested in Practice"
 number: 6
 introduction: "A pattern is a claim until someone uses it."
-image: ""
+image: images/patterns-are-tested-in-practice.svg
 thread: design-patterns
 level: metaconstitutional
 introduced_in: theory/a-pattern-language-for-community-tech.md

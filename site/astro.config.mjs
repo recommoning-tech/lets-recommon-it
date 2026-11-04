@@ -10,6 +10,7 @@ export default defineConfig({
   site: SITE,
   base: BASE,
   trailingSlash: 'always',
+  devToolbar: { enabled: false },
   markdown: {
     remarkPlugins: [[remarkRepoLinks, { repoRoot, base: BASE, repoUrl: REPO_URL }]],
   },

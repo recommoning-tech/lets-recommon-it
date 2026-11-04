@@ -2,7 +2,7 @@
 title: "Talk Before You Enforce"
 number: 3
 introduction: "Let the group talk before anyone builds a fence."
-image: ""
+image: images/talk-before-you-enforce.svg
 thread: institutions
 level: collective-choice
 larger_patterns: [two-keyholders]
