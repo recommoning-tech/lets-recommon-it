@@ -1,0 +1,58 @@
+---
+// Guides, governance pieces, and theory essays share one layout.
+import Base from '../../layouts/Base.astro';
+import { render } from 'astro:content';
+import { site, url, editUrl, threadOf, type Piece, type ColumnId } from '../../lib/content';
+import { COLUMNS, BASE } from '../../lib/site.mjs';
+
+export async function getStaticPaths() {
+  const { pieces } = await site();
+  return pieces.map((p) => ({ params: { column: p.collection, slug: p.id }, props: { piece: p } }));
+}
+const { piece } = Astro.props as { piece: Piece };
+const { table, sourceById, patternById } = await site();
+const { Content } = await render(piece);
+const d = piece.data;
+const thread = threadOf(d.threads[0])!;
+const column = COLUMNS.find((c) => c.id === piece.collection)!;
+const row = table[thread.id];
+const sources = d.sources.map((s) => sourceById.get(s.replace(/\.md$/, ''))).filter((s) => s !== undefined);
+const pats = (refs: string[]) => refs.map((r) => patternById.get(r.replace(/^.*\//, '').replace(/\.md$/, ''))).filter((p) => p !== undefined);
+const introduced = pats(d.patterns);
+const applied = pats(d.patterns_applied);
+---
+<Base title={d.title} edit={editUrl(piece)}>
+  <p class="crumbs"><a href={BASE}>The table</a> › <a href={url.thread(thread.id)}>{thread.name}</a> › {column.name} <span class="level">({column.levelLabel})</span></p>
+  <article class="piece">
+    <header>
+      <h1>{d.title}</h1>
+      {d.status === 'draft' && <p><span class="badge">Draft</span></p>}
+      {(introduced.length > 0 || applied.length > 0) && (
+        <p class="piece-patterns">
+          {introduced.length > 0 && <>Introduces {introduced.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>)}. </>}
+          {applied.length > 0 && <>Applies {applied.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>)}.</>}
+        </p>
+      )}
+    </header>
+    <div class="prose"><Content /></div>
+  </article>
+  {sources.length > 0 && (
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>{sources.map((s) => <li><a href={url.source(s)}>{s.data.title}</a>{s.data.authors.length > 0 && <>, {s.data.authors.join('; ')}</>}{s.data.year && <> ({s.data.year})</>}</li>)}</ul>
+    </section>
+  )}
+  <nav class="in-thread" aria-label="In this thread">
+    <h2>In this thread: <a href={url.thread(thread.id)}>{thread.name}</a></h2>
+    <div class="in-thread-cols">
+      {COLUMNS.map((c) => (
+        <div>
+          <h3>{c.name}</h3>
+          {row[c.id as ColumnId].length ? (
+            <ul>{row[c.id as ColumnId].map((p) => <li>{p.id === piece.id && p.collection === piece.collection ? <strong aria-current="page">{p.data.title}</strong> : <a href={url.piece(p)}>{p.data.title}</a>}</li>)}</ul>
+          ) : <p class="open">Open</p>}
+        </div>
+      ))}
+    </div>
+  </nav>
+</Base>

@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import Table from '../../components/Table.astro';
+import { site, url, columnOf, threadOf, newFileUrl } from '../../lib/content';
+import { BASE } from '../../lib/site.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const { patterns } = await site();
+const template = fs.readFileSync(path.resolve(process.cwd(), '../templates/wiki-pattern.md'), 'utf8');
+---
+<Base title="Patterns" description="A pattern language for community tech.">
+  <h1>Patterns</h1>
+  <p class="lede">A pattern names a problem that keeps coming up in some situation and says what to do about it. Together they form a language for building and running technology in common.</p>
+  <p>Each pattern sits in one cell of the table: its thread, and the column for its level. <a href={`${BASE}theory/a-pattern-language-for-community-tech/`}>More about the patterns</a> · <a href={`${BASE}guides/writing-a-pattern/`}>Write one</a> · <a href={newFileUrl('wiki/patterns', 'new-pattern.md', template)} rel="noopener">Start a pattern on GitHub</a></p>
+  <Table mode="patterns" />
+  <h2>All patterns</h2>
+  <ol class="pattern-index">
+    {patterns.map((p) => (
+      <li>
+        <span class="num">{p.data.number}</span>
+        <div>
+          <a href={url.pattern(p)}>{p.data.title}</a>
+          <p class="intro">{p.data.introduction}</p>
+          <p class="meta"><a href={url.thread(p.data.thread)}>{threadOf(p.data.thread)?.name}</a> · {p.data.level} · {columnOf(p.data.level).name}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</Base>

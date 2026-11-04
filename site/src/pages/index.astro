@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import Table from '../components/Table.astro';
+import { BASE } from '../lib/site.mjs';
+---
+<Base title="Let's Recommon IT">
+  <section class="intro">
+    <h1>Let's Recommon IT</h1>
+    <p class="lede">Guides, governance, and theory for building and running information technology at community scale, so it's owned, understood, and governed by the people who use it.</p>
+    <p>The site is a table. Each row is a thread. Each column is a level of rules, from Elinor Ostrom's institutional analysis: guides for day-to-day work, governance for how rules are made and who makes them, and theory for what the whole thing is for. <a href={`${BASE}theory/this-repository-is-a-commons/`}>Why it's built this way</a>.</p>
+    <p>Every piece explains a set of <a href={`${BASE}patterns/`}>patterns</a>. Any open cell can be written by anyone.</p>
+  </section>
+  <Table mode="pieces" />
+</Base>

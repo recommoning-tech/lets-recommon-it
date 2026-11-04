@@ -1,0 +1,57 @@
+---
+// The site's main navigation: threads as rows, IAD levels as columns.
+// mode "pieces" lists essays per cell; mode "patterns" lists patterns per cell.
+import { site, url, newFileUrl, type ColumnId } from '../lib/content';
+import { THREADS, COLUMNS } from '../lib/site.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props { mode: 'pieces' | 'patterns'; threads?: string[] }
+const { mode, threads } = Astro.props;
+const { table, patternTable } = await site();
+const rows = THREADS.filter((t) => !threads || threads.includes(t.id));
+
+const templateFile: Record<ColumnId, string> = { guides: 'guide.md', governance: 'governance.md', theory: 'theory.md' };
+const template = (col: ColumnId, thread: string) =>
+  fs.readFileSync(path.resolve(process.cwd(), '../templates', templateFile[col]), 'utf8').replace(/^threads: \[\]/m, `threads: [${thread}]`);
+---
+<div class="table-wrap">
+  <table class="the-table">
+    <thead>
+      <tr>
+        <th scope="col">Thread</th>
+        {COLUMNS.map((c) => <th scope="col">{c.name}<span class="level">{c.levelLabel}</span></th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((t) => (
+        <tr>
+          <th scope="row"><a href={url.thread(t.id)}>{t.name}</a></th>
+          {COLUMNS.map((c) => {
+            const col = c.id as ColumnId;
+            if (mode === 'patterns') {
+              const items = patternTable[t.id][col];
+              return (
+                <td data-label={c.name}>
+                  {items.length ? (
+                    <ul>{items.map((p) => <li><a href={url.pattern(p)}><span class="num">{p.data.number}</span> {p.data.title}</a></li>)}</ul>
+                  ) : <span class="open">No patterns yet</span>}
+                </td>
+              );
+            }
+            const items = table[t.id][col];
+            return (
+              <td data-label={c.name}>
+                {items.length ? (
+                  <ul>{items.map((p) => <li><a href={url.piece(p)}>{p.data.title}</a></li>)}</ul>
+                ) : (
+                  <a class="open" href={newFileUrl(col, 'new-piece.md', template(col, t.id))} rel="noopener">Open: contribute here</a>
+                )}
+              </td>
+            );
+          })}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

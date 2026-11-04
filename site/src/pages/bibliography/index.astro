@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site, url } from '../../lib/content';
+const { sources } = await site();
+const sorted = [...sources].sort((a, b) => (a.data.authors[0] ?? a.data.title).localeCompare(b.data.authors[0] ?? b.data.title));
+---
+<Base title="Bibliography" description="Annotated sources for the site.">
+  <h1>Bibliography</h1>
+  <p class="lede">Annotated sources the essays and patterns draw on.</p>
+  <ul class="bib-list">
+    {sorted.map((s) => (
+      <li>
+        <a href={url.source(s)}>{s.data.title}</a>
+        <span class="meta">{s.data.authors.join('; ')}{s.data.year && ` (${s.data.year})`}</span>
+      </li>
+    ))}
+  </ul>
+</Base>

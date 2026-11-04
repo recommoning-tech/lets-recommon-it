@@ -1,0 +1,9 @@
+---
+// "Contribute here" link to the file on GitHub.
+interface Props { href: string; label?: string }
+const { href, label = 'Edit this page on GitHub' } = Astro.props;
+---
+<a class="edit-link" href={href} rel="noopener">
+  <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path fill="currentColor" d="M11.1 1.6a1.5 1.5 0 0 1 2.1 0l1.2 1.2a1.5 1.5 0 0 1 0 2.1L6 13.3l-3.6.9a.5.5 0 0 1-.6-.6l.9-3.6zm-.7 2.1L4.1 10l-.5 2 2-.5 6.3-6.3z"/></svg>
+  {label}
+</a>

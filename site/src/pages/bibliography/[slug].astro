@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import { render } from 'astro:content';
+import { site, url, editUrl, threadOf, type Source } from '../../lib/content';
+import { BASE } from '../../lib/site.mjs';
+
+export async function getStaticPaths() {
+  const { sources } = await site();
+  return sources.map((s) => ({ params: { slug: s.id }, props: { source: s } }));
+}
+const { source } = Astro.props as { source: Source };
+const { citedIn } = await site();
+const { Content } = await render(source);
+const d = source.data;
+const cited = citedIn.get(source.id) ?? [];
+---
+<Base title={d.title} edit={editUrl(source)}>
+  <p class="crumbs"><a href={`${BASE}bibliography/`}>Bibliography</a></p>
+  <article class="piece">
+    <header>
+      <h1>{d.title}</h1>
+      <p class="meta">{d.authors.join('; ')}{d.year && ` (${d.year})`}{d.publisher && `. ${d.publisher}`}{d.url && <>. <a href={d.url}>Link</a></>}</p>
+      {d.threads.length > 0 && <p class="meta">Threads: {d.threads.map((t, i) => <>{i > 0 && ', '}{threadOf(t) ? <a href={url.thread(t)}>{threadOf(t)!.name}</a> : t}</>)}</p>}
+    </header>
+    <div class="prose"><Content /></div>
+  </article>
+  {cited.length > 0 && (
+    <section class="sources">
+      <h2>Cited in</h2>
+      <ul>{cited.map((p) => <li><a href={url.piece(p)}>{p.data.title}</a></li>)}</ul>
+    </section>
+  )}
+</Base>
