@@ -32,7 +32,7 @@ patterns_applied: []   # wiki/patterns/slug.md from other pieces
 ### [Pattern Name](../wiki/patterns/slug.md)
 <!-- One paragraph: how this piece leads to the pattern. -->
 
-> **Therefore:** <!-- copy the pattern's Therefore line -->
+> **Therefore:** <!-- copy the pattern's Solution -->
 
 ## Patterns applied
 <!-- For each pattern: which step implements it. -->

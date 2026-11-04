@@ -11,6 +11,8 @@ patterns_applied:
   - wiki/patterns/every-thread-at-every-level.md
   - wiki/patterns/any-cell-any-time.md
   - wiki/patterns/patterns-are-tested-in-practice.md
+  - wiki/patterns/solution-first.md
+  - wiki/patterns/workshop-the-pattern.md
 ---
 
 ## What you'll build
@@ -53,15 +55,16 @@ The pattern table in [`index.md`](../index.md) lists every pattern with its thre
 
 ## Contribute a pattern
 
-A pattern can be contributed on its own, before any piece explains it.
+A pattern can be contributed on its own, before any piece explains it. [Writing a pattern](writing-a-pattern.md) walks through drafting one.
 
 1. Copy the template: `cp templates/wiki-pattern.md wiki/patterns/<slug>.md`
 2. Set `number` to the highest existing number + 1.
 3. Set `thread` (one) and `level`: `operational`, `collective-choice`, `constitutional`, or `metaconstitutional`. The level decides which column introduces it.
-4. Write Context, Problem, Discussion, and **Therefore**. The Therefore line is an instruction a group can follow.
+4. Write the elements solution first and name last ([Solution First](../wiki/patterns/solution-first.md)): Solution, Actions, Problem, Context, Forces, Consequences, then the name and a one-sentence introduction. The page shows them in reading order.
 5. Set `introduced_in` to the piece that explains it. If there isn't one yet, leave it empty and write "planned for a [thread] [column] piece" under Connections.
 6. Fill in `larger_patterns` and `smaller_patterns`, and update the *other* pattern's page so the link goes both ways.
 7. Add the pattern to the pattern table in `index.md`.
+8. Before it leaves `draft`, ask for a pattern workshop ([Workshop the Pattern](../wiki/patterns/workshop-the-pattern.md); proposed in [Who decides what becomes a pattern?](../governance/who-decides-what-becomes-a-pattern.md)).
 
 ## Contribute a guide (operational)
 
@@ -84,7 +87,7 @@ A theory essay argues what the thread is about: what is being shared, who it's f
 ## For every piece
 
 ### Patterns
-- **Introduced here:** list them in `patterns:`, set each pattern page's `introduced_in` to this piece, and give each one a subsection under **Patterns introduced**: a paragraph on how the piece leads to it, its Therefore line, and a link. Don't copy the whole pattern; the wiki page is the single source.
+- **Introduced here:** list them in `patterns:`, set each pattern page's `introduced_in` to this piece, and give each one a subsection under **Patterns introduced**: a paragraph on how the piece leads to it, its Solution (the **Therefore** sentence), and a link. Don't copy the whole pattern; the wiki page is the single source.
 - **Applied here:** list them in `patterns_applied:`, say how under **Patterns applied**, and add this piece to the pattern page's `applied_in` and Connections.
 
 If a pattern doesn't fit what you found, say so and propose a change to it ([Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md)).
@@ -138,7 +141,7 @@ Before asking for review:
 ## Maintenance
 
 - **Renaming or moving a file:** search for its old name with `grep` and update every reference, including front matter and `index.md`.
-- **Revising a pattern:** update the Therefore line on the pattern page *and* in the piece that introduces it. Note the reason in the commit message.
+- **Revising a pattern:** update the Solution on the pattern page *and* in the piece that introduces it. Note the reason in the commit message.
 - **Status:** move `status: draft` to `published` only after review.
 
 ## Community considerations
@@ -152,17 +155,19 @@ Before asking for review:
 ### [Every Page Links Out](../wiki/patterns/every-page-links-out.md)
 Pieces contributed one cell at a time tend to become islands. A guide cut off from its reasons becomes a recipe; a theory essay cut off from practice becomes a slogan. The Links step above is the operational rule that prevents it.
 
-> **Therefore:** every page links to the other pieces in its thread, to the table, to the patterns it introduces or applies, and to the sources it draws on. A page with no links out isn't finished.
+> **Therefore:** link every page to the other pieces in its thread, to the table, to the patterns it introduces or applies, and to the sources it draws on.
 
 ## Patterns applied
 - [Every Thread at Every Level](../wiki/patterns/every-thread-at-every-level.md): the three "Contribute a..." sections, one per column, and the `level` field on every pattern.
 - [Any Cell, Any Time](../wiki/patterns/any-cell-any-time.md): each kind of contribution, including a single pattern, can be made on its own.
 - [Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md): the Patterns step. Applied patterns are named, and revised when they don't fit.
+- [Solution First](../wiki/patterns/solution-first.md): step 4 of Contribute a pattern.
+- [Workshop the Pattern](../wiki/patterns/workshop-the-pattern.md): step 8 of Contribute a pattern.
 
 ## Further reading
 - [`README.md`](../README.md) for repository structure
 - [`templates/`](../templates/) for all templates
-- [Alexander, *A Pattern Language*](../bibliography/alexander-1977-pattern-language.md) for the pattern format
+- [Writing a pattern](writing-a-pattern.md) and [Iba, "A Practical Guide on Pattern Writing"](../bibliography/iba-2021-practical-guide-pattern-writing.md) for the pattern format
 - [Crawford & Ostrom, "A Grammar of Institutions"](../bibliography/crawford-ostrom-1995-grammar-of-institutions.md) for ADICO
 
 ## In this thread

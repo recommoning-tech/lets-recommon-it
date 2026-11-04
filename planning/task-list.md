@@ -19,6 +19,10 @@
 - [x] Draft liberatory-tech row: Who owns the machine?, Setting up your first server, Who holds root?
 - [x] Write first 3 wiki patterns
 - [x] Draft institutions row: This repository is a commons, Writing for Let's Recommon IT, How this project is run
+- [x] Draft design-patterns row: A pattern language for community tech, Writing a pattern, Who decides what becomes a pattern?; patterns rewritten in Iba's format
+- [ ] Verify the year of Iba's PURPLSOC keynote volume (2016 from a retailer listing)
+- [ ] Pattern illustrations: decide on a style and tool (optional `image` field for now)
+- [ ] Adopt or reject the proposed pattern status stages (lazy consensus)
 - [ ] Move liberatory-tech patterns to the piece at their level (Two Keyholders is collective-choice, so it belongs in Who holds root?)
 - [ ] Write a piece that introduces Talk Before You Enforce (institutions, governance)
 - [ ] Rewrite `posts/drafts/recommoning-it.md` as a commons-thread theory essay

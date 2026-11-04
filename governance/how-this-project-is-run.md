@@ -88,7 +88,7 @@ This project uses AI tools in drafting, and its own sources are critical of AI (
 ### [Any Cell, Any Time](../wiki/patterns/any-cell-any-time.md)
 If the unit of contribution is a full set of theory, guide, and governance, only people with a lot of time can contribute, and they end up setting the direction. The action situation above makes "contribute a piece to any cell" an action open to every contributor, and the collective-choice rules decide which threads exist.
 
-> **Therefore:** accept a contribution to any single cell of the table (one guide, governance piece, theory essay, or pattern) at any time, without waiting for the rest of its row. Anyone may propose a new thread; it's added through the project's collective-choice rules.
+> **Therefore:** accept a contribution to any single cell of the table at any time, without waiting for the rest of its row.
 
 ## Patterns applied
 - [Every Thread at Every Level](../wiki/patterns/every-thread-at-every-level.md): this piece holds the collective-choice and constitutional rules; operational rules live in the guide.
