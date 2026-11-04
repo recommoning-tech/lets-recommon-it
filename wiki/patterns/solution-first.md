@@ -2,7 +2,7 @@
 title: "Solution First"
 number: 9
 introduction: "Start with what you'd tell a newcomer."
-image: ""
+image: images/solution-first.svg
 thread: design-patterns
 level: operational
 introduced_in: guides/writing-a-pattern.md

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+<title id="t">Every Page Links Out</title>
+<desc id="d">A person pins a string between pages on a board, where every page is already joined to others.</desc>
+<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
+<path class="il-i" d="M20 262 H380" opacity=".35"/>
+<g class="il-t" transform="translate(3 2)">
+<rect x="170" y="66" width="34" height="26" rx="2"/>
+<rect x="270" y="70" width="34" height="26" rx="2"/>
+<rect x="190" y="138" width="34" height="26" rx="2"/>
+<rect x="300" y="140" width="34" height="26" rx="2"/>
+<path transform="translate(92 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+</g>
+<g>
+<rect class="il-i" x="150" y="46" width="200" height="150" rx="3"/>
+<path class="il-i" stroke-width="2" d="M187 80 L287 84 M207 152 L317 154 M287 84 L317 154 M187 80 L207 152"/>
+<rect class="il-i" x="170" y="66" width="34" height="26" rx="2"/>
+<path class="il-i" stroke-width="2" d="M176 74 H198 M176 81 H192"/>
+<rect class="il-i" x="270" y="70" width="34" height="26" rx="2"/>
+<path class="il-i" stroke-width="2" d="M276 78 H298 M276 85 H292"/>
+<rect class="il-i" x="190" y="138" width="34" height="26" rx="2"/>
+<path class="il-i" stroke-width="2" d="M196 146 H218 M196 153 H212"/>
+<rect class="il-i" x="300" y="140" width="34" height="26" rx="2"/>
+<path class="il-i" stroke-width="2" d="M306 148 H328 M306 155 H322"/>
+<g transform="translate(92 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-1 -105 Q4 -100 9 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -44 M15 -88 L34 -96 L58 -110"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-44" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="58" cy="-110" r="3.6"/>
+</g>
+<path class="il-i" stroke-width="2" d="M150 152 L187 80"/>
+</g>
+</svg>

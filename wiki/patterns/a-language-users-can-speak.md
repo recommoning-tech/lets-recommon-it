@@ -2,7 +2,7 @@
 title: "A Language Users Can Speak"
 number: 8
 introduction: "Patterns are for the people who live with the system."
-image: ""
+image: images/a-language-users-can-speak.svg
 thread: design-patterns
 level: metaconstitutional
 introduced_in: theory/a-pattern-language-for-community-tech.md

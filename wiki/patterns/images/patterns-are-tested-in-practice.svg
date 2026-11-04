@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+<title id="t">Patterns Are Tested in Practice</title>
+<desc id="d">A person holds a pattern card up beside a working server, checking whether the card matches what is really there.</desc>
+<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
+<path class="il-i" d="M20 262 H380" opacity=".35"/>
+<g class="il-t" transform="translate(3 2)">
+<rect x="246" y="150" width="64" height="112" rx="5"/>
+<path transform="translate(150 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<rect x="206" y="132" width="34" height="26" rx="2" transform="rotate(-6 223 145)"/>
+</g>
+<g>
+<rect class="il-i" x="246" y="150" width="64" height="112" rx="5"/>
+<path class="il-i" stroke-width="2" d="M256 172 H300"/>
+<path class="il-i" stroke-width="2" d="M256 194 H300"/>
+<path class="il-i" stroke-width="2" d="M256 216 H300"/>
+<path class="il-i" stroke-width="2" d="M256 238 H300"/>
+<g transform="translate(150 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M0 -104 H8"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -46 M15 -88 L34 -88 L60 -96"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-46" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="60" cy="-96" r="3.6"/>
+</g>
+<rect class="il-i" x="206" y="132" width="34" height="26" rx="2" transform="rotate(-6 223 145)"/>
+<path class="il-i" stroke-width="2" d="M212 140 H234 M212 147 H228" transform="rotate(-6 223 145)"/>
+<path class="il-i" stroke-width="2" d="M168 104 Q176 92 186 100 Q192 106 184 112 L182 118 M182 126 V127"/>
+</g>
+</svg>

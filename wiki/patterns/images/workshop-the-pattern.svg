@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+<title id="t">Workshop the Pattern</title>
+<desc id="d">Two readers lean over a pattern card on a table and talk about it, while its author stands to one side, listening.</desc>
+<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
+<path class="il-i" d="M20 262 H380" opacity=".35"/>
+<g class="il-t" transform="translate(3 2)">
+<rect x="172" y="186" width="38" height="20" rx="2"/>
+<path transform="translate(90 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<path transform="translate(290 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<path d="M240 24 H294 Q304 24 304 34 V56 Q304 66 294 66 H288 L280 92 L278 66 H240 Q230 66 230 56 V34 Q230 24 240 24 Z"/>
+<path transform="translate(360 262) scale(0.9)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+</g>
+<g>
+<path class="il-i" d="M110 206 H270 M124 206 V262 M256 206 V262"/>
+<rect class="il-i" x="172" y="186" width="38" height="20" rx="2"/>
+<path class="il-i" stroke-width="2" d="M178 194 H204 M178 201 H198"/>
+<g transform="translate(90 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M1 -104 Q4 -99 7 -104 Q4 -102 1 -104"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -44 M15 -88 L26 -66 L40 -58"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-44" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="40" cy="-58" r="3.6"/>
+</g>
+<g transform="translate(290 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-9" cy="-116" r="1.8"/><circle class="il-f" cx="1" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-9 -105 Q-4 -100 1 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-26 -66 L-40 -58 M15 -88 L22 -66 L24 -44"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-40" cy="-58" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="24" cy="-44" r="3.6"/>
+</g>
+<path class="il-p il-i" d="M70 30 H120 Q130 30 130 40 V60 Q130 70 120 70 H100 L92 94 L90 70 H70 Q60 70 60 60 V40 Q60 30 70 30 Z" />
+<path class="il-p il-i" d="M240 24 H294 Q304 24 304 34 V56 Q304 66 294 66 H288 L280 92 L278 66 H240 Q230 66 230 56 V34 Q230 24 240 24 Z" fill-opacity="0"/>
+<path class="il-i" stroke-width="2" d="M74 46 H116 M74 56 H104 M244 40 H290 M244 50 H278"/>
+<g transform="translate(360 262) scale(0.9)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-9" cy="-116" r="1.8"/><circle class="il-f" cx="1" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-9 -105 Q-4 -100 1 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-14 -64 L-6 -50 M15 -88 L14 -64 L6 -50"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-6" cy="-50" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="6" cy="-50" r="3.6"/>
+</g>
+</g>
+</svg>

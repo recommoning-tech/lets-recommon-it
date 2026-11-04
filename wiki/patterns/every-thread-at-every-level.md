@@ -2,7 +2,7 @@
 title: "Every Thread at Every Level"
 number: 4
 introduction: "Write for every level where rules are made."
-image: ""
+image: images/every-thread-at-every-level.svg
 thread: institutions
 level: metaconstitutional
 introduced_in: theory/this-repository-is-a-commons.md

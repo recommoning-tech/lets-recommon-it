@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+<title id="t">Two Keyholders</title>
+<desc id="d">Two people stand on either side of a shared server, each holding up their own key to it.</desc>
+<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
+<path class="il-i" d="M20 262 H380" opacity=".35"/>
+<g class="il-t" transform="translate(3 2)">
+<rect x="168" y="150" width="64" height="112" rx="5"/>
+<path transform="translate(100 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<path transform="translate(300 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+</g>
+<g>
+<rect class="il-i" x="168" y="150" width="64" height="112" rx="5"/>
+<path class="il-i" stroke-width="2" d="M178 172 H222"/>
+<path class="il-i" stroke-width="2" d="M178 194 H222"/>
+<path class="il-i" stroke-width="2" d="M178 216 H222"/>
+<path class="il-i" stroke-width="2" d="M178 238 H222"/>
+<circle class="il-f" cx="186" cy="200" r="3.5"/><path class="il-i" d="M186 202 V208"/><circle class="il-f" cx="214" cy="200" r="3.5"/><path class="il-i" d="M214 202 V208"/>
+<g transform="translate(100 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-1 -105 Q4 -100 9 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -44 M15 -88 L32 -80 L52 -86"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-44" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="52" cy="-86" r="3.6"/>
+</g>
+<g transform="translate(300 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-9" cy="-116" r="1.8"/><circle class="il-f" cx="1" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-9 -105 Q-4 -100 1 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-32 -80 L-52 -86 M15 -88 L22 -66 L24 -44"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-52" cy="-86" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="24" cy="-44" r="3.6"/>
+</g>
+<g transform="translate(156 176) scale(1 1)"><circle class="il-i" cx="0" cy="0" r="6"/><path class="il-i" d="M6 0 H26 M20 0 V6 M25 0 V5"/></g>
+<g transform="translate(244 176) scale(-1 1)"><circle class="il-i" cx="0" cy="0" r="6"/><path class="il-i" d="M6 0 H26 M20 0 V6 M25 0 V5"/></g>
+</g>
+</svg>

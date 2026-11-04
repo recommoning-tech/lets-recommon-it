@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+<title id="t">Solution First</title>
+<desc id="d">An experienced person hands a single card to a newcomer, who reaches out with both hands to take it.</desc>
+<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
+<path class="il-i" d="M20 262 H380" opacity=".35"/>
+<g class="il-t" transform="translate(3 2)">
+<path transform="translate(140 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<rect x="194" y="166" width="36" height="26" rx="2" transform="rotate(-4 212 179)"/>
+<path transform="translate(262 262) scale(0.86)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+</g>
+<g>
+<g transform="translate(140 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-1 -105 Q4 -100 9 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -44 M15 -88 L30 -76 L52 -80"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-44" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="52" cy="-80" r="3.6"/>
+</g>
+<rect class="il-i" x="194" y="166" width="36" height="26" rx="2" transform="rotate(-4 212 179)"/>
+<path class="il-i" stroke-width="2" d="M200 174 H224 M200 181 H218" transform="rotate(-4 212 179)"/>
+<g transform="translate(262 262) scale(0.86)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-9" cy="-116" r="1.8"/><circle class="il-f" cx="1" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-7 -104 Q-4 -99 -1 -104 Q-4 -102 -7 -104"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-30 -70 L-44 -76 M15 -88 L-6 -66 L-36 -68"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-44" cy="-76" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="-36" cy="-68" r="3.6"/>
+</g>
+</g>
+</svg>

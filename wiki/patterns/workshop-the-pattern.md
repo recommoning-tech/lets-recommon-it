@@ -2,7 +2,7 @@
 title: "Workshop the Pattern"
 number: 10
 introduction: "Hear what works before you hear what's wrong."
-image: ""
+image: images/workshop-the-pattern.svg
 thread: design-patterns
 level: collective-choice
 introduced_in: governance/who-decides-what-becomes-a-pattern.md

@@ -2,7 +2,7 @@
 title: "Two Keyholders"
 number: 1
 introduction: "No shared system should depend on one person."
-image: ""
+image: images/two-keyholders.svg
 thread: liberatory-tech
 level: collective-choice
 larger_patterns: [small-enough-to-understand]

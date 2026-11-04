@@ -2,7 +2,7 @@
 title: "Every Page Links Out"
 number: 5
 introduction: "A page with no links out isn't finished."
-image: ""
+image: images/every-page-links-out.svg
 thread: institutions
 level: operational
 introduced_in: guides/contributing.md

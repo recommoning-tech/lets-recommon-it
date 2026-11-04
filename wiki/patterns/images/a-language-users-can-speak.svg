@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+<title id="t">A Language Users Can Speak</title>
+<desc id="d">Two people face each other in conversation; both speech bubbles hold the same simple shape, a word they share.</desc>
+<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
+<path class="il-i" d="M20 262 H380" opacity=".35"/>
+<g class="il-t" transform="translate(3 2)">
+<path transform="translate(130 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<path transform="translate(270 262) scale(0.94)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<rect x="88" y="60" width="24" height="24" rx="2"/>
+<rect x="288" y="66" width="24" height="24" rx="2"/>
+</g>
+<g>
+<g transform="translate(130 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-1 -105 Q4 -100 9 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -44 M15 -88 L26 -70 L38 -78"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-44" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="38" cy="-78" r="3.6"/>
+</g>
+<g transform="translate(270 262) scale(0.94)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-9" cy="-116" r="1.8"/><circle class="il-f" cx="1" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-9 -105 Q-4 -100 1 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-26 -70 L-38 -78 M15 -88 L22 -66 L24 -44"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-38" cy="-78" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="24" cy="-44" r="3.6"/>
+</g>
+<path class="il-p il-i" d="M70 44 H130 Q140 44 140 54 V90 Q140 100 130 100 H126 L118 120 L116 100 H70 Q60 100 60 90 V54 Q60 44 70 44 Z" />
+<path class="il-p il-i" d="M270 50 H330 Q340 50 340 60 V96 Q340 106 330 106 H290 L282 124 L280 106 H270 Q260 106 260 96 V60 Q260 50 270 50 Z" />
+<rect class="il-i" x="88" y="60" width="24" height="24" rx="2"/>
+<rect class="il-i" x="288" y="66" width="24" height="24" rx="2"/>
+</g>
+</svg>

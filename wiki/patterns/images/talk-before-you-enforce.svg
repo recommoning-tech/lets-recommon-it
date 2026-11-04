@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+<title id="t">Talk Before You Enforce</title>
+<desc id="d">Three people stand in a loose circle talking, with speech bubbles above them, while a fence panel lies unused on the ground.</desc>
+<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
+<path class="il-i" d="M20 262 H380" opacity=".35"/>
+<g class="il-t" transform="translate(3 2)">
+<path transform="translate(80 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<path transform="translate(170 262) scale(0.92)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<path transform="translate(255 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+<path d="M62 40 H112 Q122 40 122 50 V72 Q122 82 112 82 H90 L82 98 L80 82 H62 Q52 82 52 72 V50 Q52 40 62 40 Z"/>
+</g>
+<g>
+<g transform="translate(80 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-1 -105 Q4 -100 9 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -44 M15 -88 L28 -70 L40 -76"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-44" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="40" cy="-76" r="3.6"/>
+</g>
+<g transform="translate(170 262) scale(0.92)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-5" cy="-116" r="1.8"/><circle class="il-f" cx="5" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-3 -104 Q0 -99 3 -104 Q0 -102 -3 -104"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-26 -72 L-34 -80 M15 -88 L22 -66 L24 -44"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-34" cy="-80" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="24" cy="-44" r="3.6"/>
+</g>
+<g transform="translate(255 262) scale(1)">
+  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
+  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
+  <circle class="il-f" cx="-9" cy="-116" r="1.8"/><circle class="il-f" cx="1" cy="-116" r="1.8"/>
+  <path class="il-i" stroke-width="2.2" d="M-9 -105 Q-4 -100 1 -105"/>
+  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
+  <path class="il-i" d="M-15 -88 L-26 -66 L-30 -48 M15 -88 L22 -66 L24 -44"/>
+  <circle class="il-p il-i" stroke-width="2.4" cx="-30" cy="-48" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="24" cy="-44" r="3.6"/>
+</g>
+<path class="il-p il-i" d="M62 40 H112 Q122 40 122 50 V72 Q122 82 112 82 H90 L82 98 L80 82 H62 Q52 82 52 72 V50 Q52 40 62 40 Z" fill-opacity="0"/>
+<path class="il-p il-i" d="M206 30 H262 Q272 30 272 40 V66 Q272 76 262 76 H242 L234 100 L232 76 H206 Q196 76 196 66 V40 Q196 30 206 30 Z" />
+<path class="il-i" stroke-width="2" d="M64 56 H108 M64 66 H96 M210 48 H258 M210 58 H246"/>
+<path class="il-i" d="M300 258 H380 M300 250 H380 M310 246 V262 M340 246 V262 M370 246 V262"/>
+</g>
+</svg>

@@ -2,7 +2,7 @@
 title: "Small Enough to Understand"
 number: 2
 introduction: "People can only govern what they can understand."
-image: ""
+image: images/small-enough-to-understand.svg
 thread: liberatory-tech
 level: metaconstitutional
 larger_patterns: []

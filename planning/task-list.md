@@ -21,7 +21,6 @@
 - [x] Draft institutions row: This repository is a commons, Writing for Let's Recommon IT, How this project is run
 - [x] Draft design-patterns row: A pattern language for community tech, Writing a pattern, Who decides what becomes a pattern?; patterns rewritten in Iba's format
 - [ ] Verify the year of Iba's PURPLSOC keynote volume (2016 from a retailer listing)
-- [ ] Pattern illustrations: decide on a style and tool (optional `image` field for now)
 - [ ] Adopt or reject the proposed pattern status stages (lazy consensus)
 - [x] Move liberatory-tech patterns to the piece at their level (Two Keyholders is collective-choice, so it belongs in Who holds root?)
 - [ ] Write a piece that introduces Talk Before You Enforce (institutions, governance)
@@ -35,7 +34,8 @@
 - [x] Static site generator: Astro (`site/`)
 - [x] Hosting: GitHub Pages, deployed from `main`; repo made public
 - [x] Generated table, thread footers, pattern connections, bibliography backlinks; front matter validated at build
-- [ ] Visual identity: thread colors, level marks, type
-- [ ] Pattern illustrations: style, tool, and first set
+- [x] Visual identity: thread inks, level marks, type ("workshop print")
+- [x] Pattern illustrations: style guide and first set (AI-assisted drafts)
+- [ ] Pattern illustrations redrawn or reviewed by a person
 - [ ] Bibliography index filterable by thread
 - [ ] Domain, RSS
