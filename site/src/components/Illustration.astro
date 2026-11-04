@@ -1,0 +1,9 @@
+---
+// Inlines a pattern's SVG illustration so it takes the page's ink and the thread's color.
+import fs from 'node:fs';
+import path from 'node:path';
+interface Props { file: string; ink: string }
+const { file, ink } = Astro.props;
+const svg = fs.readFileSync(path.resolve(process.cwd(), '../wiki/patterns', file), 'utf8');
+---
+<figure class="plate" style={`--thread:${ink}`} set:html={svg} />

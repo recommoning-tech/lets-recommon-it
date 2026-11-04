@@ -1,7 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Mark from '../../components/Mark.astro';
+import Num from '../../components/Num.astro';
+import Illustration from '../../components/Illustration.astro';
 import { render } from 'astro:content';
-import { site, url, editUrl, columnOf, threadOf, repoPath, type Pattern } from '../../lib/content';
+import { site, url, editUrl, columnOf, threadOf, type Pattern } from '../../lib/content';
 import { BASE } from '../../lib/site.mjs';
 
 export async function getStaticPaths() {
@@ -12,35 +15,38 @@ const { pattern } = Astro.props as { pattern: Pattern };
 const { pieceByPath, patternById } = await site();
 const { Content } = await render(pattern);
 const d = pattern.data;
+const thread = threadOf(d.thread)!;
+const column = columnOf(d.level);
 const intro = d.introduced_in ? pieceByPath.get(d.introduced_in) : undefined;
 const applied = d.applied_in.map((a) => pieceByPath.get(a)).filter((p) => p !== undefined);
 const rel = (ids: string[]) => ids.map((id) => patternById.get(id)).filter((p) => p !== undefined);
 const larger = rel(d.larger_patterns);
 const smaller = rel(d.smaller_patterns);
-const column = columnOf(d.level);
 ---
 <Base title={d.title} description={d.introduction} edit={editUrl(pattern)}>
-  <p class="crumbs"><a href={`${BASE}patterns/`}>Patterns</a> › <a href={url.thread(d.thread)}>{threadOf(d.thread)?.name}</a> › {column.name}</p>
-  <article class="pattern">
-    <header>
-      <p class="pattern-number">Pattern {d.number}{d.status === 'draft' && <span class="badge">Draft</span>}</p>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href={`${BASE}patterns/`}>Patterns</a> <span aria-hidden="true">/</span> <a href={url.thread(d.thread)}>{thread.name}</a> <span aria-hidden="true">/</span> {column.name}</nav>
+  <article class="pattern" style={`--thread:${thread.ink}`}>
+    <header class="pattern-head">
+      <Num n={d.number} ink={thread.ink} />
       <h1>{d.title}</h1>
-      {d.image && <img class="pattern-image" src={`${BASE}${d.image}`} alt="" />}
+      {d.status === 'draft' && <span class="badge">Draft</span>}
     </header>
+    <p class="pattern-intro">{d.introduction}</p>
+    {d.image && <Illustration file={d.image} ink={thread.ink} />}
     <div class="pattern-body"><Content /></div>
     <aside class="connections" aria-label="Connections">
       <h2>Connections</h2>
       <dl>
         <dt>Thread and level</dt>
-        <dd><a href={url.thread(d.thread)}>{threadOf(d.thread)?.name}</a> · {d.level}</dd>
+        <dd><span class="tag"><Mark shape="circle" color={thread.ink} /><a href={url.thread(d.thread)}>{thread.name}</a></span> <span class="tag"><Mark shape={column.mark as any} />{d.level}</span></dd>
         <dt>Introduced in</dt>
-        <dd>{intro ? <a href={url.piece(intro)}>{intro.data.title}</a> : <span class="open">Not yet written: a {column.name.toLowerCase()} piece in this thread</span>}</dd>
+        <dd>{intro ? <a href={url.piece(intro)}>{intro.data.title}</a> : <span class="empty">Not written yet: a {column.name.toLowerCase()} piece in this thread</span>}</dd>
         <dt>Applied in</dt>
-        <dd>{applied.length ? applied.map((p, i) => <>{i > 0 && ', '}<a href={url.piece(p)}>{p.data.title}</a></>) : 'Not yet applied elsewhere'}</dd>
+        <dd>{applied.length ? applied.map((p, i) => <>{i > 0 && ', '}<a href={url.piece(p)}>{p.data.title}</a></>) : <span class="empty">Not applied elsewhere yet</span>}</dd>
         <dt>Larger patterns</dt>
-        <dd>{larger.length ? larger.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : 'None yet'}</dd>
+        <dd>{larger.length ? larger.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : <span class="empty">None yet</span>}</dd>
         <dt>Smaller patterns</dt>
-        <dd>{smaller.length ? smaller.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : 'None yet'}</dd>
+        <dd>{smaller.length ? smaller.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : <span class="empty">None yet</span>}</dd>
       </dl>
     </aside>
   </article>

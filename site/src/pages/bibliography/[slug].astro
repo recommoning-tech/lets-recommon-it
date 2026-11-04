@@ -15,7 +15,7 @@ const d = source.data;
 const cited = citedIn.get(source.id) ?? [];
 ---
 <Base title={d.title} edit={editUrl(source)}>
-  <p class="crumbs"><a href={`${BASE}bibliography/`}>Bibliography</a></p>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href={`${BASE}bibliography/`}>Bibliography</a></nav>
   <article class="piece">
     <header>
       <h1>{d.title}</h1>
