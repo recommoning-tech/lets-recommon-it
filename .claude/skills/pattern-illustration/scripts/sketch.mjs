@@ -239,110 +239,93 @@ function person(B, x, z, { reachR, reachL, s = 1, ...o } = {}) {
 // Every scene uses the shared camera() unless a bird's-eye view needs a higher eye.
 const W = (xr, zr) => [xr * CAM.c - zr * CAM.s, xr * CAM.s + zr * CAM.c]; // camera-frame ground point -> world
 const S = {
-'two-keyholders': ['Two Keyholders', "Sketch in perspective: a small wooden shed with a pitched roof, seen from its front corner, its door hatched. In front of it on the left, a mannequin turns a key in the door. On the right, a second mannequin walks away from the shed carrying a bag, with its own key hanging from the other hand. The shed is the shared system from the pattern's context: something a group depends on. Its door is admin access, the focus. Each figure is a keyholder and each key is full access. The figure leaving with a bag is the problem the pattern guards against, a keyholder who moves away or burns out; the first figure opening the door anyway is the consequence, the system surviving one person leaving. That the first figure is using the key, not just holding it, is the second half of the solution: both keyholders use their access regularly. The metaphor: a shared shed with two keys cut, so the tools stay within reach whoever is away.", (B) => {
+'two-keyholders': ['Two Keyholders', "Sketch in perspective: a long wall with one hatched door in it. At the door, a mannequin turns a key in the lock. From the right, a second mannequin walks up holding its own key out, ready to use it. The wall and door are the shared system from the pattern's context: something a group depends on, with one way in. The door is admin access, the focus. Each key is full access, and each figure is a keyholder. Two keys for one door is the first half of the solution: at least two people can get in, without needing each other. The second figure arriving with its own key out, about to take a turn, is the second half: both keyholders use their access regularly. The consequence is that the door still opens whichever of them is away. The metaphor: admin access as the key to a shared building, with a second key cut and carried, not left in a drawer.", (B) => {
   camera(); horizon(B);
-  const b = person(B, 150, 30, { face: 1, kl: [-13, -28], kr: [12, -27], el: [-16, -68], wl: [-14, -46], er: [22, -72], wr: [30, -56] });
-  key(B, b.hl[0] - 2, b.hl[1] + 4, -1); box(B, b.hr[0] - 6, b.hr[1], 16, 20, { passes: 1 }); line(B, b.hr[0] - 1, b.hr[1], b.hr[0] + 5, b.hr[1] - 6, { passes: 1 });
-  prism(B, [-60, 0, 80], [120, 140, 120]);
-  for (let y = 20; y < 140; y += 20) line3(B, [60, y, 82], [60, y, 198], { cls: 'sk-g', passes: 1 });
-  solid(B, [[[-66, 140, 76], [66, 140, 76], [0, 192, 76]], [[-66, 140, 204], [66, 140, 204], [0, 192, 204]],
-    [[-66, 140, 76], [0, 192, 76], [0, 192, 204], [-66, 140, 204]], [[66, 140, 76], [0, 192, 76], [0, 192, 204], [66, 140, 204]]], { guides: false });
-  quad(B, [[-46, 0, 80], [-6, 0, 80], [-6, 106, 80], [-46, 106, 80]], { focus: true });
-  const kh = P([-14, 54, 80]); ellipse(B, ...kh, 2.4, 2.4, { passes: 1 });
-  const a = person(B, -88, 30, { reachR: [kh[0] - 16, kh[1]] }); key(B, a.hr[0] + 2, a.hr[1], 1);
+  prism(B, [-130, 0, 150], [260, 170, 16]);
+  for (let y = 24; y < 170; y += 24) line3(B, [-128, y, 150], [128, y, 150], { cls: 'sk-g', passes: 1 });
+  quad(B, [[-20, 0, 150], [30, 0, 150], [30, 112, 150], [-20, 112, 150]], { focus: true });
+  prism(B, [-26, 112, 144], [62, 8, 6], { guides: false });
+  const L = P([22, 56, 150]); ellipse(B, ...L, 2.4, 2.4, { passes: 1 });
+  const a = person(B, -30, 100, { reachR: [L[0] - 14, L[1]] }); key(B, a.hr[0] + 2, a.hr[1], 1);
+  const b = person(B, 175, 60, { face: -1, kl: [-12, -27], kr: [13, -28], el: [-22, -84], wl: [-34, -100] }); key(B, b.hl[0] - 2, b.hl[1], -1);
 }],
-'small-enough-to-understand': ['Small Enough to Understand', "Sketch in perspective: a bicycle stands side-on between two mannequins, its front frame triangle hatched. Every part is drawn in the open: two wheels, the chain and gear, the saddle, and the handlebars. In front, one figure points at the chain and gear; behind the bicycle, the other reaches a wrench to the front wheel's hub. The bicycle is the system from the pattern's context, the hardware and software a group chooses. Its few, visible parts are the solution, a system small enough to understand, so the frame is the focus. The figure pointing knows how it works; the figure with the wrench is a second member learning to look after it, the person who could learn to run it in a weekend. The metaphor: a system as a bicycle rather than a sealed engine. Anyone can see how it works and a friend can fix it, at the cost the pattern names: it won't go as fast or as far as a car.", (B) => {
+'small-enough-to-understand': ['Small Enough to Understand', "Sketch in perspective: a table with a shallow open tray on it, hatched, holding three small parts. In front of the table, one mannequin points into the tray; behind it, a second mannequin leans in and reaches for a part. Beside the tray, a dashed outline on the table top marks an empty space. The tray and its few parts are the system from the pattern's context: the hardware and software a group runs. Kept this small and open, it is the solution, the focus: a system small enough that everything can be seen at once. The pointing figure knows it; the reaching figure is a second member learning to run it, as the solution says, within a weekend. The dashed space is the solution's second half: room left for complexity, added only when a real need appears. The metaphor: a system as a tray of parts laid out on a table, not a sealed box only its builder can open.", (B) => {
   camera(); horizon(B);
-  const Rh = [-55, 33, 60], Fh = [55, 33, 60], BB = [-5, 30, 60], S0 = [-15, 82, 60], H = [40, 80, 60];
-  const b = person(B, 92, 130, { face: -1, reachL: P(Fh) }); wrench(B, b.hl[0], b.hl[1], 0.2);
-  circle3(B, Rh, 33, 'xy'); circle3(B, Fh, 33, 'xy');
-  for (const h of [Rh, Fh]) line3(B, [h[0], h[1], h[2] - 8], [h[0], h[1], h[2] + 8], { passes: 1 });
-  quad(B, [S0, H, BB], { focus: true, fill: false });
-  stroke(B, [P(Rh), P(BB), P(S0), P(Rh)]); stroke(B, [P(H), P(Fh)]);
-  circle3(B, BB, 9, 'xy', { passes: 1 }); line3(B, [-55, 37, 60], [-5, 39, 60], { passes: 1 }); line3(B, [-55, 29, 60], [-5, 21, 60], { passes: 1 });
-  line3(B, [-15, 82, 60], [-15, 90, 60], { passes: 1 }); prism(B, [-26, 90, 54], [22, 4, 12], { shade: false, guides: false });
-  line3(B, [40, 80, 60], [36, 96, 60], { passes: 1 }); line3(B, [36, 96, 48], [36, 96, 72]);
-  person(B, -92, 10, { reachR: P(BB) });
+  person(B, 30, 270, { face: -1, s: 0.96, reachL: P([-6, 108, 186]) });
+  for (const [x, z] of [[-78, 214], [72, 214]]) prism(B, [x, 0, z], [6, 72, 6], { guides: false, shade: false });
+  prism(B, [-82, 72, 150], [164, 6, 72], { guides: false });
+  for (const [x, z] of [[-78, 152], [72, 152]]) prism(B, [x, 0, z], [6, 72, 6], { guides: false });
+  prism(B, [-56, 78, 160], [96, 8, 50], { focus: 'top', guides: false });
+  prism(B, [-46, 86, 172], [22, 16, 18], { guides: false }); prism(B, [-16, 86, 178], [20, 24, 16], { guides: false }); prism(B, [12, 86, 168], [18, 12, 22], { guides: false });
+  B.lines.push(`<path class="sk-i" stroke-dasharray="4 4" d="${poly([[40, 78, 172], [72, 78, 172], [72, 78, 204], [40, 78, 204]].map(P))}"/>`);
+  person(B, -140, 120, { reachR: P([-36, 100, 180]) });
 }],
-'talk-before-you-enforce': ['Talk Before You Enforce', "Sketch from slightly above: five mannequins stand around a round table on a single pedestal, three behind it and one at each side, and the table top is hatched. Small arcs of speech come from them toward the middle of the table. In the front right corner, a fence panel lies flat on the ground, unused. The people are the group sharing a system, from the pattern's context, now with problems to deal with. The round table is the solution: a place for the group to talk, such as a chat channel or a regular check-in, and it is the focus. The speech arcs are a problem being raised there first, with everyone, rather than decided by an admin alone. The fence panel is technical enforcement such as quotas, permissions, and bans: set aside, not built, and still there if the group chooses it later. The metaphor: a round table with no head, where the group's own judgment comes before any fence.", (B) => {
+'talk-before-you-enforce': ['Talk Before You Enforce', "Sketch from above: five mannequins stand in a ring around a round rug, which is hatched, with small arcs of speech coming from them toward its middle. Away to the front right, a fence panel lies flat on the ground, unused. The people are the group sharing a system, from the pattern's context, with problems to deal with. The rug is the solution, the focus: a place set aside for the group to talk, such as a chat channel or a regular check-in. The speech arcs are a problem being raised there first, in front of everyone, instead of decided by an admin alone. The fence panel is technical enforcement, such as quotas, permissions, and bans: set aside, not built, and still there if the group chooses to use it later. The metaphor: a meeting ground everyone stands around as equals, where talking comes before fencing anyone in.", (B) => {
   camera({ e: 450, hs: -150 });
   const T = W(0, 230), at = (xr, zr) => W(xr, 230 + zr), heads = [];
-  for (const [xr, zr, f] of [[-70, 115, 1], [0, 135, 1], [70, 115, -1]]) heads.push(person(B, ...at(xr, zr), { face: f, er: [20, -74], wr: [26, -56] }).head);
-  heads.push(person(B, ...at(-128, 10), { face: 1, er: [24, -76], wr: [34, -66] }).head);
-  line3(B, [T[0], 66, T[1]], [T[0], 0, T[1]]); prism(B, [T[0] - 40, 0, T[1] - 4], [80, 4, 8], { guides: false, shade: false }); prism(B, [T[0] - 4, 0, T[1] - 40], [8, 4, 80], { guides: false, shade: false });
-  circle3(B, [T[0], 68, T[1]], 90, 'xz', { fill: true, passes: 1 }); circle3(B, [T[0], 74, T[1]], 90, 'xz', { fill: true, focus: true });
-  heads.push(person(B, ...at(128, 0), { face: -1, el: [-24, -76], wl: [-34, -66] }).head);
-  const c = P([T[0], 74, T[1]]);
+  for (const [xr, zr, f] of [[-70, 95, 1], [0, 112, 1], [70, 95, -1]]) heads.push(person(B, ...at(xr, zr), { face: f, er: [20, -74], wr: [26, -56] }).head);
+  circle3(B, [T[0], -2, T[1]], 98, 'xz', { fill: true, passes: 1 }); circle3(B, [T[0], 0, T[1]], 98, 'xz', { fill: true, focus: true });
+  heads.push(person(B, ...at(-140, 10), { face: 1, er: [24, -76], wr: [34, -66] }).head);
+  heads.push(person(B, ...at(140, 0), { face: -1, el: [-24, -76], wl: [-34, -66] }).head);
+  const c = P([T[0], 0, T[1]]);
   for (const [hx, hy] of heads) { const dx = c[0] - hx, dy = c[1] - hy, L = Math.hypot(dx, dy), ux = dx / L, uy = dy / L, ax = hx + ux * 22, ay = hy + uy * 22;
     B.lines.push(`<path class="sk-i" stroke-width="1.2" d="M${r1(ax - uy * 5)} ${r1(ay + ux * 5)} q${r1(ux * 5)} ${r1(uy * 5)} ${r1(uy * 10)} ${r1(-ux * 10)}"/>`); }
-  const F = at(110, -210); prism(B, [F[0], 0, F[1]], [110, 5, 40]);
+  const F = at(120, -200); prism(B, [F[0], 0, F[1]], [110, 5, 40]);
   for (let x = F[0] + 20; x < F[0] + 110; x += 24) line3(B, [x, 5, F[1]], [x, 5, F[1] + 40], { passes: 1 });
 }],
-'every-thread-at-every-level': ['Every Thread at Every Level', "Sketch in perspective: a standing loom built from square posts and beams, seen from its front corner, with a mannequin beside it drawing one thread up and over the top beam. Three woven rows cross the upright threads; beside them, from top to bottom, are a diamond, a triangle, and a square. The thread being drawn passes through all three rows and is hatched; the middle row is not yet woven all the way across. The loom is the site. Its three rows are the levels of rules, in the site's column marks: the diamond is theory (metaconstitutional), the triangle is governance (collective-choice and constitutional), and the square is guides (operational). The upright threads are topic threads such as institutions or privacy. The hatched thread crossing every row is the solution, the focus: write about each thread at every level. The weaver is a contributor. The unfinished row is the cost the pattern names: a thread can look unfinished for a long time. The metaphor: the site as woven cloth, which holds together only where threads cross every level.", (B) => {
+'every-thread-at-every-level': ['Every Thread at Every Level', "Sketch in perspective: an open-sided building of three storeys, its floors marked at the side, from the ground up, with a square, a triangle, and a diamond. A rope, hatched, hangs from the roof down the front of the building, passing through a ring at the edge of every floor. Beside the building, a mannequin holds the rope's lower end. The building is the site, and its three floors are the levels of rules, in the site's column marks: the square is guides (operational), the triangle is governance (collective-choice and constitutional), and the diamond is theory (metaconstitutional). The rope is one topic thread. Threaded through every floor, it is the solution, the focus: write about each thread at every level. The figure holding it is a contributor. The metaphor: a thread that ties a building's floors together, so moving between levels is a matter of following the rope.", (B) => {
   camera(); horizon(B);
-  const z = 120;
-  prism(B, [-90, 0, z - 6], [10, 196, 10]); prism(B, [80, 0, z - 6], [10, 196, 10], { guides: false });
-  for (let x = -70; x <= 70; x += 14) if (Math.abs(x - 14) > 3) line3(B, [x, 26, z], [x, 184, z], { cls: 'sk-g', passes: 1 });
-  for (const [y, to] of [[60, 76], [105, 30], [150, 76]]) { const pts = []; for (let x = -78, i = 0; x <= to; x += 7, i++) pts.push(P([x, y + (i % 2 ? 2.5 : -2.5), z])); stroke(B, pts, { passes: 1 }); }
-  quad(B, [[10, 26, z], [18, 26, z], [18, 186, z], [10, 186, z]], { focus: true, fill: false });
-  prism(B, [-96, 184, z - 8], [192, 12, 14], { guides: false }); prism(B, [-96, 14, z - 8], [192, 12, 14], { guides: false });
-  for (const [y, m] of [[150, 'diamond'], [105, 'triangle'], [60, 'square']]) mark(B, m, ...P([-118, y, z]), 8);
-  const w = person(B, ...W(205, 90), { face: -1, reachL: P([98, 150, z]) });
-  stroke(B, [P([14, 186, z]), P([20, 200, z]), P([96, 200, z]), w.hl], { passes: 1 });
+  const cols = [[-100, 140], [42, 140], [-100, 212], [42, 212]];
+  for (const [x, z] of cols.slice(2)) prism(B, [x, 0, z], [8, 214, 8], { guides: false });
+  for (const y of [0, 62, 132, 202]) prism(B, [-104, y, 136], [154, y ? 8 : 5, 88], { guides: !y });
+  for (const [x, z] of cols.slice(0, 2)) prism(B, [x, 0, z], [8, 214, 8], { guides: false });
+  for (const [y, m] of [[30, 'square'], [98, 'triangle'], [168, 'diamond']]) mark(B, m, ...P([-124, y, 140]), 8);
+  quad(B, [[62, 64, 146], [74, 64, 146], [74, 214, 146], [62, 214, 146]], { focus: true, fill: true });
+  for (const y of [66, 136, 206]) { line3(B, [50, y + 4, 146], [62, y + 4, 146], { passes: 1 }); circle3(B, [68, y + 4, 146], 9, 'xz', { passes: 1 }); }
+  const w = person(B, 140, 105, { face: -1, reachL: P([68, 96, 146]) });
+  stroke(B, [P([68, 64, 146]), P([72, 54, 146]), w.hl], { passes: 1 });
 }],
-'every-page-links-out': ['Every Page Links Out', "Sketch from high above, looking down at an angle over open water: a large island in the middle, its top hatched, with a page standing upright on it, is joined by plank bridges to four smaller islands. On the four islands, in turn, are a small table ruled as a grid, an upright card with a circle on it, a closed book, and a thread circle. Each island is a page on the site. The open water between them is the problem: pages written one at a time drift apart, and a reader who lands on one never reaches the rest. The hatched middle island is any single page, the focus. Its bridges are its links, the solution: the grid is the table, the card is a pattern the page introduces or applies, the book is the sources it draws on, and the thread circle is the other pieces in its thread. The metaphor: the site as an archipelago. A page with no bridges is an island in the bad sense.", (B) => {
-  camera({ e: 900, f: 800, hs: -312, cx: 200 });
-  const isl = [[0, 260, 80], [-200, 0, 52], [200, 0, 52], [-200, 540, 52], [200, 540, 52]].map(([xr, zr, r]) => [...W(xr, zr), r]);
-  for (const [x, z] of [[-280, 300], [260, 260], [0, 0], [0, 560], [-120, 120], [140, 420]].map(([a, b]) => W(a, b))) { const c = P([x, 0, z]); water(B, c[0] - 15, c[1]); }
-  const [cx, cz] = isl[0];
-  for (const [x, z, r] of isl.slice(1)) {
-    const dx = cx - x, dz = cz - z, L = Math.hypot(dx, dz), ux = dx / L, uz = dz / L, nx = -uz * 10, nz = ux * 10;
-    const a = [x + ux * r, z + uz * r], b = [cx - ux * 80, cz - uz * 80];
-    line3(B, [a[0] + nx, 3, a[1] + nz], [b[0] + nx, 3, b[1] + nz], { passes: 1 }); line3(B, [a[0] - nx, 3, a[1] - nz], [b[0] - nx, 3, b[1] - nz], { passes: 1 });
-    for (let t = 0.1; t < 1; t += 0.12) { const px = a[0] + (b[0] - a[0]) * t, pz = a[1] + (b[1] - a[1]) * t; line3(B, [px + nx, 3, pz + nz], [px - nx, 3, pz - nz], { cls: 'sk-g', passes: 1 }); }
-  }
-  isl.forEach(([x, z, r], i) => { circle3(B, [x, -10, z], r, 'xz', { fill: true, passes: 1 }); circle3(B, [x, 0, z], r, 'xz', { fill: true, focus: i === 0 }); });
-  const at = (i, dx = 0, dz = 0) => [isl[i][0] + dx, isl[i][1] + dz];
-  { const [x, z] = at(0); quad(B, [[x - 18, 0, z], [x + 18, 0, z], [x + 18, 46, z], [x - 18, 46, z]]); }
-  { const [x, z] = at(1); quad(B, [[x - 24, 0, z - 18], [x + 24, 0, z - 18], [x + 24, 0, z + 18], [x - 24, 0, z + 18]]); line3(B, [x, 0, z - 18], [x, 0, z + 18], { passes: 1 }); line3(B, [x - 24, 0, z], [x + 24, 0, z], { passes: 1 }); }
-  { const [x, z] = at(2); quad(B, [[x - 16, 0, z], [x + 16, 0, z], [x + 16, 30, z], [x - 16, 30, z]]); circle3(B, [x - 6, 18, z], 5, 'xy', { passes: 1 }); }
-  { const [x, z] = at(3); prism(B, [x - 18, 0, z - 12], [36, 10, 26], { guides: false }); }
-  { const [x, z] = at(4); line3(B, [x, 0, z], [x, 34, z]); mark(B, 'circle', ...P([x, 44, z]), 8); }
-}],
-'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', "Sketch in perspective: in a workroom with a cutting table and a roll of paper behind them, one mannequin stands with its arms held out while a second holds a hatched paper sewing pattern against it. The pattern's sleeve stops short of the wrist, and the second figure is drawing a dashed line with a pencil to lengthen it. The paper sewing pattern is one of this site's patterns, the focus. It was cut on the table for someone else; holding it against a different person is the first half of the solution: apply the pattern in a piece besides the one that introduced it. The figure with its arms out is the practice the pattern meets, a real group or server. The short sleeve is a pattern that doesn't fit what happens in practice, and the pencil lengthening it is the second half: revise the pattern and say why. The metaphor: a pattern in the dressmaker's sense, a template that proves itself only when it's tried on, and is altered when it doesn't fit.", (B) => {
+'every-page-links-out': ['Every Page Links Out', "Sketch in perspective: a wooden fingerpost stands where two paths cross, with a blank, hatched board at its top. Below the board, four arms point in four directions. On them, in turn, are a small grid, a card with a circle on it, a closed book, and a thread circle. A mannequin stands at the foot of the post, pointing up at the arms. The post's blank board is a single page on the site, the focus. The crossing paths are where readers arrive, often straight from a search. The arms are the page's links, the solution: the grid points to the table, the card to a pattern the page introduces or applies, the book to the sources it draws on, and the thread circle to the other pieces in its thread. The figure is a reader who has just arrived and can see where to go next. The metaphor: a page as a signpost, not a dead end.", (B) => {
   camera(); horizon(B);
-  prism(B, [-90, 0, 280], [230, 82, 70]);
-  const rl = circle3(B, [-60, 94, 300], 12, 'xy', { fill: true, passes: 1 }), rr = P([110, 94, 300]);
-  line3(B, [-60, 106, 300], [110, 106, 300], { passes: 1 }); line3(B, [-60, 82, 300], [110, 82, 300], { passes: 1 }); circle3(B, [110, 94, 300], 12, 'xy', { passes: 1 });
-  const [X, Y] = P([70, 0, 90]), sc = depthScale(70, 90);
-  person(B, 70, 90, { face: -1, el: [-30, -92], wl: [-50, -92], er: [30, -92], wr: [50, -92] });
-  const L = (pts) => pts.map(([u, v]) => [r1(X + u * sc), r1(Y + v * sc)]);
-  const pat = L([[-18, -97], [18, -97], [22, -48], [-22, -48], [-18, -82], [-38, -82], [-38, -95]]);
-  B.lines.push(`<path class="sk-p" d="${poly(pat)}"/>`); hatchIn(B, poly(pat), bbox(pat), 6); stroke(B, pat, { closed: true, passes: 1 });
-  const e = L([[-38, -95], [-50, -95], [-50, -82], [-38, -82]]); B.lines.push(`<path class="sk-i" stroke-dasharray="3 4" d="M${e[0]} L${e[1]} L${e[2]} L${e[3]}"/>`);
-  const t = person(B, -30, 70, { reachR: e[1] }); pencil(B, t.hr[0], t.hr[1], -0.6, 14);
+  for (const z of [134, 176]) line3(B, [-230, 0, z], [230, 0, z], { cls: 'sk-g', passes: 1 });
+  for (const x of [-22, 22]) line3(B, [x, 0, 20], [x, 0, 420], { cls: 'sk-g', passes: 1 });
+  const arm = (o, sz, sym) => { prism(B, o, sz, { guides: false }); return P([o[0] + sz[0] / 2, o[1] + sz[1] / 2, o[2]]); };
+  const a3 = arm([-3, 92, 166], [5, 16, 62]);
+  prism(B, [-6, 0, 150], [12, 182, 12], { guides: false });
+  quad(B, [[-20, 160, 149], [20, 160, 149], [20, 192, 149], [-20, 192, 149]], { focus: true });
+  const a1 = arm([6, 136, 152], [64, 16, 5]), a2 = arm([-70, 116, 152], [64, 16, 5]), a4 = arm([-3, 70, 92], [5, 16, 58]);
+  { const [x, y] = a1; box(B, x - 7, y - 6, 14, 12, { passes: 1 }); line(B, x, y - 6, x, y + 6, { passes: 1 }); line(B, x - 7, y, x + 7, y, { passes: 1 }); }
+  { const [x, y] = a2; box(B, x - 9, y - 6, 18, 12, { passes: 1 }); ellipse(B, x - 3, y, 3, 3, { passes: 1 }); }
+  { const [x, y] = a3; stroke(B, [[x - 7, y - 5], [x + 6, y - 6], [x + 7, y + 5], [x - 6, y + 6]], { closed: true, passes: 1 }); line(B, x - 4, y - 5, x - 3, y + 6, { passes: 1 }); }
+  { const [x, y] = a4; mark(B, 'circle', x, y, 6); }
+  person(B, -110, 90, { reachR: P([10, 150, 152]) });
 }],
-'any-cell-any-time': ['Any Cell, Any Time', "Sketch in perspective: a patchwork quilt hangs from a pole between two posts, seen at an angle, three squares across and three down. Above its columns are a square, a triangle, and a diamond, and a thread circle sits beside each row. Most squares are sewn with simple stitched designs; one, at the left of the middle row, is empty. A mannequin reaches up to fit a single hatched patch into it. The quilt is the site's table: its columns are guides, governance, and theory (the square, triangle, and diamond) and its rows are threads. The sewn squares are pieces other people have already contributed. The hatched patch is one contribution, the focus: a single guide, governance piece, essay, or pattern. Adding it while the rest of its row is unfinished is the solution: accept a contribution to any single cell at any time. The metaphor: a community quilt, made one patch at a time by whoever has one ready, and uneven until it's done.", (B) => {
+'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', "Sketch in perspective: a stove with a pot on it, steam rising. One mannequin stands at the stove tasting from the pot with a spoon. A second mannequin stands nearby holding up a hatched recipe card and writing a correction on it with a pencil. The recipe card is a pattern, the focus. The stove and pot are practice: a real place where the pattern gets used. Cooking from the card and tasting the result is the first half of the solution: apply the pattern somewhere besides where it was written. Writing on the card is the second half: when the pattern doesn't fit what happens in practice, revise it and say why. The two figures are different people, so the test isn't only by the pattern's author. The metaphor: a pattern as a recipe, which proves itself only when it's cooked, and gets corrected in the margins.", (B) => {
   camera(); horizon(B);
-  const z = 150, X0 = -90, Y0 = 190, cw = 60, ch = 48;
-  prism(B, [-124, 0, z - 4], [10, 214, 10]); prism(B, [116, 0, z - 4], [10, 214, 10], { guides: false });
-  prism(B, [-128, 204, z - 2], [258, 7, 7], { guides: false });
-  for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) {
-    const x = X0 + c * cw, y = Y0 - r * ch, cell = [[x, y - ch, z], [x + cw, y - ch, z], [x + cw, y, z], [x, y, z]];
-    if (c === 0 && r === 1) { const q = cell.map(P); B.lines.push(`<path class="sk-i" stroke-dasharray="4 4" d="${poly(q)}"/>`); continue; }
-    quad(B, cell);
-    const m = (r * 3 + c) % 3, cxm = x + cw / 2, cym = y - ch / 2;
-    if (m === 0) { line3(B, [x + 10, y - 8, z], [x + cw - 10, y - ch + 8, z], { cls: 'sk-g', passes: 1 }); line3(B, [x + cw - 10, y - 8, z], [x + 10, y - ch + 8, z], { cls: 'sk-g', passes: 1 }); }
-    if (m === 1) stroke(B, [[cxm, y - 8, z], [x + cw - 12, cym, z], [cxm, y - ch + 8, z], [x + 12, cym, z]].map(P), { closed: true, cls: 'sk-g', passes: 1 });
-    if (m === 2) stroke(B, [[x + 14, y - 10, z], [x + cw - 14, y - 10, z], [x + cw - 14, y - ch + 10, z], [x + 14, y - ch + 10, z]].map(P), { closed: true, cls: 'sk-g', passes: 1 });
-  }
-  ['square', 'triangle', 'diamond'].forEach((m, c) => mark(B, m, ...P([X0 + c * cw + cw / 2, 226, z]), 7));
-  for (let r = 0; r < 3; r++) mark(B, 'circle', ...P([146, Y0 - r * ch - ch / 2, z]), 7);
-  const patch = [[-112, 112, 110], [-74, 112, 110], [-74, 152, 110], [-112, 152, 110]];
-  const a = person(B, -170, 70, { reachR: P([-112, 128, 110]) });
-  quad(B, patch, { focus: true });
+  prism(B, [-40, 0, 190], [130, 82, 60]);
+  circle3(B, [26, 82, 218], 30, 'xz', { fill: true, passes: 1 });
+  const pl = P([-6, 82, 218]), pr = P([58, 82, 218]), tl = P([-6, 128, 218]), tr = P([58, 128, 218]);
+  B.lines.push(`<path class="sk-p" d="${poly([pl, pr, tr, tl])}"/>`); line(B, ...pl, ...tl); line(B, ...pr, ...tr); hatchIn(B, poly([pl, pr, tr, tl]), bbox([pl, pr, tr, tl]), 4.5, 'sk-s');
+  circle3(B, [26, 82, 218], 32, 'xz', { passes: 1 }); circle3(B, [26, 128, 218], 32, 'xz', { fill: true });
+  for (const dx of [-8, 4, 16]) B.lines.push(`<path class="sk-g" d="M${tl[0] + 18 + dx} ${tl[1] - 10} q6 -8 0 -16 t0 -16"/>`);
+  const a = person(B, -30, 125, { face: 1, reachR: P([10, 134, 214]) }); line(B, a.hr[0], a.hr[1], a.hr[0] + 14, a.hr[1] + 6, { passes: 1 }); ellipse(B, a.hr[0] + 17, a.hr[1] + 7, 4, 2.5, { passes: 1 });
+  const b = person(B, -150, 70, { face: 1, el: [10, -76], wl: [26, -88], er: [26, -76], wr: [36, -84] });
+  box(B, b.hl[0] - 2, b.hl[1] - 26, 34, 24); hatch(B, b.hl[0] + 1, b.hl[1] - 23, 28, 18, { gap: 5 }); pencil(B, b.hr[0], b.hr[1], -2.3, 12);
 }],
-'a-language-users-can-speak': ['A Language Users Can Speak', "Sketch in perspective: two mannequins stand facing each other, one nearer the viewer and one farther back, and talk. Both speech bubbles hold the same simple picture of two crossed keys; the nearer figure's bubble is hatched. On the ground between them sits a thick binder, closed. The figures are members of a group that runs a system together; neither is drawn as an expert. The crossed keys are a pattern's plain name, here Two Keyholders, turned into a picture: something anyone can say. The hatched bubble is the solution working, the focus: a member using the name in ordinary conversation. The same picture in the second bubble shows it understood and used back, the consequence that pattern names become the group's words. The closed binder is the technical detail, such as commands, tools, and configuration, which the solution keeps in the Actions and guides rather than in the name. The metaphor: pattern names as everyday words in a shared language, with the manual nearby but closed.", (B) => {
+'any-cell-any-time': ['Any Cell, Any Time', "Sketch in perspective: an open shelf divided into three rows of three cubbies, with a square, a triangle, and a diamond above its columns and a thread circle beside each row. Most cubbies hold a box; one, at the left of the middle row, is empty. A mannequin slides a single hatched box into it. The shelf is the site's table: its columns are guides, governance, and theory (the square, triangle, and diamond) and its rows are threads. The boxes already in place are pieces other people have contributed. The hatched box is one contribution, the focus: a single guide, governance piece, essay, or pattern. Sliding it into one cubby while others in the same row are still missing is the solution: accept a contribution to any single cell at any time, without waiting for the rest of the row. The metaphor: a shared shelf that anyone can fill one cubby at a time.", (B) => {
+  camera(); horizon(B);
+  const z0 = 160, d = 40, X0 = -90, cw = 60, ch = 50;
+  quad(B, [[X0, 0, z0 + d], [X0 + 3 * cw, 0, z0 + d], [X0 + 3 * cw, 3 * ch, z0 + d], [X0, 3 * ch, z0 + d]]);
+  for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) if (!(c === 0 && r === 1)) prism(B, [X0 + c * cw + 8, r * ch + 4, z0 + 6], [cw - 16 - (r + c) % 2 * 8, ch - 12 - (c * 2 + r) % 3 * 6, d - 10], { guides: false });
+  for (let r = 0; r <= 3; r++) prism(B, [X0 - 2, r * ch, z0], [3 * cw + 4, 4, d], { guides: false, shade: false });
+  for (let c = 0; c <= 3; c++) prism(B, [X0 + c * cw - 2, 0, z0], [4, 3 * ch + 4, d], { guides: false, shade: c === 3 });
+  ['square', 'triangle', 'diamond'].forEach((m, c) => mark(B, m, ...P([X0 + c * cw + cw / 2, 3 * ch + 16, z0]), 7));
+  for (let r = 0; r < 3; r++) mark(B, 'circle', ...P([X0 + 3 * cw + 18, r * ch + ch / 2, z0]), 7);
+  B.lines.push(`<path class="sk-i" stroke-dasharray="4 4" d="${poly([[X0 + 4, ch + 6, z0], [X0 + cw - 4, ch + 6, z0], [X0 + cw - 4, 2 * ch - 4, z0], [X0 + 4, 2 * ch - 4, z0]].map(P))}"/>`);
+  person(B, -150, 110, { reachR: P([X0 - 16, ch + 22, z0 - 30]) });
+  prism(B, [X0 - 18, ch + 8, z0 - 34], [44, 30, 30], { focus: 'front' });
+}],
+'a-language-users-can-speak': ['A Language Users Can Speak', "Sketch in perspective: two mannequins stand facing each other and talk, one nearer the viewer and one farther back. Both speech bubbles hold the same simple picture of two crossed keys; the nearer figure's bubble is hatched. On the ground between them sits a thick binder, closed. The figures are members of a group running a system together; neither is drawn as an expert. The crossed keys are a pattern's plain name, here Two Keyholders, turned into a picture: short enough for anyone to say. The hatched bubble is the solution, the focus: a member using the name in ordinary conversation. The same picture in the other bubble is the consequence, the name understood and used back, so it becomes the group's word. The closed binder holds the technical detail the solution keeps out of the name, in the Actions and guides. The metaphor: pattern names as everyday words, with the manual nearby but shut.", (B) => {
   camera(); horizon(B);
   const b = person(B, 110, 170, { face: -1, el: [-24, -76], wl: [-34, -86] });
   prism(B, [-20, 0, 70], [36, 44, 10]);
@@ -356,11 +339,11 @@ const S = {
   };
   bub(...a.head, 96, 56, 1, true); bub(...b.head, 80, 48, -1, false);
 }],
-'solution-first': ['Solution First', "Sketch in perspective: a large card leans back on a three-legged easel, seen from its front corner, and a mannequin stands beside it writing with a pencil. Only one section in the middle of the card has been written, and it is hatched; the sections above and below it, and a dashed title line at the top, are still blank. The card is a pattern being drafted, laid out like this site's pattern pages. The written middle section is the solution, the focus: the one thing the writer most wants to share, written first. The blank sections around it are the problem, context, forces, and consequences, worked out from the solution afterwards. The empty title line is the pattern's name, which the solution says to write last. The figure writing is anyone with experience to pass on. The metaphor: writing a pattern from the inside out, starting with what you would tell a newcomer and only then explaining when and why.", (B) => {
+'solution-first': ['Solution First', "Sketch in perspective: a large card leans back on a three-legged easel, and a mannequin stands beside it writing with a pencil. Only one band in the middle of the card is written, and it is hatched; the bands above and below it, and a dashed title line at the top, are still blank. The card is a pattern being drafted, with the sections this site's pattern pages use. The written middle band is the solution, the focus: the one thing the writer most wants to share, written first. The blank bands are the problem, context, forces, and consequences, worked out from the solution afterwards. The dashed title line is the name, which the solution says to write last. The writer is anyone with experience to pass on. The metaphor: a pattern written from the middle out, starting from what you'd tell a newcomer and only then explaining when and why.", (B) => {
   camera(); horizon(B);
   const at = (u, v) => [-60 + u * 120, 60 + v * 150, 120 + v * 24];
   line3(B, at(0.5, 1), [0, 0, 220]);
-  const card = quad(B, [at(0, 0), at(1, 0), at(1, 1), at(0, 1)]);
+  quad(B, [at(0, 0), at(1, 0), at(1, 1), at(0, 1)]);
   line3(B, at(0.08, 0), [-62, 0, 100]); line3(B, at(0.92, 0), [62, 0, 100]); prism(B, [-66, 52, 112], [132, 6, 12], { guides: false });
   B.lines.push(`<path class="sk-i" stroke-dasharray="5 5" d="M${P(at(0.08, 0.9)).join(' ')} L${P(at(0.92, 0.9)).join(' ')}"/>`);
   for (const v of [0.78, 0.66, 0.3, 0.17]) line3(B, at(0.06, v), at(0.94, v), { cls: 'sk-g', passes: 1 });
@@ -368,14 +351,13 @@ const S = {
   for (const v of [0.43, 0.47, 0.51]) stroke(B, [at(0.1, v), at(0.4, v - 0.01), at(0.7, v + 0.01), at(0.9, v)].map(P), { passes: 1 });
   const a = person(B, -112, 70, { reachR: P(at(0.1, 0.47)) }); pencil(B, a.hr[0], a.hr[1], -0.5, 14);
 }],
-'workshop-the-pattern': ['Workshop the Pattern', "Sketch in perspective: a table seen from its front corner, with a hatched pattern card lying on it. In front of the table, one mannequin reader points at the card; behind the table, a second reader leans in with a pencil over it. Off to the right, the author stands apart with a hand cupped to one ear. The table and card are a pattern workshop: a new pattern set out for others to read before it leaves draft, and the card is the focus. The two readers are the solution's \"at least two readers besides its author\". The pointing reader is saying what works, which comes first; the reader with the pencil is saying what could be better, which comes second. The author standing apart and listening is the rule that the author listens first and asks questions only at the end. The metaphor: a pattern as a piece of craft set on a bench for others to inspect, with its maker stepping back.", (B) => {
+'workshop-the-pattern': ['Workshop the Pattern', "Sketch in perspective: a table on four legs with a hatched pattern card lying on it. In front of the table, one mannequin reader points at the card; behind it, a second reader leans over the card holding a pencil. To the right, apart from the table, the author stands with a hand cupped to one ear. The table and card are a pattern workshop, a new pattern set out to be read before it leaves draft; the card is the focus. The two readers are the solution's readers besides the author. The pointing reader says what works, which comes first; the reader with the pencil says what could be better, which comes second. The author standing apart and listening is the rule that the author listens first and asks questions only at the end. The metaphor: a pattern as a piece of work set on a bench for others to look over, while its maker steps back.", (B) => {
   camera(); horizon(B);
-  const card = [[-14, 78, 130], [26, 78, 130], [26, 78, 158], [-14, 78, 158]];
   const r2 = person(B, 40, 236, { face: -1, reachL: P([8, 82, 150]) }); pencil(B, r2.hl[0], r2.hl[1], 2.0, 14);
   for (const [x, z] of [[-76, 186], [70, 186]]) prism(B, [x, 0, z], [6, 72, 6], { guides: false, shade: false });
   prism(B, [-80, 72, 100], [160, 6, 92], { guides: false });
   for (const [x, z] of [[-76, 100], [70, 100]]) prism(B, [x, 0, z], [6, 72, 6], { guides: false });
-  quad(B, card, { focus: true });
+  quad(B, [[-14, 78, 130], [26, 78, 130], [26, 78, 158], [-14, 78, 158]], { focus: true });
   person(B, -96, 90, { reachR: P([-6, 84, 136]) });
   person(B, 210, 40, { s: 0.92, face: -1, er: [18, -100], wr: [9, -112], el: [-14, -70], wl: [-6, -54] });
 }],
