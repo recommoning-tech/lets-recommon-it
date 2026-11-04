@@ -10,6 +10,7 @@ Any cell can be filled at any time, and a cell can hold more than one piece. Ope
 |---|---|---|---|
 | `institutions` | [Writing for Let's Recommon IT](guides/contributing.md) | [How this project is run](governance/how-this-project-is-run.md) | [This repository is a commons](theory/this-repository-is-a-commons.md) |
 | `liberatory-tech` | [Setting up your first server](guides/first-server.md) | [Who holds root?](governance/who-holds-root.md) | [Who owns the machine?](theory/who-owns-the-machine.md) |
+| `design-patterns` | open | open | open |
 | `commons` | open | open | open |
 | `privacy` | open | open | open |
 | `ai` | open | open | open |

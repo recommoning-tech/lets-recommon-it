@@ -38,9 +38,9 @@ Any cell can be filled at any time, and new threads can be added. Each piece is 
 
 ## Threads
 
-Every piece of content is tagged with one or more threads (the first is its row in the table), defined in [`planning/concept-map.md`](planning/concept-map.md):
+Every piece of content is tagged with one or more threads (the first is its row in the table), defined in [`planning/concept-map.md`](planning/concept-map.md). The first three are covered first, in this order:
 
-`institutions` · `commons` · `liberatory-tech` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy`
+`institutions` · `liberatory-tech` · `design-patterns` · `commons` · `privacy` · `ai` · `big-tech-critique` · `open-source` · `labor-care`
 
 ## Contributing
 

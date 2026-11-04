@@ -1,6 +1,6 @@
 # Concept Map
 
-How the blog's main ideas connect. Each thread below is a tag used in front matter across the repo and a row in [the table](../index.md). Alexander's pattern language is the method for every thread, not a thread of its own.
+How the blog's main ideas connect. Each thread below is a tag used in front matter across the repo and a row in [the table](../index.md). Threads are listed in the order they're covered. Alexander's pattern language is the method for every thread, and `design-patterns` is the thread about patterns themselves, including patterns about patterns.
 
 ## The central question
 How do we build and run information technology at **community scale**, so it is owned, understood, and governed by the people who use it?
@@ -10,8 +10,9 @@ How do we build and run information technology at **community scale**, so it is 
 | Tag | Thread | Core claim | Key sources |
 |---|---|---|---|
 | `institutions` | Institutional analysis (primary framework) | Rules can be analyzed and designed. IAD breaks any governed situation into participants, positions, rules, and levels of choice | Ostrom, *Understanding Institutional Diversity*; Crawford & Ostrom; Ostrom (Nobel lecture); Ostrom, Walker & Gardner; Ostrom, *Governing the Commons* |
-| `commons` | Commons & enclosure | Communities can hold resources in common; enclosure is the recurring threat | Ostrom, *Governing the Commons*; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
 | `liberatory-tech` | Liberatory / convivial technology | Technology liberates only when its scale and control are local and democratic | Bookchin; Illich; Franklin; Winner |
+| `design-patterns` | Design & patterns | Good systems grow piecemeal from shared patterns that users can apply themselves | Alexander; Bollier & Helfrich |
+| `commons` | Commons & enclosure | Communities can hold resources in common; enclosure is the recurring threat | Ostrom, *Governing the Commons*; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
 | `big-tech-critique` | Big Tech critique | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
 | `labor-care` | Labor, care & bureaucracy | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |
 | `open-source` | Free & open source | Licenses and development models make shared code possible but not sufficient | Stallman; Raymond; Eghbal; Benkler |
@@ -21,7 +22,7 @@ How do we build and run information technology at **community scale**, so it is 
 ## Connections between threads
 
 ```
-        institutions (IAD) ─────── ADICO ────── pattern method
+        institutions (IAD) ─────── ADICO ────── design-patterns
              (Ostrom)                            (Alexander)
                 │                                    │
              commons ─── Bollier & Helfrich ─────────┤
@@ -48,7 +49,7 @@ Key bridges:
 - **ADICO → governance docs:** write codes of conduct and admin policies as statements with who, must/may/must not, what, when, and the consequence.
 - **Polycentricity → federation:** the Fediverse, Matrix, and mesh networks are polycentric systems: many independently governed nodes under shared protocols.
 - **Design principles → health check:** *Governing the Commons*' eight principles remain a quick test of whether an institution is likely to last.
-- **Alexander → wiki (method):** the "Pattern Language for Community Tech" uses his format. (His work also influenced software design patterns and the first wiki.)
+- **Alexander → wiki:** the "Pattern Language for Community Tech" uses his format. (His work also influenced software design patterns and the first wiki.)
 - **Federici → maintenance:** who does the upkeep? Every guide has a "Maintenance" and "Community considerations" section.
 - **Doctorow → open-source and guides:** interoperability and open protocols are what make leaving platforms possible.
 - **Bookchin/Illich → architecture:** choose tools small and legible enough for members to understand and control.

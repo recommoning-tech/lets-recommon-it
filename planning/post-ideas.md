@@ -10,6 +10,7 @@ Rows are threads; columns are levels. Any cell can be written at any time. Fille
 |---|---|---|---|
 | institutions | Writing a server charter | Changing the rules; introduces Talk Before You Enforce | IAD for community tech |
 | liberatory-tech | Docker Compose stack; private networks | From personal VPN to neighborhood network | Exit Built In? |
+| design-patterns | Writing a pattern from a problem you've seen | Who decides what becomes a pattern? | A pattern language for community tech (seed: the Alexander section of [`posts/drafts/recommoning-it.md`](../posts/drafts/recommoning-it.md)); patterns about patterns |
 | privacy | E2EE services; threat modeling | The admin can read your mail | Contextual integrity |
 | ai | Running a local LLM | Who governs the model and the data? | Situated AI (Griziotti) |
 | commons | Self-hosted shared files | Membership and exit | Enclosure and recommoning (seed: [`posts/drafts/recommoning-it.md`](../posts/drafts/recommoning-it.md)) |
