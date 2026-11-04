@@ -7,8 +7,9 @@ sources:
   - crawford-ostrom-1995-grammar-of-institutions.md
   - ostrom-walker-gardner-1992-covenants-with-and-without-a-sword.md
   - ostrom-1990-governing-the-commons.md
-patterns_applied:
+patterns:
   - wiki/patterns/two-keyholders.md
+patterns_applied:
   - wiki/patterns/talk-before-you-enforce.md
 status: draft          # rough draft for the author to rewrite in their own voice
 ---
@@ -73,8 +74,14 @@ Ostrom's design principles from *Governing the Commons*, as a five-minute check:
 - [ ] There's a quick, low-cost way to resolve disputes.
 - [ ] No outside party (landlord, ISP, platform) can override the group's rules without notice.
 
+## Patterns introduced
+
+### [Two Keyholders](../wiki/patterns/two-keyholders.md)
+A position rule: how many people hold the admin role. If one person holds all the access, the group depends on that person's time, health, and goodwill, and decisions default to them. The charter below requires at least two admins.
+
+> **Therefore:** give at least two people full admin access to every shared system, and make sure both of them use it regularly.
+
 ## Patterns applied
-- [Two Keyholders](../wiki/patterns/two-keyholders.md): a position rule. The charter below requires at least two admins.
 - [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md): an aggregation and information rule. In Ostrom, Walker, and Gardner's "Covenants With and Without a Sword" experiments, letting people talk sharply increased cooperation even without enforcement, and sanctions worked best when the group chose them. Set up a group channel or regular check-in before any enforcement tools.
 
 ## A one-page server charter
