@@ -1,55 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-every-page-links-out d-every-page-links-out">
 <title id="t-every-page-links-out">Every Page Links Out</title>
-<desc id="d-every-page-links-out">Diagram: a page labeled "this page" sits in the middle, with lines out to pages labeled "its thread", "the table", "patterns", and "sources".</desc>
+<desc id="d-every-page-links-out">Diagram: a hatched page in the middle has arrows out to four others: a page ruled as a small table, a pattern card with a circle on it, a closed book, and a page marked with a thread circle.</desc>
 <defs><filter id="rough-every-page-links-out" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="20"/><feDisplacementMap in="SourceGraphic" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
 <style>.sk-i{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.sk-g{fill:none;stroke:currentColor;stroke-width:.9;opacity:.38;stroke-linecap:round}.sk-h{fill:none;stroke:var(--thread,#2f5da8);stroke-width:1.4;stroke-linecap:round;opacity:.85}.sk-t{fill:currentColor;font-family:'Architects Daughter',cursive;font-size:13px}</style>
 <g filter="url(#rough-every-page-links-out)">
-<path class="sk-i" d="M172.7 120.4 L226.9 120.4 L224.8 117.8 L225.3 186.3 L226.8 183.6 L173.1 183.7 L175.3 186.4 L174.9 117.8"/>
-<path class="sk-i" opacity=".55" d="M174.4 120.1 L228.2 121.3 L223.9 117.9 L224.3 186.9 L225.9 182.7 L172.1 182.8 L173.7 185.7 L175 117.3"/>
-<path class="sk-h" d="M178.5 128.1 L184.2 123.9"/>
-<path class="sk-h" d="M179 134.2 L190.5 122.9"/>
-<path class="sk-h" d="M177.7 141.6 L195.4 122.7"/>
-<path class="sk-h" d="M177.3 146.5 L201.7 123.4"/>
-<path class="sk-h" d="M177.6 152.3 L207.5 122.2"/>
-<path class="sk-h" d="M177.4 158.5 L214.4 123.4"/>
-<path class="sk-h" d="M178.7 165.7 L220.5 122.4"/>
-<path class="sk-h" d="M178.4 171.9 L221.1 126.1"/>
-<path class="sk-h" d="M178.6 177.5 L222.8 132.2"/>
-<path class="sk-h" d="M180.3 180 L221.7 138.3"/>
-<path class="sk-h" d="M186.6 181.7 L221.3 144.6"/>
-<path class="sk-h" d="M193 180.6 L222.8 151.6"/>
-<path class="sk-h" d="M197.6 180.5 L221.5 156.7"/>
-<path class="sk-h" d="M204.7 180.9 L221.8 164"/>
-<path class="sk-h" d="M209.8 180.5 L222.3 169"/>
-<path class="sk-h" d="M215.8 180.1 L221.1 175"/>
-<path class="sk-i" d="M47.9 39.6 L102.4 39.8 L100.3 37.8 L100.3 82.3 L102.1 80.1 L48 79.8 L49.7 82.2 L49.7 37.9"/>
-<path class="sk-g" d="M58.2 50.1 L92.1 49.9"/>
-<path class="sk-g" d="M58.3 60.3 L92.2 59.8"/>
-<path class="sk-g" d="M57.7 69.6 L80.1 70.1"/>
-<path class="sk-i" d="M175 120 Q125.5 85.2 100 60"/>
-<path class="sk-i" d="M107.6 62.3 L100.2 60.4 L102.3 67.8"/>
-<path class="sk-i" d="M297.9 40.2 L352 39.9 L350.3 37.8 L349.9 82.2 L351.8 80 L297.9 79.7 L299.9 82.2 L300.1 38.1"/>
-<path class="sk-g" d="M307.6 50 L342.3 50.3"/>
-<path class="sk-g" d="M307.8 59.8 L341.8 60.3"/>
-<path class="sk-g" d="M307.8 69.7 L330.1 70.4"/>
-<path class="sk-i" d="M225 120 Q274.5 85.2 300 60"/>
-<path class="sk-i" d="M297.6 67.5 L299.6 60.1 L292.2 62.3"/>
-<path class="sk-i" d="M48.3 199.9 L101.8 200.3 L99.8 198.3 L99.7 241.7 L101.8 240 L48 240 L49.6 242.2 L50.4 198.1"/>
-<path class="sk-g" d="M57.8 210.3 L91.8 209.6"/>
-<path class="sk-g" d="M58.1 220.2 L91.7 219.7"/>
-<path class="sk-g" d="M58.2 229.9 L80.1 230.4"/>
-<path class="sk-i" d="M175 184 Q125.5 197.2 100 220"/>
-<path class="sk-i" d="M103 212.8 L99.6 219.8 L107.4 218.1"/>
-<path class="sk-i" d="M297.8 199.8 L352.1 199.8 L350.1 198.1 L350.3 242.4 L351.8 240.2 L298 240 L300 242 L299.7 198.2"/>
-<path class="sk-g" d="M308.2 210.4 L342 210.3"/>
-<path class="sk-g" d="M308.2 219.9 L342.1 219.7"/>
-<path class="sk-g" d="M307.9 230.2 L330 229.8"/>
-<path class="sk-i" d="M225 184 Q274.5 197.2 300 220"/>
-<path class="sk-i" d="M292 217.5 L300.3 220.4 L297 212.6"/>
+<path class="sk-i" d="M172.7 116.4 L226.9 116.4 L224.8 113.8 L225.3 182.3 L226.8 179.6 L173.1 179.7 L175.3 182.4 L174.9 113.8"/>
+<path class="sk-i" opacity=".55" d="M174.4 116.1 L228.2 117.3 L223.9 113.9 L224.3 182.9 L225.9 178.7 L172.1 178.8 L173.7 181.7 L175 113.3"/>
+<path class="sk-h" d="M178.5 124.1 L184.2 119.9"/>
+<path class="sk-h" d="M179 130.2 L190.5 118.9"/>
+<path class="sk-h" d="M177.7 137.6 L195.4 118.7"/>
+<path class="sk-h" d="M177.3 142.5 L201.7 119.4"/>
+<path class="sk-h" d="M177.6 148.3 L207.5 118.2"/>
+<path class="sk-h" d="M177.4 154.5 L214.4 119.4"/>
+<path class="sk-h" d="M178.7 161.7 L220.5 118.4"/>
+<path class="sk-h" d="M178.4 167.9 L221.1 122.1"/>
+<path class="sk-h" d="M178.6 173.5 L222.8 128.2"/>
+<path class="sk-h" d="M180.3 176 L221.7 134.3"/>
+<path class="sk-h" d="M186.6 177.7 L221.3 140.6"/>
+<path class="sk-h" d="M193 176.6 L222.8 147.6"/>
+<path class="sk-h" d="M197.6 176.5 L221.5 152.7"/>
+<path class="sk-h" d="M204.7 176.9 L221.8 160"/>
+<path class="sk-h" d="M209.8 176.5 L222.3 165"/>
+<path class="sk-h" d="M215.8 176.1 L221.1 171"/>
+<path class="sk-i" d="M175 116 Q126.5 83.4 106 62"/>
+<path class="sk-i" d="M113.4 64.4 L106.4 61.8 L108.8 69.4"/>
+<path class="sk-i" d="M225 116 Q273.5 83.4 294 62"/>
+<path class="sk-i" d="M291.8 69.9 L294.1 62.1 L286.5 64.6"/>
+<path class="sk-i" d="M175 180 Q126.5 193.4 106 218"/>
+<path class="sk-i" d="M107.6 210.5 L105.7 217.9 L113.5 214.8"/>
+<path class="sk-i" d="M225 180 Q273.5 193.4 294 218"/>
+<path class="sk-i" d="M286.9 214.6 L294.3 218.3 L292.2 210"/>
+<path class="sk-i" d="M49.7 39.6 L104.1 40.1 L102 37.7 L102.2 86.4 L103.6 84.3 L49.9 84.2 L52 85.9 L52.3 37.8"/>
+<path class="sk-i" d="M51.9 55.2 L101.8 55"/>
+<path class="sk-i" d="M51.9 69.7 L101.9 70.2"/>
+<path class="sk-i" d="M69.1 40.1 L68.6 84"/>
+<path class="sk-i" d="M85.3 40.3 L84.8 83.8"/>
+<path class="sk-i" d="M295.8 44.3 L349.8 43.7 L348.1 42.4 L348.2 82 L349.6 80.1 L295.8 79.7 L298.3 81.9 L297.8 42.3"/>
+<path class="sk-i" d="M313.9 68.4 L312.1 68.7 L310.4 68.8 L308.8 67.7 L307.2 67.8 L306.2 65.9 L305.1 64.5 L305.7 63 L304.7 61.3 L305.8 59.5 L306.3 58 L307 56.8 L308.6 56.4 L310.3 55.7 L311.9 55.3 L313.6 55 L315.1 55.6 L316.7 56.4 L318.2 58.2 L318.8 59.5 L318.9 61.1 L319 62.8 L318.8 64.6 L318.2 66 L317 67.5 L315.2 68.3 L313.5 68.6 L312 69.1 L310.4 68.4"/>
+<path class="sk-g" d="M323.7 56.3 L342.4 56.1"/>
+<path class="sk-g" d="M324 66.3 L338.1 66.1"/>
+<path class="sk-i" d="M51.6 199.8 L95.7 196 L101.7 201.6 L102.4 240.1 L57.9 244.3 L52.3 238.2 Z"/>
+<path class="sk-i" opacity=".55" d="M51.8 201.2 L96 196.4 L101.1 201.6 L102.2 241.1 L58.7 244.9 L50.7 238 Z"/>
+<path class="sk-i" d="M60 200 L60.2 242.2"/>
+<path class="sk-i" d="M295.8 196.1 L349.6 196 L348 194.4 L348.1 254.1 L349.9 252.2 L296.4 252.4 L298.2 253.6 L298.3 193.9"/>
+<path class="sk-i" d="M330.2 213.7 L330.2 215.3 L329.9 216.8 L328 218.8 L327.3 219.7 L325.9 220 L324 220.8 L322.4 220.8 L320.9 220.8 L319.5 219.6 L317.8 218.6 L317.3 217.4 L316.2 216 L315.8 214.2 L315.8 212.6 L316.6 211.1 L317.5 209.2 L318.5 208.3 L320.1 207.5 L321.9 206.5 L323.7 206.6 L325.3 206.9 L326.6 208 L328.5 209.2 L328.7 210.7 L329.4 212.3 L330.2 213.8 L329.4 215.5 L328.7 217"/>
+<path class="sk-h" d="M316.4 220.1 L326.5 208.7"/>
+<path class="sk-h" d="M320.9 219 L329.4 209.4"/>
+<path class="sk-g" d="M305.6 231.6 L340 232.3"/>
+<path class="sk-g" d="M306.2 242 L339.6 241.7"/>
 </g>
-<text class="sk-t" x="200" y="112" text-anchor="middle" font-size="13">this page</text>
-<text class="sk-t" x="75" y="32" text-anchor="middle" font-size="13">its thread</text>
-<text class="sk-t" x="325" y="32" text-anchor="middle" font-size="13">the table</text>
-<text class="sk-t" x="75" y="256" text-anchor="middle" font-size="13">patterns</text>
-<text class="sk-t" x="325" y="256" text-anchor="middle" font-size="13">sources</text>
+
 </svg>

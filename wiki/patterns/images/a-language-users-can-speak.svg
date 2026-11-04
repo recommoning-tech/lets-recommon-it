@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-a-language-users-can-speak d-a-language-users-can-speak">
 <title id="t-a-language-users-can-speak">A Language Users Can Speak</title>
-<desc id="d-a-language-users-can-speak">Sketch: two mannequin figures talk; between them a speech bubble holds a plain pattern name, "Two Keyholders". A side note reads "commands and tools go in the actions".</desc>
+<desc id="d-a-language-users-can-speak">Sketch: two mannequin figures face each other and talk. Both speech bubbles hold the same simple picture, two crossed keys: a plain name they share. The first bubble is hatched.</desc>
 <defs><filter id="rough-a-language-users-can-speak" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="26"/><feDisplacementMap in="SourceGraphic" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
 <style>.sk-i{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.sk-g{fill:none;stroke:currentColor;stroke-width:.9;opacity:.38;stroke-linecap:round}.sk-h{fill:none;stroke:var(--thread,#2f5da8);stroke-width:1.4;stroke-linecap:round;opacity:.85}.sk-t{fill:currentColor;font-family:'Architects Daughter',cursive;font-size:13px}</style>
 <g filter="url(#rough-a-language-users-can-speak)">
@@ -97,12 +97,51 @@
 <path class="sk-i" d="M300.7 236.5 L300.3 258.1"/>
 <path class="sk-g" d="M297.38 234.00799999999998 L298.62 260.792"/>
 <path class="sk-i" d="M296.4 258.3 L290 262 L295.6 261.8"/>
-<path class="sk-i" d="M140.1 39.7 L262.4 39.9 L267.9 45.6 L267.9 91.8 L261.6 98.2 L214.3 97.9 L203.9 116.1 L199.7 98.1 L140.2 98.4 L133.9 92.1 L134.1 45.8 Z"/>
-<path class="sk-i" opacity=".55" d="M141.4 39.2 L262.3 39.1 L267.3 47 L269.2 91.1 L263 97.7 L215.4 98.6 L202.9 114.6 L201 98.4 L141.1 97.7 L133.3 91.6 L132.8 46.5 Z"/>
-<path class="sk-i" d="M283.9 40 L392.3 40.1 L389.7 38.2 L390.2 81.9 L391.8 79.7 L284.4 80.1 L286.2 81.9 L285.9 38"/>
+<path class="sk-i" d="M96.1 39.7 L186.4 39.9 L191.9 45.6 L191.9 95.8 L185.6 102.2 L150.3 101.9 L127.9 124.1 L131.7 102.1 L96.2 102.4 L89.9 96.1 L90.1 45.8 Z"/>
+<path class="sk-i" opacity=".55" d="M97.4 39.2 L186.3 39.1 L191.3 47 L193.2 95.1 L187 101.7 L151.4 102.6 L126.9 122.6 L133 102.4 L97.1 101.7 L89.3 95.6 L88.8 46.5 Z"/>
+<path class="sk-h" d="M93.7 51 L101.7 44.1"/>
+<path class="sk-h" d="M93.3 58.6 L108.4 43.8"/>
+<path class="sk-h" d="M93.4 64.3 L115.9 44.2"/>
+<path class="sk-h" d="M94.5 71.8 L121.8 44.1"/>
+<path class="sk-h" d="M94.9 79.5 L128.9 44.8"/>
+<path class="sk-h" d="M94.7 85.4 L136 43.8"/>
+<path class="sk-h" d="M93.1 92.6 L142.7 44.5"/>
+<path class="sk-h" d="M93.8 99.5 L150.6 44.1"/>
+<path class="sk-h" d="M101.1 99.2 L157.9 45"/>
+<path class="sk-h" d="M108.1 99.6 L163.7 43.1"/>
+<path class="sk-h" d="M115.4 100.1 L171.9 43.9"/>
+<path class="sk-h" d="M122.3 100.9 L178 43.7"/>
+<path class="sk-h" d="M128.9 100.3 L184.7 43"/>
+<path class="sk-h" d="M135.4 100.1 L187.7 48.8"/>
+<path class="sk-h" d="M142 99.5 L187.7 54.9"/>
+<path class="sk-h" d="M150.7 101 L188.6 62.8"/>
+<path class="sk-h" d="M157.6 100.4 L188.8 68.4"/>
+<path class="sk-h" d="M164.6 100.4 L187.2 76.6"/>
+<path class="sk-h" d="M171.8 99.5 L187.7 83.5"/>
+<path class="sk-h" d="M178.4 100.9 L187.5 90.9"/>
+<path class="sk-h" d="M184.8 100.6 L188.2 96.8"/>
+<g transform="rotate(-25 141 71)">
+<path class="sk-i" d="M135.5 66.7 L135.8 67.7 L135.1 68.7 L134.2 69.7 L133.5 70.8 L132.7 70.7 L131.8 71.2 L130.7 72 L129.7 70.9 L128.8 70.8 L127.4 70.3 L127.7 69.3 L127 68.5 L126.4 67.3 L126.9 66.2 L127.1 65.2 L127.1 64.5 L128.6 63.7 L129 63.2 L130.2 62.6 L131.3 62.9 L132.3 62.4 L133.5 63.1 L133.9 63.8 L134.9 64.7 L135 65.8 L134.9 66.8 L135.1 67.9 L135.3 68.8"/>
+<path class="sk-i" d="M135.5 67.4 L151.2 67.1 L150.8 71.8"/>
+<path class="sk-i" d="M146.2 67.2 L145.7 71.3"/>
 </g>
-<text class="sk-t" x="201" y="75" text-anchor="middle" font-size="16">Two Keyholders</text>
-<text class="sk-t" x="201" y="30" text-anchor="middle" font-size="11">a plain name</text>
-<text class="sk-t" x="338" y="56" text-anchor="middle" font-size="10">commands, tools:</text>
-<text class="sk-t" x="338" y="71" text-anchor="middle" font-size="10">in the actions</text>
+<g transform="rotate(25 141 71)">
+<path class="sk-i" d="M127.4 72.4 L128.6 71.3 L129.1 71.1 L130.4 70.2 L131.4 70.7 L132.6 70.5 L133.7 71.3 L134.1 71.9 L135.1 73 L135 73.7 L134.9 74.9 L135.6 76.1 L135.3 77.1 L134.7 78.2 L133.6 78.6 L132.9 79.1 L131.6 79.2 L130.6 79.5 L129.5 79.6 L128.2 79 L127.2 77.8 L127.6 77.3 L126.2 76.2 L125.9 75.1 L126.6 74 L126.5 72.8 L127.8 72.2 L128.3 71 L129.4 71.2"/>
+<path class="sk-i" d="M135.5 75.1 L151.3 74.9 L151.2 79.7"/>
+<path class="sk-i" d="M145.6 75.2 L146.3 79.1"/>
+</g>
+<path class="sk-i" d="M222.1 53.7 L302.3 53.8 L308.1 60.1 L308 104.1 L302.1 109.9 L278.3 109.9 L272.4 128.1 L262 110.4 L222.2 110.1 L215.6 104.1 L216.4 59.9 Z"/>
+<path class="sk-i" opacity=".55" d="M221.9 54.8 L302.9 53 L307.8 60 L307.1 104.8 L301.3 110.4 L278.1 108.6 L272.9 127.7 L263.2 111.2 L222.9 110.4 L216.9 104.1 L215.3 60.9 Z"/>
+<g transform="rotate(-25 262 82)">
+<path class="sk-i" d="M255.6 76.1 L256.7 76.7 L256.4 77.9 L256.2 78.9 L255.8 80.2 L255.3 80.6 L254.4 81.6 L253.8 82.5 L252.7 82 L251.6 82.7 L250.5 82.4 L249.6 81.7 L248.5 80.6 L248.1 80.1 L247.1 79.3 L247.7 78.1 L247.7 77 L248.3 75.8 L249 75.2 L249.6 74.1 L250.5 74.1 L251.5 74 L252.5 74.1 L253.7 73.5 L254.7 74 L255.3 75.2 L256.5 76.1 L256.4 77 L257.1 78"/>
+<path class="sk-i" d="M256.5 78.3 L272.3 78.3 L272.2 82.9"/>
+<path class="sk-i" d="M266.7 78 L267 82.4"/>
+</g>
+<g transform="rotate(25 262 82)">
+<path class="sk-i" d="M254.8 89 L254.1 90 L253.4 90.5 L252.3 90.7 L251.2 89.9 L250 90.5 L249.5 89.8 L248.3 88.8 L248.3 87.8 L247.4 86.8 L247.2 85.7 L247.7 84.4 L248 83.6 L248.9 82.8 L249.8 82.3 L250.8 81.4 L251.8 81.6 L252.9 82.1 L254.1 82.3 L254.8 82.1 L255.8 83 L256.6 84.1 L256.5 85.3 L256.1 86.3 L255.9 87.3 L255.6 88.2 L255.5 89 L254.5 89.6 L253.4 90.2"/>
+<path class="sk-i" d="M256.6 85.9 L271.9 86.3 L271.7 90.8"/>
+<path class="sk-i" d="M266.9 86.1 L267 90.2"/>
+</g>
+</g>
+
 </svg>

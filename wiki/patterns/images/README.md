@@ -6,10 +6,11 @@ The current drawings are drafts made with AI assistance (hand-coded SVG, no imag
 
 ## What an illustration shows
 
-Diagrams in the spirit of Christopher Alexander's *A Pattern Language*: a fast pen sketch of the pattern working, labeled by hand.
+Diagrams in the spirit of Christopher Alexander's *A Pattern Language*: a fast pen sketch of the pattern working, with no words in it.
 
 - Show the arrangement the Solution creates: who stands where, what is shared, what connects to what.
-- Label the parts in a few words ("shared system", "keyholder", "talk first"). Arrows are fine.
+- No labels, letters, or numbers. Gestures, objects, arrangement, and the one hatched focus carry the meaning. Where a symbol is needed, use the site's marks: the thread circle, and the square, triangle, and diamond for guides, governance, and theory. Arrows are fine.
+- Plan views (seen from above) work well for arrangements of people and space.
 - People are artist's mannequins: an oval head with construction lines, separate chest and pelvis blocks, circles at the joints, and limbs drawn as two-line tubes. Drawn quickly, not polished.
 
 ## Style
@@ -18,10 +19,9 @@ Diagrams in the spirit of Christopher Alexander's *A Pattern Language*: a fast p
 - **Pen:** ink lines (`currentColor`, about 1.7px, round caps) drawn twice with a little offset, then roughened with an SVG displacement filter (`feTurbulence` + `feDisplacementMap`). Give the filter an id unique to the file (`rough-<slug>`).
 - **Construction lines:** thinner and faint (`opacity` about 0.4), overshooting the shapes they guide.
 - **Colored pencil:** hatching in `var(--thread)` marks the one thing the pattern is about (the shared server, the cell being filled). Nothing else is colored.
-- **Lettering:** labels in Architects Daughter (`font-family: 'Architects Daughter', cursive`), not roughened, so they stay readable.
 - Don't hard-code colors. The site sets the ink color and `--thread`, so drawings work on paper and on the dark blueprint theme.
-- Use the classes in the existing files: `sk-i` (ink), `sk-g` (construction), `sk-h` (hatching), `sk-t` (lettering).
-- Include a `<title>` with the pattern name and a `<desc>` describing the sketch in one sentence, including its labels. The `<desc>` is the alt text.
+- Use the classes in the existing files: `sk-i` (ink), `sk-g` (construction), `sk-h` (hatching).
+- Include a `<title>` with the pattern name and a `<desc>` describing the sketch in one or two sentences. Write the `<desc>` first: it's the spec for the drawing and the alt text on the site.
 
 ## License
 

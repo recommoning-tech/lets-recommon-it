@@ -105,78 +105,117 @@ const card = (B, x, y, w = 30, h = 20) => { box(B, x, y, w, h, { passes: 1 }); h
 function server(B, x, y, w, h) { box(B, x, y, w, h); for (let yy = y + 18; yy < y + h - 6; yy += 18) line(B, x + 6, yy, x + w - 6, yy, { passes: 1 }); hatch(B, x + 3, y + 3, w - 6, h - 6, { gap: 7 }); }
 function key(B, x, y, dir = 1) { ellipse(B, x, y, 4.5, 4.5, { passes: 1 }); stroke(B, [[x + dir * 4.5, y], [x + dir * 20, y], [x + dir * 20, y + 5]], { passes: 1 }); line(B, x + dir * 15, y, x + dir * 15, y + 4, { passes: 1 }); }
 
-// Scenes, keyed by pattern slug. Primitives above: mannequin, box, ellipse, hatch, arrow, text, card, server, key, ground.
+// A person seen from above (plan view): shoulders and head, facing angle `a` in radians.
+function topPerson(B, x, y, a) {
+  const c = Math.cos(a), si = Math.sin(a);
+  const pts = []; for (let t = 0; t <= 6.3; t += 0.35) { const u = Math.cos(t) * 7, v = Math.sin(t) * 18; pts.push([x + u * c - v * si, y + u * si + v * c]); }
+  stroke(B, pts, { closed: true, passes: 1 }); ellipse(B, x + c * 3, y + si * 3, 7.5, 7.5, { passes: 1 });
+}
+// A pencil held at (x, y), pointing along angle a.
+function pencil(B, x, y, a = 0.6, L = 22) {
+  const dx = Math.cos(a), dy = Math.sin(a), nx = -dy * 2.2, ny = dx * 2.2;
+  stroke(B, [[x - dx * 6 + nx, y - dy * 6 + ny], [x + dx * L + nx, y + dy * L + ny], [x + dx * (L + 6), y + dy * (L + 6)], [x + dx * L - nx, y + dy * L - ny], [x - dx * 6 - nx, y - dy * 6 - ny]], { closed: true, passes: 1 });
+}
+// The site's marks: thread circle, and square / triangle / diamond for guides / governance / theory.
+function mark(B, shape, x, y, r = 8, hatched = false) {
+  if (shape === 'circle') ellipse(B, x, y, r, r, { passes: 1 });
+  if (shape === 'square') box(B, x - r, y - r, 2 * r, 2 * r, { passes: 1 });
+  if (shape === 'triangle') stroke(B, [[x, y - r], [x + r, y + r * 0.8], [x - r, y + r * 0.8]], { closed: true, passes: 1 });
+  if (shape === 'diamond') stroke(B, [[x, y - r], [x + r, y], [x, y + r], [x - r, y]], { closed: true, passes: 1 });
+  if (hatched) hatch(B, x - r + 1, y - r + 1, 2 * r - 2, 2 * r - 2, { oval: shape !== 'square', gap: 3.5 });
+}
+// Two keys crossed: the pictogram for Two Keyholders, used as a shared "word".
+function keysIcon(B, x, y) {
+  B.lines.push(`<g transform="rotate(-25 ${x} ${y})">`); key(B, x - 10, y - 4, 1); B.lines.push('</g>');
+  B.lines.push(`<g transform="rotate(25 ${x} ${y})">`); key(B, x - 10, y + 4, 1); B.lines.push('</g>');
+}
+
+// Scenes, keyed by pattern slug: [title, alt text, draw]. The alt text is written first; the drawing
+// shows exactly what it says, with no words, letters, or numbers.
 const S = {
-'two-keyholders': ['Two Keyholders', 'Sketch: two mannequin figures on either side of a shared server, each reaching toward it with a key. Labels read "shared system", "keyholder", and "both use it".', (B) => {
-  ground(B); server(B, 172, 150, 56, 112); text(B, 200, 136, 'shared system');
-  const a = mannequin(B, 96, { er: [30, -84], wr: [48, -92] }); key(B, a.hr[0] + 6, a.hr[1], 1);
-  const b = mannequin(B, 304, { face: -1, el: [-30, -84], wl: [-48, -92] }); key(B, b.hl[0] - 6, b.hl[1], -1);
-  text(B, 96, 284, 'keyholder'); text(B, 304, 284, 'keyholder');
-  arrow(B, 120, 66, 280, 66, 0); arrow(B, 280, 74, 120, 74, 0); text(B, 200, 56, 'both use it');
+'two-keyholders': ['Two Keyholders', 'Sketch: two mannequin figures stand on either side of a server with two keyholes, each turning a key in its own lock at the same time. The server is hatched.', (B) => {
+  ground(B); server(B, 172, 150, 56, 112);
+  for (const kx of [184, 216]) { ellipse(B, kx, 168, 3.2, 3.2, { passes: 1 }); line(B, kx, 171, kx, 178, { passes: 1 }); }
+  const a = mannequin(B, 104, { er: [30, -84], wr: [56, -92] }); key(B, a.hr[0] + 5, a.hr[1], 1);
+  const b = mannequin(B, 296, { face: -1, el: [-30, -84], wl: [-56, -92] }); key(B, b.hl[0] - 5, b.hl[1], -1);
 }],
-'small-enough-to-understand': ['Small Enough to Understand', 'Sketch: one mannequin holds a small server while a second leans in to learn it, both inside a dashed circle labeled "a weekend to learn". To the right, a large rack is crossed out with the note "not yet".', (B) => {
-  ground(B);
-  const a = mannequin(B, 110, { el: [4, -72], wl: [22, -78], er: [26, -74], wr: [38, -80] });
-  box(B, a.hl[0] - 2, a.hl[1] - 22, 28, 20, { passes: 2 }); hatch(B, a.hl[0], a.hl[1] - 20, 24, 16, { gap: 4 });
-  mannequin(B, 190, { s: 0.9, face: -1, el: [-18, -76], wl: [-26, -68] });
-  B.lines.push(`<ellipse class="sk-i" cx="150" cy="180" rx="105" ry="95" stroke-dasharray="6 7"/>`);
-  text(B, 150, 74, 'a weekend to learn');
-  for (const yy of [120, 160, 200]) box(B, 290, yy, 60, 34, { passes: 1 });
-  stroke(B, [[280, 112], [362, 240]]); stroke(B, [[362, 112], [280, 240]]);
-  text(B, 320, 100, 'not yet', { rot: -6 });
+'small-enough-to-understand': ['Small Enough to Understand', 'Sketch: at a workbench, one mannequin points to a few small parts laid out side by side while a second leans in to look. Above the bench, a shelf holds one box beside a dashed outline of space left for another. The parts are hatched.', (B) => {
+  ground(B); stroke(B, [[140, 200], [300, 200]]); line(B, 150, 200, 150, 262); line(B, 290, 200, 290, 262);
+  for (const x of [180, 212, 244]) { box(B, x, 184, 22, 16, { passes: 1 }); hatch(B, x + 2, 186, 18, 12, { gap: 4 }); }
+  stroke(B, [[178, 112], [286, 112]]); line(B, 184, 112, 190, 124, { passes: 1 }); line(B, 280, 112, 274, 124, { passes: 1 });
+  box(B, 190, 84, 30, 28, { passes: 1 }); B.lines.push('<rect class="sk-i" x="236" y="84" width="30" height="28" stroke-dasharray="4 5"/>');
+  mannequin(B, 104, { er: [30, -76], wr: [52, -70] });
+  mannequin(B, 336, { s: 0.9, face: -1, el: [-26, -70], wl: [-46, -62], er: [10, -66], wr: [16, -50] });
 }],
-'talk-before-you-enforce': ['Talk Before You Enforce', 'Sketch: three mannequin figures stand together under a hatched loop labeled "talk first". A fence panel lies on the ground to the side, labeled "enforcement: later, if the group chooses".', (B) => {
-  ground(B);
-  mannequin(B, 70, { er: [26, -74], wr: [36, -82] }); mannequin(B, 140, { s: 0.92, face: 1, el: [-20, -80], wl: [-28, -90] }); mannequin(B, 210, { face: -1, el: [-24, -74], wl: [-34, -80] });
-  ellipse(B, 140, 78, 92, 26); hatch(B, 60, 58, 160, 40, { oval: true, gap: 7 }); text(B, 140, 40, 'talk first', { size: 15 });
-  stroke(B, [[268, 256], [370, 248]]); stroke(B, [[268, 262], [370, 254]]); for (const xx of [282, 318, 354]) line(B, xx, 246, xx + 2, 262, { passes: 1 });
-  text(B, 318, 196, 'enforcement:', { size: 12 }); text(B, 318, 211, 'later, if the', { size: 11 }); text(B, 318, 225, 'group chooses', { size: 11 });
+'talk-before-you-enforce': ['Talk Before You Enforce', 'Diagram in plan view, seen from above: six people stand in a ring facing a hatched open space in the middle, with small arcs of speech between them. Outside the ring, a fence panel lies on the ground, set aside.', (B) => {
+  const cx = 160, cy = 150;
+  ellipse(B, cx, cy, 44, 44); hatch(B, cx - 42, cy - 42, 84, 84, { oval: true, gap: 7 });
+  for (let i = 0; i < 6; i++) {
+    const t = (i / 6) * 6.283 + 0.3, x = cx + Math.cos(t) * 82, y = cy + Math.sin(t) * 82; topPerson(B, x, y, t + Math.PI);
+    const ax = cx + Math.cos(t) * 60, ay = cy + Math.sin(t) * 60;
+    B.lines.push(`<path class="sk-i" d="M${r1(ax + Math.sin(t) * 6)} ${r1(ay - Math.cos(t) * 6)} Q${r1(ax - Math.cos(t) * 4)} ${r1(ay - Math.sin(t) * 4)} ${r1(ax - Math.sin(t) * 6)} ${r1(ay + Math.cos(t) * 6)}" stroke-width="1.2"/>`);
+  }
+  B.lines.push('<g transform="rotate(-18 330 170)">'); box(B, 300, 120, 60, 100, { passes: 1 });
+  for (const yy of [140, 170, 200]) line(B, 300, yy, 360, yy, { passes: 1 }); B.lines.push('</g>');
 }],
-'every-thread-at-every-level': ['Every Thread at Every Level', 'Diagram: three stacked bands labeled theory, governance, and guides. Vertical threads run down through all three bands, with a hatched dot where each thread crosses each band, marking a pattern.', (B) => {
-  const bands = [['theory', 60], ['governance', 130], ['guides', 200]];
-  for (const [name, y] of bands) { box(B, 104, y, 270, 52); text(B, 96, y + 31, name, { anchor: 'end', size: 12 }); }
-  for (const x of [170, 250, 330]) { line(B, x, 34, x, 270); for (const [, y] of bands) { ellipse(B, x, y + 26, 9, 9, { passes: 1 }); hatch(B, x - 8, y + 18, 16, 16, { oval: true, gap: 3.5 }); } }
-  text(B, 250, 24, 'threads'); text(B, 210, 284, 'each dot is a pattern', { size: 11 });
+'every-thread-at-every-level': ['Every Thread at Every Level', 'Sketch: a mannequin draws one thread up through a small hand loom. The loom has three cross rows, marked at the side with a diamond, a triangle, and a square, and the drawn thread passes through all three. That thread is hatched.', (B) => {
+  ground(B); line(B, 140, 60, 140, 262); line(B, 300, 60, 300, 262); stroke(B, [[132, 60], [308, 60]]); stroke(B, [[132, 240], [308, 240]]);
+  for (let x = 160; x <= 280; x += 20) if (x !== 220) B.lines.push(`<path class="sk-g" d="M${x} 62 L${x} 238"/>`);
+  for (const [y, shape] of [[100, 'diamond'], [150, 'triangle'], [200, 'square']]) {
+    let d = `M144 ${y}`; for (let x = 150; x <= 296; x += 10) d += ` L${x} ${y + (((x - 150) / 10) % 2 ? 3 : -3)}`;
+    B.lines.push(`<path class="sk-i" d="${d}"/>`); mark(B, shape, 118, y, 8);
+  }
+  for (let y = 66; y < 236; y += 8) B.lines.push(`<path class="sk-h" d="M216 ${y + 6} L224 ${y}"/>`);
+  line(B, 216, 62, 216, 238, { passes: 1 }); line(B, 224, 62, 224, 238, { passes: 1 });
+  stroke(B, [[220, 60], [236, 48], [304, 50], [330, 140]], { passes: 1 });
+  mannequin(B, 350, { face: -1, el: [-14, -100], wl: [-20, -120] });
 }],
-'every-page-links-out': ['Every Page Links Out', 'Diagram: a page labeled "this page" sits in the middle, with lines out to pages labeled "its thread", "the table", "patterns", and "sources".', (B) => {
-  const c = [175, 120, 50, 64];
-  box(B, ...c); hatch(B, c[0] + 3, c[1] + 3, c[2] - 6, c[3] - 6, { gap: 6 }); text(B, 200, 112, 'this page');
-  const others = [[50, 40, 'its thread'], [300, 40, 'the table'], [50, 200, 'patterns'], [300, 200, 'sources']];
-  for (const [x, y, name] of others) { box(B, x, y, 50, 40, { passes: 1 }); for (let k = 1; k < 4; k++) line(B, x + 8, y + k * 10, x + 42 - (k === 3 ? 12 : 0), y + k * 10, { cls: 'sk-g', passes: 1 }); text(B, x + 25, y + (y < 100 ? -8 : 56), name); arrow(B, 200 + (x < 200 ? -25 : 25), 152 + (y < 100 ? -32 : 32), x + (x < 200 ? 50 : 0), y + 20, x < 200 ? -12 : 12); }
+'every-page-links-out': ['Every Page Links Out', 'Diagram: a hatched page in the middle has arrows out to four others: a page ruled as a small table, a pattern card with a circle on it, a closed book, and a page marked with a thread circle.', (B) => {
+  box(B, 175, 116, 50, 64); hatch(B, 178, 119, 44, 58, { gap: 6 });
+  const others = [[52, 40], [298, 40], [52, 196], [298, 196]];
+  for (const [x, y] of others) { const tx = x + 25, ty = y + 22; arrow(B, 200 + (x < 200 ? -25 : 25), 148 + (y < 100 ? -32 : 32), x < 200 ? x + 54 : x - 4, ty, x < 200 ? -14 : 14); }
+  box(B, 52, 40, 50, 44, { passes: 1 }); for (const yy of [55, 70]) line(B, 52, yy, 102, yy, { passes: 1 }); for (const xx of [69, 85]) line(B, xx, 40, xx, 84, { passes: 1 });
+  box(B, 298, 44, 50, 36, { passes: 1 }); ellipse(B, 312, 62, 7, 7, { passes: 1 }); line(B, 324, 56, 342, 56, { cls: 'sk-g', passes: 1 }); line(B, 324, 66, 338, 66, { cls: 'sk-g', passes: 1 });
+  stroke(B, [[52, 200], [96, 196], [102, 202], [102, 240], [58, 244], [52, 238]], { closed: true }); line(B, 60, 200, 60, 242, { passes: 1 });
+  box(B, 298, 196, 50, 56, { passes: 1 }); mark(B, 'circle', 323, 214, 7, true); for (const yy of [232, 242]) line(B, 306, yy, 340, yy, { cls: 'sk-g', passes: 1 });
 }],
-'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', 'Sketch: a mannequin holds a pattern card up beside a working server. Labels read "pattern", "practice", and "does it fit? if not, revise".', (B) => {
-  ground(B); server(B, 262, 150, 56, 112); text(B, 290, 136, 'practice');
-  const a = mannequin(B, 120, { er: [30, -86], wr: [58, -98] }); card(B, a.hr[0] - 2, a.hr[1] - 26, 34, 24); text(B, a.hr[0] + 15, a.hr[1] - 34, 'pattern');
-  arrow(B, 214, 112, 256, 160, 10); text(B, 222, 62, 'does it fit?'); text(B, 222, 78, 'if not, revise', { size: 11 });
+'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', 'Sketch: a mannequin holds a pattern card up beside a doorway it has built. The card shows a narrower doorway than the real one, and the figure is redrawing it wider with a pencil. The card is hatched.', (B) => {
+  ground(B); stroke(B, [[250, 262], [250, 130], [320, 130], [320, 262]]); stroke(B, [[244, 130], [326, 130]]);
+  for (let y = 150; y < 262; y += 20) { line(B, 238, y, 250, y, { cls: 'sk-g', passes: 1 }); line(B, 320, y, 332, y, { cls: 'sk-g', passes: 1 }); }
+  const a = mannequin(B, 130, { er: [30, -96], wr: [52, -112], el: [22, -80], wl: [44, -92] });
+  box(B, a.hr[0], a.hr[1] - 40, 46, 40); hatch(B, a.hr[0] + 3, a.hr[1] - 37, 40, 34, { gap: 5 });
+  const dx = a.hr[0] + 18, dy = a.hr[1] - 6; stroke(B, [[dx, dy], [dx, dy - 22], [dx + 8, dy - 22], [dx + 8, dy]], { passes: 1 });
+  B.lines.push(`<path class="sk-i" stroke-dasharray="3 3" d="M${dx - 6} ${dy} L${dx - 6} ${dy - 24} L${dx + 14} ${dy - 24} L${dx + 14} ${dy}"/>`);
+  pencil(B, a.hl[0], a.hl[1], -0.9, 18);
 }],
-'any-cell-any-time': ['Any Cell, Any Time', 'Sketch: a mannequin places one card into a single empty cell of a large three-by-three grid whose columns are labeled guides, governance, and theory. A few cells are already hatched. The note reads "one cell at a time".', (B) => {
+'any-cell-any-time': ['Any Cell, Any Time', 'Sketch: a mannequin slots one card into a single empty cell of a large three-by-three grid. The columns are marked above with a square, a triangle, and a diamond, and a few other cells are already filled. The card is hatched.', (B) => {
   ground(B); const gx = 150, gy = 50, cw = 66, ch = 50;
   for (let i = 0; i <= 3; i++) { line(B, gx, gy + i * ch, gx + 3 * cw, gy + i * ch, { passes: 1 }); line(B, gx + i * cw, gy, gx + i * cw, gy + 3 * ch, { passes: 1 }); }
-  ['guides', 'governance', 'theory'].forEach((n, i) => text(B, gx + i * cw + cw / 2, gy - 8, n, { size: 11 }));
-  for (const [c, r] of [[0, 0], [2, 0], [1, 1]]) hatch(B, gx + c * cw + 4, gy + r * ch + 4, cw - 8, ch - 8, { gap: 6 });
+  ['square', 'triangle', 'diamond'].forEach((m, i) => mark(B, m, gx + i * cw + cw / 2, gy - 16, 7));
+  for (const [c, r] of [[0, 0], [2, 0], [1, 1], [2, 2]]) { const x = gx + c * cw + 12, y = gy + r * ch + 12; box(B, x, y, cw - 24, ch - 24, { passes: 1 }); line(B, x + 6, y + 9, x + cw - 30, y + 9, { cls: 'sk-g', passes: 1 }); line(B, x + 6, y + 17, x + cw - 36, y + 17, { cls: 'sk-g', passes: 1 }); }
   const a = mannequin(B, 100, { er: [30, -96], wr: [54, -114] }); card(B, a.hr[0] + 4, a.hr[1] - 12, 30, 20);
-  text(B, 250, 230, 'one cell at a time');
 }],
-'a-language-users-can-speak': ['A Language Users Can Speak', 'Sketch: two mannequin figures talk; between them a speech bubble holds a plain pattern name, "Two Keyholders". A side note reads "commands and tools go in the actions".', (B) => {
+'a-language-users-can-speak': ['A Language Users Can Speak', 'Sketch: two mannequin figures face each other and talk. Both speech bubbles hold the same simple picture, two crossed keys: a plain name they share. The first bubble is hatched.', (B) => {
   ground(B);
   mannequin(B, 110, { er: [26, -76], wr: [38, -86] }); mannequin(B, 290, { s: 0.94, face: -1, el: [-26, -76], wl: [-38, -86] });
-  stroke(B, [[140, 40], [262, 40], [268, 46], [268, 92], [262, 98], [214, 98], [204, 116], [200, 98], [140, 98], [134, 92], [134, 46]], { closed: true });
-  text(B, 201, 75, 'Two Keyholders', { size: 16 }); text(B, 201, 30, 'a plain name', { size: 11 });
-  box(B, 286, 40, 104, 40, { passes: 1 }); text(B, 338, 56, 'commands, tools:', { size: 10 }); text(B, 338, 71, 'in the actions', { size: 10 });
+  stroke(B, [[96, 40], [186, 40], [192, 46], [192, 96], [186, 102], [150, 102], [128, 124], [132, 102], [96, 102], [90, 96], [90, 46]], { closed: true });
+  hatch(B, 94, 44, 94, 56, { gap: 7 }); keysIcon(B, 141, 71);
+  stroke(B, [[222, 54], [302, 54], [308, 60], [308, 104], [302, 110], [278, 110], [272, 128], [262, 110], [222, 110], [216, 104], [216, 60]], { closed: true });
+  keysIcon(B, 262, 82);
 }],
-'solution-first': ['Solution First', 'Diagram: a numbered sequence of boxes, read left to right and down: 1 solution (hatched), 2 actions, 3 problem, 4 context, 5 forces, 6 consequences, and finally 7 name.', (B) => {
-  const steps = ['solution', 'actions', 'problem', 'context', 'forces', 'consequences', 'name'];
-  const pos = [[16, 50], [144, 50], [272, 50], [272, 140], [144, 140], [16, 140], [144, 228]];
-  steps.forEach((s, i) => { const [x, y] = pos[i]; box(B, x, y, 112, 44, { passes: i === 0 ? 2 : 1 }); if (i === 0) hatch(B, x + 3, y + 31, 106, 10, { gap: 5 }); text(B, x + 56, y + 25, `${i + 1}  ${s}`, { size: i === 6 ? 15 : 13 }); });
-  arrow(B, 130, 72, 142, 72); arrow(B, 258, 72, 270, 72); arrow(B, 328, 96, 328, 138); arrow(B, 270, 162, 258, 162); arrow(B, 142, 162, 130, 162); arrow(B, 72, 186, 142, 246, -20);
-  text(B, 200, 30, 'the order you write in', { size: 12 });
+'solution-first': ['Solution First', 'Sketch: a mannequin writes on a large card propped on an easel. Only the middle section of the card, the solution, has been written and is hatched; the sections above and below and the title line at the top are still blank.', (B) => {
+  ground(B); box(B, 196, 50, 130, 160); stroke(B, [[220, 210], [204, 262]]); stroke(B, [[302, 210], [318, 262]]); line(B, 261, 210, 261, 262, { passes: 1 });
+  B.lines.push('<path class="sk-i" stroke-dasharray="5 5" d="M210 70 L312 70"/>');
+  for (const y of [92, 120, 176, 196]) line(B, 206, y, 316, y, { cls: 'sk-g', passes: 1 });
+  box(B, 204, 132, 114, 34, { passes: 1 }); hatch(B, 207, 135, 108, 28, { gap: 5 });
+  for (const y of [142, 150, 158]) stroke(B, [[212, y], [240, y - 2], [270, y + 1], [300, y - 1]], { passes: 1 });
+  const a = mannequin(B, 130, { er: [32, -84], wr: [62, -102] }); pencil(B, a.hr[0], a.hr[1], -0.5, 16);
 }],
-'workshop-the-pattern': ['Workshop the Pattern', 'Sketch: two mannequin readers stand at a table with a pattern card on it, labeled "what works" and "what could be better". The author stands apart, labeled "author listens".', (B) => {
+'workshop-the-pattern': ['Workshop the Pattern', 'Sketch: two mannequin readers stand at a table with a pattern card on it; one points at the card approvingly, the other holds a pencil over it to suggest a change. The author stands apart with a hand cupped to one ear, listening. The card is hatched.', (B) => {
   ground(B); stroke(B, [[110, 200], [270, 200]]); line(B, 122, 200, 122, 262); line(B, 258, 200, 258, 262); card(B, 172, 180, 36, 18);
-  mannequin(B, 80, { er: [24, -70], wr: [36, -62] }); mannequin(B, 300, { face: -1, el: [-24, -70], wl: [-36, -62] });
-  text(B, 80, 116, 'what works', { size: 12 }); text(B, 300, 116, 'what could', { size: 12 }); text(B, 300, 130, 'be better', { size: 12 });
-  mannequin(B, 366, { s: 0.8, face: -1, el: [-12, -70], wl: [-4, -58], er: [12, -70], wr: [4, -58] });
-  text(B, 362, 140, 'author', { size: 11 }); text(B, 362, 153, 'listens', { size: 11 });
+  mannequin(B, 80, { er: [34, -80], wr: [76, -76] });
+  const b = mannequin(B, 300, { face: -1, el: [-30, -84], wl: [-62, -92] }); pencil(B, b.hl[0], b.hl[1], 2.2, 16);
+  mannequin(B, 368, { s: 0.85, face: -1, er: [20, -100], wr: [10, -112], el: [-14, -70], wl: [-6, -54] });
 }],
 };
 for (const [slug, [title, desc, build]] of Object.entries(S)) { if (ONLY.length && !ONLY.includes(slug)) continue; seed = slug.length * 977 + 13; const B = { lines: [], text: [] }; build(B); fs.writeFileSync(`${OUT}/${slug}.svg`, svg(slug, title, desc, B)); }
