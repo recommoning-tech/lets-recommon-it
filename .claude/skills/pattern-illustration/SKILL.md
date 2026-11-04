@@ -59,6 +59,20 @@ node .claude/skills/pattern-illustration/scripts/sketch.mjs wiki/patterns/images
 - Primitives: `mannequin` (pose with elbow `el`/`er`, wrist `wl`/`wr`, knee positions; `face` ±1; `s` scale), `topPerson` (a person seen from above, for plan views), `box`, `ellipse`, `hatch`, `arrow`, `card`, `server`, `key`, `pencil`, `mark` (the site's circle, square, triangle, diamond), `ground`, `line`, `stroke`. Don't use `text`.
 - **Design Rules:** people who talk or work together face each other; gestures carry the action, so make them clear; a line rising to the right reads as hopeful; keep the focus hatched and near the center; leave empty space; keep everything inside the 400×300 canvas.
 - Plan views (seen from above, as in Alexander's diagrams) are a good way to show arrangements of people and space.
+
+### Draw like a drafter: three dimensions and perspective
+
+The mannequins are drawn the way an artist builds a figure: simple solids, construction lines, quick confident strokes. Draw every object the same way. Flat outlines read as icons; solids read as things people can use.
+
+- **One perspective for the whole set.** Use two-point perspective with the horizon at the mannequins' eye height (about y = 150) and both vanishing points far outside the canvas (about x = −400 and x = 800), so the distortion is mild and every drawing feels like the same room. Draw the horizon and a few guide lines to the vanishing points as faint construction lines, overshooting their ends.
+- **Box it first.** Start every object as a box in perspective (its envelope), then carve it: a shed is a box with a roof prism; a table is a slab on four legs; a loom is a frame of square-section posts; a book has a visible spine and page edge. Show at least two faces of anything solid, usually the front and one side or the top.
+- **Circles become ellipses.** Wheels, table tops, cups, and plates seen at an angle are ellipses, with their axes lined up with the perspective. Give flat round things a visible thickness (a second ellipse below the first).
+- **Depth.** Objects and figures farther back are smaller and higher on the ground plane, and nearer things overlap farther ones (give near shapes a paper fill so they hide what's behind). Place mannequins in the same perspective as the objects they use; their feet sit on the ground plane.
+- **Light from one side.** Shade the faces turned away from the light (always the same side across the set) with light ink hatching at construction weight. Thread-color hatching stays reserved for the one focus.
+- **Line weight.** Outer silhouettes heaviest, inner edges lighter, construction and shading lightest; edges nearer the viewer slightly heavier than far ones.
+- **Ruled, not traced.** Edges are straight, quick strokes that overshoot a little at corners, drawn twice with a small offset, as with the mannequins. Keep it fast and rough, not polished.
+- **Plan views become bird's-eye views.** Instead of a flat plan, look down at an angle (high horizon, or axonometric) so people stay recognizable as mannequins and the space keeps its depth.
+- If a primitive you need doesn't exist yet (a box, prism, cylinder, or ellipse in perspective), add it to `scripts/sketch.mjs` and reuse it across drawings.
 - Set `image: images/<slug>.svg` in the pattern's front matter.
 
 ## 4. Review against the set (Consistent Styles, Graphical Diversity)
@@ -72,7 +86,7 @@ Screenshot the sheet and look at it.
 - Does each drawing match its alt text, element for element?
 - Cover the alt text and look: does the picture alone say what the pattern is about?
 - No words, letters, or numbers anywhere in the drawing.
-- Same style as the others: mannequins, pen weight, construction lines, one hatched focus. Redraw any that drift.
+- Same style as the others: mannequins, pen weight, construction lines, one hatched focus, and objects drawn as solids in the shared perspective. Redraw any that are still flat.
 - Is each drawing distinct from the others at a glance?
 
 Then build the site (`cd site && npm run build`) and look at the pattern page in light and dark mode.
