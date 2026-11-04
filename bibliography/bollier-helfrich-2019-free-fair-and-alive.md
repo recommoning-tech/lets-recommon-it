@@ -4,7 +4,7 @@ authors: ["Bollier, David", "Helfrich, Silke"]
 year: 2019
 publisher: "New Society Publishers"
 type: book
-threads: [commons, design-patterns]
+threads: [commons]
 status: draft
 ---
 

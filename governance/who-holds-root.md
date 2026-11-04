@@ -1,13 +1,12 @@
 ---
 title: "Who holds root? An IAD analysis of a shared server"
 date:                  # YYYY-MM-DD, set at publish
-threads: [institutions]
+threads: [liberatory-tech, institutions]   # first thread is the row in the table
 sources:
   - ostrom-2005-understanding-institutional-diversity.md
   - crawford-ostrom-1995-grammar-of-institutions.md
   - ostrom-walker-gardner-1992-covenants-with-and-without-a-sword.md
   - ostrom-1990-governing-the-commons.md
-release: 001-a-shared-server
 patterns_applied:
   - wiki/patterns/two-keyholders.md
   - wiki/patterns/talk-before-you-enforce.md
@@ -114,8 +113,8 @@ If the group ends, members get [N] weeks to export their data before the server 
 
 <!-- Author: add a real example from your own setup? Even a small one makes this concrete. -->
 
-## In this release
-- **Release:** [001 Liberatory Tech: A Shared Server](../releases/001-a-shared-server.md)
-- **Theory & patterns:** [Who owns the machine?](../theory/who-owns-the-machine.md): [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Two Keyholders](../wiki/patterns/two-keyholders.md)
-- **Guide:** [Setting up your first server](../guides/first-server.md)
+## In this thread
+- **Thread:** liberatory-tech · [the table](../index.md)
+- **Guides:** [Setting up your first server](../guides/first-server.md)
 - **Governance:** [Who holds root?](../governance/who-holds-root.md)
+- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)

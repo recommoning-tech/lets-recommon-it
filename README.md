@@ -13,10 +13,10 @@ There is no website yet. This repo holds the source material.
 
 | Folder | Contents |
 |---|---|
-| `releases/` | One manifest per release, listing its parts |
-| `theory/` | Theory posts: why a thread matters, deriving its patterns |
-| `guides/` | Step-by-step technical guides |
-| `governance/` | How to run it as a commons; risks and trade-offs |
+| `index.md` | The table: every piece and pattern by thread and level |
+| `guides/` | Operational level: step-by-step guides |
+| `governance/` | Collective-choice and constitutional levels: how rules are made and changed, and who makes them |
+| `theory/` | Metaconstitutional level: what is shared, who it's for, what counts as good |
 | `wiki/patterns/` | The "Pattern Language for Community Tech" |
 | `wiki/` | Other reference pages |
 | `posts/` | Standalone commentary, essays, and reviews (`drafts/` holds work in progress) |
@@ -24,31 +24,29 @@ There is no website yet. This repo holds the source material.
 | `planning/` | Concept map, post ideas, and task list |
 | `templates/` | Starting templates for each content type |
 
-## Releases
+## The table
 
-Content is published in releases. Each thread has one foundational release with three parts:
+The site is a table, kept in [`index.md`](index.md). Rows are threads. Columns are levels of rules from Ostrom's Institutional Analysis and Development framework:
 
-1. **Theory & patterns:** why the thread matters for community-scale IT commons. The essay derives a set of patterns and shows how they relate to each other.
-2. **Guide:** implements a concrete example, applying the patterns.
-3. **Governance:** the considerations and processes for running it as a commons, with risks and trade-offs.
+| Column | Level |
+|---|---|
+| Guides | Operational |
+| Governance | Collective-choice and constitutional |
+| Theory | Metaconstitutional |
 
-Patterns live on their own wiki pages (`wiki/patterns/`) and form one network across all threads. Each pattern records the theory post that introduced it (`introduced_in`) and the guides and governance pieces that apply it (`applied_in`).
-
-Every element links to the others. The manifest in `releases/NNN-slug.md` lists them; each element has `release:` in its front matter and an "In this release" footer.
-
-Release 000 applies this structure to the project itself (the `design-patterns` thread).
+Any cell can be filled at any time, and new threads can be added. Each piece is an essay about the patterns at its level. Patterns live on their own wiki pages (`wiki/patterns/`), each with one `thread` and one `level`, and form one network across the table. [This repository is a commons](theory/this-repository-is-a-commons.md) explains why.
 
 ## Threads
 
-Every piece of content is tagged with one or more threads, defined in [`planning/concept-map.md`](planning/concept-map.md):
+Every piece of content is tagged with one or more threads (the first is its row in the table), defined in [`planning/concept-map.md`](planning/concept-map.md):
 
-`institutions` · `commons` · `liberatory-tech` · `design-patterns` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy`
+`institutions` · `commons` · `liberatory-tech` · `big-tech-critique` · `labor-care` · `open-source` · `ai` · `privacy`
 
 ## Contributing
 
-See [Writing for Let's Recommon IT](guides/contributing.md) for the full workflow, and [How this project is run](governance/how-this-project-is-run.md) for review and decision rules.
+See [Writing for Let's Recommon IT](guides/contributing.md) for the full workflow, and [How this project is run](governance/how-this-project-is-run.md) for how the rules are made and who decides.
 
-Start from the matching file in `templates/` (`release.md`, `theory.md`, `guide.md`, `governance.md`, `wiki-pattern.md`, `post.md`, `bibliography-entry.md`). Keep the "In this release" footer in every element in sync with the release manifest. File names use lowercase kebab-case, and bibliography entries are named `author-year-short-title.md`.
+Start from the matching file in `templates/` (`guide.md`, `governance.md`, `theory.md`, `wiki-pattern.md`, `post.md`, `bibliography-entry.md`). Add each new piece to `index.md` and to the "In this thread" footer of every piece in its row. File names use lowercase kebab-case, and bibliography entries are named `author-year-short-title.md`.
 
 ## License
 

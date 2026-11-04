@@ -4,7 +4,7 @@ authors: ["Alexander, Christopher"]
 year: 1964
 publisher: "Harvard University Press"
 type: book
-threads: [design-patterns]
+threads: [institutions]
 status: draft
 ---
 

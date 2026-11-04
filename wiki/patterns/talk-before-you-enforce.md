@@ -1,10 +1,11 @@
 ---
 title: "Talk Before You Enforce"
 number: 3
-threads: [design-patterns, institutions]
+thread: institutions
+level: collective-choice
 larger_patterns: [two-keyholders]
 smaller_patterns: []
-introduced_in: ""                     # planned: Release 002 (institutions) theory post
+introduced_in: ""                     # planned: an institutions governance piece
 applied_in:
   - governance/who-holds-root.md
   - governance/how-this-project-is-run.md
@@ -26,7 +27,8 @@ Technical enforcement still has a place. But it works better as the group's deci
 **Before building any enforcement tool, set up a place for the group to talk (a chat channel, a regular check-in) and use it.** When a problem comes up, raise it there first. If enforcement is needed, let the group choose it, and start with the smallest response that works.
 
 ## Connections
-- **Introduced in:** planned for the Release 002 (institutions) theory post. Previewed in [Who owns the machine?](../../theory/who-owns-the-machine.md)
+- **Thread and level:** institutions, collective-choice
+- **Introduced in:** planned for an institutions governance piece. Previewed in [Who owns the machine?](../../theory/who-owns-the-machine.md)
 - **Applied in:** [Who holds root?](../../governance/who-holds-root.md), [How this project is run](../../governance/how-this-project-is-run.md)
 - **Larger patterns:** [Two Keyholders](two-keyholders.md)
 - **Smaller patterns:** none yet

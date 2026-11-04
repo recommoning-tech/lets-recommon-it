@@ -16,6 +16,7 @@ Bridges Ostrom's natural-resource work to digital infrastructure. Shows where th
 
 ## Key ideas
 - Institutional Analysis and Development (IAD) framework applied to knowledge
+- A knowledge commons has three parts: facilities (where knowledge is stored and accessed), artifacts (its expressions), and ideas (its content)
 - Digital commons face enclosure through law and technology, not scarcity
 
 ## Related

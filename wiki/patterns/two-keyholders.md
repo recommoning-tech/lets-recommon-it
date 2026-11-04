@@ -1,7 +1,8 @@
 ---
 title: "Two Keyholders"
 number: 1
-threads: [design-patterns, liberatory-tech, institutions, labor-care]
+thread: liberatory-tech
+level: collective-choice
 larger_patterns: [small-enough-to-understand]
 smaller_patterns: [talk-before-you-enforce]
 introduced_in: theory/who-owns-the-machine.md
@@ -27,7 +28,8 @@ Two keyholders is the minimum, not the ideal. The second keyholder needs to use 
 **Every shared system has at least two people with full admin access, and both of them use it regularly.** Write down where credentials and recovery information live, and make sure both keyholders can reach them without the other's help.
 
 ## Connections
-- **Introduced in:** [Who owns the machine?](../../theory/who-owns-the-machine.md) (Release 001, liberatory-tech)
+- **Thread and level:** liberatory-tech, collective-choice
+- **Introduced in:** [Who owns the machine?](../../theory/who-owns-the-machine.md)
 - **Applied in:** [Setting up your first server](../../guides/first-server.md), [Who holds root?](../../governance/who-holds-root.md), [How this project is run](../../governance/how-this-project-is-run.md)
 - **Larger patterns:** [Small Enough to Understand](small-enough-to-understand.md)
 - **Smaller patterns:** [Talk Before You Enforce](talk-before-you-enforce.md)

@@ -1,28 +1,27 @@
 # Concept Map
 
-How the blog's main ideas connect. Each thread below is a tag used in front matter across the repo, and each thread has one foundational release (theory + patterns, guide, governance). `design-patterns` is the method behind the whole project, so its release (000) is about the project itself.
+How the blog's main ideas connect. Each thread below is a tag used in front matter across the repo and a row in [the table](../index.md). Alexander's pattern language is the method for every thread, not a thread of its own.
 
 ## The central question
 How do we build and run information technology at **community scale**, so it is owned, understood, and governed by the people who use it?
 
 ## Threads
 
-| Tag | Thread | Release | Core claim | Key sources |
-|---|---|---|---|---|
-| `institutions` | Institutional analysis (primary framework) | 002 | Rules can be analyzed and designed. IAD breaks any governed situation into participants, positions, rules, and levels of choice | Ostrom, *Understanding Institutional Diversity*; Crawford & Ostrom; Ostrom (Nobel lecture); Ostrom, Walker & Gardner; Ostrom, *Governing the Commons* |
-| `commons` | Commons & enclosure | 005 | Communities can hold resources in common; enclosure is the recurring threat | Ostrom, *Governing the Commons*; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
-| `liberatory-tech` | Liberatory / convivial technology | 001 | Technology liberates only when its scale and control are local and democratic | Bookchin; Illich; Franklin; Winner |
-| `design-patterns` | Design & patterns | 000 (meta) | Good systems grow piecemeal from shared patterns that users can apply themselves | Alexander; Bollier & Helfrich |
-| `big-tech-critique` | Big Tech critique | 006 | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
-| `labor-care` | Labor, care & bureaucracy | 008 | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |
-| `open-source` | Free & open source | 007 | Licenses and development models make shared code possible but not sufficient | Stallman; Raymond; Eghbal; Benkler |
-| `ai` | Artificial intelligence | 004 | AI is a relational, hardware-centered megamachine of extraction and control; alternatives are small, local, federated, and situated | Griziotti; Pasquinelli; McQuillan; Crawford; Bender & Hanna; Eubanks; Viljoen; Frischmann, Madison & Strandburg |
-| `privacy` | Privacy & anti-surveillance | 003 | Privacy means information flowing appropriately for its context. Self-hosting moves the surveillance risk from corporations to the admins, so governance and encryption both matter | Nissenbaum; Brunton & Nissenbaum; Moglen; Rogaway; Browne; Zuboff; Schneier; Sadowski; EFF |
+| Tag | Thread | Core claim | Key sources |
+|---|---|---|---|
+| `institutions` | Institutional analysis (primary framework) | Rules can be analyzed and designed. IAD breaks any governed situation into participants, positions, rules, and levels of choice | Ostrom, *Understanding Institutional Diversity*; Crawford & Ostrom; Ostrom (Nobel lecture); Ostrom, Walker & Gardner; Ostrom, *Governing the Commons* |
+| `commons` | Commons & enclosure | Communities can hold resources in common; enclosure is the recurring threat | Ostrom, *Governing the Commons*; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
+| `liberatory-tech` | Liberatory / convivial technology | Technology liberates only when its scale and control are local and democratic | Bookchin; Illich; Franklin; Winner |
+| `big-tech-critique` | Big Tech critique | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
+| `labor-care` | Labor, care & bureaucracy | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |
+| `open-source` | Free & open source | Licenses and development models make shared code possible but not sufficient | Stallman; Raymond; Eghbal; Benkler |
+| `ai` | Artificial intelligence | AI is a relational, hardware-centered megamachine of extraction and control; alternatives are small, local, federated, and situated | Griziotti; Pasquinelli; McQuillan; Crawford; Bender & Hanna; Eubanks; Viljoen; Frischmann, Madison & Strandburg |
+| `privacy` | Privacy & anti-surveillance | Privacy means information flowing appropriately for its context. Self-hosting moves the surveillance risk from corporations to the admins, so governance and encryption both matter | Nissenbaum; Brunton & Nissenbaum; Moglen; Rogaway; Browne; Zuboff; Schneier; Sadowski; EFF |
 
 ## Connections between threads
 
 ```
-        institutions (IAD) ─────── ADICO ────── design-patterns
+        institutions (IAD) ─────── ADICO ────── pattern method
              (Ostrom)                            (Alexander)
                 │                                    │
              commons ─── Bollier & Helfrich ─────────┤
@@ -49,7 +48,7 @@ Key bridges:
 - **ADICO → governance docs:** write codes of conduct and admin policies as statements with who, must/may/must not, what, when, and the consequence.
 - **Polycentricity → federation:** the Fediverse, Matrix, and mesh networks are polycentric systems: many independently governed nodes under shared protocols.
 - **Design principles → health check:** *Governing the Commons*' eight principles remain a quick test of whether an institution is likely to last.
-- **Alexander → wiki:** the "Pattern Language for Community Tech" uses his format. (His work also influenced software design patterns and the first wiki.)
+- **Alexander → wiki (method):** the "Pattern Language for Community Tech" uses his format. (His work also influenced software design patterns and the first wiki.)
 - **Federici → maintenance:** who does the upkeep? Every guide has a "Maintenance" and "Community considerations" section.
 - **Doctorow → open-source and guides:** interoperability and open protocols are what make leaving platforms possible.
 - **Bookchin/Illich → architecture:** choose tools small and legible enough for members to understand and control.

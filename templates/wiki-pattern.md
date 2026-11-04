@@ -2,15 +2,16 @@
 # Pattern Language for Community Tech, after Christopher Alexander's format
 title: ""
 number:                # pattern number, for cross-reference
-threads: [design-patterns]   # plus the thread of the release that introduces it
-introduced_in: ""      # theory/slug.md that derives this pattern
-applied_in: []         # guides/... and governance/... that put it into practice (any release)
+thread: ""             # one thread: the row in the table (index.md)
+level: ""              # operational | collective-choice | constitutional | metaconstitutional
+introduced_in: ""      # the piece at this level that explains it: guides/ (operational), governance/ (collective-choice, constitutional), theory/ (metaconstitutional)
+applied_in: []         # other pieces that put it into practice (any thread or level)
 larger_patterns: []    # patterns this one helps complete (any thread)
 smaller_patterns: []   # patterns that complete this one (any thread)
 status: draft
 ---
 
-<!-- This page holds the full pattern. The theory post introduces it; guides and governance apply it. -->
+<!-- This page holds the full pattern. The piece at its level introduces it; other pieces apply it. -->
 
 ## Context
 <!-- When this pattern applies. -->
@@ -25,7 +26,8 @@ status: draft
 <!-- The solution, stated as an instruction. -->
 
 ## Connections
-- **Introduced in:** [Theory title](../../theory/slug.md)
-- **Applied in:** [Guide or governance title](../../guides/slug.md)
+- **Thread and level:** thread-name, level
+- **Introduced in:** [Piece title](../../guides/slug.md)
+- **Applied in:** [Piece title](../../governance/slug.md)
 - **Larger patterns:** [Pattern](larger-slug.md)
 - **Smaller patterns:** [Pattern](smaller-slug.md)

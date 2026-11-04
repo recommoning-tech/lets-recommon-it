@@ -2,11 +2,11 @@
 title: ""
 date:                  # YYYY-MM-DD
 updated:
-threads: []            # the release's thread
+threads: []            # first thread is the row in the table (index.md)
 difficulty: beginner   # beginner | intermediate | advanced
 status: draft          # draft | published
-release: ""            # NNN-slug, matching releases/NNN-slug.md
-patterns_applied: []   # wiki/patterns/slug.md this guide implements
+patterns: []           # wiki/patterns/slug.md introduced here (level: operational)
+patterns_applied: []   # wiki/patterns/slug.md from other pieces
 ---
 
 ## What you'll build
@@ -26,15 +26,23 @@ patterns_applied: []   # wiki/patterns/slug.md this guide implements
 ## Community considerations
 <!-- Access, accounts, who holds admin rights, what happens if the maintainer leaves. -->
 
+## Patterns introduced
+<!-- One subsection per pattern whose level matches this column. -->
+
+### [Pattern Name](../wiki/patterns/slug.md)
+<!-- One paragraph: how this piece leads to the pattern. -->
+
+> **Therefore:** <!-- copy the pattern's Therefore line -->
+
 ## Patterns applied
 <!-- For each pattern: which step implements it. -->
 - [Pattern](../wiki/patterns/slug.md):
 
 ## Further reading
 
-## In this release
-<!-- Keep in sync with releases/<release>.md. -->
-- **Release:** [NNN Title](../releases/NNN-slug.md)
-- **Theory & patterns:** [Title](../theory/slug.md): [Pattern](../wiki/patterns/slug.md), [Pattern](../wiki/patterns/slug.md)
-- **Guide:** [Title](../guides/slug.md)
+## In this thread
+<!-- Every piece in this row of index.md. Keep identical across the row. -->
+- **Thread:** thread-name · [the table](../index.md)
+- **Guides:** [Title](../guides/slug.md)
 - **Governance:** [Title](../governance/slug.md)
+- **Theory:** [Title](../theory/slug.md)

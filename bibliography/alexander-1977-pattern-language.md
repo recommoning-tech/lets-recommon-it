@@ -4,7 +4,7 @@ authors: ["Alexander, Christopher", "Ishikawa, Sara", "Silverstein, Murray"]
 year: 1977
 publisher: "Oxford University Press"
 type: book
-threads: [design-patterns]
+threads: [institutions]
 status: draft
 ---
 
