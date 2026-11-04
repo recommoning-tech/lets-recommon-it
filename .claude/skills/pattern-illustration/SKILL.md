@@ -1,6 +1,6 @@
 ---
 name: pattern-illustration
-description: Draw or redraw an illustration for a pattern in wiki/patterns/ (Alexander-style sketch with mannequin figures, no words in the image). Writes a short alt text describing the illustration first, then draws only what the alt text says, then checks the drawing against the whole set. Use when asked to illustrate a pattern, add or fix a pattern image, or review pattern illustrations.
+description: Draw or redraw an illustration for a pattern in wiki/patterns/ (Alexander-style sketch with mannequin figures, no words in the image). Writes an alt text first that describes the illustration, maps each part to the pattern, and names the metaphor, then draws only what the alt text says, then checks the drawing against the whole set. Use when asked to illustrate a pattern, add or fix a pattern image, or review pattern illustrations.
 ---
 
 # Pattern illustration: alt text first, then draw
@@ -15,15 +15,15 @@ Read the pattern page. Work from the **Solution** and **Consequences**, not the 
 
 ## 2. Write the alt text
 
-One or two sentences, at most about 45 words. It is the spec for the drawing and becomes the SVG `<desc>`, which is the image's alt text on the site.
+It is the spec for the drawing and becomes the SVG `<desc>`, which is the image's alt text on the site. A reader who can't see the image should come away knowing both what is drawn and how it explains the pattern. Write three parts, in this order, in about 90–140 words:
 
-- Start with the form: "Sketch:" (people and things) or "Diagram:" (abstract arrangement).
-- Name every figure, object, gesture, and arrangement that will be drawn, and where they are relative to each other.
-- Say which one thing is hatched in the thread color: the focus of the Solution.
-- Mention any of the site's marks used as symbols (e.g. "rows marked with a square, a triangle, and a diamond").
-- One moment, no story. Only what a sighted reader would see; no interpretation ("showing that...").
+1. **What is drawn.** Start with the form: "Sketch:" (people and things) or "Diagram:" (an abstract arrangement or plan view). Name every figure, object, gesture, and arrangement, and where they are relative to each other. Say which one thing is hatched in the thread color, and mention any of the site's marks used as symbols. Describe only what a sighted reader sees; no interpretation yet.
+2. **What each part stands for.** Go through the drawing element by element and say which part of the pattern it represents, using the pattern's own terms: the Context (the situation or the people in it), the Problem or Forces, the Solution (name both halves if it has two, what and how), and the Consequences. Be explicit: "The server is the shared system from the Context." Every drawn element should map to something; if one doesn't, cut it from the drawing.
+3. **The metaphor.** One or two sentences starting "The metaphor:", saying what familiar thing the drawing borrows (a key, a loom, a workbench) and what that comparison says about the pattern.
 
-Example: *Sketch: two mannequin figures stand on either side of a server with two keyholes, each turning a key in its own lock at the same time. The server is hatched.*
+Example (Two Keyholders):
+
+> Sketch: two mannequin figures stand on either side of a server with two keyholes, each turning a key in its own lock at the same moment. The server is hatched. The server is the shared system from the pattern's context: something a group depends on. Each figure is a keyholder and each key is full admin access; there are two locks, so neither needs the other's help to get in. Both turning their keys at once is the second half of the solution: both keyholders use their access regularly, not just hold it. The metaphor: admin access as a physical key. A single admin is a building with one key; this pattern cuts a second one and puts it to use.
 
 Before drawing, check the alt text:
 

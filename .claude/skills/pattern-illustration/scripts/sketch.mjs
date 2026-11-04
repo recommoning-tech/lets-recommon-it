@@ -133,13 +133,13 @@ function keysIcon(B, x, y) {
 // Scenes, keyed by pattern slug: [title, alt text, draw]. The alt text is written first; the drawing
 // shows exactly what it says, with no words, letters, or numbers.
 const S = {
-'two-keyholders': ['Two Keyholders', 'Sketch: two mannequin figures stand on either side of a server with two keyholes, each turning a key in its own lock at the same time. The server is hatched.', (B) => {
+'two-keyholders': ['Two Keyholders', "Sketch: two mannequin figures stand on either side of a server with two keyholes, each turning a key in its own lock at the same moment. The server is hatched. The server is the shared system from the pattern's context: something a group depends on. Each figure is a keyholder and each key is full admin access; there are two locks, so neither needs the other's help to get in. Both turning their keys at once is the second half of the solution: both keyholders use their access regularly, not just hold it. The metaphor: admin access as a physical key. A single admin is a building with one key; this pattern cuts a second one and puts it to use.", (B) => {
   ground(B); server(B, 172, 150, 56, 112);
   for (const kx of [184, 216]) { ellipse(B, kx, 168, 3.2, 3.2, { passes: 1 }); line(B, kx, 171, kx, 178, { passes: 1 }); }
   const a = mannequin(B, 104, { er: [30, -84], wr: [56, -92] }); key(B, a.hr[0] + 5, a.hr[1], 1);
   const b = mannequin(B, 296, { face: -1, el: [-30, -84], wl: [-56, -92] }); key(B, b.hl[0] - 5, b.hl[1], -1);
 }],
-'small-enough-to-understand': ['Small Enough to Understand', 'Sketch: at a workbench, one mannequin points to a few small parts laid out side by side while a second leans in to look. Above the bench, a shelf holds one box beside a dashed outline of space left for another. The parts are hatched.', (B) => {
+'small-enough-to-understand': ['Small Enough to Understand', "Sketch: at a workbench, one mannequin points to a few small parts laid out side by side while a second leans in to look. Above the bench, a shelf holds one box beside a dashed outline of empty space. The parts are hatched. The parts on the bench are the whole system, kept small: few enough pieces that the second figure, a newer member, can see and learn all of them. The pointing and leaning in are the teaching that the solution makes possible: a second member could learn to run it in a weekend. The shelf is room to grow; the dashed outline is complexity that gets added only when a real need appears. The metaphor: a system as parts laid out on a workbench that anyone can see and handle, rather than a sealed machine only its builder can open.", (B) => {
   ground(B); stroke(B, [[140, 200], [300, 200]]); line(B, 150, 200, 150, 262); line(B, 290, 200, 290, 262);
   for (const x of [180, 212, 244]) { box(B, x, 184, 22, 16, { passes: 1 }); hatch(B, x + 2, 186, 18, 12, { gap: 4 }); }
   stroke(B, [[178, 112], [286, 112]]); line(B, 184, 112, 190, 124, { passes: 1 }); line(B, 280, 112, 274, 124, { passes: 1 });
@@ -147,7 +147,7 @@ const S = {
   mannequin(B, 104, { er: [30, -76], wr: [52, -70] });
   mannequin(B, 336, { s: 0.9, face: -1, el: [-26, -70], wl: [-46, -62], er: [10, -66], wr: [16, -50] });
 }],
-'talk-before-you-enforce': ['Talk Before You Enforce', 'Diagram in plan view, seen from above: six people stand in a ring facing a hatched open space in the middle, with small arcs of speech between them. Outside the ring, a fence panel lies on the ground, set aside.', (B) => {
+'talk-before-you-enforce': ['Talk Before You Enforce', "Diagram in plan view, seen from above: six people stand in a ring facing a hatched open space in the middle, with small arcs of speech between them. Outside the ring, a fence panel lies flat on the ground. The ring of people is the group sharing a system, from the pattern's context. The hatched space between them is the solution's place to talk, such as a chat channel or a regular check-in, and the speech arcs are problems being raised there first. The fence panel is enforcement: quotas, permissions, bans. It lies set aside, not built: available if the group chooses it, but not the first response. The metaphor: a commons as a shared clearing where people meet in the open, instead of fencing each other off.", (B) => {
   const cx = 160, cy = 150;
   ellipse(B, cx, cy, 44, 44); hatch(B, cx - 42, cy - 42, 84, 84, { oval: true, gap: 7 });
   for (let i = 0; i < 6; i++) {
@@ -158,7 +158,7 @@ const S = {
   B.lines.push('<g transform="rotate(-18 330 170)">'); box(B, 300, 120, 60, 100, { passes: 1 });
   for (const yy of [140, 170, 200]) line(B, 300, yy, 360, yy, { passes: 1 }); B.lines.push('</g>');
 }],
-'every-thread-at-every-level': ['Every Thread at Every Level', 'Sketch: a mannequin draws one thread up through a small hand loom. The loom has three cross rows, marked at the side with a diamond, a triangle, and a square, and the drawn thread passes through all three. That thread is hatched.', (B) => {
+'every-thread-at-every-level': ['Every Thread at Every Level', "Sketch: a mannequin draws one thread up through a small hand loom. The loom has three cross rows, marked at the side from top to bottom with a diamond, a triangle, and a square, and the drawn thread passes through all three. That thread is hatched. The loom is the site. The three rows are its three levels of rules, using the site's column marks: the diamond is theory (metaconstitutional), the triangle is governance (collective-choice and constitutional), and the square is guides (operational). Each vertical thread is a topic thread, such as institutions or privacy. The hatched thread crossing every row is the solution: write about each thread at every level. The weaver is a contributor. The metaphor: the site as woven cloth, which only holds together where threads cross every level; the site's threads, taken literally.", (B) => {
   ground(B); line(B, 140, 60, 140, 262); line(B, 300, 60, 300, 262); stroke(B, [[132, 60], [308, 60]]); stroke(B, [[132, 240], [308, 240]]);
   for (let x = 160; x <= 280; x += 20) if (x !== 220) B.lines.push(`<path class="sk-g" d="M${x} 62 L${x} 238"/>`);
   for (const [y, shape] of [[100, 'diamond'], [150, 'triangle'], [200, 'square']]) {
@@ -170,7 +170,7 @@ const S = {
   stroke(B, [[220, 60], [236, 48], [304, 50], [330, 140]], { passes: 1 });
   mannequin(B, 350, { face: -1, el: [-14, -100], wl: [-20, -120] });
 }],
-'every-page-links-out': ['Every Page Links Out', 'Diagram: a hatched page in the middle has arrows out to four others: a page ruled as a small table, a pattern card with a circle on it, a closed book, and a page marked with a thread circle.', (B) => {
+'every-page-links-out': ['Every Page Links Out', "Diagram: a hatched page in the middle has curved arrows out to four others: a page ruled as a small grid, a card with a circle on it, a closed book, and a page marked with a hatched thread circle. The middle page is any single page on the site, the focus of the pattern, and the arrows are its links, all pointing outward. The grid page is the table; the card with a circle is a pattern; the closed book is the sources in the bibliography; the page with the thread circle is the other pieces in the same thread. Together they are the solution's list: link every page to its thread, the table, its patterns, and its sources. The metaphor: a page as one point in a web of lines. With no lines out, it would be an island, the problem the pattern names.", (B) => {
   box(B, 175, 116, 50, 64); hatch(B, 178, 119, 44, 58, { gap: 6 });
   const others = [[52, 40], [298, 40], [52, 196], [298, 196]];
   for (const [x, y] of others) { const tx = x + 25, ty = y + 22; arrow(B, 200 + (x < 200 ? -25 : 25), 148 + (y < 100 ? -32 : 32), x < 200 ? x + 54 : x - 4, ty, x < 200 ? -14 : 14); }
@@ -179,7 +179,7 @@ const S = {
   stroke(B, [[52, 200], [96, 196], [102, 202], [102, 240], [58, 244], [52, 238]], { closed: true }); line(B, 60, 200, 60, 242, { passes: 1 });
   box(B, 298, 196, 50, 56, { passes: 1 }); mark(B, 'circle', 323, 214, 7, true); for (const yy of [232, 242]) line(B, 306, yy, 340, yy, { cls: 'sk-g', passes: 1 });
 }],
-'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', 'Sketch: a mannequin holds a pattern card up beside a doorway it has built. The card shows a narrower doorway than the real one, and the figure is redrawing it wider with a pencil. The card is hatched.', (B) => {
+'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', "Sketch: a mannequin holds a pattern card up beside a doorway it has built. On the card is a small drawing of a door narrower than the real one, and the figure is redrawing it wider with a pencil. The card is hatched. The doorway is practice: something actually built. The card is the pattern itself, the focus. Holding the card up against the real door is the first half of the solution: applying the pattern somewhere besides the piece that introduced it. The door on the card being too narrow is a pattern that doesn't fit what really happened, and the pencil redrawing it is the second half: revise the pattern and note why. The metaphor: a pattern as a plan, checked against the building, so the plan changes to fit the building and not the other way round.", (B) => {
   ground(B); stroke(B, [[250, 262], [250, 130], [320, 130], [320, 262]]); stroke(B, [[244, 130], [326, 130]]);
   for (let y = 150; y < 262; y += 20) { line(B, 238, y, 250, y, { cls: 'sk-g', passes: 1 }); line(B, 320, y, 332, y, { cls: 'sk-g', passes: 1 }); }
   const a = mannequin(B, 130, { er: [30, -96], wr: [52, -112], el: [22, -80], wl: [44, -92] });
@@ -188,14 +188,14 @@ const S = {
   B.lines.push(`<path class="sk-i" stroke-dasharray="3 3" d="M${dx - 6} ${dy} L${dx - 6} ${dy - 24} L${dx + 14} ${dy - 24} L${dx + 14} ${dy}"/>`);
   pencil(B, a.hl[0], a.hl[1], -0.9, 18);
 }],
-'any-cell-any-time': ['Any Cell, Any Time', 'Sketch: a mannequin slots one card into a single empty cell of a large three-by-three grid. The columns are marked above with a square, a triangle, and a diamond, and a few other cells are already filled. The card is hatched.', (B) => {
+'any-cell-any-time': ['Any Cell, Any Time', "Sketch: a mannequin slots one card into a single empty cell of a large three-by-three grid. The columns are marked above with a square, a triangle, and a diamond, and a few other cells already hold cards. The new card is hatched. The grid is the site's table: its columns are guides, governance, and theory (the square, triangle, and diamond), and its rows are threads. The hatched card is one contribution: a single guide, governance piece, essay, or pattern. Slotting it into one cell while the rest of its row stays unfinished is the solution: accept a contribution to any single cell at any time, without waiting for the rest of the row. The cards already in place are other people's earlier contributions. The metaphor: the site as a shared wall of pigeonholes, filled one slot at a time by whoever has something to put there.", (B) => {
   ground(B); const gx = 150, gy = 50, cw = 66, ch = 50;
   for (let i = 0; i <= 3; i++) { line(B, gx, gy + i * ch, gx + 3 * cw, gy + i * ch, { passes: 1 }); line(B, gx + i * cw, gy, gx + i * cw, gy + 3 * ch, { passes: 1 }); }
   ['square', 'triangle', 'diamond'].forEach((m, i) => mark(B, m, gx + i * cw + cw / 2, gy - 16, 7));
   for (const [c, r] of [[0, 0], [2, 0], [1, 1], [2, 2]]) { const x = gx + c * cw + 12, y = gy + r * ch + 12; box(B, x, y, cw - 24, ch - 24, { passes: 1 }); line(B, x + 6, y + 9, x + cw - 30, y + 9, { cls: 'sk-g', passes: 1 }); line(B, x + 6, y + 17, x + cw - 36, y + 17, { cls: 'sk-g', passes: 1 }); }
   const a = mannequin(B, 100, { er: [30, -96], wr: [54, -114] }); card(B, a.hr[0] + 4, a.hr[1] - 12, 30, 20);
 }],
-'a-language-users-can-speak': ['A Language Users Can Speak', 'Sketch: two mannequin figures face each other and talk. Both speech bubbles hold the same simple picture, two crossed keys: a plain name they share. The first bubble is hatched.', (B) => {
+'a-language-users-can-speak': ['A Language Users Can Speak', "Sketch: two mannequin figures face each other and talk. Each has a speech bubble, and both bubbles hold the same simple picture of two crossed keys. The first bubble is hatched. The two figures are members of a group that runs a system together; neither is drawn as an expert. The crossed keys are a pattern name, Two Keyholders, turned into a picture: a short, plain name that anyone can say. The same picture in both bubbles is the solution working: one person says the name, the other understands it and uses it back, so the pattern has become shared vocabulary in an ordinary conversation. The metaphor: pattern names as the words of a common language, simple enough to pass from person to person without a dictionary.", (B) => {
   ground(B);
   mannequin(B, 110, { er: [26, -76], wr: [38, -86] }); mannequin(B, 290, { s: 0.94, face: -1, el: [-26, -76], wl: [-38, -86] });
   stroke(B, [[96, 40], [186, 40], [192, 46], [192, 96], [186, 102], [150, 102], [128, 124], [132, 102], [96, 102], [90, 96], [90, 46]], { closed: true });
@@ -203,7 +203,7 @@ const S = {
   stroke(B, [[222, 54], [302, 54], [308, 60], [308, 104], [302, 110], [278, 110], [272, 128], [262, 110], [222, 110], [216, 104], [216, 60]], { closed: true });
   keysIcon(B, 262, 82);
 }],
-'solution-first': ['Solution First', 'Sketch: a mannequin writes on a large card propped on an easel. Only the middle section of the card, the solution, has been written and is hatched; the sections above and below and the title line at the top are still blank.', (B) => {
+'solution-first': ['Solution First', "Sketch: a mannequin writes with a pencil on a large card propped on an easel. Only one section in the middle of the card has been written and is hatched; the sections above and below it and the title line at the top are still blank. The card is a pattern being drafted, laid out like this site's pattern pages. The written middle section is the Solution: the one thing worth sharing, written first. The blank sections around it are the problem, context, forces, and consequences, to be worked out from the solution afterwards. The empty title line is the pattern's name, which the solution says to write last. The metaphor: writing a pattern from the inside out, starting with what you would tell a newcomer and only then explaining why and when.", (B) => {
   ground(B); box(B, 196, 50, 130, 160); stroke(B, [[220, 210], [204, 262]]); stroke(B, [[302, 210], [318, 262]]); line(B, 261, 210, 261, 262, { passes: 1 });
   B.lines.push('<path class="sk-i" stroke-dasharray="5 5" d="M210 70 L312 70"/>');
   for (const y of [92, 120, 176, 196]) line(B, 206, y, 316, y, { cls: 'sk-g', passes: 1 });
@@ -211,7 +211,7 @@ const S = {
   for (const y of [142, 150, 158]) stroke(B, [[212, y], [240, y - 2], [270, y + 1], [300, y - 1]], { passes: 1 });
   const a = mannequin(B, 130, { er: [32, -84], wr: [62, -102] }); pencil(B, a.hr[0], a.hr[1], -0.5, 16);
 }],
-'workshop-the-pattern': ['Workshop the Pattern', 'Sketch: two mannequin readers stand at a table with a pattern card on it; one points at the card approvingly, the other holds a pencil over it to suggest a change. The author stands apart with a hand cupped to one ear, listening. The card is hatched.', (B) => {
+'workshop-the-pattern': ['Workshop the Pattern', "Sketch: two mannequin readers stand at a table with a pattern card on it; one points at the card approvingly, and the other holds a pencil over it to suggest a change. The author stands apart with a hand cupped to one ear. The card is hatched. The table and card are a pattern workshop: a new pattern laid out for others to read before it leaves draft. The pointing reader is saying what works, which comes first; the reader with the pencil is saying what could be better, which comes second. The author standing apart and listening is the rule that the author listens first and asks questions only at the end. The metaphor: a pattern as a piece of craft set on a bench for others to inspect, with its maker stepping back.", (B) => {
   ground(B); stroke(B, [[110, 200], [270, 200]]); line(B, 122, 200, 122, 262); line(B, 258, 200, 258, 262); card(B, 172, 180, 36, 18);
   mannequin(B, 80, { er: [34, -80], wr: [76, -76] });
   const b = mannequin(B, 300, { face: -1, el: [-30, -84], wl: [-62, -92] }); pencil(B, b.hl[0], b.hl[1], 2.2, 16);

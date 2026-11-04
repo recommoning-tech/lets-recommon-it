@@ -21,7 +21,7 @@ Diagrams in the spirit of Christopher Alexander's *A Pattern Language*: a fast p
 - **Colored pencil:** hatching in `var(--thread)` marks the one thing the pattern is about (the shared server, the cell being filled). Nothing else is colored.
 - Don't hard-code colors. The site sets the ink color and `--thread`, so drawings work on paper and on the dark blueprint theme.
 - Use the classes in the existing files: `sk-i` (ink), `sk-g` (construction), `sk-h` (hatching).
-- Include a `<title>` with the pattern name and a `<desc>` describing the sketch in one or two sentences. Write the `<desc>` first: it's the spec for the drawing and the alt text on the site.
+- Include a `<title>` with the pattern name and a `<desc>`: the alt text. Write it first, in three parts: what is drawn, what each part stands for in the pattern (context, problem, solution, consequences), and the metaphor. It's the spec for the drawing and the alt text on the site.
 
 ## License
 
