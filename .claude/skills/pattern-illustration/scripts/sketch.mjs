@@ -130,39 +130,57 @@ function keysIcon(B, x, y) {
   B.lines.push(`<g transform="rotate(25 ${x} ${y})">`); key(B, x - 10, y + 4, 1); B.lines.push('</g>');
 }
 
-// Scenes, keyed by pattern slug: [title, alt text, draw]. The alt text is written first; the drawing
-// shows exactly what it says, with no words, letters, or numbers.
+// Hatching clipped to any path, for shapes that aren't rectangles or ovals.
+let CUR = '', clipN = 0;
+function hatchIn(B, d, [x, y, w, h], gap = 6) {
+  const id = `clip-${CUR}-${++clipN}`;
+  B.lines.push(`<clipPath id="${id}"><path d="${d}"/></clipPath><g clip-path="url(#${id})">`); hatch(B, x, y, w, h, { gap }); B.lines.push('</g>');
+}
+const oval = (cx, cy, rx, ry) => `M${cx - rx} ${cy} a${rx} ${ry} 0 1 0 ${2 * rx} 0 a${rx} ${ry} 0 1 0 ${-2 * rx} 0 Z`;
+const poly = (pts) => 'M' + pts.map(([x, y]) => `${x} ${y}`).join(' L') + ' Z';
+function wrench(B, x, y, a) { const dx = Math.cos(a), dy = Math.sin(a); line(B, x, y, x + dx * 24, y + dy * 24, { passes: 1 }); ellipse(B, x + dx * 28, y + dy * 28, 5, 5, { passes: 1 }); }
+function water(B, x, y) { B.lines.push(`<path class="sk-g" d="M${x} ${y} q5 -4 10 0 t10 0 t10 0"/>`); }
+
+// Scenes, keyed by pattern slug: [title, alt text, draw]. The alt text is written first, from the
+// pattern's map; the drawing shows exactly what it says, with no words, letters, or numbers.
 const S = {
-'two-keyholders': ['Two Keyholders', "Sketch: two mannequin figures stand on either side of a server with two keyholes, each turning a key in its own lock at the same moment. The server is hatched. The server is the shared system from the pattern's context: something a group depends on. Each figure is a keyholder and each key is full admin access; there are two locks, so neither needs the other's help to get in. Both turning their keys at once is the second half of the solution: both keyholders use their access regularly, not just hold it. The metaphor: admin access as a physical key. A single admin is a building with one key; this pattern cuts a second one and puts it to use.", (B) => {
-  ground(B); server(B, 172, 150, 56, 112);
-  for (const kx of [184, 216]) { ellipse(B, kx, 168, 3.2, 3.2, { passes: 1 }); line(B, kx, 171, kx, 178, { passes: 1 }); }
-  const a = mannequin(B, 104, { er: [30, -84], wr: [56, -92] }); key(B, a.hr[0] + 5, a.hr[1], 1);
-  const b = mannequin(B, 296, { face: -1, el: [-30, -84], wl: [-56, -92] }); key(B, b.hl[0] - 5, b.hl[1], -1);
+'two-keyholders': ['Two Keyholders', "Sketch: a small shared tool shed stands in the middle; its door is hatched. On the left, a mannequin turns a key in the door. On the right, a second mannequin walks away carrying a bag, with its own key in the other hand. The shed is the shared system from the pattern's context: something a group depends on. Its door is admin access, the focus. Each figure is a keyholder and each key is full access. The figure leaving with a bag is the problem the pattern guards against, a keyholder who moves away or burns out; the first figure opening the door anyway is the consequence, the system surviving one person leaving. That the first figure is using the key, not just holding it, is the second half of the solution: both keyholders use their access regularly. The metaphor: a shared shed with two keys cut, so the tools stay within reach whoever is away.", (B) => {
+  ground(B);
+  stroke(B, [[170, 262], [170, 150], [290, 150], [290, 262]]); stroke(B, [[162, 152], [230, 108], [298, 152]]);
+  for (let y = 166; y < 262; y += 16) line(B, 222, y, 286, y, { cls: 'sk-g', passes: 1 });
+  box(B, 178, 178, 36, 84); hatch(B, 181, 181, 30, 78, { gap: 6 });
+  ellipse(B, 204, 220, 2.6, 2.6, { passes: 1 });
+  const a = mannequin(B, 124, { er: [28, -72], wr: [48, -46] }); key(B, a.hr[0] + 4, a.hr[1], 1);
+  const b = mannequin(B, 340, { kl: [-13, -28], kr: [12, -27], el: [-16, -68], wl: [-14, -46], er: [22, -72], wr: [30, -56] });
+  key(B, b.hl[0] - 2, b.hl[1] + 4, -1); box(B, b.hr[0] - 8, b.hr[1], 18, 22, { passes: 1 }); line(B, b.hr[0] - 2, b.hr[1], b.hr[0] + 4, b.hr[1] - 6, { passes: 1 });
 }],
-'small-enough-to-understand': ['Small Enough to Understand', "Sketch: at a workbench, one mannequin points to a few small parts laid out side by side while a second leans in to look. Above the bench, a shelf holds one box beside a dashed outline of empty space. The parts are hatched. The parts on the bench are the whole system, kept small: few enough pieces that the second figure, a newer member, can see and learn all of them. The pointing and leaning in are the teaching that the solution makes possible: a second member could learn to run it in a weekend. The shelf is room to grow; the dashed outline is complexity that gets added only when a real need appears. The metaphor: a system as parts laid out on a workbench that anyone can see and handle, rather than a sealed machine only its builder can open.", (B) => {
-  ground(B); stroke(B, [[140, 200], [300, 200]]); line(B, 150, 200, 150, 262); line(B, 290, 200, 290, 262);
-  for (const x of [180, 212, 244]) { box(B, x, 184, 22, 16, { passes: 1 }); hatch(B, x + 2, 186, 18, 12, { gap: 4 }); }
-  stroke(B, [[178, 112], [286, 112]]); line(B, 184, 112, 190, 124, { passes: 1 }); line(B, 280, 112, 274, 124, { passes: 1 });
-  box(B, 190, 84, 30, 28, { passes: 1 }); B.lines.push('<rect class="sk-i" x="236" y="84" width="30" height="28" stroke-dasharray="4 5"/>');
-  mannequin(B, 104, { er: [30, -76], wr: [52, -70] });
-  mannequin(B, 336, { s: 0.9, face: -1, el: [-26, -70], wl: [-46, -62], er: [10, -66], wr: [16, -50] });
+'small-enough-to-understand': ['Small Enough to Understand', "Sketch: a bicycle stands between two mannequins, its frame hatched. Every part is drawn in the open: two wheels, a chain, a gear, a saddle, handlebars. One figure points at the chain and gear; the other holds a wrench to the front wheel. The bicycle is the system from the pattern's context, the hardware and software a group chooses. Its few, visible parts are the solution: a system small enough to understand, so the frame is the focus. The figure pointing knows how it works; the figure with the wrench is a second member learning to look after it, the person who could learn to run it in a weekend. The metaphor: a system as a bicycle rather than a sealed engine. Anyone can see how it works and a friend can fix it, at the cost the pattern names: it won't go as fast or as far as a car.", (B) => {
+  ground(B);
+  const R = [168, 228], F = [262, 228], BB = [208, 230], S0 = [198, 182], H = [248, 184];
+  ellipse(B, ...R, 32, 32); ellipse(B, ...F, 32, 32); ellipse(B, ...R, 4, 4, { passes: 1 }); ellipse(B, ...F, 4, 4, { passes: 1 });
+  hatchIn(B, poly([S0, H, BB]), [196, 180, 56, 52], 5);
+  stroke(B, [R, BB, S0, R]); stroke(B, [S0, H, BB]); stroke(B, [H, F]);
+  ellipse(B, ...BB, 9, 9, { passes: 1 }); line(B, 168, 223, 208, 221, { passes: 1 }); line(B, 168, 233, 208, 239, { passes: 1 });
+  stroke(B, [[188, 176], [208, 176]]); line(B, 198, 176, 198, 182, { passes: 1 }); stroke(B, [[240, 170], [256, 172]]); line(B, 248, 172, 248, 184, { passes: 1 });
+  mannequin(B, 100, { er: [30, -72], wr: [56, -56] });
+  const b = mannequin(B, 330, { face: -1, s: 0.92, el: [-26, -66], wl: [-44, -54] }); wrench(B, b.hl[0], b.hl[1], Math.PI + 0.4);
 }],
-'talk-before-you-enforce': ['Talk Before You Enforce', "Diagram in plan view, seen from above: six people stand in a ring facing a hatched open space in the middle, with small arcs of speech between them. Outside the ring, a fence panel lies flat on the ground. The ring of people is the group sharing a system, from the pattern's context. The hatched space between them is the solution's place to talk, such as a chat channel or a regular check-in, and the speech arcs are problems being raised there first. The fence panel is enforcement: quotas, permissions, bans. It lies set aside, not built: available if the group chooses it, but not the first response. The metaphor: a commons as a shared clearing where people meet in the open, instead of fencing each other off.", (B) => {
+'talk-before-you-enforce': ['Talk Before You Enforce', "Diagram in plan view, seen from above: six people sit around a round table, which is hatched, with small arcs of speech between them. Off to the right, a fence panel lies flat on the ground, unused. The people are the group sharing a system, from the pattern's context, now with problems to deal with. The round table is the solution: a place for the group to talk, such as a chat channel or a regular check-in, and it is the focus. The speech arcs are a problem being raised there first, with everyone, rather than decided by an admin alone. The fence panel is technical enforcement such as quotas, permissions, and bans: set aside, not built, and still available if the group chooses it later. The metaphor: a round table with no head, where the group's own judgment comes before any fence.", (B) => {
   const cx = 160, cy = 150;
-  ellipse(B, cx, cy, 44, 44); hatch(B, cx - 42, cy - 42, 84, 84, { oval: true, gap: 7 });
+  ellipse(B, cx, cy, 46, 46); hatchIn(B, oval(cx, cy, 44, 44), [cx - 46, cy - 46, 92, 92], 7);
   for (let i = 0; i < 6; i++) {
-    const t = (i / 6) * 6.283 + 0.3, x = cx + Math.cos(t) * 82, y = cy + Math.sin(t) * 82; topPerson(B, x, y, t + Math.PI);
-    const ax = cx + Math.cos(t) * 60, ay = cy + Math.sin(t) * 60;
-    B.lines.push(`<path class="sk-i" d="M${r1(ax + Math.sin(t) * 6)} ${r1(ay - Math.cos(t) * 6)} Q${r1(ax - Math.cos(t) * 4)} ${r1(ay - Math.sin(t) * 4)} ${r1(ax - Math.sin(t) * 6)} ${r1(ay + Math.cos(t) * 6)}" stroke-width="1.2"/>`);
+    const t = (i / 6) * 6.283 + 0.3, x = cx + Math.cos(t) * 76, y = cy + Math.sin(t) * 76; topPerson(B, x, y, t + Math.PI);
+    const ax = cx + Math.cos(t + 0.52) * 60, ay = cy + Math.sin(t + 0.52) * 60;
+    B.lines.push(`<path class="sk-i" stroke-width="1.2" d="M${r1(ax - Math.cos(t) * 5)} ${r1(ay - Math.sin(t) * 5)} q${r1(Math.cos(t + 1.57) * 6)} ${r1(Math.sin(t + 1.57) * 6)} ${r1(Math.cos(t) * 10)} ${r1(Math.sin(t) * 10)}"/>`);
   }
   B.lines.push('<g transform="rotate(-18 330 170)">'); box(B, 300, 120, 60, 100, { passes: 1 });
   for (const yy of [140, 170, 200]) line(B, 300, yy, 360, yy, { passes: 1 }); B.lines.push('</g>');
 }],
-'every-thread-at-every-level': ['Every Thread at Every Level', "Sketch: a mannequin draws one thread up through a small hand loom. The loom has three cross rows, marked at the side from top to bottom with a diamond, a triangle, and a square, and the drawn thread passes through all three. That thread is hatched. The loom is the site. The three rows are its three levels of rules, using the site's column marks: the diamond is theory (metaconstitutional), the triangle is governance (collective-choice and constitutional), and the square is guides (operational). Each vertical thread is a topic thread, such as institutions or privacy. The hatched thread crossing every row is the solution: write about each thread at every level. The weaver is a contributor. The metaphor: the site as woven cloth, which only holds together where threads cross every level; the site's threads, taken literally.", (B) => {
+'every-thread-at-every-level': ['Every Thread at Every Level', "Sketch: a mannequin draws one thread up through a small hand loom. The loom has three cross rows, marked at the side from top to bottom with a diamond, a triangle, and a square; the drawn thread passes through all three and is hatched. The loom is the site. Its three rows are the levels of rules, in the site's column marks: the diamond is theory (metaconstitutional), the triangle is governance (collective-choice and constitutional), and the square is guides (operational). The upright threads are topic threads such as institutions or privacy. The hatched thread crossing every row is the solution, the focus: write about each thread at every level. The weaver is a contributor. The empty spaces still left in the weave are the cost the pattern names: a thread can look unfinished for a long time. The metaphor: the site as woven cloth, which holds together only where threads cross every level.", (B) => {
   ground(B); line(B, 140, 60, 140, 262); line(B, 300, 60, 300, 262); stroke(B, [[132, 60], [308, 60]]); stroke(B, [[132, 240], [308, 240]]);
   for (let x = 160; x <= 280; x += 20) if (x !== 220) B.lines.push(`<path class="sk-g" d="M${x} 62 L${x} 238"/>`);
-  for (const [y, shape] of [[100, 'diamond'], [150, 'triangle'], [200, 'square']]) {
-    let d = `M144 ${y}`; for (let x = 150; x <= 296; x += 10) d += ` L${x} ${y + (((x - 150) / 10) % 2 ? 3 : -3)}`;
+  for (const [y, shape, to] of [[100, 'diamond', 296], [150, 'triangle', 256], [200, 'square', 296]]) {
+    let d = `M144 ${y}`; for (let x = 150; x <= to; x += 10) d += ` L${x} ${y + (((x - 150) / 10) % 2 ? 3 : -3)}`;
     B.lines.push(`<path class="sk-i" d="${d}"/>`); mark(B, shape, 118, y, 8);
   }
   for (let y = 66; y < 236; y += 8) B.lines.push(`<path class="sk-h" d="M216 ${y + 6} L224 ${y}"/>`);
@@ -170,40 +188,57 @@ const S = {
   stroke(B, [[220, 60], [236, 48], [304, 50], [330, 140]], { passes: 1 });
   mannequin(B, 350, { face: -1, el: [-14, -100], wl: [-20, -120] });
 }],
-'every-page-links-out': ['Every Page Links Out', "Diagram: a hatched page in the middle has curved arrows out to four others: a page ruled as a small grid, a card with a circle on it, a closed book, and a page marked with a hatched thread circle. The middle page is any single page on the site, the focus of the pattern, and the arrows are its links, all pointing outward. The grid page is the table; the card with a circle is a pattern; the closed book is the sources in the bibliography; the page with the thread circle is the other pieces in the same thread. Together they are the solution's list: link every page to its thread, the table, its patterns, and its sources. The metaphor: a page as one point in a web of lines. With no lines out, it would be an island, the problem the pattern names.", (B) => {
-  box(B, 175, 116, 50, 64); hatch(B, 178, 119, 44, 58, { gap: 6 });
-  const others = [[52, 40], [298, 40], [52, 196], [298, 196]];
-  for (const [x, y] of others) { const tx = x + 25, ty = y + 22; arrow(B, 200 + (x < 200 ? -25 : 25), 148 + (y < 100 ? -32 : 32), x < 200 ? x + 54 : x - 4, ty, x < 200 ? -14 : 14); }
-  box(B, 52, 40, 50, 44, { passes: 1 }); for (const yy of [55, 70]) line(B, 52, yy, 102, yy, { passes: 1 }); for (const xx of [69, 85]) line(B, xx, 40, xx, 84, { passes: 1 });
-  box(B, 298, 44, 50, 36, { passes: 1 }); ellipse(B, 312, 62, 7, 7, { passes: 1 }); line(B, 324, 56, 342, 56, { cls: 'sk-g', passes: 1 }); line(B, 324, 66, 338, 66, { cls: 'sk-g', passes: 1 });
-  stroke(B, [[52, 200], [96, 196], [102, 202], [102, 240], [58, 244], [52, 238]], { closed: true }); line(B, 60, 200, 60, 242, { passes: 1 });
-  box(B, 298, 196, 50, 56, { passes: 1 }); mark(B, 'circle', 323, 214, 7, true); for (const yy of [232, 242]) line(B, 306, yy, 340, yy, { cls: 'sk-g', passes: 1 });
+'every-page-links-out': ['Every Page Links Out', "Diagram in plan view: in open water, a hatched island in the middle with a page drawn on it is joined by small plank bridges to four other islands. The four islands carry, in turn, a small grid, a card with a circle on it, a closed book, and a thread circle. Each island is a page on the site. The open water between them is the problem: pages written one at a time drift apart, and a reader who lands on one never reaches the rest. The hatched middle island is any single page, the focus. Its bridges are its links, the solution: the grid island is the table, the card is a pattern the page introduces or applies, the book is the sources it draws on, and the thread circle is the other pieces in its thread. The metaphor: the site as an archipelago. A page with no bridges is an island in the bad sense.", (B) => {
+  for (const [x, y] of [[30, 140], [140, 30], [300, 150], [180, 270], [350, 110], [40, 200], [250, 20], [120, 270]]) water(B, x, y);
+  ellipse(B, 200, 150, 50, 36); hatchIn(B, oval(200, 150, 48, 34), [150, 114, 100, 72], 7); box(B, 188, 134, 24, 30, { passes: 1 });
+  const isl = [[70, 62], [330, 62], [70, 238], [330, 238]];
+  for (const [x, y] of isl) {
+    ellipse(B, x, y, 42, 28);
+    const dx = x < 200 ? 1 : -1, dy = y < 150 ? 1 : -1, x1 = x + dx * 34, y1 = y + dy * 18, x2 = 200 - dx * 40, y2 = 150 - dy * 22;
+    const a = Math.atan2(y2 - y1, x2 - x1), nx = -Math.sin(a) * 5, ny = Math.cos(a) * 5;
+    line(B, x1 + nx, y1 + ny, x2 + nx, y2 + ny, { passes: 1 }); line(B, x1 - nx, y1 - ny, x2 - nx, y2 - ny, { passes: 1 });
+    for (let t = 0.15; t < 1; t += 0.17) { const px = x1 + (x2 - x1) * t, py = y1 + (y2 - y1) * t; line(B, px + nx, py + ny, px - nx, py - ny, { cls: 'sk-g', passes: 1 }); }
+  }
+  box(B, 56, 50, 28, 24, { passes: 1 }); line(B, 56, 62, 84, 62, { passes: 1 }); line(B, 70, 50, 70, 74, { passes: 1 });
+  box(B, 314, 50, 32, 24, { passes: 1 }); ellipse(B, 324, 62, 5, 5, { passes: 1 }); line(B, 332, 58, 342, 58, { cls: 'sk-g', passes: 1 });
+  stroke(B, [[56, 228], [80, 226], [84, 230], [84, 250], [60, 252], [56, 248]], { closed: true }); line(B, 61, 229, 61, 251, { passes: 1 });
+  mark(B, 'circle', 330, 238, 9);
 }],
-'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', "Sketch: a mannequin holds a pattern card up beside a doorway it has built. On the card is a small drawing of a door narrower than the real one, and the figure is redrawing it wider with a pencil. The card is hatched. The doorway is practice: something actually built. The card is the pattern itself, the focus. Holding the card up against the real door is the first half of the solution: applying the pattern somewhere besides the piece that introduced it. The door on the card being too narrow is a pattern that doesn't fit what really happened, and the pencil redrawing it is the second half: revise the pattern and note why. The metaphor: a pattern as a plan, checked against the building, so the plan changes to fit the building and not the other way round.", (B) => {
-  ground(B); stroke(B, [[250, 262], [250, 130], [320, 130], [320, 262]]); stroke(B, [[244, 130], [326, 130]]);
-  for (let y = 150; y < 262; y += 20) { line(B, 238, y, 250, y, { cls: 'sk-g', passes: 1 }); line(B, 320, y, 332, y, { cls: 'sk-g', passes: 1 }); }
-  const a = mannequin(B, 130, { er: [30, -96], wr: [52, -112], el: [22, -80], wl: [44, -92] });
-  box(B, a.hr[0], a.hr[1] - 40, 46, 40); hatch(B, a.hr[0] + 3, a.hr[1] - 37, 40, 34, { gap: 5 });
-  const dx = a.hr[0] + 18, dy = a.hr[1] - 6; stroke(B, [[dx, dy], [dx, dy - 22], [dx + 8, dy - 22], [dx + 8, dy]], { passes: 1 });
-  B.lines.push(`<path class="sk-i" stroke-dasharray="3 3" d="M${dx - 6} ${dy} L${dx - 6} ${dy - 24} L${dx + 14} ${dy - 24} L${dx + 14} ${dy}"/>`);
-  pencil(B, a.hl[0], a.hl[1], -0.9, 18);
+'patterns-are-tested-in-practice': ['Patterns Are Tested in Practice', "Sketch: one mannequin stands with its arms held out while a second holds a hatched paper sewing pattern against it. The pattern's sleeve stops short of the wrist, and the second figure is drawing a dashed line with a pencil to lengthen it. The paper sewing pattern is one of this site's patterns, the focus. It was cut for someone else; holding it against a different person is the first half of the solution: apply the pattern in a piece besides the one that introduced it. The figure with its arms out is the practice the pattern meets: a real group or server. The short sleeve is a pattern that doesn't fit what happens in practice, and the pencil lengthening it is the second half of the solution: revise the pattern and say why. The metaphor: a pattern in the dressmaker's sense, a template that proves itself only when it's tried on, and is altered when it doesn't fit.", (B) => {
+  ground(B);
+  mannequin(B, 260, { face: -1, el: [-30, -92], wl: [-52, -92], er: [30, -92], wr: [52, -92] });
+  const P = [[240, 164], [280, 164], [284, 214], [236, 214], [240, 180], [222, 180], [222, 168]];
+  hatchIn(B, poly(P), [220, 162, 66, 54], 6); stroke(B, P, { closed: true, passes: 1 });
+  B.lines.push('<path class="sk-i" stroke-dasharray="3 4" d="M222 168 L206 168 L206 180 L222 180"/>');
+  const t = mannequin(B, 130, { er: [32, -84], wr: [62, -94] }); pencil(B, t.hr[0] + 2, t.hr[1] + 2, -0.2, 14);
 }],
-'any-cell-any-time': ['Any Cell, Any Time', "Sketch: a mannequin slots one card into a single empty cell of a large three-by-three grid. The columns are marked above with a square, a triangle, and a diamond, and a few other cells already hold cards. The new card is hatched. The grid is the site's table: its columns are guides, governance, and theory (the square, triangle, and diamond), and its rows are threads. The hatched card is one contribution: a single guide, governance piece, essay, or pattern. Slotting it into one cell while the rest of its row stays unfinished is the solution: accept a contribution to any single cell at any time, without waiting for the rest of the row. The cards already in place are other people's earlier contributions. The metaphor: the site as a shared wall of pigeonholes, filled one slot at a time by whoever has something to put there.", (B) => {
-  ground(B); const gx = 150, gy = 50, cw = 66, ch = 50;
-  for (let i = 0; i <= 3; i++) { line(B, gx, gy + i * ch, gx + 3 * cw, gy + i * ch, { passes: 1 }); line(B, gx + i * cw, gy, gx + i * cw, gy + 3 * ch, { passes: 1 }); }
-  ['square', 'triangle', 'diamond'].forEach((m, i) => mark(B, m, gx + i * cw + cw / 2, gy - 16, 7));
-  for (const [c, r] of [[0, 0], [2, 0], [1, 1], [2, 2]]) { const x = gx + c * cw + 12, y = gy + r * ch + 12; box(B, x, y, cw - 24, ch - 24, { passes: 1 }); line(B, x + 6, y + 9, x + cw - 30, y + 9, { cls: 'sk-g', passes: 1 }); line(B, x + 6, y + 17, x + cw - 36, y + 17, { cls: 'sk-g', passes: 1 }); }
-  const a = mannequin(B, 100, { er: [30, -96], wr: [54, -114] }); card(B, a.hr[0] + 4, a.hr[1] - 12, 30, 20);
+'any-cell-any-time': ['Any Cell, Any Time', "Sketch: a patchwork quilt hangs from a line between two posts, three squares across and three down, with a square, a triangle, and a diamond above its columns and a thread circle beside each row. Most squares are already sewn with simple stitched designs; one is empty. A mannequin reaches up to fit a single hatched patch into the empty square. The quilt is the site's table: its columns are guides, governance, and theory (the square, triangle, and diamond) and its rows are threads. The sewn squares are pieces other people have already contributed. The hatched patch is one contribution, the focus: a single guide, governance piece, essay, or pattern. Adding it while the rest of its row is unfinished is the solution: accept a contribution to any single cell at any time. The metaphor: a community quilt, made one patch at a time by whoever has one ready, and uneven until it's done.", (B) => {
+  ground(B); line(B, 160, 40, 160, 262); line(B, 350, 40, 350, 262); stroke(B, [[156, 50], [354, 50]]);
+  const gx = 174, gy = 60, cw = 54, ch = 48;
+  ['square', 'triangle', 'diamond'].forEach((m, i) => mark(B, m, gx + i * cw + cw / 2, 30, 7));
+  for (let r = 0; r < 3; r++) mark(B, 'circle', 374, gy + r * ch + ch / 2, 7);
+  for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) {
+    const x = gx + c * cw, y = gy + r * ch;
+    if (c === 0 && r === 1) { B.lines.push(`<rect class="sk-i" x="${x + 2}" y="${y + 2}" width="${cw - 4}" height="${ch - 4}" stroke-dasharray="4 4"/>`); continue; }
+    box(B, x, y, cw, ch, { passes: 1 });
+    const m = (r * 3 + c) % 3;
+    if (m === 0) { line(B, x + 8, y + 8, x + cw - 8, y + ch - 8, { cls: 'sk-g', passes: 1 }); line(B, x + cw - 8, y + 8, x + 8, y + ch - 8, { cls: 'sk-g', passes: 1 }); }
+    if (m === 1) stroke(B, [[x + cw / 2, y + 8], [x + cw - 10, y + ch / 2], [x + cw / 2, y + ch - 8], [x + 10, y + ch / 2]], { closed: true, cls: 'sk-g', passes: 1 });
+    if (m === 2) B.lines.push(`<rect class="sk-g" x="${x + 12}" y="${y + 10}" width="${cw - 24}" height="${ch - 20}"/>`);
+  }
+  const a = mannequin(B, 106, { er: [30, -96], wr: [54, -114] });
+  box(B, a.hr[0], a.hr[1] - 20, 40, 36); hatch(B, a.hr[0] + 3, a.hr[1] - 17, 34, 30, { gap: 5 });
 }],
-'a-language-users-can-speak': ['A Language Users Can Speak', "Sketch: two mannequin figures face each other and talk. Each has a speech bubble, and both bubbles hold the same simple picture of two crossed keys. The first bubble is hatched. The two figures are members of a group that runs a system together; neither is drawn as an expert. The crossed keys are a pattern name, Two Keyholders, turned into a picture: a short, plain name that anyone can say. The same picture in both bubbles is the solution working: one person says the name, the other understands it and uses it back, so the pattern has become shared vocabulary in an ordinary conversation. The metaphor: pattern names as the words of a common language, simple enough to pass from person to person without a dictionary.", (B) => {
+'a-language-users-can-speak': ['A Language Users Can Speak', "Sketch: two mannequins face each other and talk. Both speech bubbles hold the same simple picture of two crossed keys; the first bubble is hatched. On the ground beside them sits a thick, closed binder. The figures are members of a group that runs a system together; neither is drawn as an expert. The crossed keys are a pattern's plain name, here Two Keyholders, turned into a picture: something anyone can say. The hatched bubble is the solution working, the focus: a member using the name in ordinary conversation. The same picture in the second bubble shows it understood and used back, the consequence that pattern names become the group's words. The closed binder is the technical detail, such as commands, tools, and configuration, which the solution keeps in the Actions and guides rather than in the name. The metaphor: pattern names as everyday words in a shared language, with the manual nearby but closed.", (B) => {
   ground(B);
   mannequin(B, 110, { er: [26, -76], wr: [38, -86] }); mannequin(B, 290, { s: 0.94, face: -1, el: [-26, -76], wl: [-38, -86] });
   stroke(B, [[96, 40], [186, 40], [192, 46], [192, 96], [186, 102], [150, 102], [128, 124], [132, 102], [96, 102], [90, 96], [90, 46]], { closed: true });
   hatch(B, 94, 44, 94, 56, { gap: 7 }); keysIcon(B, 141, 71);
   stroke(B, [[222, 54], [302, 54], [308, 60], [308, 104], [302, 110], [278, 110], [272, 128], [262, 110], [222, 110], [216, 104], [216, 60]], { closed: true });
   keysIcon(B, 262, 82);
+  box(B, 178, 226, 44, 36); for (const yy of [234, 246]) ellipse(B, 182, yy, 3, 3, { passes: 1 }); line(B, 190, 226, 190, 262, { passes: 1 });
 }],
-'solution-first': ['Solution First', "Sketch: a mannequin writes with a pencil on a large card propped on an easel. Only one section in the middle of the card has been written and is hatched; the sections above and below it and the title line at the top are still blank. The card is a pattern being drafted, laid out like this site's pattern pages. The written middle section is the Solution: the one thing worth sharing, written first. The blank sections around it are the problem, context, forces, and consequences, to be worked out from the solution afterwards. The empty title line is the pattern's name, which the solution says to write last. The metaphor: writing a pattern from the inside out, starting with what you would tell a newcomer and only then explaining why and when.", (B) => {
+'solution-first': ['Solution First', "Sketch: a mannequin writes with a pencil on a large card propped on an easel. Only one section in the middle of the card has been written, and it is hatched; the sections above and below it, and the title line at the top, are still blank. The card is a pattern being drafted, laid out like this site's pattern pages. The written middle section is the solution, the focus: the one thing the writer most wants to share, written first. The blank sections around it are the problem, context, forces, and consequences, worked out from the solution afterwards. The empty title line is the pattern's name, which the solution says to write last. The figure writing is anyone with experience to pass on. The metaphor: writing a pattern from the inside out, starting with what you would tell a newcomer and only then explaining when and why.", (B) => {
   ground(B); box(B, 196, 50, 130, 160); stroke(B, [[220, 210], [204, 262]]); stroke(B, [[302, 210], [318, 262]]); line(B, 261, 210, 261, 262, { passes: 1 });
   B.lines.push('<path class="sk-i" stroke-dasharray="5 5" d="M210 70 L312 70"/>');
   for (const y of [92, 120, 176, 196]) line(B, 206, y, 316, y, { cls: 'sk-g', passes: 1 });
@@ -211,12 +246,12 @@ const S = {
   for (const y of [142, 150, 158]) stroke(B, [[212, y], [240, y - 2], [270, y + 1], [300, y - 1]], { passes: 1 });
   const a = mannequin(B, 130, { er: [32, -84], wr: [62, -102] }); pencil(B, a.hr[0], a.hr[1], -0.5, 16);
 }],
-'workshop-the-pattern': ['Workshop the Pattern', "Sketch: two mannequin readers stand at a table with a pattern card on it; one points at the card approvingly, and the other holds a pencil over it to suggest a change. The author stands apart with a hand cupped to one ear. The card is hatched. The table and card are a pattern workshop: a new pattern laid out for others to read before it leaves draft. The pointing reader is saying what works, which comes first; the reader with the pencil is saying what could be better, which comes second. The author standing apart and listening is the rule that the author listens first and asks questions only at the end. The metaphor: a pattern as a piece of craft set on a bench for others to inspect, with its maker stepping back.", (B) => {
+'workshop-the-pattern': ['Workshop the Pattern', "Sketch: two mannequin readers stand at a table with a hatched pattern card on it; one points at the card approvingly, and the other holds a pencil over it to suggest a change. The author stands apart with a hand cupped to one ear. The table and card are a pattern workshop: a new pattern set out for others to read before it leaves draft, and the card is the focus. The two readers are the solution's \"at least two readers besides its author\". The pointing reader is saying what works, which comes first; the reader with the pencil is saying what could be better, which comes second. The author standing apart and listening is the rule that the author listens first and asks questions only at the end. The metaphor: a pattern as a piece of craft set on a bench for others to inspect, with its maker stepping back.", (B) => {
   ground(B); stroke(B, [[110, 200], [270, 200]]); line(B, 122, 200, 122, 262); line(B, 258, 200, 258, 262); card(B, 172, 180, 36, 18);
   mannequin(B, 80, { er: [34, -80], wr: [76, -76] });
   const b = mannequin(B, 300, { face: -1, el: [-30, -84], wl: [-62, -92] }); pencil(B, b.hl[0], b.hl[1], 2.2, 16);
   mannequin(B, 368, { s: 0.85, face: -1, er: [20, -100], wr: [10, -112], el: [-14, -70], wl: [-6, -54] });
 }],
 };
-for (const [slug, [title, desc, build]] of Object.entries(S)) { if (ONLY.length && !ONLY.includes(slug)) continue; seed = slug.length * 977 + 13; const B = { lines: [], text: [] }; build(B); fs.writeFileSync(`${OUT}/${slug}.svg`, svg(slug, title, desc, B)); }
+for (const [slug, [title, desc, build]] of Object.entries(S)) { if (ONLY.length && !ONLY.includes(slug)) continue; seed = slug.length * 977 + 13; CUR = slug; clipN = 0; const B = { lines: [], text: [] }; build(B); fs.writeFileSync(`${OUT}/${slug}.svg`, svg(slug, title, desc, B)); }
 console.log(ONLY.length ? ONLY.join(', ') : `${Object.keys(S).length} scenes`, 'drawn');

@@ -7,18 +7,32 @@ description: Draw or redraw an illustration for a pattern in wiki/patterns/ (Ale
 
 Based on Harasawa, Arao & Iba, "A Pattern Language for Pattern Illustrating" (PLoP 2012). Their Three-Step Drawing (pencil, pen, PC) becomes: **alt text** (the composition), **draft** (the drawing), **review** (against the set). The house style is in `wiki/patterns/images/README.md`; read it before drawing.
 
-## 1. Read the pattern (Expressing Solution)
+## 1. Map the pattern, then choose the metaphor (Expressing Solution)
 
-Read the pattern page. Work from the **Solution** and **Consequences**, not the Problem: the drawing shows the pattern working. Find the action: who does what, with what. Look for a motif or metaphor that carries it.
+Read the pattern page and write a working map (notes only, not committed) of its parts:
+
+| Pattern part | In this pattern |
+|---|---|
+| Context | the situation and who is in it |
+| Problem / Forces | what goes wrong, and why it's hard |
+| Solution: what | what to do |
+| Solution: how | how to do it |
+| Consequences | what changes, including costs |
+
+Then choose a metaphor: a familiar scene or object whose parts line up with the map (a key for access, a loom for threads, a workbench for something small enough to handle). Fill in a third column saying which visual element stands for each pattern part. The drawing shows the Solution working, so the Solution rows must have elements; the Problem is usually shown as something set aside, avoided, or corrected, not as the main scene.
+
+When redrawing from scratch, don't look at the existing drawing until the review in step 4, so the old picture doesn't decide the new one.
 
 **No words in the image.** No labels, captions, letters, or numbers. Everything is carried by the picture: figures and their gestures (pointing, holding, listening with a hand to the ear, writing with a pencil), objects, how things are arranged, what is set aside, and the one hatched focus. If an idea needs a symbol, use the site's own marks, which readers already know from the table: the thread circle, and the square, triangle, and diamond for guides, governance, and theory. If a pattern can't be drawn without words, look for a better motif or metaphor.
+
+**One hatched focus.** Exactly one element is hatched in the thread color: whatever stands for the heart of the Solution.
 
 ## 2. Write the alt text
 
 It is the spec for the drawing and becomes the SVG `<desc>`, which is the image's alt text on the site. A reader who can't see the image should come away knowing both what is drawn and how it explains the pattern. Write three parts, in this order, in about 90–140 words:
 
 1. **What is drawn.** Start with the form: "Sketch:" (people and things) or "Diagram:" (an abstract arrangement or plan view). Name every figure, object, gesture, and arrangement, and where they are relative to each other. Say which one thing is hatched in the thread color, and mention any of the site's marks used as symbols. Describe only what a sighted reader sees; no interpretation yet.
-2. **What each part stands for.** Go through the drawing element by element and say which part of the pattern it represents, using the pattern's own terms: the Context (the situation or the people in it), the Problem or Forces, the Solution (name both halves if it has two, what and how), and the Consequences. Be explicit: "The server is the shared system from the Context." Every drawn element should map to something; if one doesn't, cut it from the drawing.
+2. **What each part stands for.** Turn the map from step 1 into prose: go through the drawing element by element and say which part of the pattern it represents, using the pattern's own terms: the Context (the situation or the people in it), the Problem or Forces, the Solution (name both halves if it has two, what and how), and the Consequences. Be explicit: "The server is the shared system from the Context." Every drawn element should map to something; if one doesn't, cut it from the drawing.
 3. **The metaphor.** One or two sentences starting "The metaphor:", saying what familiar thing the drawing borrows (a key, a loom, a workbench) and what that comparison says about the pattern.
 
 Example (Two Keyholders):
