@@ -5,7 +5,7 @@ title: ""
 number:                # pattern number, for cross-reference
 introduction: ""       # one sentence under the name that makes the reader want to read on
 image: ""              # optional: path to an illustration of the pattern at work
-thread: ""             # one thread: the row in the table (index.md)
+thread: ""             # one thread: the row in the table
 level: ""              # operational | collective-choice | constitutional | metaconstitutional
 introduced_in: ""      # the piece at this level that explains it: guides/ (operational), governance/ (collective-choice, constitutional), theory/ (metaconstitutional)
 applied_in: []         # other pieces that put it into practice (any thread or level)
@@ -34,10 +34,3 @@ status: draft          # draft | workshopped | tested | published | retired (pro
 ## Consequences
 - **Positive:** <!-- what improves -->
 - **Negative:** <!-- side effects and costs -->
-
-## Connections
-- **Thread and level:** thread-name, level
-- **Introduced in:** [Piece title](../../guides/slug.md)
-- **Applied in:** [Piece title](../../governance/slug.md)
-- **Larger patterns:** [Pattern](larger-slug.md)
-- **Smaller patterns:** [Pattern](smaller-slug.md)

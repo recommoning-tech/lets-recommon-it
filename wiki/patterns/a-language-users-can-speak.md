@@ -39,10 +39,3 @@ Pattern writing drifts toward experts. Names become jargon and solutions assume 
 ## Consequences
 - **Positive:** members can join technical decisions, and pattern names become words the group uses.
 - **Negative:** plain language loses some precision, experts may find patterns obvious, and some patterns need a guide beside them to be usable.
-
-## Connections
-- **Thread and level:** design-patterns, metaconstitutional
-- **Introduced in:** [A pattern language for community tech](../../theory/a-pattern-language-for-community-tech.md)
-- **Applied in:** [Writing a pattern](../../guides/writing-a-pattern.md), [Who decides what becomes a pattern?](../../governance/who-decides-what-becomes-a-pattern.md)
-- **Larger patterns:** none yet
-- **Smaller patterns:** [Solution First](solution-first.md), [Workshop the Pattern](workshop-the-pattern.md)

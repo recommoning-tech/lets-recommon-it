@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import { render } from 'astro:content';
+import { site, url, editUrl, columnOf, threadOf, repoPath, type Pattern } from '../../lib/content';
+import { BASE } from '../../lib/site.mjs';
+
+export async function getStaticPaths() {
+  const { patterns } = await site();
+  return patterns.map((p) => ({ params: { slug: p.id }, props: { pattern: p } }));
+}
+const { pattern } = Astro.props as { pattern: Pattern };
+const { pieceByPath, patternById } = await site();
+const { Content } = await render(pattern);
+const d = pattern.data;
+const intro = d.introduced_in ? pieceByPath.get(d.introduced_in) : undefined;
+const applied = d.applied_in.map((a) => pieceByPath.get(a)).filter((p) => p !== undefined);
+const rel = (ids: string[]) => ids.map((id) => patternById.get(id)).filter((p) => p !== undefined);
+const larger = rel(d.larger_patterns);
+const smaller = rel(d.smaller_patterns);
+const column = columnOf(d.level);
+---
+<Base title={d.title} description={d.introduction} edit={editUrl(pattern)}>
+  <p class="crumbs"><a href={`${BASE}patterns/`}>Patterns</a> › <a href={url.thread(d.thread)}>{threadOf(d.thread)?.name}</a> › {column.name}</p>
+  <article class="pattern">
+    <header>
+      <p class="pattern-number">Pattern {d.number}{d.status === 'draft' && <span class="badge">Draft</span>}</p>
+      <h1>{d.title}</h1>
+      {d.image && <img class="pattern-image" src={`${BASE}${d.image}`} alt="" />}
+    </header>
+    <div class="pattern-body"><Content /></div>
+    <aside class="connections" aria-label="Connections">
+      <h2>Connections</h2>
+      <dl>
+        <dt>Thread and level</dt>
+        <dd><a href={url.thread(d.thread)}>{threadOf(d.thread)?.name}</a> · {d.level}</dd>
+        <dt>Introduced in</dt>
+        <dd>{intro ? <a href={url.piece(intro)}>{intro.data.title}</a> : <span class="open">Not yet written: a {column.name.toLowerCase()} piece in this thread</span>}</dd>
+        <dt>Applied in</dt>
+        <dd>{applied.length ? applied.map((p, i) => <>{i > 0 && ', '}<a href={url.piece(p)}>{p.data.title}</a></>) : 'Not yet applied elsewhere'}</dd>
+        <dt>Larger patterns</dt>
+        <dd>{larger.length ? larger.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : 'None yet'}</dd>
+        <dt>Smaller patterns</dt>
+        <dd>{smaller.length ? smaller.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : 'None yet'}</dd>
+      </dl>
+    </aside>
+  </article>
+</Base>

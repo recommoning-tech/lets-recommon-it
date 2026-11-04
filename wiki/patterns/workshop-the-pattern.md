@@ -39,10 +39,3 @@ Review by a single approver checks format and facts, but not whether the pattern
 ## Consequences
 - **Positive:** patterns read clearly to people other than their author, and the group builds a shared vocabulary.
 - **Negative:** it's slower, and it needs at least three people. Until the project has them, patterns stay in draft or are workshopped with outside readers.
-
-## Connections
-- **Thread and level:** design-patterns, collective-choice
-- **Introduced in:** [Who decides what becomes a pattern?](../../governance/who-decides-what-becomes-a-pattern.md)
-- **Applied in:** [Writing for Let's Recommon IT](../../guides/contributing.md)
-- **Larger patterns:** [A Language Users Can Speak](a-language-users-can-speak.md), [Patterns Are Tested in Practice](patterns-are-tested-in-practice.md), [Talk Before You Enforce](talk-before-you-enforce.md)
-- **Smaller patterns:** none yet

@@ -1,10 +1,10 @@
 # Let's Recommon IT
 
-Source for a blog, guides, and pattern wiki about community-scale IT, run as a commons. Markdown only; no site generator yet. Content is CC BY-SA 4.0, code is MIT.
+Source for a blog, guides, and pattern wiki about community-scale IT, run as a commons. Content is Markdown with YAML front matter; the website (`site/`, Astro) is generated from it and deployed to GitHub Pages from `main`. Content is CC BY-SA 4.0, code is MIT.
 
 ## The table
 
-The site is a table (`index.md`): threads are rows, levels of rules from Ostrom's IAD framework are columns.
+The site is a table, generated from front matter: threads are rows, levels of rules from Ostrom's IAD framework are columns.
 
 | Column | Folder | IAD level |
 |---|---|---|
@@ -43,11 +43,11 @@ Patterns (`wiki/patterns/`) are the main unit; every piece is an essay about the
 
 ## Linking
 
-- Relative links only. Pattern pages link with `../../`; pieces with `../`.
-- Every piece ends with an identical `## In this thread` footer listing all pieces in its row (Guides, Governance, Theory) and a link to `index.md`.
-- Adding a piece or pattern means updating `index.md`, the footers in its row, and the pattern pages' `introduced_in` / `applied_in` and Connections.
+- The website generates the table, the pattern table, each piece's "In this thread" footer, pattern connections, and bibliography backlinks from front matter. Don't hand-write these in Markdown.
+- Front matter must agree in both directions: piece `patterns` ↔ pattern `introduced_in` (in the column matching its level); piece `patterns_applied` ↔ pattern `applied_in`; `larger_patterns` ↔ `smaller_patterns`; `sources` must exist in `bibliography/`.
+- `cd site && npm run build` validates all of this and fails with a list of mismatches. Run it after content changes; CI runs it on every pull request.
+- Body links are relative repo paths (pattern pages use `../../`, pieces `../`). The site's remark plugin (`site/src/lib/remark-repo-links.mjs`) rewrites them to site URLs; files without a site page link to GitHub.
 - When a Solution changes, update every quote of it. Find references with `grep -rn "<slug>" --include=*.md .`
-- No link checker is committed; check links by hand or with a throwaway script.
 
 ## Bibliography
 
@@ -61,6 +61,14 @@ Patterns (`wiki/patterns/`) are the main unit; every piece is an essay about the
 - `status: draft` on anything AI-drafted until a member rewrites or reviews it.
 - Notes for the author go in `<!-- Author: ... -->` comments; values for members to decide go in `[brackets]`.
 - Don't invent facts, examples, or experiences for the author; leave an author note instead.
+
+## Website
+
+- Astro 7 in `site/`; content collections in `site/src/content.config.ts` read the repo folders directly. Remark plugins need `@astrojs/markdown-remark` (Astro 7's default processor is different).
+- Threads and columns are defined in `site/src/lib/site.mjs`. Adding a thread means adding it there and to `planning/concept-map.md`.
+- Every page links to its file on GitHub ("Edit this page"); open cells link to a new GitHub file pre-filled from the matching template.
+- Plain styling in `site/src/styles/global.css`. Pattern pages show Iba's separators (▼ In this context, ▼ Therefore, ▼ Consequently) via CSS on the section headings.
+- Pattern illustrations go in the `image:` field; not yet designed.
 
 ## Workflow
 

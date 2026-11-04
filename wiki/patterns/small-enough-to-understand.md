@@ -38,10 +38,3 @@ Powerful, complex systems promise more features and scale. But a system that onl
 ## Consequences
 - **Positive:** more members can maintain the system and take part in decisions about it. [Two Keyholders](two-keyholders.md) becomes realistic.
 - **Negative:** some features and scale come later or not at all, and members may get less convenience than a commercial service offers.
-
-## Connections
-- **Thread and level:** liberatory-tech, metaconstitutional
-- **Introduced in:** [Who owns the machine?](../../theory/who-owns-the-machine.md)
-- **Applied in:** [Setting up your first server](../../guides/first-server.md)
-- **Larger patterns:** none yet
-- **Smaller patterns:** [Two Keyholders](two-keyholders.md)

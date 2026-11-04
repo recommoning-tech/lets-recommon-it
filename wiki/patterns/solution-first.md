@@ -37,10 +37,3 @@ Writers tend to start at the top of the form, with a name and a context, and fil
 ## Consequences
 - **Positive:** the solution is concrete, and the name captures what the pattern is actually about.
 - **Negative:** a pattern written this way may overlap one that already exists. Check the pattern table before naming it.
-
-## Connections
-- **Thread and level:** design-patterns, operational
-- **Introduced in:** [Writing a pattern](../../guides/writing-a-pattern.md)
-- **Applied in:** [Writing for Let's Recommon IT](../../guides/contributing.md)
-- **Larger patterns:** [A Language Users Can Speak](a-language-users-can-speak.md)
-- **Smaller patterns:** none yet

@@ -32,8 +32,10 @@
 - [ ] Add 5 entries from `reading-list.md`
 
 ## Phase 3: Website (later)
-- [ ] Choose a static site generator (Hugo / Astro / Quartz / Eleventy)
-- [ ] Decide hosting (self-hosted fits the mission; static host is simpler)
-- [ ] Map front matter fields to site taxonomies (threads → tags)
-- [ ] Bibliography index page filterable by thread
-- [ ] Domain, deploy pipeline, RSS
+- [x] Static site generator: Astro (`site/`)
+- [x] Hosting: GitHub Pages, deployed from `main`; repo made public
+- [x] Generated table, thread footers, pattern connections, bibliography backlinks; front matter validated at build
+- [ ] Visual identity: thread colors, level marks, type
+- [ ] Pattern illustrations: style, tool, and first set
+- [ ] Bibliography index filterable by thread
+- [ ] Domain, RSS

@@ -39,10 +39,3 @@ Most writing about technology stays at one level. Tutorials explain how to build
 ## Consequences
 - **Positive:** readers can move from idea to rule to practice within a thread, and the missing pieces are easy to see.
 - **Negative:** assigning a level takes judgment, and some patterns sit between levels. A thread can look unfinished for a long time.
-
-## Connections
-- **Thread and level:** institutions, metaconstitutional
-- **Introduced in:** [This repository is a commons](../../theory/this-repository-is-a-commons.md)
-- **Applied in:** [Writing for Let's Recommon IT](../../guides/contributing.md), [How this project is run](../../governance/how-this-project-is-run.md)
-- **Larger patterns:** none
-- **Smaller patterns:** [Patterns Are Tested in Practice](patterns-are-tested-in-practice.md), [Any Cell, Any Time](any-cell-any-time.md), [Every Page Links Out](every-page-links-out.md)

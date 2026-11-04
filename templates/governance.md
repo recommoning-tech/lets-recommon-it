@@ -1,7 +1,7 @@
 ---
 title: ""
 date:                  # YYYY-MM-DD, set at publish
-threads: []            # first thread is the row in the table (index.md)
+threads: []            # first thread is the row in the table
 sources: []            # bibliography file names
 patterns: []           # wiki/patterns/slug.md introduced here (level: collective-choice or constitutional)
 patterns_applied: []   # wiki/patterns/slug.md from other pieces
@@ -35,10 +35,3 @@ status: draft          # draft | published
 
 ## Template or checklist
 <!-- Something a group can copy and fill in. -->
-
-## In this thread
-<!-- Every piece in this row of index.md. Keep identical across the row. -->
-- **Thread:** thread-name · [the table](../index.md)
-- **Guides:** [Title](../guides/slug.md)
-- **Governance:** [Title](../governance/slug.md)
-- **Theory:** [Title](../theory/slug.md)

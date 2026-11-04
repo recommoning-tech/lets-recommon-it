@@ -175,9 +175,3 @@ The governance piece, [Who holds root?](../governance/who-holds-root.md), works 
 - [Debian Administrator's Handbook](https://debian-handbook.info/) (free)
 - [Debian Wiki: UnattendedUpgrades](https://wiki.debian.org/UnattendedUpgrades)
 - `man sshd_config`, `man ufw`
-
-## In this thread
-- **Thread:** liberatory-tech · [the table](../index.md)
-- **Guides:** [Setting up your first server](../guides/first-server.md)
-- **Governance:** [Who holds root?](../governance/who-holds-root.md)
-- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)

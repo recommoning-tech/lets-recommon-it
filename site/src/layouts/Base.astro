@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import EditLink from '../components/EditLink.astro';
+import { BASE, REPO_URL } from '../lib/site.mjs';
+
+interface Props { title: string; description?: string; edit?: string }
+const { title, description = 'Guides, governance, and theory for community-scale IT, run as a commons.', edit } = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  { href: BASE, label: 'The table' },
+  { href: `${BASE}patterns/`, label: 'Patterns' },
+  { href: `${BASE}bibliography/`, label: 'Bibliography' },
+  { href: `${BASE}guides/contributing/`, label: 'Contribute' },
+];
+const pageTitle = title === "Let's Recommon IT" ? title : `${title} · Let's Recommon IT`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={`${BASE}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-name" href={BASE}>Let's Recommon IT</a>
+      <nav aria-label="Main">
+        {nav.map((n) => (
+          <a href={n.href} aria-current={(n.href === BASE ? path === BASE : path.startsWith(n.href)) ? 'page' : undefined}>{n.label}</a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+      {edit && <p class="page-edit"><EditLink href={edit} /></p>}
+    </main>
+    <footer class="site-footer">
+      <p>Writing is <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; code is <a href="https://opensource.org/license/mit">MIT</a>. Source and contributions on <a href={REPO_URL}>GitHub</a>.</p>
+    </footer>
+  </body>
+</html>
