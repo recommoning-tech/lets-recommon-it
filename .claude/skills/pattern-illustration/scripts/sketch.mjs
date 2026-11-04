@@ -143,9 +143,10 @@ function water(B, x, y) { B.lines.push(`<path class="sk-g" d="M${x} ${y} q5 -4 1
 
 // ---- Drafter's perspective -------------------------------------------------------------
 // One two-point camera for the whole set: world units are roughly centimetres, y is up, the
-// ground is y = 0. Horizon at the figures' eye height; vanishing points far outside the canvas.
+// ground is y = 0. Horizon (the camera's eye height) at about mid-chest on the figures; vanishing
+// points far outside the canvas.
 let CAM;
-function camera({ yaw = 30, e = 150, f = 1200, D = 1333, cx = 160, hs = 120 } = {}) {
+function camera({ yaw = 30, e = 120, f = 1200, D = 1333, cx = 160, hs = 147 } = {}) {
   const t = (yaw * Math.PI) / 180;
   CAM = { c: Math.cos(t), s: Math.sin(t), e, f, D, cx, hs, pos: [D * Math.sin(t), e, -D * Math.cos(t)] };
 }

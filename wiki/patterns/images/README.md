@@ -18,7 +18,7 @@ Diagrams in the spirit of Christopher Alexander's *A Pattern Language*: a fast p
 - **Canvas:** `viewBox="0 0 400 300"`, with a faint ground line at y = 262 when people stand on it.
 - **Pen:** ink lines (`currentColor`, about 1.7px, round caps) drawn twice with a little offset, then roughened with an SVG displacement filter (`feTurbulence` + `feDisplacementMap`). Give the filter an id unique to the file (`rough-<slug>`).
 - **Construction lines:** thinner and faint (`opacity` about 0.4), overshooting the shapes they guide.
-- **Drafter's perspective:** objects are solids, not flat outlines. Use one two-point perspective for the whole set (horizon at the figures' eye height, vanishing points far outside the canvas), box each object first, show at least two faces, draw circles at an angle as ellipses, and shade the faces away from a single light with light ink hatching. Prefer bird's-eye views to flat plans.
+- **Drafter's perspective:** objects are solids, not flat outlines. Use one two-point perspective for the whole set (horizon at about mid-chest height on the figures, vanishing points far outside the canvas), box each object first, show at least two faces, draw circles at an angle as ellipses, and shade the faces away from a single light with light ink hatching. Prefer bird's-eye views to flat plans.
 - **Colored pencil:** hatching in `var(--thread)` marks the one thing the pattern is about (the shared server, the cell being filled). Nothing else is colored.
 - Don't hard-code colors. The site sets the ink color and `--thread`, so drawings work on paper and on the dark blueprint theme.
 - Use the classes in the existing files: `sk-i` (ink), `sk-g` (construction), `sk-h` (hatching).
