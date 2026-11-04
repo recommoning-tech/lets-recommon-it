@@ -27,7 +27,7 @@ It doesn't take a specialist. In Iba's workshops, businesspeople and students wr
 
 - Something you know works, from running a server, a group, or a project
 - The pattern template: `templates/wiki-pattern.md`
-- A look at the [pattern table](https://recommoning-tech.github.io/lets-recommon-it/patterns/), so you don't rewrite a pattern that exists
+- A look at the [pattern table](https://lets-recommon-it.com/patterns/), so you don't rewrite a pattern that exists
 - For submitting it: [Writing for Let's Recommon IT](contributing.md)
 
 ## Steps

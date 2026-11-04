@@ -4,7 +4,7 @@ Status: `idea` → `outlined` → `drafting` → `published`
 
 ## The table: ideas by cell
 
-Rows are threads; columns are levels. Any cell can be written at any time. Filled cells are shown on [the website](https://recommoning-tech.github.io/lets-recommon-it/).
+Rows are threads; columns are levels. Any cell can be written at any time. Filled cells are shown on [the website](https://lets-recommon-it.com/).
 
 | Thread | Guides (operational) | Governance (collective-choice, constitutional) | Theory (metaconstitutional) |
 |---|---|---|---|

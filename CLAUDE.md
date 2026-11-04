@@ -1,6 +1,6 @@
 # Let's Recommon IT
 
-Source for a blog, guides, and pattern wiki about community-scale IT, run as a commons. Content is Markdown with YAML front matter; the website (`site/`, Astro) is generated from it and deployed to GitHub Pages from `main`. Content is CC BY-SA 4.0, code is MIT.
+Source for a blog, guides, and pattern wiki about community-scale IT, run as a commons. Content is Markdown with YAML front matter; the website (`site/`, Astro) is generated from it and deployed to GitHub Pages from `main` at <https://lets-recommon-it.com/>. Content is CC BY-SA 4.0, code is MIT.
 
 ## The table
 

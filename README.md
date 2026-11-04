@@ -7,7 +7,7 @@ The project has two parts:
 1. **Technical:** practical guides to running your own infrastructure, such as servers, Docker stacks, self-hosted apps, and private networks with Tailscale/WireGuard.
 2. **Governance:** how to build and run these tools so they serve a community and not just one person, drawing on commons scholarship, social ecology, design theory, and critiques of Big Tech.
 
-The website is at <https://recommoning-tech.github.io/lets-recommon-it/>. It's built with [Astro](https://astro.build) from the Markdown in this repo (source in `site/`) and deployed to GitHub Pages on every merge to `main`.
+The website is at <https://lets-recommon-it.com/>. It's built with [Astro](https://astro.build) from the Markdown in this repo (source in `site/`) and deployed to GitHub Pages on every merge to `main`.
 
 ## Structure
 
@@ -27,7 +27,7 @@ The website is at <https://recommoning-tech.github.io/lets-recommon-it/>. It's b
 
 ## The table
 
-The site is a table, generated on the [website](https://recommoning-tech.github.io/lets-recommon-it/) from front matter. Rows are threads. Columns are levels of rules from Ostrom's Institutional Analysis and Development framework:
+The site is a table, generated on the [website](https://lets-recommon-it.com/) from front matter. Rows are threads. Columns are levels of rules from Ostrom's Institutional Analysis and Development framework:
 
 | Column | Level |
 |---|---|

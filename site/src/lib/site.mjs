@@ -1,6 +1,6 @@
 // Shared constants. Plain .mjs so astro.config.mjs can import it too.
-export const SITE = 'https://recommoning-tech.github.io';
-export const BASE = '/lets-recommon-it/';
+export const SITE = 'https://lets-recommon-it.com';
+export const BASE = '/';
 export const REPO_URL = 'https://github.com/recommoning-tech/lets-recommon-it';
 export const BRANCH = 'main';
 
