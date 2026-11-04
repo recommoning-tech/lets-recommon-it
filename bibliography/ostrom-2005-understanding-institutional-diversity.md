@@ -19,7 +19,7 @@ The fullest statement of the Institutional Analysis and Development (IAD) framew
 ## Key ideas
 - **Action situation** parts: participants, positions, actions, outcomes, action-outcome linkages, information, costs/benefits
 - **Rule types:** boundary, position, choice, aggregation, information, payoff, scope
-- **Levels of analysis:** operational, collective-choice, constitutional
+- **Levels of analysis:** operational, collective-choice, constitutional, metaconstitutional. The outcomes of each level are the rules for the level below.
 - Includes the grammar of institutions (ADICO) and revisits the design principles
 
 ## Related

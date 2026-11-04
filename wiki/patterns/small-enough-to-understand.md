@@ -1,7 +1,8 @@
 ---
 title: "Small Enough to Understand"
 number: 2
-threads: [design-patterns, liberatory-tech]
+thread: liberatory-tech
+level: metaconstitutional
 larger_patterns: []
 smaller_patterns: [two-keyholders]
 introduced_in: theory/who-owns-the-machine.md
@@ -25,7 +26,8 @@ For a community server, this means: one machine before a cluster, a plain Debian
 **Keep the system small enough that a second member could learn to run it in a weekend.** Prefer well-documented, widely used software. Add complexity only when a real need appears, and write down why.
 
 ## Connections
-- **Introduced in:** [Who owns the machine?](../../theory/who-owns-the-machine.md) (Release 001, liberatory-tech)
+- **Thread and level:** liberatory-tech, metaconstitutional
+- **Introduced in:** [Who owns the machine?](../../theory/who-owns-the-machine.md)
 - **Applied in:** [Setting up your first server](../../guides/first-server.md)
 - **Larger patterns:** none yet
 - **Smaller patterns:** [Two Keyholders](two-keyholders.md)

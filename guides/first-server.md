@@ -2,10 +2,9 @@
 title: "Setting up your first server"
 date:                  # YYYY-MM-DD, set at publish
 updated:
-threads: [liberatory-tech]
+threads: [liberatory-tech]   # first thread is the row in the table
 difficulty: beginner
 status: draft          # commands need a test run on a fresh install before publishing
-release: 001-a-shared-server
 patterns_applied:
   - wiki/patterns/small-enough-to-understand.md
   - wiki/patterns/two-keyholders.md
@@ -15,7 +14,7 @@ patterns_applied:
 
 A small, secure Linux server running Debian 13 ("trixie"), reachable over SSH from your own computer. It will update itself, have a firewall, and accept only key-based logins. Later guides (Docker, Tailscale, self-hosted apps) build on this one.
 
-This guide is part of [Release 001: A Shared Server](../releases/001-a-shared-server.md). The theory post, [Who owns the machine?](../theory/who-owns-the-machine.md), explains why running your own server matters. This guide is for one or two admins. The governance piece, [Who holds root?](../governance/who-holds-root.md), covers what changes when a group shares the server.
+This guide is in the `liberatory-tech` thread. The theory essay, [Who owns the machine?](../theory/who-owns-the-machine.md), explains why running your own server matters. This guide is for one or two admins. The governance piece, [Who holds root?](../governance/who-holds-root.md), covers what changes when a group shares the server.
 
 ## Prerequisites
 
@@ -177,8 +176,8 @@ The governance piece, [Who holds root?](../governance/who-holds-root.md), works 
 - [Debian Wiki: UnattendedUpgrades](https://wiki.debian.org/UnattendedUpgrades)
 - `man sshd_config`, `man ufw`
 
-## In this release
-- **Release:** [001 Liberatory Tech: A Shared Server](../releases/001-a-shared-server.md)
-- **Theory & patterns:** [Who owns the machine?](../theory/who-owns-the-machine.md): [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Two Keyholders](../wiki/patterns/two-keyholders.md)
-- **Guide:** [Setting up your first server](../guides/first-server.md)
+## In this thread
+- **Thread:** liberatory-tech · [the table](../index.md)
+- **Guides:** [Setting up your first server](../guides/first-server.md)
 - **Governance:** [Who holds root?](../governance/who-holds-root.md)
+- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)

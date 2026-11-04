@@ -1,16 +1,16 @@
 ---
 title: ""
 date:                  # YYYY-MM-DD, set at publish
-release: ""            # NNN-slug, matching releases/NNN-slug.md
-threads: []            # the release's thread first
+threads: []            # first thread is the row in the table (index.md)
 sources: []            # bibliography file names this post cites
-patterns: []           # wiki/patterns/slug.md introduced here
+patterns: []           # wiki/patterns/slug.md introduced here (level: metaconstitutional)
+patterns_applied: []   # wiki/patterns/slug.md from other pieces
 status: draft          # draft | published
 ---
 
 <!--
-Theory & patterns: why this thread matters for community-scale IT commons.
-The essay derives the patterns. The full pattern text lives on each wiki page; here, give each pattern
+Theory (metaconstitutional level): what is being shared, who it's for, and what counts as a good outcome.
+The essay explains its patterns. The full pattern text lives on each wiki page; here, give each pattern
 a short paragraph, its "Therefore" line, and a link. Don't duplicate the full pattern.
 -->
 
@@ -21,8 +21,8 @@ a short paragraph, its "Therefore" line, and a link. Don't duplicate the full pa
 
 ## The argument
 
-## Patterns
-<!-- One subsection per pattern introduced here. -->
+## Patterns introduced
+<!-- One subsection per metaconstitutional pattern introduced here. -->
 
 ### [Pattern Name](../wiki/patterns/slug.md)
 <!-- One paragraph: how the argument above leads to this pattern. -->
@@ -30,14 +30,14 @@ a short paragraph, its "Therefore" line, and a link. Don't duplicate the full pa
 > **Therefore:** <!-- copy the pattern's Therefore line -->
 
 ### How the patterns fit together
-<!-- Which pattern is larger, which completes which, and links to related patterns from other releases. -->
+<!-- Which pattern is larger, which completes which, and links to related patterns in other cells. -->
 
 ## From theory to practice
-<!-- Bridge to the guide (concrete example) and governance piece (processes). -->
+<!-- Bridge to guides and governance pieces in the same thread. -->
 
-## In this release
-<!-- Keep in sync with releases/<release>.md. -->
-- **Release:** [NNN Title](../releases/NNN-slug.md)
-- **Theory & patterns:** [Title](../theory/slug.md): [Pattern](../wiki/patterns/slug.md), [Pattern](../wiki/patterns/slug.md)
-- **Guide:** [Title](../guides/slug.md)
+## In this thread
+<!-- Every piece in this row of index.md. Keep identical across the row. -->
+- **Thread:** thread-name · [the table](../index.md)
+- **Guides:** [Title](../guides/slug.md)
 - **Governance:** [Title](../governance/slug.md)
+- **Theory:** [Title](../theory/slug.md)

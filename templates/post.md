@@ -1,7 +1,7 @@
 ---
 title: ""
 date:                  # YYYY-MM-DD
-type: essay            # essay | commentary | review (standalone; theory posts go in theory/)
+type: essay            # essay | commentary | review (standalone; theory essays go in theory/)
 threads: []
 sources: []            # bibliography file names this post draws on
 status: draft          # draft | published

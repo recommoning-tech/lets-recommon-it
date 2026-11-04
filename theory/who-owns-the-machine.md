@@ -1,8 +1,7 @@
 ---
 title: "Who owns the machine?"
 date:                  # YYYY-MM-DD, set at publish
-release: 001-a-shared-server
-threads: [liberatory-tech, privacy, big-tech-critique]
+threads: [liberatory-tech, privacy, big-tech-critique]   # first thread is the row in the table
 sources:
   - moglen-2010-freedom-in-the-cloud.md
   - winner-1980-do-artifacts-have-politics.md
@@ -17,7 +16,7 @@ status: draft          # rough draft for the author to rewrite in their own voic
 
 ## The cloud is someone else's computer
 
-Your email, photos, and group chats live in data centers owned by a few large companies. "The cloud" makes this sound weightless, but it's a building full of computers, and whoever owns them sets the terms. This release asks who owns the machine, and why it matters.
+Your email, photos, and group chats live in data centers owned by a few large companies. "The cloud" makes this sound weightless, but it's a building full of computers, and whoever owns them sets the terms. This essay asks who owns the machine, and why it matters.
 
 Langdon Winner's answer to ["Do Artifacts Have Politics?"](../bibliography/winner-1980-do-artifacts-have-politics.md) was yes. Some technologies require a certain social order to run them: a nuclear plant needs centralized, hierarchical control, and a rooftop solar panel doesn't. Computing is the same. Routing everyone's data through one company's servers produces one kind of power; a network of small servers run by households and neighborhoods produces another.
 
@@ -37,7 +36,7 @@ People stay on platforms anyway because of switching costs, as Cory Doctorow arg
 
 A server where one person holds every password is still a small platform, just with a friendly owner. Once other people depend on it, the question changes from who owns the machine to who decides how it's run. Two patterns follow.
 
-## Patterns
+## Patterns introduced
 
 ### [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md)
 Illich and Franklin point the same way: people can only control what they can understand. A server only one expert can follow is prescriptive technology with a friendlier face, and members can't fix it or take part in decisions about it.
@@ -50,7 +49,7 @@ If one person holds all the access, the community depends on that person's time,
 > **Therefore:** every shared system has at least two people with full admin access, and both of them use it regularly. Write down where credentials and recovery information live, and make sure both keyholders can reach them without the other's help.
 
 ### How the patterns fit together
-Small Enough to Understand is the larger pattern: a second keyholder is only realistic if the system is small enough to learn. Two Keyholders completes it. [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md), from the `institutions` thread (Release 002), completes Two Keyholders: people who share power need a way to settle problems together.
+Small Enough to Understand is the larger pattern: a second keyholder is only realistic if the system is small enough to learn. Two Keyholders completes it. [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md), from the `institutions` thread, completes Two Keyholders: people who share power need a way to settle problems together.
 
 <!-- Author: the Moglen and Doctorow sections suggest a third pattern about federation and exit, e.g. "Federate, Don't Isolate" or "Exit Built In". -->
 
@@ -58,8 +57,8 @@ Small Enough to Understand is the larger pattern: a second keyholder is only rea
 - The [guide](../guides/first-server.md) builds a small, understandable server: one machine, plain Debian, a few standard tools.
 - The [governance piece](../governance/who-holds-root.md) turns Two Keyholders and Talk Before You Enforce into rules and a charter a group can adopt.
 
-## In this release
-- **Release:** [001 Liberatory Tech: A Shared Server](../releases/001-a-shared-server.md)
-- **Theory & patterns:** [Who owns the machine?](../theory/who-owns-the-machine.md): [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md), [Two Keyholders](../wiki/patterns/two-keyholders.md)
-- **Guide:** [Setting up your first server](../guides/first-server.md)
+## In this thread
+- **Thread:** liberatory-tech · [the table](../index.md)
+- **Guides:** [Setting up your first server](../guides/first-server.md)
 - **Governance:** [Who holds root?](../governance/who-holds-root.md)
+- **Theory:** [Who owns the machine?](../theory/who-owns-the-machine.md)
