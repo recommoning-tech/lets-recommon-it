@@ -67,10 +67,14 @@ Patterns (`wiki/patterns/`) are the main unit; every piece is an essay about the
 - Astro 7 in `site/`; content collections in `site/src/content.config.ts` read the repo folders directly. Remark plugins need `@astrojs/markdown-remark` (Astro 7's default processor is different).
 - Threads and columns are defined in `site/src/lib/site.mjs`. Adding a thread means adding it there and to `planning/concept-map.md`.
 - Every page links to its file on GitHub ("Edit this page"); open cells link to a new GitHub file pre-filled from the matching template.
-- Visual system ("workshop print"), in `site/src/styles/global.css`: manila paper, blue-black ink, one riso-style ink per thread (`ink` in `site.mjs`). Stamps are the one bold element: thread circles, column shapes (■ guides, ▲ governance, ◆ theory), and pattern numbers, with the color printed slightly off-register. Literata for reading, Archivo (wide) for structure; both self-hosted via Fontsource, no third-party font requests.
-- Avoid all-caps labels and "a · b · c" meta strings.
-- Pattern pages follow Iba's order: number, name, introduction, illustration, then sections with "▼ In this context" and "▼ Consequently" separators (CSS on the headings).
-- Illustrations: `wiki/patterns/images/<slug>.svg`, inlined so they take the page's ink and the thread's color. Style guide: `wiki/patterns/images/README.md`. Current drawings are AI-assisted drafts.
+- Visual system, in `site/src/styles/global.css`: a typed memo marked up by hand.
+  - Typed layer: Courier Prime on onionskin paper, with typewriter flourishes (memo fields like `Re:` and `File:`, `§` before section headings, double rules, `* * *`, a `cc:` footer).
+  - Hand layer: Architects Daughter and a red pencil, used only for edits that carry information: draft status (circled), what a page introduces or applies (marginalia), the current page in the menu (circled), open cells ("write this one"), pattern numbers, and the boxed Solution. Hand marks use the shared `#rough` SVG filter.
+  - Thread colors (`ink` in `site.mjs`) appear only as colored-pencil hatching: thread swatches and illustrations.
+  - Dark mode is a blueprint: navy paper, pale ink.
+  - Fonts self-hosted via Fontsource; no third-party requests. Avoid all-caps labels and "a · b · c" meta strings.
+- Pattern pages follow Iba's order: number, name, introduction, illustration, then sections with "▼ In this context" and "▼ Consequently" separators.
+- Illustrations: Alexander-style sketches with mannequin figures, in `wiki/patterns/images/<slug>.svg`, inlined so they take the page's ink and the thread's pencil color. Style guide: `wiki/patterns/images/README.md`. Current drawings are AI-assisted drafts.
 
 ## Workflow
 

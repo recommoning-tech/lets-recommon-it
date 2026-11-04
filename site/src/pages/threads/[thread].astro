@@ -17,12 +17,12 @@ const own = patterns.filter((p) => p.data.thread === thread.id);
   <nav class="crumbs" aria-label="Breadcrumb"><a href={import.meta.env.BASE_URL}>The table</a></nav>
   <h1 class="with-mark"><Mark shape="circle" color={thread.ink} />{thread.name}</h1>
   <p class="lede">{thread.claim}</p>
-  <h2>Pieces</h2>
+  <h2 class="page-h2">Pieces</h2>
   <Table mode="pieces" threads={[thread.id]} />
-  <h2>Patterns</h2>
+  <h2 class="page-h2">Patterns</h2>
   {own.length ? (
     <ul class="pattern-index">
-      {own.map((p) => <li><Num n={p.data.number} ink={thread.ink} /><div><a href={url.pattern(p)}>{p.data.title}</a><p class="intro">{p.data.introduction}</p></div></li>)}
+      {own.map((p) => <li><Num n={p.data.number} /><div><a href={url.pattern(p)}>{p.data.title}</a><p class="intro">{p.data.introduction}</p></div></li>)}
     </ul>
   ) : <p class="empty">No patterns in this thread yet.</p>}
 </Base>

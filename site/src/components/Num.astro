@@ -1,6 +1,6 @@
 ---
-// Pattern number, stamped in the color of the pattern's thread.
-interface Props { n: number; ink: string }
-const { n, ink } = Astro.props;
+// Pattern number, written by hand in red pencil inside a rough circle.
+interface Props { n: number }
+const { n } = Astro.props;
 ---
-<span class="num-stamp" style={`--thread:${ink}`}>{n}</span>
+<span class="num-hand" aria-label={`Pattern ${n}`}><span aria-hidden="true">{n}</span></span>

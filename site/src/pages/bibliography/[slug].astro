@@ -26,7 +26,7 @@ const cited = citedIn.get(source.id) ?? [];
   </article>
   {cited.length > 0 && (
     <section class="sources">
-      <h2>Cited in</h2>
+      <h2 class="page-h2">Cited in</h2>
       <ul>{cited.map((p) => <li><a href={url.piece(p)}>{p.data.title}</a></li>)}</ul>
     </section>
   )}

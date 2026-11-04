@@ -41,8 +41,8 @@ const template = (col: ColumnId, thread: string) =>
               return (
                 <td data-label={c.name}>
                   {items.length ? (
-                    <ul>{items.map((p) => <li><a class="pattern-link" href={url.pattern(p)}><Num n={p.data.number} ink={t.ink} /><span>{p.data.title}</span></a></li>)}</ul>
-                  ) : <span class="empty">None yet</span>}
+                    <ul>{items.map((p) => <li><a class="pattern-link" href={url.pattern(p)}><Num n={p.data.number} /><span>{p.data.title}</span></a></li>)}</ul>
+                  ) : <span class="empty">none yet</span>}
                 </td>
               );
             }
@@ -52,7 +52,7 @@ const template = (col: ColumnId, thread: string) =>
                 {items.length ? (
                   <ul>{items.map((p) => <li><a href={url.piece(p)}>{p.data.title}</a></li>)}</ul>
                 ) : (
-                  <a class="write-here" href={newFileUrl(col, 'new-piece.md', template(col, t.id))} rel="noopener">Write this piece</a>
+                  <a class="write-here" href={newFileUrl(col, 'new-piece.md', template(col, t.id))} rel="noopener">write this one</a>
                 )}
               </td>
             );

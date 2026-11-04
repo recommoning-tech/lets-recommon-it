@@ -4,8 +4,7 @@ import Mark from '../../components/Mark.astro';
 import Num from '../../components/Num.astro';
 import Illustration from '../../components/Illustration.astro';
 import { render } from 'astro:content';
-import { site, url, editUrl, columnOf, threadOf, type Pattern } from '../../lib/content';
-import { BASE } from '../../lib/site.mjs';
+import { site, url, editUrl, columnOf, threadOf, repoPath, type Pattern } from '../../lib/content';
 
 export async function getStaticPaths() {
   const { patterns } = await site();
@@ -24,29 +23,36 @@ const larger = rel(d.larger_patterns);
 const smaller = rel(d.smaller_patterns);
 ---
 <Base title={d.title} description={d.introduction} edit={editUrl(pattern)}>
-  <nav class="crumbs" aria-label="Breadcrumb"><a href={`${BASE}patterns/`}>Patterns</a> <span aria-hidden="true">/</span> <a href={url.thread(d.thread)}>{thread.name}</a> <span aria-hidden="true">/</span> {column.name}</nav>
   <article class="pattern" style={`--thread:${thread.ink}`}>
-    <header class="pattern-head">
-      <Num n={d.number} ink={thread.ink} />
-      <h1>{d.title}</h1>
-      {d.status === 'draft' && <span class="badge">Draft</span>}
+    <header class="memo">
+      <div class="pattern-title"><Num n={d.number} /><h1>{d.title}</h1></div>
+      <p class="pattern-intro">{d.introduction}</p>
+      <dl class="memo-fields">
+        <dt>Thread:</dt>
+        <dd><span class="tag"><Mark shape="circle" color={thread.ink} /><a href={url.thread(d.thread)}>{thread.name}</a></span></dd>
+        <dt>Level:</dt>
+        <dd><span class="tag"><Mark shape={column.mark as any} />{d.level}</span>, in the {column.name.toLowerCase()} column</dd>
+        <dt>File:</dt>
+        <dd><code>{repoPath(pattern)}</code></dd>
+      </dl>
+      <div class="margin-notes">
+        {d.status === 'draft' && <p class="note note--draft">draft</p>}
+        {intro ? <p class="note">explained in <a href={url.piece(intro)}>{intro.data.title}</a></p> : <p class="note">no piece explains this yet: write one?</p>}
+      </div>
     </header>
-    <p class="pattern-intro">{d.introduction}</p>
-    {d.image && <Illustration file={d.image} ink={thread.ink} />}
+    {d.image && <Illustration file={d.image} ink={thread.ink} n={d.number} />}
     <div class="pattern-body"><Content /></div>
     <aside class="connections" aria-label="Connections">
       <h2>Connections</h2>
       <dl>
-        <dt>Thread and level</dt>
-        <dd><span class="tag"><Mark shape="circle" color={thread.ink} /><a href={url.thread(d.thread)}>{thread.name}</a></span> <span class="tag"><Mark shape={column.mark as any} />{d.level}</span></dd>
         <dt>Introduced in</dt>
-        <dd>{intro ? <a href={url.piece(intro)}>{intro.data.title}</a> : <span class="empty">Not written yet: a {column.name.toLowerCase()} piece in this thread</span>}</dd>
+        <dd>{intro ? <a href={url.piece(intro)}>{intro.data.title}</a> : <span class="empty">not written yet: a {column.name.toLowerCase()} piece in this thread</span>}</dd>
         <dt>Applied in</dt>
-        <dd>{applied.length ? applied.map((p, i) => <>{i > 0 && ', '}<a href={url.piece(p)}>{p.data.title}</a></>) : <span class="empty">Not applied elsewhere yet</span>}</dd>
+        <dd>{applied.length ? applied.map((p, i) => <>{i > 0 && ', '}<a href={url.piece(p)}>{p.data.title}</a></>) : <span class="empty">not applied elsewhere yet</span>}</dd>
         <dt>Larger patterns</dt>
-        <dd>{larger.length ? larger.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : <span class="empty">None yet</span>}</dd>
+        <dd>{larger.length ? larger.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : <span class="empty">none yet</span>}</dd>
         <dt>Smaller patterns</dt>
-        <dd>{smaller.length ? smaller.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : <span class="empty">None yet</span>}</dd>
+        <dd>{smaller.length ? smaller.map((p, i) => <>{i > 0 && ', '}<a href={url.pattern(p)}>{p.data.title}</a></>) : <span class="empty">none yet</span>}</dd>
       </dl>
     </aside>
   </article>

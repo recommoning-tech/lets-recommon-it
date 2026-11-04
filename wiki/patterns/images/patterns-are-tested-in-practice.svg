@@ -1,30 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
-<title id="t">Patterns Are Tested in Practice</title>
-<desc id="d">A person holds a pattern card up beside a working server, checking whether the card matches what is really there.</desc>
-<style>.il-i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.il-f{fill:currentColor}.il-t{fill:var(--thread,#2f5da8)}.il-p{fill:var(--paper,#ece5d1)}</style>
-<path class="il-i" d="M20 262 H380" opacity=".35"/>
-<g class="il-t" transform="translate(3 2)">
-<rect x="246" y="150" width="64" height="112" rx="5"/>
-<path transform="translate(150 262) scale(1)" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
-<rect x="206" y="132" width="34" height="26" rx="2" transform="rotate(-6 223 145)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-patterns-are-tested-in-practice d-patterns-are-tested-in-practice">
+<title id="t-patterns-are-tested-in-practice">Patterns Are Tested in Practice</title>
+<desc id="d-patterns-are-tested-in-practice">Sketch: a mannequin holds a pattern card up beside a working server. Labels read "pattern", "practice", and "does it fit? if not, revise".</desc>
+<defs><filter id="rough-patterns-are-tested-in-practice" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="31"/><feDisplacementMap in="SourceGraphic" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+<style>.sk-i{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.sk-g{fill:none;stroke:currentColor;stroke-width:.9;opacity:.38;stroke-linecap:round}.sk-h{fill:none;stroke:var(--thread,#2f5da8);stroke-width:1.4;stroke-linecap:round;opacity:.85}.sk-t{fill:currentColor;font-family:'Architects Daughter',cursive;font-size:13px}</style>
+<g filter="url(#rough-patterns-are-tested-in-practice)">
+<path class="sk-g" d="M30 262 L370 262"/>
+<path class="sk-i" d="M259.8 150.1 L320.3 149.7 L318.3 148 L318 264.1 L320.1 261.8 L259.7 261.9 L261.8 264 L262.3 148.3"/>
+<path class="sk-i" opacity=".55" d="M260.9 149.3 L320 149.5 L318.9 147.2 L319.4 263.2 L321 263.2 L260.1 262.7 L262.8 262.8 L262.6 148.3"/>
+<path class="sk-i" d="M267.9 167.7 L311.8 168"/>
+<path class="sk-i" d="M268.4 185.8 L311.9 186.2"/>
+<path class="sk-i" d="M267.8 203.8 L312.1 204.1"/>
+<path class="sk-i" d="M267.6 221.9 L312 222.1"/>
+<path class="sk-i" d="M267.7 239.8 L312.2 239.8"/>
+<path class="sk-h" d="M265.1 160.4 L272.5 152.3"/>
+<path class="sk-h" d="M265 168 L278 152.2"/>
+<path class="sk-h" d="M266 173.1 L286.3 153.4"/>
+<path class="sk-h" d="M264.5 181 L292.4 152.4"/>
+<path class="sk-h" d="M264.5 188.2 L299.8 153"/>
+<path class="sk-h" d="M265.2 195.3 L306.7 153.4"/>
+<path class="sk-h" d="M265.4 202.1 L314.8 152.4"/>
+<path class="sk-h" d="M265.7 209.1 L315.6 158.4"/>
+<path class="sk-h" d="M265.8 215.3 L315.2 167"/>
+<path class="sk-h" d="M265.1 223.5 L315.6 173.1"/>
+<path class="sk-h" d="M265.5 229.4 L315.5 179.5"/>
+<path class="sk-h" d="M264.1 237.5 L314.6 186.9"/>
+<path class="sk-h" d="M264.6 244.8 L315.1 193.7"/>
+<path class="sk-h" d="M265.4 250.3 L315.8 201.1"/>
+<path class="sk-h" d="M265.7 258.9 L314.9 207.5"/>
+<path class="sk-h" d="M271.8 258.7 L315.9 215.6"/>
+<path class="sk-h" d="M278.9 258.7 L315.4 222.9"/>
+<path class="sk-h" d="M284 258 L315.8 228.2"/>
+<path class="sk-h" d="M291.7 259.1 L314.6 235.6"/>
+<path class="sk-h" d="M298.3 258.9 L315.6 242.8"/>
+<path class="sk-h" d="M305.3 259.6 L314.4 249.2"/>
+<path class="sk-h" d="M312.3 258.5 L315.5 257.9"/>
+<path class="sk-i" d="M117.7 158.9 L115.7 157.9 L114.1 156.5 L113 154.8 L111.4 152.4 L111.9 150.1 L111.4 147.6 L111.7 145.1 L112.6 142.9 L114.8 140.9 L116 139.9 L118.1 138.5 L120.2 138.1 L122.1 138.5 L124.1 140.3 L125.5 141 L127.2 143.4 L128.3 145.5 L128.9 148 L128.8 150.6 L128 152.8 L127.1 155.5 L125.1 157.2 L123.6 158.8 L121.7 159 L119.7 160 L117.8 158.6 L116.1 158 L113.7 156.8"/>
+<path class="sk-i" opacity=".55" d="M116.1 158.5 L114.3 157 L113 154.8 L111.5 152.8 L112.1 150.5 L111.5 148.1 L112.3 145.9 L112.5 143.3 L113.6 142.1 L115.1 140.2 L117 139.6 L119 138.8 L121 138 L122.9 139.6 L124.6 140.7 L125.9 141.6 L127.4 143.5 L128.1 145.7 L128.6 148.1 L128.6 150.4 L128 152.9 L126.8 154.9 L125.5 156.3 L124 157.9 L122.5 159 L120.4 159.7 L118.5 159 L116.9 158.1 L114.9 157"/>
+<path class="sk-g" d="M123 139 Q125.5 149 123 159 M112 148 Q120 150.5 128 148"/>
+<path class="sk-i" d="M119.9 160 L119.8 166.3"/>
+<path class="sk-i" d="M105.3 167.1 L134.9 166.6 L131.2 190 L108.7 189.9 Z"/>
+<path class="sk-i" opacity=".55" d="M104.8 167.3 L135.2 166.2 L131.6 189.3 L107.7 188.9 Z"/>
+<path class="sk-i" d="M110 197.9 L129.8 198.3 L127.8 210.6 L112.3 211.2 Z"/>
+<path class="sk-i" opacity=".55" d="M110.2 198.7 L130.3 197.9 L127 210.3 L112 210.2 Z"/>
+<path class="sk-g" d="M120 162 L120 214"/>
+<path class="sk-i" d="M122.4 194.7 L122.5 195.1 L121.7 195.6 L120.9 196.2 L120.7 196 L120 196.3 L119.3 197 L118.9 196.7 L118.4 195.9 L118.4 195.7 L117.6 194.8 L117.9 194.3 L117.1 193.7 L118.1 193.1 L118.4 192.5 L118.7 192.2 L119.1 191.3 L119.3 191.1 L120 191.6 L120.5 191.4 L121 191.7 L121.6 192.4 L122.4 192.9 L122.9 193.2 L122.9 193.7 L121.9 194.3 L122.8 194.8 L121.7 195.4 L121.3 195.9"/>
+<path class="sk-i" d="M106.8 167.6 L108.2 168.5 L108.3 169.4 L108.5 170 L108 170.6 L108.1 171.5 L107.2 172.1 L106.4 172.4 L106.3 172.5 L105.3 172.6 L104.6 173.1 L104.1 172.4 L103.4 172.8 L102.8 171.7 L102.7 171.1 L101.8 170.8 L102.1 170 L102.3 169.4 L102.2 168.7 L102.6 168.3 L103.6 167.1 L103.9 166.7 L104.6 167 L105.4 166.5 L106 167.3 L106.7 167.3 L107.5 167.8 L108.1 168.9 L107.6 169.4"/>
+<path class="sk-i" d="M101.5 169.4 L100.6 189.1"/>
+<path class="sk-i" d="M108 170.2 L105.2 189.5"/>
+<path class="sk-g" d="M105.24 167.72 L102.76 191.28"/>
+<path class="sk-i" d="M102.9 191 L102.2 191.7 L101.7 190.8 L101.1 191.1 L100.7 190.2 L100.4 189.8 L100.3 189.2 L100.7 188.5 L100.6 187.8 L101 187.8 L101.5 186.7 L101.7 186.8 L102.4 186.2 L103.2 185.9 L103.6 186.3 L104.5 186.5 L104.5 186.9 L105.2 187.5 L105.1 188.3 L105.5 188.9 L105.9 189.6 L105.5 189.9 L104.6 190.7 L104.8 190.7 L104.2 191.2 L103.4 191.2 L102.9 191.7 L102.1 191.9 L101.5 191.6"/>
+<path class="sk-i" d="M100.1 188.4 L97.9 210.1"/>
+<path class="sk-i" d="M105.7 189.5 L102.3 210"/>
+<path class="sk-g" d="M103.36 186.48 L99.64 212.52"/>
+<path class="sk-i" d="M98.9 206.2 L99.8 205.8 L100.7 205.7 L101.4 205.6 L102.1 206.6 L103.2 207.4 L103.1 208.3 L103.6 209.2 L103.3 210.4 L103.2 211.5 L103 212.3 L102.8 213.2 L101.9 214 L101.1 214.5 L100.1 214.7 L99.3 214.8 L98.4 214.5 L97.4 213.2 L97 212.7 L96.6 211.7 L96.2 210.6 L96 209.6 L96.8 208.5 L96.5 207.8 L97.8 206.7 L98.5 206.2 L99 206.2 L99.9 205.7 L100.9 205.1"/>
+<path class="sk-i" d="M132.3 170.6 L131.6 170 L131.9 169.3 L132 168.5 L133 167.6 L133.2 167.8 L134 167.2 L134.6 167.5 L135.4 166.9 L136.1 167.6 L136.6 167.8 L137.2 167.9 L137.6 168.3 L137.9 169.3 L138.4 170 L137.5 170.8 L138 171.4 L136.9 171.8 L136.9 172.3 L136 172.7 L135.3 172.4 L134.6 172.7 L133.7 173.1 L133.2 172.8 L132.8 171.8 L132 171.2 L132.2 170.8 L132.6 170 L132.6 169.3"/>
+<path class="sk-i" d="M134.1 172.8 L149.1 178.2"/>
+<path class="sk-i" d="M136.2 167.1 L151.2 173.4"/>
+<path class="sk-g" d="M133.2 169.28 L151.8 176.72"/>
+<path class="sk-i" d="M152.1 174.3 L152.3 175.1 L152.8 175.4 L153.2 176.1 L153 176.7 L152 177.4 L151.6 177.4 L151.5 177.9 L151 178.8 L150.3 178.6 L149.5 178.4 L149.2 178.6 L148.3 177.8 L148.2 177.7 L147.5 176.9 L147.6 176.6 L147.4 175.9 L147.8 175.4 L147.8 175 L148 174.2 L148.6 174.2 L149 173.2 L149.8 173.6 L150.4 173.9 L151 173.8 L151.8 174.3 L151.6 174 L152.4 174.9 L152.9 175.6"/>
+<path class="sk-i" d="M151 178.2 L178.9 165.5"/>
+<path class="sk-i" d="M148.7 173.2 L177.6 162.5"/>
+<path class="sk-g" d="M146.64 177.44 L181.36 162.56"/>
+<path class="sk-i" d="M178.7 168.7 L177.7 168.9 L177 168.6 L176 167.5 L175.1 167.3 L175.4 166.1 L175 165.2 L174.7 164.2 L174.4 163.2 L174.5 162.2 L175.4 161.4 L175.5 160.6 L176.5 159.6 L177.3 159.9 L178.3 159 L179.1 159.8 L179.8 159.9 L180.7 160.6 L181 162 L181.7 162.9 L181.6 163.8 L181.4 165 L181.8 165.9 L180.8 166.7 L180.3 167.3 L179.3 168.4 L178.5 167.9 L177.6 167.9 L176.8 168.6"/>
+<path class="sk-i" d="M110.5 208.4 L111.6 207.7 L111.6 207.4 L112 206.6 L113 205.8 L113.4 205.7 L114.2 205.9 L114.9 206 L115.7 206.5 L115.9 206.6 L116.8 207.5 L116.4 208 L116.8 208.8 L116.5 209.7 L117.1 210.5 L116.6 210.8 L115.6 211.1 L115.2 212 L114.5 212.3 L113.8 212.4 L113 211.6 L112.7 211.4 L111.8 211 L111.7 210.4 L111.6 209.8 L111.2 209.1 L110.7 208.5 L111.2 207.5 L111.8 207.3"/>
+<path class="sk-i" d="M110.6 208.7 L108.6 234.5"/>
+<path class="sk-i" d="M117.5 209 L115.1 235.6"/>
+<path class="sk-g" d="M114.24 205.88 L111.76 238.12"/>
+<path class="sk-i" d="M114.3 233.2 L114.2 234.2 L115.2 234.8 L115.1 235.5 L114.4 236.2 L114 236.7 L114.1 237.1 L113.2 237.2 L112.6 237.3 L111.9 238.1 L111.4 237.3 L110.7 237.2 L110 237.3 L109.5 236.8 L109.8 235.7 L108.9 235.2 L109.1 234.5 L109.2 234.1 L109.8 233.5 L109.8 233.1 L111 232.3 L111.5 232.5 L112.1 232.6 L112.8 231.9 L113.4 232.6 L113.8 233.2 L114.5 233.2 L114.3 234.1 L115.1 234.8"/>
+<path class="sk-i" d="M109.2 234.5 L109 258.2"/>
+<path class="sk-i" d="M115.2 234.9 L113.5 257.9"/>
+<path class="sk-g" d="M112.12 232.24 L110.88 260.76"/>
+<path class="sk-i" d="M108.7 257.8 L119.7 261.7 L108.4 261.7"/>
+<path class="sk-i" d="M123.5 208.4 L123.9 207.7 L123.3 206.8 L124.4 207 L125.1 206 L125.7 205.7 L126.3 206.2 L127.1 205.8 L127.7 206.3 L128 207.1 L129 207.7 L129.2 208.4 L128.7 209.1 L128.6 209.8 L128.6 210.3 L128.1 210.8 L127.5 211.9 L126.8 211.5 L126.3 212 L125.6 212.6 L124.9 212.1 L124.2 211.8 L123.8 211.3 L123.4 210.5 L122.9 209.6 L123 208.9 L123.6 208.2 L123 207.6 L123.6 206.7"/>
+<path class="sk-i" d="M122.1 209.4 L124.8 235.1"/>
+<path class="sk-i" d="M129.5 208.6 L130.8 234.5"/>
+<path class="sk-g" d="M125.76 205.88 L128.24 238.12"/>
+<path class="sk-i" d="M128.2 237.8 L127.7 238.3 L126.9 237.3 L126.1 237.1 L125.8 237.2 L125.4 236.5 L125.4 235.8 L124.9 235 L125.5 234.2 L125.6 233.6 L126.2 233 L126.3 233.2 L127.2 232.4 L127.7 231.7 L128.4 232.6 L129.1 232.3 L129.8 232.5 L130.4 233.1 L131 233.8 L131.1 234.4 L130.2 235.1 L130.5 235.6 L130.1 236.6 L130.3 236.8 L129.5 237.5 L129 237.8 L128.3 237.6 L127.5 238.2 L127 237.9"/>
+<path class="sk-i" d="M124.8 235.2 L127 258.4"/>
+<path class="sk-i" d="M130.8 235.2 L131.6 257.6"/>
+<path class="sk-g" d="M127.88 232.24 L129.12 260.76"/>
+<path class="sk-i" d="M127.3 258.1 L138.3 261.8 L126.2 261.8"/>
+<path class="sk-i" d="M174.2 138.1 L212.2 137.8 L210.4 135.9 L209.8 164.3 L212.2 161.9 L174.1 162 L176 164.1 L176 135.8"/>
+<path class="sk-h" d="M177 143 L181.5 140"/>
+<path class="sk-h" d="M179 147.9 L185.9 139.8"/>
+<path class="sk-h" d="M178.4 151.2 L189 140.5"/>
+<path class="sk-h" d="M177.6 156.7 L194.3 140.5"/>
+<path class="sk-h" d="M178 160.6 L198 139.7"/>
+<path class="sk-h" d="M183 160.8 L202.3 140.3"/>
+<path class="sk-h" d="M185.1 160.9 L205 139.4"/>
+<path class="sk-h" d="M189.3 159.8 L207.6 142.1"/>
+<path class="sk-h" d="M193.9 160.2 L208.6 146.7"/>
+<path class="sk-h" d="M197.5 159.5 L207.5 150.9"/>
+<path class="sk-h" d="M201.7 160.4 L208.4 154.7"/>
+<path class="sk-h" d="M205.9 159.9 L208.1 158.5"/>
+<path class="sk-i" d="M214 112 Q245 132 256 160"/>
+<path class="sk-i" d="M250 154.7 L256.3 160.3 L256.5 152"/>
 </g>
-<g>
-<rect class="il-i" x="246" y="150" width="64" height="112" rx="5"/>
-<path class="il-i" stroke-width="2" d="M256 172 H300"/>
-<path class="il-i" stroke-width="2" d="M256 194 H300"/>
-<path class="il-i" stroke-width="2" d="M256 216 H300"/>
-<path class="il-i" stroke-width="2" d="M256 238 H300"/>
-<g transform="translate(150 262) scale(1)">
-  <path class="il-i" d="M-16 -92 Q0 -100 16 -92 L20 -44 Q0 -40 -20 -44 Z"/>
-  <circle class="il-p il-i" cx="0" cy="-114" r="14"/>
-  <circle class="il-f" cx="-1" cy="-116" r="1.8"/><circle class="il-f" cx="9" cy="-116" r="1.8"/>
-  <path class="il-i" stroke-width="2.2" d="M0 -104 H8"/>
-  <path class="il-i" d="M-9 -44 L-11 0 M9 -44 L11 0"/>
-  <path class="il-i" d="M-15 -88 L-22 -66 L-24 -46 M15 -88 L34 -88 L60 -96"/>
-  <circle class="il-p il-i" stroke-width="2.4" cx="-24" cy="-46" r="3.6"/><circle class="il-p il-i" stroke-width="2.4" cx="60" cy="-96" r="3.6"/>
-</g>
-<rect class="il-i" x="206" y="132" width="34" height="26" rx="2" transform="rotate(-6 223 145)"/>
-<path class="il-i" stroke-width="2" d="M212 140 H234 M212 147 H228" transform="rotate(-6 223 145)"/>
-<path class="il-i" stroke-width="2" d="M168 104 Q176 92 186 100 Q192 106 184 112 L182 118 M182 126 V127"/>
-</g>
+<text class="sk-t" x="290" y="136" text-anchor="middle" font-size="13">practice</text>
+<text class="sk-t" x="193" y="130" text-anchor="middle" font-size="13">pattern</text>
+<text class="sk-t" x="222" y="62" text-anchor="middle" font-size="13">does it fit?</text>
+<text class="sk-t" x="222" y="78" text-anchor="middle" font-size="11">if not, revise</text>
 </svg>

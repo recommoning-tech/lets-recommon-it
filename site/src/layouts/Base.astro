@@ -1,7 +1,8 @@
 ---
-import '@fontsource-variable/literata/opsz.css';
-import '@fontsource-variable/literata/opsz-italic.css';
-import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource/courier-prime/400.css';
+import '@fontsource/courier-prime/400-italic.css';
+import '@fontsource/courier-prime/700.css';
+import '@fontsource/architects-daughter/400.css';
 import '../styles/global.css';
 import EditLink from '../components/EditLink.astro';
 import { BASE, REPO_URL } from '../lib/site.mjs';
@@ -27,6 +28,13 @@ const pageTitle = title === "Let's Recommon IT" ? title : `${title} | Let's Reco
     <link rel="icon" href={`${BASE}favicon.svg`} type="image/svg+xml" />
   </head>
   <body>
+    <!-- Shared filter that makes drawn marks look hand-made. -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7" />
+        <feDisplacementMap in="SourceGraphic" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="site-name" href={BASE}>Let's Recommon IT</a>
@@ -38,10 +46,11 @@ const pageTitle = title === "Let's Recommon IT" ? title : `${title} | Let's Reco
     </header>
     <main id="main">
       <slot />
-      {edit && <p class="page-edit"><EditLink href={edit} /></p>}
+      {edit && <p class="page-edit"><EditLink href={edit} label="Mark up this page on GitHub" /></p>}
     </main>
     <footer class="site-footer">
-      <p>Writing is <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> and code is <a href="https://opensource.org/license/mit">MIT</a>. Everything here can be copied, changed, and shared back.</p>
+      <p class="typed-rule" aria-hidden="true">* * *</p>
+      <p>cc: everyone. Writing is <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> and code is <a href="https://opensource.org/license/mit">MIT</a>, so all of it can be copied, changed, and shared back.</p>
       <p><a href={REPO_URL}>Source and contributions on GitHub</a></p>
     </footer>
   </body>
