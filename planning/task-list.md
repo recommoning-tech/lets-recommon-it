@@ -34,8 +34,8 @@
 - [x] Static site generator: Astro (`site/`)
 - [x] Hosting: GitHub Pages, deployed from `main`; repo made public
 - [x] Generated table, thread footers, pattern connections, bibliography backlinks; front matter validated at build
-- [x] Visual identity: thread inks, level marks, type ("workshop print")
-- [x] Pattern illustrations: style guide and first set (AI-assisted drafts)
+- [x] Visual identity: typed memo marked up by hand; blueprint dark mode
+- [x] Pattern illustrations: style guide, pattern-illustration skill, and a set of AI-assisted drafts in drafter's perspective
 - [ ] Pattern illustrations redrawn or reviewed by a person
 - [ ] Bibliography index filterable by thread
 - [ ] Domain, RSS
