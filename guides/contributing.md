@@ -51,7 +51,7 @@ Open [the table](../index.md) on the website. Pick a thread (row) and a column. 
 
 ### 3. Check the existing patterns
 
-The [pattern table](https://recommoning-tech.github.io/lets-recommon-it/patterns/) lists every pattern with its thread and level. Apply existing patterns by name before inventing new ones.
+The [pattern table](https://lets-recommon-it.com/patterns/) lists every pattern with its thread and level. Apply existing patterns by name before inventing new ones.
 
 ## Contribute a pattern
 
