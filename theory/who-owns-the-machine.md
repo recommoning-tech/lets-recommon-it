@@ -41,12 +41,12 @@ A server where one person holds every password is still a small platform, just w
 ### [Small Enough to Understand](../wiki/patterns/small-enough-to-understand.md)
 Illich and Franklin point the same way: people can only control what they can understand. A server only one expert can follow is prescriptive technology with a friendlier face, and members can't fix it or take part in decisions about it.
 
-> **Therefore:** keep the system small enough that a second member could learn to run it in a weekend. Prefer well-documented, widely used software. Add complexity only when a real need appears, and write down why.
+> **Therefore:** keep the system small enough that a second member could learn to run it in a weekend, by adding complexity only when a real need appears.
 
 ### [Two Keyholders](../wiki/patterns/two-keyholders.md)
 If one person holds all the access, the community depends on that person's time, health, and goodwill, and the friendly owner ends up deciding everything by default.
 
-> **Therefore:** every shared system has at least two people with full admin access, and both of them use it regularly. Write down where credentials and recovery information live, and make sure both keyholders can reach them without the other's help.
+> **Therefore:** give at least two people full admin access to every shared system, and make sure both of them use it regularly.
 
 ### How the patterns fit together
 Small Enough to Understand is the larger pattern: a second keyholder is only realistic if the system is small enough to learn. Two Keyholders completes it. [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md), from the `institutions` thread, completes Two Keyholders: people who share power need a way to settle problems together.

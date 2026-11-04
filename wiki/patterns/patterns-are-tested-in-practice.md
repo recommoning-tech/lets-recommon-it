@@ -1,32 +1,49 @@
 ---
 title: "Patterns Are Tested in Practice"
 number: 6
-thread: institutions
+introduction: "A pattern is a claim until someone uses it."
+image: ""
+thread: design-patterns
 level: metaconstitutional
-introduced_in: theory/this-repository-is-a-commons.md
+introduced_in: theory/a-pattern-language-for-community-tech.md
 applied_in:
   - guides/contributing.md
   - governance/how-this-project-is-run.md
+  - guides/writing-a-pattern.md
+  - governance/who-decides-what-becomes-a-pattern.md
 larger_patterns: [every-thread-at-every-level]
-smaller_patterns: []
+smaller_patterns: [workshop-the-pattern]
 status: draft
 ---
+
+*A pattern is a claim until someone uses it.*
 
 ## Context
 A pattern language that grows out of essays, guides, and reading, as this one does.
 
 ## Problem
-Patterns that come only from argument drift toward abstraction. They sound right but nobody has checked whether they work. Over time the language fills with good intentions instead of tested solutions.
+Patterns that come only from argument drift toward abstraction. They sound right, but nobody has checked whether they work, and over time the language fills with good intentions instead of tested solutions.
 
-## Discussion
-Alexander's design method starts from fit: what actually goes wrong in real use ([*Notes on the Synthesis of Form*](../../bibliography/alexander-1964-notes-on-the-synthesis-of-form.md)). His patterns came from observing places that worked and places that failed, and he favored piecemeal growth through repair over master plans ([*The Timeless Way of Building*](../../bibliography/alexander-1979-timeless-way-of-building.md)). On this site a pattern is introduced in the piece at its level. Applying it somewhere else, in another thread or at another level, is how it meets real servers and real groups.
+## Forces
+- Alexander's design method starts from fit: what actually goes wrong in real use ([*Notes on the Synthesis of Form*](../../bibliography/alexander-1964-notes-on-the-synthesis-of-form.md)). His patterns came from observing places that worked and places that failed ([*The Timeless Way of Building*](../../bibliography/alexander-1979-timeless-way-of-building.md)).
+- Iba's lab mines patterns from experience, through group reflection and interviews with practitioners ([Iba, "Pattern Language 3.0"](../../bibliography/iba-2016-pattern-language-3.md)).
+- Writing from reading is faster than writing from practice, and an essay rewards a pattern that sounds right.
 
-## Therefore
-**Apply every pattern by name in at least one piece besides the one that introduces it, preferably at a different level or in a different thread. When a pattern doesn't fit what happens in practice, revise it and note why.**
+## Solution
+**Therefore, apply every pattern by name in at least one piece besides the one that introduces it, preferably at another level or in another thread, and revise the pattern when it doesn't fit.**
+
+## Actions
+- List each applying piece in the pattern's `applied_in`.
+- When a pattern doesn't fit, revise it and say why in the commit message.
+- Mine patterns from your own experience or from interviews, not only from reading.
+
+## Consequences
+- **Positive:** the language fills with solutions that have met real servers and real groups, and failures improve the patterns.
+- **Negative:** a new pattern waits for a second piece before it counts as tested, and a pattern applied only by its own author is still lightly tested.
 
 ## Connections
-- **Thread and level:** institutions, metaconstitutional
-- **Introduced in:** [This repository is a commons](../../theory/this-repository-is-a-commons.md)
-- **Applied in:** [Writing for Let's Recommon IT](../../guides/contributing.md), [How this project is run](../../governance/how-this-project-is-run.md)
+- **Thread and level:** design-patterns, metaconstitutional
+- **Introduced in:** [A pattern language for community tech](../../theory/a-pattern-language-for-community-tech.md)
+- **Applied in:** [Writing for Let's Recommon IT](../../guides/contributing.md), [How this project is run](../../governance/how-this-project-is-run.md), [Writing a pattern](../../guides/writing-a-pattern.md), [Who decides what becomes a pattern?](../../governance/who-decides-what-becomes-a-pattern.md)
 - **Larger patterns:** [Every Thread at Every Level](every-thread-at-every-level.md)
-- **Smaller patterns:** none yet
+- **Smaller patterns:** [Workshop the Pattern](workshop-the-pattern.md)

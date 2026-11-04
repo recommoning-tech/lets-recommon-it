@@ -11,7 +11,7 @@ How do we build and run information technology at **community scale**, so it is 
 |---|---|---|---|
 | `institutions` | Institutional analysis (primary framework) | Rules can be analyzed and designed. IAD breaks any governed situation into participants, positions, rules, and levels of choice | Ostrom, *Understanding Institutional Diversity*; Crawford & Ostrom; Ostrom (Nobel lecture); Ostrom, Walker & Gardner; Ostrom, *Governing the Commons* |
 | `liberatory-tech` | Liberatory / convivial technology | Technology liberates only when its scale and control are local and democratic | Bookchin; Illich; Franklin; Winner |
-| `design-patterns` | Design & patterns | Good systems grow piecemeal from shared patterns that users can apply themselves | Alexander; Bollier & Helfrich |
+| `design-patterns` | Design & patterns | Good systems grow piecemeal from shared patterns that users can apply themselves | Alexander; Iba; Bollier & Helfrich |
 | `commons` | Commons & enclosure | Communities can hold resources in common; enclosure is the recurring threat | Ostrom, *Governing the Commons*; Hess & Ostrom; Bollier & Helfrich; Linebaugh; Federici |
 | `big-tech-critique` | Big Tech critique | Centralized platforms decay and extract; lock-in is the mechanism | Doctorow; Marx; Graeber; Winner |
 | `labor-care` | Labor, care & bureaucracy | Maintenance is undervalued care work; rules can become bureaucracy | Federici; Graeber; Eghbal; Franklin |

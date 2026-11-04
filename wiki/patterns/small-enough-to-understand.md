@@ -1,6 +1,8 @@
 ---
 title: "Small Enough to Understand"
 number: 2
+introduction: "People can only govern what they can understand."
+image: ""
 thread: liberatory-tech
 level: metaconstitutional
 larger_patterns: []
@@ -11,19 +13,31 @@ applied_in:
 status: draft
 ---
 
+*People can only govern what they can understand.*
+
 ## Context
 Choosing hardware, software, and architecture for a household or community system.
 
 ## Problem
-Powerful, complex systems are tempting. They promise more features and scale. But a system that only one expert can understand can only be maintained by that expert, and members can't take part in decisions about something they can't understand.
+Powerful, complex systems promise more features and scale. But a system that only one expert understands can only be maintained by that expert, and members can't take part in decisions about something they can't follow.
 
-## Discussion
-Illich argued that tools past a certain size stop serving people and start controlling them ([*Tools for Conviviality*](../../bibliography/illich-1973-tools-for-conviviality.md)). Franklin's holistic technologies keep the whole process within the reach of the people doing the work ([*The Real World of Technology*](../../bibliography/franklin-1990-real-world-of-technology.md)). Alexander favored piecemeal growth over master plans ([*The Timeless Way of Building*](../../bibliography/alexander-1979-timeless-way-of-building.md)).
+## Forces
+- Tools past a certain size stop serving people and start controlling them ([*Tools for Conviviality*](../../bibliography/illich-1973-tools-for-conviviality.md)).
+- Holistic technologies keep the whole process within reach of the people doing the work ([*The Real World of Technology*](../../bibliography/franklin-1990-real-world-of-technology.md)).
+- Features and scale are visible up front. The cost of complexity shows up later, when the expert isn't available.
+- Good places grow piecemeal, not from master plans ([*The Timeless Way of Building*](../../bibliography/alexander-1979-timeless-way-of-building.md)).
 
-For a community server, this means: one machine before a cluster, a plain Debian install before an orchestration platform, a few well-documented services before many. Growth should come from real need, one piece at a time.
+## Solution
+**Therefore, keep the system small enough that a second member could learn to run it in a weekend, by adding complexity only when a real need appears.**
 
-## Therefore
-**Keep the system small enough that a second member could learn to run it in a weekend.** Prefer well-documented, widely used software. Add complexity only when a real need appears, and write down why.
+## Actions
+- One machine before a cluster, a plain Debian install before an orchestration platform, a few well-documented services before many.
+- Prefer well-documented, widely used software.
+- Write down why each new piece of complexity was added.
+
+## Consequences
+- **Positive:** more members can maintain the system and take part in decisions about it. [Two Keyholders](two-keyholders.md) becomes realistic.
+- **Negative:** some features and scale come later or not at all, and members may get less convenience than a commercial service offers.
 
 ## Connections
 - **Thread and level:** liberatory-tech, metaconstitutional

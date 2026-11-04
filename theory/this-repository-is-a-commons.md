@@ -10,7 +10,6 @@ sources:
   - alexander-1979-timeless-way-of-building.md
 patterns:
   - wiki/patterns/every-thread-at-every-level.md
-  - wiki/patterns/patterns-are-tested-in-practice.md
 patterns_applied: []
 status: draft          # rough draft for the author to rewrite in their own voice
 ---
@@ -70,22 +69,17 @@ Every piece on the site is an essay about patterns. A pattern, as [Christopher A
 
 Here, each pattern has a thread and a level, which places it in one cell of the table. A guide explains operational patterns, a governance piece explains collective-choice and constitutional ones, and a theory essay explains metaconstitutional ones. The prose gives the reasons and examples. The patterns are what a reader takes away and reuses. Patterns themselves, including patterns about patterns, have their own thread: `design-patterns`.
 
-[Sue Crawford and Elinor Ostrom's grammar of institutions](../bibliography/crawford-ostrom-1995-grammar-of-institutions.md) connects the two traditions. In their terms, a statement with who, what, and when is a shared strategy; add "must" or "must not" and it's a norm; add a consequence and it's a rule. Most of a pattern's **Therefore** lines are strategies or norms: advice a group can adopt, which becomes a rule when the group attaches a consequence.
+[Sue Crawford and Elinor Ostrom's grammar of institutions](../bibliography/crawford-ostrom-1995-grammar-of-institutions.md) connects the two traditions. In their terms, a statement with who, what, and when is a shared strategy; add "must" or "must not" and it's a norm; add a consequence and it's a rule. Most pattern Solutions (the **Therefore** sentence) are strategies or norms: advice a group can adopt, which becomes a rule when the group attaches a consequence.
 
 ## Patterns introduced
 
 ### [Every Thread at Every Level](../wiki/patterns/every-thread-at-every-level.md)
 Writing about technology tends to stay at one level. Tutorials stay operational, critique stays at the level of values, and governance writing floats free of anything concrete. Readers have to connect the levels themselves, and the rules that link them go unwritten.
 
-> **Therefore:** write about each thread at every level: guides for operational patterns, governance for collective-choice and constitutional patterns, theory for metaconstitutional ones. Give every pattern a thread and a level, and introduce it in a piece at that level.
-
-### [Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md)
-A pattern explained in one piece is a claim. It becomes knowledge when someone uses it somewhere else and finds out whether it holds.
-
-> **Therefore:** apply every pattern by name in at least one piece besides the one that introduces it, preferably at a different level or in a different thread. When a pattern doesn't fit what happens in practice, revise it and note why.
+> **Therefore:** write about each thread at every level, by giving every pattern a thread and a level and introducing it in a piece at that level.
 
 ### How the patterns fit together
-Every Thread at Every Level is the largest pattern on the site: it sets the shape of the table. Patterns Are Tested in Practice completes it by connecting the cells. Two smaller patterns are introduced at the levels where they belong: [Any Cell, Any Time](../wiki/patterns/any-cell-any-time.md) (collective-choice) in the [governance piece](../governance/how-this-project-is-run.md), and [Every Page Links Out](../wiki/patterns/every-page-links-out.md) (operational) in the [contributing guide](../guides/contributing.md).
+Every Thread at Every Level is the largest pattern on the site: it sets the shape of the table. [Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md), from the `design-patterns` thread, completes it by connecting the cells. Two more smaller patterns are introduced at the levels where they belong: [Any Cell, Any Time](../wiki/patterns/any-cell-any-time.md) (collective-choice) in the [governance piece](../governance/how-this-project-is-run.md), and [Every Page Links Out](../wiki/patterns/every-page-links-out.md) (operational) in the [contributing guide](../guides/contributing.md).
 
 ## From theory to practice
 - The [guide](../guides/contributing.md) explains how to contribute each kind of piece, and each pattern, on its own.

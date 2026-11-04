@@ -11,7 +11,7 @@ status: draft          # draft | published
 <!--
 Theory (metaconstitutional level): what is being shared, who it's for, and what counts as a good outcome.
 The essay explains its patterns. The full pattern text lives on each wiki page; here, give each pattern
-a short paragraph, its "Therefore" line, and a link. Don't duplicate the full pattern.
+a short paragraph, its Solution, and a link. Don't duplicate the full pattern.
 -->
 
 ## The problem or question
@@ -27,7 +27,7 @@ a short paragraph, its "Therefore" line, and a link. Don't duplicate the full pa
 ### [Pattern Name](../wiki/patterns/slug.md)
 <!-- One paragraph: how the argument above leads to this pattern. -->
 
-> **Therefore:** <!-- copy the pattern's Therefore line -->
+> **Therefore:** <!-- copy the pattern's Solution -->
 
 ### How the patterns fit together
 <!-- Which pattern is larger, which completes which, and links to related patterns in other cells. -->
