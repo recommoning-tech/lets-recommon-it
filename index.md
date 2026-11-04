@@ -24,7 +24,7 @@ Each pattern has one thread and one level, and is introduced in a piece in the m
 
 | # | Pattern | Thread | Level | Introduced in |
 |---|---|---|---|---|
-| 1 | [Two Keyholders](wiki/patterns/two-keyholders.md) | `liberatory-tech` | collective-choice | [Who owns the machine?](theory/who-owns-the-machine.md) |
+| 1 | [Two Keyholders](wiki/patterns/two-keyholders.md) | `liberatory-tech` | collective-choice | [Who holds root?](governance/who-holds-root.md) |
 | 2 | [Small Enough to Understand](wiki/patterns/small-enough-to-understand.md) | `liberatory-tech` | metaconstitutional | [Who owns the machine?](theory/who-owns-the-machine.md) |
 | 3 | [Talk Before You Enforce](wiki/patterns/talk-before-you-enforce.md) | `institutions` | collective-choice | planned |
 | 4 | [Every Thread at Every Level](wiki/patterns/every-thread-at-every-level.md) | `institutions` | metaconstitutional | [This repository is a commons](theory/this-repository-is-a-commons.md) |

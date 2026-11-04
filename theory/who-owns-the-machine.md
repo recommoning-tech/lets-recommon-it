@@ -10,7 +10,6 @@ sources:
   - doctorow-2023-internet-con.md
 patterns:
   - wiki/patterns/small-enough-to-understand.md
-  - wiki/patterns/two-keyholders.md
 status: draft          # rough draft for the author to rewrite in their own voice
 ---
 
@@ -34,7 +33,7 @@ People stay on platforms anyway because of switching costs, as Cory Doctorow arg
 
 ## Owning it isn't enough
 
-A server where one person holds every password is still a small platform, just with a friendly owner. Once other people depend on it, the question changes from who owns the machine to who decides how it's run. Two patterns follow.
+A server where one person holds every password is still a small platform, just with a friendly owner. Once other people depend on it, the question changes from who owns the machine to who decides how it's run. One pattern follows here, about the system itself. The rule it leads to, [Two Keyholders](../wiki/patterns/two-keyholders.md), is about who holds which role, so it's introduced in the governance piece, [Who holds root?](../governance/who-holds-root.md).
 
 ## Patterns introduced
 
@@ -43,19 +42,14 @@ Illich and Franklin point the same way: people can only control what they can un
 
 > **Therefore:** keep the system small enough that a second member could learn to run it in a weekend, by adding complexity only when a real need appears.
 
-### [Two Keyholders](../wiki/patterns/two-keyholders.md)
-If one person holds all the access, the community depends on that person's time, health, and goodwill, and the friendly owner ends up deciding everything by default.
-
-> **Therefore:** give at least two people full admin access to every shared system, and make sure both of them use it regularly.
-
 ### How the patterns fit together
-Small Enough to Understand is the larger pattern: a second keyholder is only realistic if the system is small enough to learn. Two Keyholders completes it. [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md), from the `institutions` thread, completes Two Keyholders: people who share power need a way to settle problems together.
+Small Enough to Understand is the larger pattern: a second keyholder is only realistic if the system is small enough to learn. [Two Keyholders](../wiki/patterns/two-keyholders.md), introduced in [Who holds root?](../governance/who-holds-root.md), completes it. [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md), from the `institutions` thread, completes Two Keyholders: people who share power need a way to settle problems together.
 
 <!-- Author: the Moglen and Doctorow sections suggest a third pattern about federation and exit, e.g. "Federate, Don't Isolate" or "Exit Built In". -->
 
 ## From theory to practice
 - The [guide](../guides/first-server.md) builds a small, understandable server: one machine, plain Debian, a few standard tools.
-- The [governance piece](../governance/who-holds-root.md) turns Two Keyholders and Talk Before You Enforce into rules and a charter a group can adopt.
+- The [governance piece](../governance/who-holds-root.md) introduces Two Keyholders and applies Talk Before You Enforce, turning both into rules and a charter a group can adopt.
 
 ## In this thread
 - **Thread:** liberatory-tech · [the table](../index.md)

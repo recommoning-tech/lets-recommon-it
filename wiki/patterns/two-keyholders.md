@@ -7,10 +7,9 @@ thread: liberatory-tech
 level: collective-choice
 larger_patterns: [small-enough-to-understand]
 smaller_patterns: [talk-before-you-enforce]
-introduced_in: theory/who-owns-the-machine.md
+introduced_in: governance/who-holds-root.md
 applied_in:
   - guides/first-server.md
-  - governance/who-holds-root.md
   - governance/how-this-project-is-run.md
 status: draft
 ---
@@ -43,7 +42,7 @@ When one person holds all the admin access, the system depends on that person. I
 
 ## Connections
 - **Thread and level:** liberatory-tech, collective-choice
-- **Introduced in:** [Who owns the machine?](../../theory/who-owns-the-machine.md)
-- **Applied in:** [Setting up your first server](../../guides/first-server.md), [Who holds root?](../../governance/who-holds-root.md), [How this project is run](../../governance/how-this-project-is-run.md)
+- **Introduced in:** [Who holds root?](../../governance/who-holds-root.md)
+- **Applied in:** [Setting up your first server](../../guides/first-server.md), [How this project is run](../../governance/how-this-project-is-run.md)
 - **Larger patterns:** [Small Enough to Understand](small-enough-to-understand.md)
 - **Smaller patterns:** [Talk Before You Enforce](talk-before-you-enforce.md)

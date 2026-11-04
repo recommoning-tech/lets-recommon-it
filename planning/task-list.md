@@ -23,7 +23,7 @@
 - [ ] Verify the year of Iba's PURPLSOC keynote volume (2016 from a retailer listing)
 - [ ] Pattern illustrations: decide on a style and tool (optional `image` field for now)
 - [ ] Adopt or reject the proposed pattern status stages (lazy consensus)
-- [ ] Move liberatory-tech patterns to the piece at their level (Two Keyholders is collective-choice, so it belongs in Who holds root?)
+- [x] Move liberatory-tech patterns to the piece at their level (Two Keyholders is collective-choice, so it belongs in Who holds root?)
 - [ ] Write a piece that introduces Talk Before You Enforce (institutions, governance)
 - [ ] Rewrite `posts/drafts/recommoning-it.md` as a commons-thread theory essay
 - [x] Create GitHub organization `recommoning-tech` and transfer the repo
