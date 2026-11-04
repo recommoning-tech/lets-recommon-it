@@ -74,30 +74,38 @@ function arrow(B, x1, y1, x2, y2, bend = 0) {
 // Artist's mannequin: construction head, chest and pelvis blocks, joint circles, tube limbs.
 function mannequin(B, x, { s = 1, face = 1, el = [-17, -73], wl = [-20, -52], er = [17, -73], wr = [20, -52], kl = [-8, -27], kr = [8, -27], gy = G } = {}) {
   const P = ([px, py]) => [r1(x + px * s), r1(gy + py * s)];
+  // Paper fill behind every part, so the horizon and anything behind the figure don't show through.
+  // Fills are collected and inserted before the figure's lines when it's done.
+  const start = B.lines.length, fills = [];
+  const fillPoly = (pts) => fills.push(`<path class="sk-p" d="${poly(pts)}"/>`);
+  const fillEll = ([cx, cy], rx, ry) => fills.push(`<ellipse class="sk-p" cx="${cx}" cy="${cy}" rx="${r1(rx)}" ry="${r1(ry)}"/>`);
   const tube = (a, b, w1, w2) => {
     const [ax, ay] = P(a), [bx, by] = P(b); const ang = Math.atan2(by - ay, bx - ax) + Math.PI / 2;
     const o = (w) => [Math.cos(ang) * w * s, Math.sin(ang) * w * s];
     const [o1x, o1y] = o(w1), [o2x, o2y] = o(w2);
+    fillPoly([[ax + o1x, ay + o1y], [bx + o2x, by + o2y], [bx - o2x, by - o2y], [ax - o1x, ay - o1y]]);
     line(B, ax + o1x, ay + o1y, bx + o2x, by + o2y, { passes: 1 }); line(B, ax - o1x, ay - o1y, bx - o2x, by - o2y, { passes: 1 });
     guide(B, ax - (bx - ax) * 0.12, ay - (by - ay) * 0.12, bx + (bx - ax) * 0.12, by + (by - ay) * 0.12);
   };
-  const joint = (p, rr = 3) => { const [px, py] = P(p); ellipse(B, px, py, rr * s, rr * s, { passes: 1 }); };
+  const joint = (p, rr = 3) => { const [px, py] = P(p); fillEll([px, py], rr * s, rr * s); ellipse(B, px, py, rr * s, rr * s, { passes: 1 }); };
   // head with construction cross, turned toward `face`
   const [hx, hy] = P([0, -113]);
-  ellipse(B, hx, hy, 8.5 * s, 10.5 * s);
+  fillEll([hx, hy], 8.5 * s, 10.5 * s); ellipse(B, hx, hy, 8.5 * s, 10.5 * s);
   B.lines.push(`<path class="sk-g" d="M${r1(hx + face * 3 * s)} ${r1(hy - 10 * s)} Q${r1(hx + face * 5.5 * s)} ${hy} ${r1(hx + face * 3 * s)} ${r1(hy + 10 * s)} M${r1(hx - 8 * s)} ${r1(hy - 1 * s)} Q${hx} ${r1(hy + 1.5 * s)} ${r1(hx + 8 * s)} ${r1(hy - 1 * s)}"/>`);
+  fillPoly([P([-2.5, -103]), P([2.5, -103]), P([2.5, -95]), P([-2.5, -95])]); fillPoly([P([-5, -73]), P([5, -73]), P([5, -63]), P([-5, -63])]);
   line(B, ...P([0, -102]), ...P([0, -96]), { passes: 1 });
-  stroke(B, [P([-15, -95]), P([15, -95]), P([11, -72]), P([-11, -72])], { closed: true });
-  stroke(B, [P([-10, -64]), P([10, -64]), P([8, -51]), P([-8, -51])], { closed: true });
+  fillPoly([P([-15, -95]), P([15, -95]), P([11, -72]), P([-11, -72])]); stroke(B, [P([-15, -95]), P([15, -95]), P([11, -72]), P([-11, -72])], { closed: true });
+  fillPoly([P([-10, -64]), P([10, -64]), P([8, -51]), P([-8, -51])]); stroke(B, [P([-10, -64]), P([10, -64]), P([8, -51]), P([-8, -51])], { closed: true });
   guide(B, ...P([0, -100]), ...P([0, -48]));
   joint([0, -68], 2.5);
   for (const [sh, e, w] of [[[-15, -92], el, wl], [[15, -92], er, wr]]) {
-    joint(sh); tube(sh, e, 3.2, 2.6); joint(e, 2.6); tube(e, w, 2.6, 2); const [wx, wy] = P(w); ellipse(B, wx, wy, 3.6 * s, 4.4 * s, { passes: 1 });
+    joint(sh); tube(sh, e, 3.2, 2.6); joint(e, 2.6); tube(e, w, 2.6, 2); const [wx, wy] = P(w); fillEll([wx, wy], 3.6 * s, 4.4 * s); ellipse(B, wx, wy, 3.6 * s, 4.4 * s, { passes: 1 });
   }
   for (const [hp, k, ft] of [[[-6, -53], kl, -1], [[6, -53], kr, 1]]) {
     joint(hp); tube(hp, k, 3.8, 3); joint(k, 2.8); const an = [k[0] + (k[0] > 0 ? 1 : -1), -4]; tube(k, an, 3, 2.2);
-    stroke(B, [P([an[0] - 2, -4]), P([an[0] + face * 9, 0]), P([an[0] - 3, 0])], { passes: 1 });
+    fillPoly([P([an[0] - 2, -4]), P([an[0] + face * 9, 0]), P([an[0] - 3, 0])]); stroke(B, [P([an[0] - 2, -4]), P([an[0] + face * 9, 0]), P([an[0] - 3, 0])], { passes: 1 });
   }
+  B.lines.splice(start, 0, ...fills);
   return { hl: P(wl), hr: P(wr), head: [hx, hy] };
 }
 const ground = (B, x1 = 30, x2 = 370) => B.lines.push(`<path class="sk-g" d="M${x1} ${G} L${x2} ${G}"/>`);
