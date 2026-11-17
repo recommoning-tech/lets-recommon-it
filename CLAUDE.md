@@ -80,5 +80,5 @@ Patterns (`wiki/patterns/`) are the main unit; every piece is an essay about the
 
 - Branch prefixes: `guide/`, `governance/`, `theory/`, `pattern/`, `content/` (bibliography, fixes, multi-file content), `structure/` (templates, layout, repo files).
 - Pull requests are merged with a merge commit. Note AI-assisted drafting in the PR description.
-- Operational rules (review, merging, drafts) are in `guides/contributing.md#operational-rules`; collective-choice and constitutional rules are in `governance/how-this-project-is-run.md`.
+- Contributing workflow is in `CONTRIBUTING.md`. Rules at every level (review, merging, drafts, decisions, charter changes) are in the charter in `governance/how-this-project-is-run.md`.
 - Open work is tracked in `planning/task-list.md`; ideas by cell in `planning/post-ideas.md`.

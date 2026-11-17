@@ -79,10 +79,10 @@ Writing about technology tends to stay at one level. Tutorials stay operational,
 > **Therefore:** write about each thread at every level, by giving every pattern a thread and a level and introducing it in a piece at that level.
 
 ### How the patterns fit together
-Every Thread at Every Level is the largest pattern on the site: it sets the shape of the table. [Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md), from the `design-patterns` thread, completes it by connecting the cells. Two more smaller patterns are introduced at the levels where they belong: [Any Cell, Any Time](../wiki/patterns/any-cell-any-time.md) (collective-choice) in the [governance piece](../governance/how-this-project-is-run.md), and [Every Page Links Out](../wiki/patterns/every-page-links-out.md) (operational) in the [contributing guide](../guides/contributing.md).
+Every Thread at Every Level is the largest pattern on the site: it sets the shape of the table. [Patterns Are Tested in Practice](../wiki/patterns/patterns-are-tested-in-practice.md), from the `design-patterns` thread, completes it by connecting the cells. Two more smaller patterns are introduced at the levels where they belong: [Any Cell, Any Time](../wiki/patterns/any-cell-any-time.md) (collective-choice) in the [governance piece](../governance/how-this-project-is-run.md), and [Every Page Links Out](../wiki/patterns/every-page-links-out.md) (operational) in the [charter worksheet](../guides/charter-worksheet.md).
 
 ## From theory to practice
-- The [guide](../guides/contributing.md) explains how to contribute each kind of piece, and each pattern, on its own.
+- The [contributing guide](../CONTRIBUTING.md) explains how to contribute each kind of piece, and each pattern, on its own.
 - The [governance piece](../governance/how-this-project-is-run.md) analyzes the project as an action situation and sets its collective-choice and constitutional rules.
 
 <!-- Author: rewrite in your own voice. A concrete moment from setting up this repo (e.g. realizing one person held every account) would ground the commons section. -->

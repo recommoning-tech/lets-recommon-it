@@ -41,7 +41,7 @@ Adding a pattern as an action situation ([*Understanding Institutional Diversity
 ## Rules to decide
 
 ### Operational rules
-How to write a pattern is in [Writing a pattern](../guides/writing-a-pattern.md). How to submit one is in the [contributing guide](../guides/contributing.md#contribute-a-pattern).
+How to write a pattern is in [Writing a pattern](../guides/writing-a-pattern.md). How to submit one is in the [contributing guide](../CONTRIBUTING.md#contribute-a-pattern).
 
 ### Collective-choice rules: how a pattern moves from draft to published
 

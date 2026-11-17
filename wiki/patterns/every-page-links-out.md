@@ -5,7 +5,7 @@ introduction: "A page with no links out isn't finished."
 image: images/every-page-links-out.svg
 thread: institutions
 level: operational
-introduced_in: guides/contributing.md
+introduced_in: guides/charter-worksheet.md
 applied_in:
   - governance/how-this-project-is-run.md
 larger_patterns: [every-thread-at-every-level]

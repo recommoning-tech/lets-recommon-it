@@ -7,7 +7,7 @@ thread: design-patterns
 level: collective-choice
 introduced_in: governance/who-decides-what-becomes-a-pattern.md
 applied_in:
-  - guides/contributing.md
+  - governance/how-this-project-is-run.md
 larger_patterns: [a-language-users-can-speak, patterns-are-tested-in-practice, talk-before-you-enforce]
 smaller_patterns: []
 status: draft

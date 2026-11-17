@@ -7,7 +7,7 @@ thread: design-patterns
 level: operational
 introduced_in: guides/writing-a-pattern.md
 applied_in:
-  - guides/contributing.md
+  - guides/charter-worksheet.md
 larger_patterns: [a-language-users-can-speak]
 smaller_patterns: []
 status: draft

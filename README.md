@@ -45,7 +45,7 @@ Every piece of content is tagged with one or more threads (the first is its row 
 
 ## Contributing
 
-See [Writing for Let's Recommon IT](guides/contributing.md) for the full workflow, and [How this project is run](governance/how-this-project-is-run.md) for how the rules are made and who decides.
+See [Writing for Let's Recommon IT](CONTRIBUTING.md) for the full workflow, and [How this project is run](governance/how-this-project-is-run.md) for how the rules are made and who decides.
 
 Start from the matching file in `templates/` (`guide.md`, `governance.md`, `theory.md`, `wiki-pattern.md`, `post.md`, `bibliography-entry.md`). Fill in the front matter carefully: the website builds the table and all links between pieces and patterns from it, and `cd site && npm run build` reports any mismatch. File names use lowercase kebab-case, and bibliography entries are named `author-year-short-title.md`.
 
