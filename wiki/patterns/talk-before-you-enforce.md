@@ -12,6 +12,7 @@ applied_in:
   - governance/who-holds-root.md
   - governance/how-this-project-is-run.md
   - governance/who-decides-what-becomes-a-pattern.md
+  - governance/charter-worksheet.md
 status: draft
 ---
 
