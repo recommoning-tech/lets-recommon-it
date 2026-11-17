@@ -296,35 +296,112 @@ A statement without the "or else" is a norm. Many norms work fine; just know whi
 
 A charter can follow the worksheet's order:
 
+Fill in the brackets. Under "Rules", list the key rules for that section in ADICO form; delete the "Rules" list where a section doesn't need one.
+
 ```markdown
 # [Tool name] Charter
 
+Adopted [date] by [group].
+
 ## Purpose
-[Step 1: what this tool is for, and what it is not for.]
+<!-- Step 1 -->
+[Tool name] exists to [affect which resource or value] for [whom] by [how].
+We will know it's working when [sign of success].
+It is not for [out of scope].
 
 ## Members and roles
-[Steps 3 and 14: who belongs, what roles exist, how people join and leave.]
+<!-- Steps 3 and 14 -->
+Members are [who]. New members join by [how] and are approved by [role or process].
+Roles:
+- [Role, e.g. member]: [what they can do]. Held by [everyone with an account].
+- [Role, e.g. admin]: [what they can do]. Held by [names]. There must always be at least [two].
+- [Role, e.g. steward]: [what they can do]. Held by [names], for [term].
+Someone leaves by [how]. Their access is removed within [time] by [role].
+
+Rules:
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 
 ## How we use it
-[Steps 2 and 15: key rules for everyday use.]
+<!-- Steps 2 and 15 -->
+Members use [tool] to [main actions]. Help and instructions are at [location].
+New members are shown how it works by [role or process].
+
+Rules:
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 
 ## How we decide
-[Step 4: which decisions are individual, which are group, and how the group decides.]
+<!-- Step 4 -->
+[Role] can decide [routine matters] alone.
+[Larger matters] are decided by [majority / consensus / consent] of [who] at [meeting / poll / channel].
+Discussion happens in [place] before any decision.
+
+Rules:
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 
 ## Costs
-[Step 5: who pays for what.]
+<!-- Step 5 -->
+[Tool] costs about [amount] per [period] in money and [hours] per [period] in time.
+Money is covered by [who, how]. Time is covered by [who, how].
+If something breaks, [who] pays for [what].
+
+Rules:
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 
 ## Upkeep
-[Steps 16 to 19: who maintains it, how requests and bugs are handled, how changes are announced.]
+<!-- Steps 16 to 19 -->
+[Names or role] maintain [tool]. [Names] cover when they are away.
+Updates and backups happen [how often] and are done by [who].
+Feature requests go to [place]. [Who] decides on them using [criteria].
+Bugs are reported at [place]. Members can expect a response within [time].
+Changes and outages are announced in [channel], which works even when [tool] is down.
+Planned changes get [time] notice.
 
-## Data
-[Step 22: what is collected, who sees it, how long it's kept, how members take it with them.]
+Rules:
+- Maintainers (A) must (D) announce planned downtime in [channel] (I) at least [48 hours] in advance (C), or else the change is postponed (O).
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
+
+## Technical changes
+<!-- Step 20 -->
+Maintainers can [routine technical changes] on their own.
+[Changes such as a new vendor, a migration, or a change in data kept] need [approval process].
+Maintainers and admins are appointed and removed by [who, how].
+
+Rules:
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
+
+## Data and access
+<!-- Steps 21 and 22 -->
+[Tool] collects [what data]. It is stored at [where] for [how long].
+It can be seen by [who]. It is not shared with [whom].
+Members can export or delete their data by [how].
+We check that [tool] works for [accessibility needs] by [how].
+
+Rules:
+- Admins (A) must not (D) read members' data (I) without the member's permission (C), or else [consequence] (O).
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 
 ## Checking in
-[Steps 6 to 8: how we know it's working, how problems are raised and settled, when we review.]
+<!-- Steps 6 to 8 -->
+[Who] checks [signs of success] every [period] and reports to [whom].
+Problems are raised first by [talking with the person / raising it in place].
+If a problem continues, the next steps are [step 1], then [step 2], then [step 3].
+Disagreements are settled by [who, how].
+If [tool] isn't working, [who] can call a review. The group may adjust, pause, or stop using it.
+First review: [date].
+
+Rules:
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 
 ## Changing this charter
-[Steps 9 and 20: who can propose changes, how they're decided, how the arrangement ends.]
+<!-- Steps 9 and 20 -->
+Any [member / role] can propose a change by [how].
+Changes are adopted by [rule, e.g. two-thirds of members] after [notice period].
+The whole charter is reviewed every [period].
+This charter must also follow [rules of any larger organization, landlord, or law].
+If the group ends, members get [time] to export their data, then [what happens to data and assets].
+
+Rules:
+- [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 ```
 
 ## Patterns applied
