@@ -11,6 +11,7 @@ introduced_in: governance/who-holds-root.md
 applied_in:
   - guides/first-server.md
   - governance/how-this-project-is-run.md
+  - governance/charter-worksheet.md
 status: draft
 ---
 

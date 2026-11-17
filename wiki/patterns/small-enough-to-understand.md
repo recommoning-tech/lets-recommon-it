@@ -10,6 +10,7 @@ smaller_patterns: [two-keyholders]
 introduced_in: theory/who-owns-the-machine.md
 applied_in:
   - guides/first-server.md
+  - governance/charter-worksheet.md
 status: draft
 ---
 
