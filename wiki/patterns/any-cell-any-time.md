@@ -7,7 +7,6 @@ thread: institutions
 level: collective-choice
 introduced_in: governance/how-this-project-is-run.md
 applied_in:
-  - guides/contributing.md
 larger_patterns: [every-thread-at-every-level]
 smaller_patterns: []
 status: draft

@@ -1,26 +1,32 @@
 ---
 title: "Charter worksheet: a tool as an action situation"
 date:                  # YYYY-MM-DD, set at publish
+updated:
 threads: [institutions, liberatory-tech]   # first thread is the row in the table
 sources:
   - ostrom-2005-understanding-institutional-diversity.md
   - ostrom-1990-governing-the-commons.md
   - crawford-ostrom-1995-grammar-of-institutions.md
-patterns: []
+difficulty: beginner
+patterns:
+  - wiki/patterns/every-page-links-out.md
 patterns_applied:
+  - wiki/patterns/solution-first.md
   - wiki/patterns/two-keyholders.md
   - wiki/patterns/talk-before-you-enforce.md
   - wiki/patterns/small-enough-to-understand.md
 status: draft          # AI-drafted; needs a member's review
 ---
 
-<!-- Author: this worksheet is the "something a group can copy" for the governance column. It walks Ostrom's IAD levels twice, once for the purpose of the tool and once for the technology, then checks the result against the eight design principles. -->
+<!-- Author: this worksheet walks Ostrom's IAD levels twice, once for the purpose of the tool and once for the technology, then checks the result against the eight design principles. -->
 
 ## What this is for
 
 A group is about to adopt a tool: a shared server, a chat space, a tool library's booking system, a shared spreadsheet. This worksheet helps the group treat that tool as an *action situation* (Ostrom's term for a setting where people in different roles act under rules and produce outcomes) and leave with a draft charter.
 
-It starts from the outcome, not the software. The first question is what the tool is meant to change. Everything else follows from that.
+It starts from the outcome, not the software. The first question is what the tool is meant to change. Everything else follows from that ([Solution First](../wiki/patterns/solution-first.md)).
+
+[How this project is run](../governance/how-this-project-is-run.md) is this worksheet filled in for Let's Recommon IT itself.
 
 ## How to use it
 
@@ -79,6 +85,7 @@ It starts from the outcome, not the software. The first question is what the too
 - How does the group decide: majority, consensus, consent, a delegated committee?
 - Can the people affected by a rule take part in changing it?
 - Where does discussion happen? (See [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md).)
+- Where are decisions recorded, and does each record link to the discussion and the change it led to?
 
 > Our answer:
 
@@ -404,7 +411,28 @@ Rules:
 - [Who] (A) [must / may / must not] (D) [action] (I) [when or where] (C), or else [consequence] (O).
 ```
 
+## Maintenance
+
+- Keep the filled-in worksheet next to the charter. When someone asks why a rule exists, the answer is in the step it came from.
+- Revisit the worksheet at each charter review (step 9). Start with the steps whose answers have changed.
+- Run the design principles check (Part 3) again after any big change: new members, a new tool, a new maintainer.
+
+## Community considerations
+
+- **Who fills it in:** the people who will use the tool, not only the people who will run it. If only maintainers answer, Part 1 ends up describing the technology.
+- **Who isn't in the room:** note them, and ask them about the steps that affect them most, especially 12, 15, 21, and 22.
+- **Disagreement:** a step the group can't agree on is a decision for step 4, not a reason to stop. Mark it and move on.
+
+## Patterns introduced
+
+### [Every Page Links Out](../wiki/patterns/every-page-links-out.md)
+A charter cut off from the reasons behind it turns into a list of orders, and the next group can't tell which rules still make sense. The worksheet keeps the reasons: each charter section names the steps it came from, and step 4 asks that every decision link to its discussion and the change it led to.
+
+> **Therefore:** link every page to the other pieces in its thread, to the table, to the patterns it introduces or applies, and to the sources it draws on.
+
 ## Patterns applied
+
+- [Solution First](../wiki/patterns/solution-first.md): step 1 asks what the tool is meant to change before anything about the tool itself.
 
 - [Two Keyholders](../wiki/patterns/two-keyholders.md): steps 3 and 14 ask who holds each role and require at least two people with full admin access.
 - [Talk Before You Enforce](../wiki/patterns/talk-before-you-enforce.md): steps 4 and 8 set up a place to talk and make a conversation the first response to a problem.

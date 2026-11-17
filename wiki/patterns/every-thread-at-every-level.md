@@ -7,7 +7,6 @@ thread: institutions
 level: metaconstitutional
 introduced_in: theory/this-repository-is-a-commons.md
 applied_in:
-  - guides/contributing.md
   - governance/how-this-project-is-run.md
 larger_patterns: []
 smaller_patterns: [patterns-are-tested-in-practice, any-cell-any-time, every-page-links-out]

@@ -7,7 +7,6 @@ thread: design-patterns
 level: metaconstitutional
 introduced_in: theory/a-pattern-language-for-community-tech.md
 applied_in:
-  - guides/contributing.md
   - governance/how-this-project-is-run.md
   - guides/writing-a-pattern.md
   - governance/who-decides-what-becomes-a-pattern.md
